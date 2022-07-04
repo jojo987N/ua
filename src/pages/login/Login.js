@@ -1,8 +1,82 @@
+import { signInWithEmailAndPassword } from "firebase/auth"
+import { useContext, useState } from "react"
+import { auth, getRestaurantById, getRestaurantId } from "../../firebase"
 import "./login.scss"
+import { useNavigate } from "react-router-dom";
+import { RestaurantContext } from "../../context/RestaurantContext";
+import { LoadingContext } from "../../context/LoadingContext";
 
 const Login = () => {
+  const navigate = useNavigate();
+  const [user, setUser] = useState()
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const [emailError, setEmailError] = useState("")
+  const [passwordError, setPasswordError] = useState("")
+  const {setCurrentRestaurant} = useContext(RestaurantContext)
+  const {setLoading} = useContext(LoadingContext)
+  
+  const SignInUser = async ()=>{
+
+      
+     
+    try{
+      const re = await signInWithEmailAndPassword(auth, email, password)
+      //navigate("/")   
+      setLoading(true)
+
+      // getRestaurantById(re.user.uid).then(restaurant => setCurrentRestaurant(restaurant))
+      // .then(()=> setLoading(false))
+      
+    }catch(err){
+       
+    err.message.includes("password")?setPasswordError(err.message.replace(/Firebase:|auth\//g,''))
+     :setEmailError(err.message.replace(/Firebase:|auth\//g,''))
+      // setEmailError(err.message.replace("Firebase:",'').replace("auth/:",''))
+      // switch(err.code){
+      //   case "auth/invalid-email":
+      //   case "auth/user-not-found":
+      //    setEmailError(err.message)
+      //    break
+      //   case "auth/wrong-password":
+      //     setPasswordError(err.message)
+        
+      // }
+
+    }
+  }
   return (
-    <div>Login</div>
+    <section className="login">
+       
+      <div className="loginContainer" >
+      <div style={{display: "flex", justifyContent: "center"}}>
+        <h1 style={{color: "white", fontSize: 25}}>Good</h1>
+        <h1 style={{color: "green", marginLeft: 10, fontSize: 25}}>Food</h1>
+      </div>
+        <label>Username</label>
+        <input 
+          type={"text"}
+          autoFocus
+          required
+          value={email}
+          onChange={e => setEmail(e.target.value)}
+          />
+        <p className="errorMsg">{emailError}</p>
+        <label>Password</label>
+        <input 
+          type={"password"}
+          required
+          value={password}
+          onChange={e => setPassword(e.target.value)}
+          />
+        <p className="errorMsg">{passwordError}</p>
+        <div className="btnContainer">
+        <button onClick={SignInUser}>Sign In</button>
+        </div>
+
+      </div>
+
+    </section>
   )
 }
 

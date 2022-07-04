@@ -1,6 +1,7 @@
 import {initializeApp} from 'firebase/app'
 import {addDoc, getFirestore, collection, getDocs, doc, deleteDoc, orderBy, query, limit,
 where, onSnapshot, serverTimestamp, updateDoc, Timestamp} from 'firebase/firestore'
+import { users } from './datatablesource';
 
 import { getAuth } from 'firebase/auth';
 
@@ -31,8 +32,32 @@ import { getAuth } from 'firebase/auth';
   export const db = getFirestore()
 
   export const restaurantsCol = collection(db, 'restaurants')
+  export const categoriesCol = collection(db, 'categories')
 
   export const ordersCol = collection(db, 'orders')
+
+  export const usersCol = collection(db, 'users')
+  
+
+  export const getRestaurantsFromFirebase = () => {
+
+    const restos = []
+  
+    return getDocs(restaurantsCol)
+      .then((snapshot) => {
+        snapshot.docs.forEach((doc) => {
+  
+         // restaurants.push(doc.data())
+        
+         restos.push({
+           restaurantId: doc.id,
+           ...doc.data()
+         })
+        })
+        return restos
+      })
+      //.then(()=> setRestaurantData(restaurants))
+  }
 
 
   export const getOrders = (setOrders)=>{
@@ -75,6 +100,25 @@ import { getAuth } from 'firebase/auth';
       return orders
   })
  }
+
+ export const getOrdersFromFirebaseQuery = ()=>{
+
+  const orders=[]
+
+ //const q= query(ordersCol, orderBy('createdAt', 'desc'), limit(5))
+
+  return getDocs(ordersCol).then(snapshot=>{
+
+     snapshot.docs.forEach((doc) => {
+
+       // console.log(doc.data().createdAt)
+        orders.push({...doc.data(), id: doc.id})
+      })
+      return orders
+  })
+ }
+
+
 
 // getOrdersFromFirebase().then(orders => console.log(orders))
 
@@ -124,7 +168,6 @@ export const productsCol = collection(db, 'products')
       })
 
     }))
-
 }
 
 //addProducts()
@@ -141,11 +184,14 @@ export const addProduct = (name, description, price) => {
 }
 
 
-export const getRestaurantId = (uid)=>{
+export const getRestaurantById = (uid)=>{
 
   const q= query(restaurantsCol, where('managerId', '==', uid))
 
-  return getDocs(q)
+  return getDocs(q).then((snapshot) => {
+    return snapshot.docs[0].data()
+    
+  })
    
 }
 
@@ -185,5 +231,225 @@ const getOrder = ()=>{
     console.log(snapshot.docs[0].data())
   })
 }
+
+
+export const getCategoriesTest = () => {
+
+  const categories = []
+
+  return getDocs(restaurantsCol)
+    .then((snapshot) => {
+      snapshot.docs.forEach((doc) => {
+
+        //console.log(doc.data().categories)
+        doc.data().categories.forEach(categorie =>{
+          console.log(categorie.title)
+         categories.push(categorie.title)
+          //console.log(snapshot.docs[Math.floor(Math.random()*7)].data().image_url)
+
+          // categories.push({
+          //   restaurantId: doc.id,
+          //   name: categorie.title,
+          //   image: snapshot.docs[Math.floor(Math.random()*7)].data().image_url
+   
+          // })
+
+
+          // addDoc(categoriesCol, {
+          //   restaurantId: doc.id,
+          //   name: categorie.title,
+          //   image: snapshot.docs[Math.floor(Math.random()*7)].data().image_url
+   
+          // }) 
+
+
+        })
+        
+      //  categories.push({
+      //    restaurantId: doc.id,
+      //    name: categorie.title,
+
+      //  })
+
+      })
+      return categories
+    })
+    //.then(()=> setRestaurantData(restaurants))
+}
+
+ 
+
+//getCategoriesTest()
+
+// Populate Foods with categories
+
+// getFoods().then(foods => {
+
+//   foods.forEach(food => {
+
+//     getDocs(categoriesCol)
+//       .then(snapshot => {
+
+//         console.log(typeof snapshot.docs.map(doc => doc.id)[Math.floor(Math.random() * 15)])
+//         updateDoc(doc(db, 'products', food.id), {
+
+//           categorieId: snapshot.docs.map(doc => doc.id)[Math.floor(Math.random()*15)],
+
+//         })
+//         .then(()=> console.log('good'))
+
+//       })
+
+//   })
+
+
+// })
+
+export const getCategories = ()=>{
+
+  const categories=[]
+  
+  return getDocs(categoriesCol).then(snapshot=>{
+
+     snapshot.docs.forEach((doc) => {
+
+       // console.log(doc.data().createdAt)
+       categories.push({...doc.data(), id: doc.id })
+
+      })
+
+      return categories
+
+  })
+
+ }
+
+ const addUsers = () => {
+
+   
+      users.forEach(user => {
+
+        addDoc(usersCol, user).then(()=>console.log("ADDED"))
+      }) 
+        
+
+       
+
+    
+}
+//addUsers()
+
+export const getUsersFromFirebase = () => {
+
+  const users = []
+
+  return getDocs(usersCol)
+    .then((snapshot) => {
+      snapshot.docs.forEach((doc) => {
+
+       // restaurants.push(doc.data())
+      
+       users.push({
+         userId: doc.id,
+         ...doc.data()
+       })
+
+      })
+      return users
+    })
+    //.then(()=> setRestaurantData(restaurants))
+}
+
+
+export const getUsersRoleFromFirebase = () => {
+
+  const users = []
+
+  const q= query(usersCol, where('Role', '==', "admin"))
+  return getDocs(usersCol)
+    .then((snapshot) => {
+      snapshot.docs.forEach((doc) => {
+
+       // restaurants.push(doc.data())
+      
+       users.push({
+         userId: doc.id,
+         ...doc.data()
+       })
+
+      })
+      return users
+    })
+    //.then(()=> setRestaurantData(restaurants))
+}
+
+
+export const updateUsersFromFirebase = () => {
+
+  return getDocs(usersCol)
+    .then((snapshot) => {
+      snapshot.docs.forEach((docc) => {
+     
+       updateDoc(doc(db, 'users', docc.id), {
+        Status: "active",
+      })
+      .then(()=> console.log('good'))
+
+      })
+       
+    })
+    //.then(()=> setRestaurantData(restaurants))
+}
+//updateUsersFromFirebase()
+
+export const updateDriversFromFirebase = () => {
+
+  const q= query(usersCol, where('Role', '==', "driver"))
+
+  return getDocs(q)
+    .then((snapshot) => {
+      snapshot.docs.forEach((docc) => {
+     
+       updateDoc(doc(db, 'users', docc.id), {
+        driverStatus: ["online", "offline"][Math.floor(Math.random()*2)],
+      })
+      .then(()=> console.log('good'))
+
+      })
+       
+    })
+    //.then(()=> setRestaurantData(restaurants))
+}
+
+//updateDriversFromFirebase()
+
+export const updateOrdersFromFirebase = ()=>{
+
+  // const q= query(ordersCol, orderBy('createdAt', 'desc'), limit(5))
+
+  return getDocs(ordersCol).then(snapshot=>{
+
+     snapshot.docs.forEach((docc) => {
+
+       // orders.push({...doc.data(), id: doc.id})
+
+        updateDoc(doc(db, 'orders', docc.id), {
+          orderType: ["pickup", "delivery"][Math.floor(Math.random()*2)],
+        })
+        .then(()=> console.log('good'))
+
+
+      })
+       
+  })
+ }
+
+ //updateOrdersFromFirebase()
+
+
+
+
+
+
 
  

@@ -95,7 +95,9 @@ const Widget = ({ type }) => {
           {data.number}
           
         </span>
-        <Link to="/users" style={{ textDecoration: "none" }}>
+        {/* <Link to="/users" style={{ textDecoration: "none" }}> */}
+
+        <Link to={`/${type}s`} style={{ textDecoration: "none" }}>
           
           <span className="link">{data.link}</span>
         </Link>

@@ -5,9 +5,20 @@ import "./home.scss";
  import Featured from "../../components/featured/Featured";
  import Chart from "../../components/chart/Chart";
  import Table from "../../components/table/Table";
+import List from "../../components/table/Table";
+// import { useContext } from "react";
+//import { AuthContext } from "../../context/Auth";
+import { RestaurantContext } from "../../context/RestaurantContext";
+import { useContext } from "react";
 
 const Home = () => {
+
+  const {currentRestaurant} = useContext(RestaurantContext)
+
+ // console.log(currentRestaurant)
+
   return (
+    
     <div className="home">
       <Sidebar />
       <div className="homeContainer">
@@ -24,7 +35,8 @@ const Home = () => {
         </div>
         <div className="listContainer">
           <div className="listTitle">Latest Orders</div>
-          <Table />
+          {/* <Table1 /> */}
+          <List />
         </div>
       </div>
     </div>

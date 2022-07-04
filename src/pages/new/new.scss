@@ -58,9 +58,24 @@
               border: none;
               border-bottom: 1px solid gray;
             }
+             
+          }
+          .tmpContainer{
+            width: 40%;
+            
+          }
+          
+          .tmp{
+            width: 100%;
+            border: none;
           }
 
-          button {
+          .react-time-picker__wrapper {
+            border: none;
+            border-bottom: thin solid gray;
+          }
+
+          .button {
             width: 150px;
             padding: 10px;
             border: none;

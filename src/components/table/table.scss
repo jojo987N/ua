@@ -14,6 +14,33 @@
 
     .tableCell{
       text-align: center; 
+    //  border: 1px solid green;
+    }
+
+    .tableCell1{
+       
+      //border: 1px solid green;
+
+      .text{
+        font-weight: bold;
+      }
+    }
+
+    .tableCell2{
+      background-color:    #f2f2f2
+      //text-align: center; 
+    //  border: 1px solid green;
+    }
+
+     
+
+
+    .tableCellImg {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 20px;
     }
   
     .status {

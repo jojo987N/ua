@@ -63,6 +63,27 @@
         }
       }
 
+      .buttonsContainer{
+       // border: 1px solid black
+        //width: 150px;
+       // display: "flex",
+      }
+      .button{
+        width: 50%;
+       // width: 150px;
+        padding: 10px;
+        border: none;
+        //background-color: teal;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 10px;
+        //margin: 3.7px;
+         
+         
+         
+      }
+
       .right {
         flex: 2;
       }
@@ -73,6 +94,9 @@
       box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
       padding: 20px;
       margin: 10px 20px;
+    }
+    .totalText {
+      margin-left: 100px
     }
 
     .title {
