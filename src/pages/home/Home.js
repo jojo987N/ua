@@ -1,0 +1,46 @@
+ import Sidebar from "../../components/sidebar/Sidebar";
+ import Navbar from "../../components/navbar/Navbar";
+import "./home.scss";
+ import Widget from "../../components/widget/Widget";
+ import Featured from "../../components/featured/Featured";
+ import Chart from "../../components/chart/Chart";
+ import Table from "../../components/table/Table";
+import List from "../../components/table/Table";
+// import { useContext } from "react";
+//import { AuthContext } from "../../context/Auth";
+import { RestaurantContext } from "../../context/RestaurantContext";
+import { useContext } from "react";
+
+const Home = () => {
+
+  const {currentRestaurant} = useContext(RestaurantContext)
+
+ // console.log(currentRestaurant)
+
+  return (
+    
+    <div className="home">
+      <Sidebar />
+      <div className="homeContainer">
+        <Navbar />
+        <div className="widgets">
+           <Widget type="user" />
+          <Widget type="order" />
+          <Widget type="earning" />
+          <Widget type="driver" /> 
+        </div>
+        <div className="charts">
+          <Featured />
+          <Chart title="Last 6 Months (Revenue)" aspect={2 / 1} />
+        </div>
+        <div className="listContainer">
+          <div className="listTitle">Latest Orders</div>
+          {/* <Table1 /> */}
+          <List />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Home;
