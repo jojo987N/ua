@@ -5,9 +5,14 @@ import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalance
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlined";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { RestaurantContext } from "../../context/RestaurantContext";
+import { decryptData} from "../../utils";
+
 
 const Widget = ({ type }) => {
   let data;
+  const {currentRestaurant} = useContext(RestaurantContext)
 
   //temporary
   const amount = 100;
@@ -52,7 +57,15 @@ const Widget = ({ type }) => {
       data = {
         title: "EARNINGS",
         //isMoney: true,
-        number: (81450).toLocaleString('en', {
+        number: currentRestaurant?
+        
+        decryptData(localStorage.getItem(process.env.REACT_APP_EARNINGS_KEY))
+        .find(item => item.restaurant === currentRestaurant.name).earning.toLocaleString('en', {
+          style: "currency",
+          currency: 'USD'
+      }) 
+        
+        :(81450).toLocaleString('en', {
           style: "currency",
           currency: 'USD'
       }),
@@ -82,6 +95,57 @@ const Widget = ({ type }) => {
         ),
       };
       break;
+      case "confirmed-order":
+        data = {
+          title: "CONFIRMED",
+          //isMoney: false,
+          number: 20,
+          link: "See all confirmed orders",
+          icon: (
+            <PersonOutlinedIcon
+              className="icon"
+              style={{
+                color: "crimson",
+                backgroundColor: "rgba(255, 0, 0, 0.2)",
+              }}
+            />
+          ),
+        };
+        break;
+        case "cooking-order":
+          data = {
+            title: "COOKING",
+            //isMoney: false,
+            number: 20,
+            link: "See all ready for pickup orders",
+            icon: (
+              <PersonOutlinedIcon
+                className="icon"
+                style={{
+                  color: "crimson",
+                  backgroundColor: "rgba(255, 0, 0, 0.2)",
+                }}
+              />
+            ),
+          };
+          break;
+        case "ready-for-pickup-order":
+          data = {
+            title: "READY FOR PICKUP",
+            //isMoney: false,
+            number: 20,
+            link: "See all ready for pickup orders",
+            icon: (
+              <PersonOutlinedIcon
+                className="icon"
+                style={{
+                  color: "crimson",
+                  backgroundColor: "rgba(255, 0, 0, 0.2)",
+                }}
+              />
+            ),
+          };
+          break;
     default:
       break;
   }

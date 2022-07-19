@@ -1,11 +1,12 @@
 import "./datatable.scss";
 import { DataGrid } from "@mui/x-data-grid";
-import { userColumns, userRows, productColumns, restaurantColumns, categoryColumns, driverColumns, orderColumns} from "../../datatablesource";
+import { userColumns, userRows, productColumns, restaurantColumns, categoryColumns, driverColumns, orderColumns, restaurantsEarningsColumns} from "../../datatablesource";
 import { Link } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
-import { getCategories, getFoods, getRestaurantsFromFirebase, getUsersFromFirebase} from "../../firebase";
+import { getCategories, getEarnings, getFoods, getRestaurantsFromFirebase, getUsersFromFirebase} from "../../firebase";
 import { decryptData, encryptData } from "../../utils";
 import { RestaurantContext } from "../../context/RestaurantContext";
+import { DotLoader } from "react-spinners";
 
 const Datatable = ({type}) => {
 
@@ -17,7 +18,7 @@ const Datatable = ({type}) => {
 
  const {currentRestaurant} = useContext(RestaurantContext) 
 
- console.log(currentRestaurant)
+// console.log(currentRestaurant)
 
  const [tab, setTab] = useState({})
  const [title, setTitle] = useState()
@@ -76,7 +77,12 @@ const Datatable = ({type}) => {
      
     if(!localStorage.getItem(process.env.REACT_APP_USERS_KEY))
     await getUsersFromFirebase().then(users => localStorage.setItem(process.env.REACT_APP_USERS_KEY, encryptData(users)))
- 
+    
+    if(!localStorage.getItem(process.env.REACT_APP_EARNINGS_KEY))
+    // Convert restaurantsEarnings object to  array before pass to localstorage
+    await getEarnings().then(restaurantsEarnings => localStorage.setItem(process.env.REACT_APP_EARNINGS_KEY, encryptData(Object.keys(restaurantsEarnings).map((restaurant, index) => ({id: index, restaurant:restaurant, earning:restaurantsEarnings[restaurant]}) ))))
+    
+    // await getEarnings().then(restaurantsEarnings =>console.log(Object.keys(restaurantsEarnings).map(restaurant => ({restaurant:restaurant, earnings:restaurantsEarnings[restaurant]}) )))
 
       
     // if(!localStorage.getItem('restaurants'))
@@ -135,6 +141,14 @@ const Datatable = ({type}) => {
           columns: categoryColumns
         })
       break
+      case "earnings":
+        setTitle("Earnings")
+        console.log( decryptData(localStorage.getItem(process.env.REACT_APP_EARNINGS_KEY)))
+        setTab({
+          rows: decryptData(localStorage.getItem(process.env.REACT_APP_EARNINGS_KEY)),
+          columns: restaurantsEarningsColumns
+        })
+      break
       default:
         setTitle("User")
         setTab({
@@ -148,8 +162,12 @@ const Datatable = ({type}) => {
   
   }, [])
 
-   if(!tab.columns)
-   return <div>Bonjour</div>
+   if (!tab.columns)
+   return <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+      
+      <DotLoader color={"#36D7B7"} loading={true}  size={150} />
+    </div>
+
 
   return (
     <div className="datatable">

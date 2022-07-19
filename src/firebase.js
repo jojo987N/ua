@@ -1,7 +1,7 @@
 import {initializeApp} from 'firebase/app'
 import {addDoc, getFirestore, collection, getDocs, doc, deleteDoc, orderBy, query, limit,
 where, onSnapshot, serverTimestamp, updateDoc, Timestamp} from 'firebase/firestore'
-import { users } from './datatablesource';
+// import { users } from './datatablesource';
 
 import { getAuth } from 'firebase/auth';
 
@@ -329,19 +329,14 @@ export const getCategories = ()=>{
 
  }
 
- const addUsers = () => {
+//  const addUsers = () => {
 
    
-      users.forEach(user => {
+//       users.forEach(user => {
 
-        addDoc(usersCol, user).then(()=>console.log("ADDED"))
-      }) 
-        
-
-       
-
-    
-}
+//         addDoc(usersCol, user).then(()=>console.log("ADDED"))
+//       }) 
+// }
 //addUsers()
 
 export const getUsersFromFirebase = () => {
@@ -486,7 +481,9 @@ export const updateOrdersFromFirebase = ()=>{
 
    )}
 
-   // getEarnings().then(restaurant => console.log(restaurant))
+    // getEarnings().then(restaurantsEarnings => {
+    //   console.log(Object.keys(restaurantsEarnings).map((restaurant, index) => ({id: index, restaurant:restaurant, earnings:restaurantsEarnings[restaurant]}) ))
+    // })
 
 
 

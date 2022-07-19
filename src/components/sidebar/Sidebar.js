@@ -102,18 +102,22 @@ const {currentRestaurant} = useContext(RestaurantContext)
             <NotificationsNoneIcon className="icon" />
             <span>Notifications</span>
           </li>
-          <p className="title">SERVICE</p>
+          <p className="title">STATUS</p>
           <li>
             <SettingsSystemDaydreamOutlinedIcon className="icon" />
-            <span>System Health</span>
+            <span>Confirmed</span>
           </li>
           <li>
             <PsychologyOutlinedIcon className="icon" />
-            <span>Logs</span>
+            <span>Cooking</span>
           </li>
           <li>
             <SettingsApplicationsIcon className="icon" />
-            <span>Settings</span>
+            <span>Ready For Pickup</span>
+          </li>
+          <li>
+            <SettingsApplicationsIcon className="icon" />
+            <span>Picked Up</span>
           </li>
           <p className="title">USER</p>
           <Link to="/users/profile" style={{ textDecoration: "none" }}>

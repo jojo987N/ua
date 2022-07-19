@@ -24,10 +24,10 @@ const Home = () => {
       <div className="homeContainer">
         <Navbar />
         <div className="widgets">
-           <Widget type="user" />
-          <Widget type="order" />
+           {currentRestaurant?<Widget type="confirmed-order" />:<Widget type="user" />}
+           {currentRestaurant?<Widget type="cooking-order" />:<Widget type="order" />}
           <Widget type="earning" />
-          <Widget type="driver" /> 
+          {currentRestaurant?<Widget type="ready-for-pickup-order" />:<Widget type="driver" />}
         </div>
         <div className="charts">
           <Featured />
