@@ -41,108 +41,94 @@ const {currentRestaurant} = useContext(RestaurantContext)
 }
   return (
     <div className="sidebar">
-      <div className="top">
-        <Link to="/" style={{ textDecoration: "none" }}>
-          <span className="logo">Good Food</span>
-        </Link>
-      </div>
-      <hr />
-      <div className="center">
-        <ul>
-          <p className="title">MAIN</p>
-          <Link to="/" style={{ textDecoration: "none" }}>
-          <li>
-            <DashboardIcon className="icon" />
-            <span>Dashboard</span>
-          </li>
-          </Link>
-          <p className="title">LISTS</p>
-         {!currentRestaurant && <Link to="/users" style={{ textDecoration: "none" }}>
-            <li>
-              <PersonOutlineIcon className="icon" />
-              <span>Users</span>
-            </li>
-          </Link>}
-          <Link to="/products" style={{ textDecoration: "none" }}>
-            <li>
-              <StoreIcon className="icon" />
-              <span>Menus</span>
-            </li>
-          </Link>
-          <Link to="/orders" style={{ textDecoration: "none" }}>
-          <li>
-            <CreditCardIcon className="icon" />
-            <span>Orders</span>
-          </li>
-          </Link>
-          {!currentRestaurant && <Link to="/drivers" style={{ textDecoration: "none" }}>
-          <li>
-            <LocalShippingIcon className="icon" />
-            <span>Drivers</span>
-          </li>
-          </Link>}
-          {!currentRestaurant && <Link to="/restaurants" style={{ textDecoration: "none" }}>
-            <li>
-            <RestaurantIcon className="icon" />
-            <span>Restaurants</span>
-          </li>
-          </Link>}
-          <Link to="/categories" style={{ textDecoration: "none" }}>
-            <li>
-            <CategoryIcon className="icon" />
-            <span>Categories</span>
-          </li>
-          </Link>
-          <p className="title">USEFUL</p>
-          <li>
-            <InsertChartIcon className="icon" />
-            <span>Stats</span>
-          </li>
-          <li>
-            <NotificationsNoneIcon className="icon" />
-            <span>Notifications</span>
-          </li>
-          <p className="title">STATUS</p>
-          <li>
-            <SettingsSystemDaydreamOutlinedIcon className="icon" />
-            <span>Confirmed</span>
-          </li>
-          <li>
-            <PsychologyOutlinedIcon className="icon" />
-            <span>Cooking</span>
-          </li>
-          <li>
-            <SettingsApplicationsIcon className="icon" />
-            <span>Ready For Pickup</span>
-          </li>
-          <li>
-            <SettingsApplicationsIcon className="icon" />
-            <span>Picked Up</span>
-          </li>
-          <p className="title">USER</p>
-          <Link to="/users/profile" style={{ textDecoration: "none" }}>
-          <li>
-            <AccountCircleOutlinedIcon className="icon" />
-            <span>Profile</span>
-          </li>
-          </Link>
-          <li onClick={signOutUser}>
-            <ExitToAppIcon className="icon" />
-            <span>Logout</span>
-          </li>
-        </ul>
-      </div>
-      <div className="bottom">
-        <div
-          className="colorOption"
-        //   onClick={() => dispatch({ type: "LIGHT" })}
-        ></div>
-        <div
-          className="colorOption"
-        //   onClick={() => dispatch({ type: "DARK" })}
-        ></div>
-      </div>
+    <div className="top">
+      <Link to="/" style={{ textDecoration: "none" }}>
+        <span className="logo">Good Food</span>
+      </Link>
     </div>
+    <hr />
+    <div className="center">
+      <ul>
+        <p className="title">MAIN</p>
+        <Link to="/" style={{ textDecoration: "none" }}>
+        <li>
+           
+          <span>Dashboard</span>
+        </li>
+        </Link>
+        <p className="title">LISTS</p>
+       {!currentRestaurant && <Link to="/users" style={{ textDecoration: "none" }}>
+          <li>
+             <span>Users</span>
+          </li>
+        </Link>}
+        <Link to="/products" style={{ textDecoration: "none" }}>
+          <li>
+             <span>Menus</span>
+          </li>
+        </Link>
+        <Link to="/orders" style={{ textDecoration: "none" }}>
+        <li>
+           <span>Orders</span>
+        </li>
+        </Link>
+        {!currentRestaurant && <Link to="/drivers" style={{ textDecoration: "none" }}>
+        <li>
+           <span>Drivers</span>
+        </li>
+        </Link>}
+        {!currentRestaurant && <Link to="/restaurants" style={{ textDecoration: "none" }}>
+          <li>
+           <span>Restaurants</span>
+        </li>
+        </Link>}
+        <Link to="/categories" style={{ textDecoration: "none" }}>
+          <li>
+           <span>Categories</span>
+        </li>
+        </Link>
+        <p className="title">USEFUL</p>
+        <li>
+           <span>Stats</span>
+        </li>
+        <li>
+           <span>Notifications</span>
+        </li>
+        <p className="title">STATUS</p>
+        <li>
+           <span>Confirmed</span>
+        </li>
+        <li>
+           <span>Cooking</span>
+        </li>
+        <li>
+           <span>Ready For Pickup</span>
+        </li>
+        <li>
+           <span>Picked Up</span>
+        </li>
+        <p className="title">USER</p>
+        <Link to="/users/profile" style={{ textDecoration: "none" }}>
+        <li>
+           <span>Profile</span>
+        </li>
+        </Link>
+        <li onClick={signOutUser}>
+           <span>Logout</span>
+        </li>
+      </ul>
+    </div>
+    <div className="bottom">
+      <div
+        className="colorOption"
+      //   onClick={() => dispatch({ type: "LIGHT" })}
+      ></div>
+      <div
+        className="colorOption"
+      //   onClick={() => dispatch({ type: "DARK" })}
+      ></div>
+    </div>
+  </div>
   );
 };
 

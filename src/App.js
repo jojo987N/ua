@@ -94,7 +94,7 @@ function App() {
               } />
 
               <Route path="login" element={<Login />} />
-              <Route element={<ProtectedRoute currentUser={currentUser} />}>
+              {/* <Route element={<ProtectedRoute currentUser={currentUser} />}> */}
                 <Route path="users">
                   <Route index element={currentUser ? <List key="users" type="users" /> : <Login />} />
                   {/* <Route path=":userId" element={<Single />} /> */}
@@ -163,7 +163,10 @@ function App() {
                   <Route path="menu" element={<Restaurant path={"menu"} />} />
                 </Route>
               </Route>
-            </Route>
+              <Route path="documentation">
+                  <Route index element={<List key="documentation" type="documentation" />} />
+              </Route>
+            {/* </Route> */}
           </Routes>
 
         </BrowserRouter>
