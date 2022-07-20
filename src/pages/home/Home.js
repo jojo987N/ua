@@ -23,21 +23,61 @@ const Home = () => {
       <Sidebar />
       <div className="homeContainer">
         <Navbar />
-        <div className="widgets">
-           {currentRestaurant?<Widget type="confirmed-order" />:<Widget type="user" />}
-           {currentRestaurant?<Widget type="cooking-order" />:<Widget type="order" />}
-          <Widget type="earning" />
-          {currentRestaurant?<Widget type="ready-for-pickup-order" />:<Widget type="driver" />}
+         
+        <div className="folders">
+           
+        <table>
+<tbody>
+<tr><td>📦components</td>
+<td>All components share between all screens</td></tr>
+<tr><td> ┣ 📂home</td></tr>
+<tr><td> ┃ ┣ 📜Categories.js</td></tr>
+<tr><td> ┃ ┣ 📜HeaderTabs.js</td></tr>
+<tr><td> ┃ ┣ 📜HomeHeader.js</td></tr>
+<tr><td> ┃ ┣ 📜RestaurantItems.js</td></tr>
+<tr><td> ┃ ┗ 📜SearchBar.js</td></tr>
+<tr><td> ┣ 📂restaurantDetail</td></tr>
+<tr><td> ┃ ┣ 📜About.js</td></tr>
+<tr><td> ┃ ┣ 📜MenuDetailItems.js</td></tr>
+<tr><td> ┃ ┣ 📜MenuItems.js</td></tr>
+<tr><td> ┃ ┣ 📜OrderItem.js</td></tr>
+<tr><td> ┃ ┣ 📜RestaurantDetailHeader.js</td></tr>
+<tr><td> ┃ ┣ 📜TabviewComponent.js</td></tr>
+<tr><td> ┃ ┗ 📜ViewCart.js</td></tr>
+<tr><td> ┣ 📜Cart.js</td></tr>
+<tr><td> ┣ 📜CartModal.js</td></tr>
+<tr><td> ┣ 📜Checkout.js</td></tr>
+<tr><td> ┣ 📜CookingProgress.js</td></tr>
+<tr><td> ┣ 📜DishListItem.js</td></tr>
+<tr><td> ┣ 📜DisplayMapview.js</td></tr>
+<tr><td> ┣ 📜DisplayPreferences.js</td></tr>
+<tr><td> ┣ 📜DrawerContent.js</td></tr>
+<tr><td> ┣ 📜FilterModal.js</td></tr>
+<tr><td> ┣ 📜GroupFoodHeader.js</td></tr>
+<tr><td> ┣ 📜List.js</td></tr>
+<tr><td> ┣ 📜Loading.js</td></tr>
+<tr><td> ┣ 📜MaxDeliveryFee.js</td></tr>
+<tr><td> ┣ 📜OrderCountDown.js</td></tr>
+<tr><td> ┣ 📜OrderListItem.js</td></tr>
+<tr><td> ┣ 📜PreferenceScreen.js</td></tr>
+<tr><td> ┣ 📜ProgressComponent.js</td></tr>
+<tr><td> ┣ 📜Quantity.js</td></tr>
+<tr><td> ┣ 📜RestaurantDescription.js</td></tr>
+<tr><td> ┣ 📜RestaurantDetailComponent.js</td></tr>
+<tr><td> ┣ 📜RestaurantName.js</td></tr>
+<tr><td> ┣ 📜Reward.js</td></tr>
+<tr><td> ┣ 📜SearchComponent.js</td></tr>
+<tr><td> ┗ 📜menusByGroup.js</td></tr>
+</tbody>
+</table>
+
+ 
+
+ 
         </div>
-        <div className="charts">
-          <Featured />
-          <Chart title="Last 6 Months (Revenue)" aspect={2 / 1} />
-        </div>
-        <div className="listContainer">
-          <div className="listTitle">Latest Orders</div>
-          {/* <Table1 /> */}
-          <List />
-        </div>
+
+        
+        
       </div>
     </div>
   );

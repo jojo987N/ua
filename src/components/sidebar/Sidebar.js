@@ -44,6 +44,7 @@ const {currentRestaurant} = useContext(RestaurantContext)
     <div className="top">
       <Link to="/" style={{ textDecoration: "none" }}>
         <span className="logo">Good Food</span>
+        <span className="logo1">{" "}Docs</span>
       </Link>
     </div>
     <hr />
