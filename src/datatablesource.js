@@ -5,7 +5,7 @@ export const userColumns = [
     { field: "id", headerName: "ID", width: 70 },
     {
       field: "user",
-      headerName: "User",
+      headerName:  <b>User</b>,
       width: 230,
       renderCell: (params) => {
         return (
@@ -20,23 +20,23 @@ export const userColumns = [
     },
     {
       field: "email",
-      headerName: "Email",
+      headerName: <b>Email</b>,
       width: 250,
     },
   
     {
       field: "phone",
-      headerName: "Phone",
+      headerName: <b>Phone</b>,
       width: 150,
     },
     {
       field: "Role",
-      headerName: "Role",
+      headerName: <b>Role</b>,
       width: 100,
     },
     {
       field: "status",
-      headerName: "Status",
+      headerName: <b>Status</b>,
       width: 100,
       renderCell: (params) => {
         return (
@@ -49,95 +49,13 @@ export const userColumns = [
   ];
   
   //temporary data
-  export const userRows = [
-    {
-      id: 1,
-      username: "Snow",
-      img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      status: "active",
-      email: "1snow@gmail.com",
-      age: 35,
-    },
-    {
-      id: 2,
-      username: "Jamie Lannister",
-      img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      email: "2snow@gmail.com",
-      status: "passive",
-      age: 42,
-    },
-    {
-      id: 3,
-      username: "Lannister",
-      img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      email: "3snow@gmail.com",
-      status: "pending",
-      age: 45,
-    },
-    {
-      id: 4,
-      username: "Stark",
-      img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      email: "4snow@gmail.com",
-      status: "active",
-      age: 16,
-    },
-    {
-      id: 5,
-      username: "Targaryen",
-      img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      email: "5snow@gmail.com",
-      status: "passive",
-      age: 22,
-    },
-    {
-      id: 6,
-      username: "Melisandre",
-      img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      email: "6snow@gmail.com",
-      status: "active",
-      age: 15,
-    },
-    {
-      id: 7,
-      username: "Clifford",
-      img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      email: "7snow@gmail.com",
-      status: "passive",
-      age: 44,
-    },
-    {
-      id: 8,
-      username: "Frances",
-      img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      email: "8snow@gmail.com",
-      status: "active",
-      age: 36,
-    },
-    {
-      id: 9,
-      username: "Roxie",
-      img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      email: "snow@gmail.com",
-      status: "pending",
-      age: 65,
-    },
-    {
-      id: 10,
-      username: "Roxie",
-      img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      email: "snow@gmail.com",
-      status: "active",
-      age: 65,
-    },
-  ];
-
+ 
 
   export const productColumns = [
   //  { field: "id", headerName: "ID", width: 70 },
     {
       field: "menu",
-      headerName: "Menu",
+      headerName:  <b>Menu</b>,
       width: 230,
       renderCell: (params) => {
         return (
@@ -150,7 +68,7 @@ export const userColumns = [
     },
     {
       field: "restaurant",
-      headerName: "Restaurant",
+      headerName:  <b>Restaurant</b>,
       width: 230,
       renderCell: (params) => {
         
@@ -167,7 +85,7 @@ export const userColumns = [
     },
     {
       field: "price",
-      headerName: "Price",
+      headerName:  <b>Price</b>,
       width: 150,
       renderCell: (params) => {
         return (
@@ -182,7 +100,7 @@ export const userColumns = [
     },
     {
       field: "category",
-      headerName: "Category",
+      headerName:  <b>Category</b>,
       width: 230,
       renderCell: (params) => {
         
@@ -204,7 +122,7 @@ export const userColumns = [
     //  { field: "id", headerName: "ID", width: 70 },
       {
         field: "restaurant",
-        headerName: "Restaurant",
+        headerName:  <b>Restaurant</b>,
         width: 250,
         renderCell: (params) => {
           return (
@@ -217,13 +135,13 @@ export const userColumns = [
       },
       {
         field: "phone",
-        headerName: "Phone",
+        headerName:  <b>Phone</b>,
         width: 230,
       },
     
       {
         field: "address",
-        headerName: "Address",
+        headerName:  <b>Address</b>,
         width: 350,
         renderCell: (params) => {
           return (
@@ -239,7 +157,7 @@ export const userColumns = [
       //  { field: "id", headerName: "ID", width: 70 },
         {
           field: "category",
-          headerName: "Category",
+          headerName:  <b>Category</b>,
           width: 250,
           renderCell: (params) => {
             return (
@@ -252,7 +170,7 @@ export const userColumns = [
         },
         {
           field: "restaurant",
-          headerName: "Restaurant",
+          headerName:  <b>Restaurant</b>,
           width: 300,
           renderCell: (params) => {
             
@@ -276,7 +194,7 @@ export const userColumns = [
         { field: "id", headerName: "ID", width: 70 },
         {
           field: "driver",
-          headerName: "Driver",
+          headerName:  <b>Driver</b>,
           width: 230,
           renderCell: (params) => {
             return (
@@ -291,13 +209,13 @@ export const userColumns = [
         },
         {
           field: "email",
-          headerName: "Email",
+          headerName:  <b>Email</b>,
           width: 250,
         },
       
         {
           field: "phone",
-          headerName: "Phone",
+          headerName:  <b>Phone</b>,
           width: 150,
         },
         // {
@@ -307,7 +225,7 @@ export const userColumns = [
         // },
         {
           field: "status",
-          headerName: "Status",
+          headerName:  <b>Status</b>,
           width: 100,
           renderCell: (params) => {
             return (
@@ -320,10 +238,16 @@ export const userColumns = [
       ];
 
       export const orderColumns = [
-        { field: "orderId", headerName: "orders ID", width: 100 },
+        // { field: "orderId", headerName: "orders ID", width: 100 },
+        {
+          field: "orderId",
+          headerName: <b>{"orders ID"}</b>,
+          width: 100,
+          renderCell: (params) => params.row.orderId.toUpperCase(),
+        },
         {
           field: "customer",
-          headerName: "Customer",
+          headerName:  <b>Customer</b>,
           width: 180,
           renderCell: (params) => {
             return (
@@ -336,7 +260,7 @@ export const userColumns = [
         },
         {
           field: "restaurant",
-          headerName: "Restaurant",
+          headerName:  <b>Restaurant</b>,
           width: 230,
           renderCell: (params) => {
             return (
@@ -350,7 +274,7 @@ export const userColumns = [
       
         {
           field: "amount",
-          headerName: "Amount",
+          headerName:  <b>Amount</b>,
           width: 150,
           renderCell: (params) => {
             return (
@@ -366,12 +290,12 @@ export const userColumns = [
         },
         {
           field: "orderType",
-          headerName: "Order Type",
+          headerName:  <b>Order Type</b>,
           width: 100,
         },
         {
           field: "status",
-          headerName: "Status",
+          headerName:  <b>Status</b>,
           width: 100,
           renderCell: (params) => {
             return (
@@ -400,12 +324,12 @@ export const userColumns = [
           
           {
             field: "restaurant",
-            headerName: "Restaurant",
+            headerName:  <b>Restaurant</b>,
             width: 350,
           },
           {
             field: "earning",
-            headerName: "Earning",
+            headerName:  <b>Earning</b>,
             width: 350,
             renderCell: (params) => {
               return (

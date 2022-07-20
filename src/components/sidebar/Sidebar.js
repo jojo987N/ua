@@ -93,7 +93,7 @@ const {currentRestaurant} = useContext(RestaurantContext)
             <span>Categories</span>
           </li>
           </Link>
-          <p className="title">USEFUL</p>
+          {/* <p className="title">USEFUL</p>
           <li>
             <InsertChartIcon className="icon" />
             <span>Stats</span>
@@ -118,7 +118,7 @@ const {currentRestaurant} = useContext(RestaurantContext)
           <li>
             <SettingsApplicationsIcon className="icon" />
             <span>Picked Up</span>
-          </li>
+          </li> */}
           <p className="title">USER</p>
           <Link to="/users/profile" style={{ textDecoration: "none" }}>
           <li>

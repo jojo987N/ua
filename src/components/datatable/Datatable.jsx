@@ -41,16 +41,16 @@ const Datatable = ({type}) => {
   const actionColumn = [
     {
       field: "action",
-      headerName: "Action",
+      headerName:  <b>Action</b>,
       width: 200,
       renderCell: (params) => {
 
         
         return (
           <div className="cellAction">
-            <Link to={`/${type}/${(((type==="users" || type === "drivers") && params.row.userId ) || (type === "restaurants" && params.row.restaurantId) ) || params.row.id}`} style={{ textDecoration: "none" }}>
+           {type !== "earnings"?<Link to={`/${type}/${(((type==="users" || type === "drivers") && params.row.userId ) || (type === "restaurants" && params.row.restaurantId) ) || params.row.id}`} style={{ textDecoration: "none" }}>
               <div className="viewButton">View</div>
-            </Link>
+            </Link>:<></>}
             <div
               className="deleteButton"
               onClick={() => handleDelete(params.row.id)}
@@ -106,16 +106,16 @@ const Datatable = ({type}) => {
       }))
       else{
         setTab({
-          rows: decryptData(localStorage.getItem(process.env.REACT_APP_PRODUCTS_KEY)).filter(product => product.restaurantID === currentRestaurant.restaurantId),
+          rows: decryptData(localStorage.getItem(process.env.REACT_APP_PRODUCTS_KEY)),
           columns: productColumns
         })
       }
     
       break
       case "orders":
-        setTitle("Order")
+        setTitle("Orders")
         setTab({
-          rows: decryptData(localStorage.getItem(process.env.REACT_APP_ORDERS_KEY)).filter(order => order.Restaurant.name === currentRestaurant.name),
+          rows: decryptData(localStorage.getItem(process.env.REACT_APP_ORDERS_KEY)),
           columns: orderColumns
         })
         break
@@ -172,10 +172,10 @@ const Datatable = ({type}) => {
   return (
     <div className="datatable">
       <div className="datatableTitle">
-        Add New {title}
-        <Link to={`/${type}/new`} className="link">
+      {type === "earnings" || type === "orders" ?null:"Add New"} {title}
+        {type === "earnings"|| type === "orders"?null:<Link to={`/${type}/new`} className="link">
           Add New
-        </Link>
+        </Link>}
       </div>
       <DataGrid
         className="datagrid"
