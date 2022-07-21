@@ -6,6 +6,7 @@ import FullscreenExitOutlinedIcon from "@mui/icons-material/FullscreenExitOutlin
 import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
 import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutlineOutlined";
 import ListOutlinedIcon from "@mui/icons-material/ListOutlined";
+import AccountMenu from "../accountMenu/AccountMenu";
 //import { DarkModeContext } from "../../context/darkModeContext";
 //import { useContext } from "react";
 
@@ -31,25 +32,27 @@ const Navbar = () => {
             /> */}
           </div>
           <div className="item">
-            <FullscreenExitOutlinedIcon className="icon" />
+            {/* <FullscreenExitOutlinedIcon className="icon" /> */}
+            <AccountMenu />
           </div>
-          <div className="item">
+          {/* <div className="item">
             <NotificationsNoneOutlinedIcon className="icon" />
             <div className="counter">1</div>
           </div>
           <div className="item">
             <ChatBubbleOutlineOutlinedIcon className="icon" />
             <div className="counter">2</div>
-          </div>
-          <div className="item">
+          </div> */}
+          {/* <div className="item">
             <ListOutlinedIcon className="icon" />
-          </div>
+          </div> */}
           <div className="item">
-            <img
+            {/* <img
               src="https://cdn.pixabay.com/photo/2013/07/13/12/07/avatar-159236__340.png"
               alt=""
               className="avatar"
-            />
+            /> */}
+             
           </div>
         </div>
       </div>
