@@ -14,6 +14,7 @@ import { useContext } from "react";
 const Home = () => {
 
   const {currentRestaurant} = useContext(RestaurantContext)
+  const space = " "
 
  // console.log(currentRestaurant)
 
@@ -28,21 +29,20 @@ const Home = () => {
            
         <table>
 <tbody>
-<tr><td>📦components</td>
-<td>All components share between all screens</td></tr>
-<tr><td> ┣ 📂home</td></tr>
-<tr><td> ┃ ┣ 📜Categories.js</td></tr>
-<tr><td> ┃ ┣ 📜HeaderTabs.js</td></tr>
-<tr><td> ┃ ┣ 📜HomeHeader.js</td></tr>
-<tr><td> ┃ ┣ 📜RestaurantItems.js</td></tr>
-<tr><td> ┃ ┗ 📜SearchBar.js</td></tr>
-<tr><td> ┣ 📂restaurantDetail</td></tr>
-<tr><td> ┃ ┣ 📜About.js</td></tr>
-<tr><td> ┃ ┣ 📜MenuDetailItems.js</td></tr>
-<tr><td> ┃ ┣ 📜MenuItems.js</td></tr>
+<tr><td>📦components&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <i style={{color:"grey"}}>All components share between all screens</i></td>
+</tr>
+<tr><td> ┣ 📂home &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i style={{color:"grey"}}>Components in Home screen</i></td></tr>
+<tr><td> ┃ ┣ 📜Categories.js &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i style={{color:"grey"}}>Horizontal <a href="https://reactnative.dev/docs/flatlist"> Flatlist</a> displaying Categories items </i></td></tr>
+<tr><td> ┃ ┣ 📜HeaderTabs.js &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i style={{color:"grey"}}> Buttons to navigate between pickup and delivery screen </i></td></tr>
+<tr><td> ┃ ┣ 📜HomeHeader.js &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i style={{color:"grey"}}>Contain menu and filter icon component</i></td></tr>
+<tr><td> ┃ ┣ 📜RestaurantItems.js &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i style={{color:"grey"}}>Restaurant image , name, ratings , view component  </i></td></tr>
+<tr><td> ┃ ┗ 📜SearchBar.js &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i style={{color:"grey"}}><a href="https://www.npmjs.com/package/react-native-google-places-autocomplete">Google Maps Search</a> Component  </i></td></tr>
+<tr><td> ┣ 📂restaurantDetail <i style={{color:"grey"}}>Components in Restaurant details screen</i></td></tr>
+<tr><td> ┃ ┣ 📜About.js <i style={{color:"grey"}}>Contain restaurant ratings, categories,price size, opening time</i></td></tr>
+<tr><td> ┃ ┣ 📜MenuItems.js <i style={{color:"grey"}}>Menu image, title, description views </i></td></tr>
 <tr><td> ┃ ┣ 📜OrderItem.js</td></tr>
-<tr><td> ┃ ┣ 📜RestaurantDetailHeader.js</td></tr>
-<tr><td> ┃ ┣ 📜TabviewComponent.js</td></tr>
+<tr><td> ┃ ┣ 📜RestaurantDetailHeader.js <i style={{color:"grey"}}>Menu items search food by group</i></td></tr>
 <tr><td> ┃ ┗ 📜ViewCart.js</td></tr>
 <tr><td> ┣ 📜Cart.js</td></tr>
 <tr><td> ┣ 📜CartModal.js</td></tr>
