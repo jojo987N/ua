@@ -24,6 +24,7 @@ const New = ({ inputs, title, type}) => {
   const itemId = useParams()[paramName]
   let data;
 
+   
    console.log(type === 'user'?process.env.REACT_APP_USERS_KEY:type)
    //console.log(`${type}s`)
   //console.log(paramName)
@@ -73,7 +74,11 @@ const New = ({ inputs, title, type}) => {
     }),
      
   }
-
+  
+  const handleSubmit = (e)=>{
+    
+    e.preventDefault();
+  }
 
   // const options = [
   //   { value: 'chocolate', label: 'Chocolate' },
@@ -106,7 +111,7 @@ const New = ({ inputs, title, type}) => {
             />
           </div>
           <div className="right">
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className="formInput">
                 <label htmlFor="file">
                   {type === "drivers"?"Car Image":"Image"}: <DriveFolderUploadOutlinedIcon className="icon" />
@@ -127,7 +132,8 @@ const New = ({ inputs, title, type}) => {
                   value={
                    // (userId && user[input.alias]) || 
                     // (itemId && itemId !== "profile" && (data[input.alias]))} 
-                   itemId !== "profile"?data[input.alias]:input.placeholder} 
+                  //  itemId !== "profile"?data[input.alias]:input.placeholder} 
+                  itemId !== "profile"?data?data[input.alias]:"":input.placeholder} 
                   />
                 </div>
               ))}

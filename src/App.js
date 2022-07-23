@@ -7,7 +7,7 @@ import { decryptData, encryptData } from "./utils";
 
 import { BrowserRouter, Routes, Route, Navigate, Outlet } from "react-router-dom";
 import { carInputs, categoryInputs, productInputs, restaurantInputs, userInputs } from "./formSource";
-import { getOrdersFromFirebase } from './firebase'
+import { auth, getOrdersFromFirebase } from './firebase'
 import { useContext, useEffect, useLayoutEffect, useState } from "react";
 import { OrdersContext } from "./context/OrdersContext"
 import Restaurant from "./pages/restaurant/Restaurant";
@@ -16,6 +16,7 @@ import PrivateRoute from "./components/privateRoute/PrivateRoute";
 import { RestaurantProvider } from "./context/RestaurantContext";
 import { LoadingProvider } from "./context/LoadingContext";
 import { AuthContext } from "./context/Auth";
+import { onAuthStateChanged } from "firebase/auth";
 
 
 
@@ -24,10 +25,23 @@ import { AuthContext } from "./context/Auth";
 // import { DarkModeContext } from "./context/darkModeContext";
 
 const ProtectedRoute = ({ currentUser }) => {
+  
   if (!currentUser)
     return <Navigate to={"/"} replace />
 
   return <Outlet />
+}
+
+const ProtectedRoute1 = () => {
+
+  onAuthStateChanged(auth, (user)=>{
+
+    if (!user)
+    return <Navigate to={"/"} replace />
+  })
+
+  return <Outlet />
+  
 }
 
 function App() {
@@ -95,8 +109,9 @@ function App() {
 
               <Route path="login" element={<Login />} />
               <Route element={<ProtectedRoute currentUser={currentUser} />}>
+              {/* <Route element={<ProtectedRoute />}> */}
                 <Route path="users">
-                  <Route index element={currentUser ? <List key="users" type="users" /> : <Login />} />
+                  <Route index element={<List key="users" type="users" /> } />
                   {/* <Route path=":userId" element={<Single />} /> */}
                   <Route path=":userId" element={<New inputs={userInputs} type="user" title="Update User" />} />
                   <Route
