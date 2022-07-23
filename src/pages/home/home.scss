@@ -17,12 +17,19 @@
       table { 
         border-spacing: 0;
         border-collapse: collapse;
+        border: 1px dotted rgba(0, 0, 139, 0.596);
+        margin-left: 20px
+ 
         
         }
 
       td {
-        padding: 0; 
-   margin: 0;
+        padding-left: 10px; 
+        padding-right: 10px; 
+        border: 1px dotted rgba(0, 0, 139, 0.596);
+        margin: 0;
+        font-size: 15px;
+
   //  color: red;
       }
   

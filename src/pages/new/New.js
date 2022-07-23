@@ -126,7 +126,8 @@ const New = ({ inputs, title, type}) => {
                   placeholder={input.placeholder}
                   value={
                    // (userId && user[input.alias]) || 
-                   (itemId && itemId !== "profile" && (data[input.alias]))} 
+                    // (itemId && itemId !== "profile" && (data[input.alias]))} 
+                   itemId !== "profile"?data[input.alias]:input.placeholder} 
                   />
                 </div>
               ))}

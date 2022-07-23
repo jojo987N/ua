@@ -10,6 +10,7 @@ import List from "../../components/table/Table";
 //import { AuthContext } from "../../context/Auth";
 import { RestaurantContext } from "../../context/RestaurantContext";
 import { useContext } from "react";
+import {Card} from 'antd'
 
 const Home = () => {
 
@@ -27,49 +28,50 @@ const Home = () => {
          
         <div className="folders">
            
-        <table>
+        <Card title={"Folder Structure"} style={{margin: 20}}>
+
+        <table >
 <tbody>
-<tr><td>📦components&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <i style={{color:"grey"}}>All components share between all screens</i></td>
-</tr>
-<tr><td> ┣ 📂home &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i style={{color:"grey"}}>Components in Home screen</i></td></tr>
-<tr><td> ┃ ┣ 📜Categories.js &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i style={{color:"grey"}}>Horizontal <a href="https://reactnative.dev/docs/flatlist"> Flatlist</a> displaying Categories items </i></td></tr>
-<tr><td> ┃ ┣ 📜HeaderTabs.js &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i style={{color:"grey"}}> Buttons to navigate between pickup and delivery screen </i></td></tr>
-<tr><td> ┃ ┣ 📜HomeHeader.js &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i style={{color:"grey"}}>Contain menu and filter icon component</i></td></tr>
-<tr><td> ┃ ┣ 📜RestaurantItems.js &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i style={{color:"grey"}}>Restaurant image , name, ratings , view component  </i></td></tr>
-<tr><td> ┃ ┗ 📜SearchBar.js &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i style={{color:"grey"}}><a href="https://www.npmjs.com/package/react-native-google-places-autocomplete">Google Maps Search</a> Component  </i></td></tr>
-<tr><td> ┣ 📂restaurantDetail <i style={{color:"grey"}}>Components in Restaurant details screen</i></td></tr>
-<tr><td> ┃ ┣ 📜About.js <i style={{color:"grey"}}>Contain restaurant ratings, categories,price size, opening time</i></td></tr>
-<tr><td> ┃ ┣ 📜MenuItems.js <i style={{color:"grey"}}>Menu image, title, description views </i></td></tr>
-<tr><td> ┃ ┣ 📜OrderItem.js</td></tr>
-<tr><td> ┃ ┣ 📜RestaurantDetailHeader.js <i style={{color:"grey"}}>Menu items search food by group</i></td></tr>
-<tr><td> ┃ ┗ 📜ViewCart.js</td></tr>
-<tr><td> ┣ 📜Cart.js</td></tr>
-<tr><td> ┣ 📜CartModal.js</td></tr>
-<tr><td> ┣ 📜Checkout.js</td></tr>
-<tr><td> ┣ 📜CookingProgress.js</td></tr>
-<tr><td> ┣ 📜DishListItem.js</td></tr>
-<tr><td> ┣ 📜DisplayMapview.js</td></tr>
-<tr><td> ┣ 📜DisplayPreferences.js</td></tr>
-<tr><td> ┣ 📜DrawerContent.js</td></tr>
-<tr><td> ┣ 📜FilterModal.js</td></tr>
-<tr><td> ┣ 📜GroupFoodHeader.js</td></tr>
-<tr><td> ┣ 📜List.js</td></tr>
-<tr><td> ┣ 📜Loading.js</td></tr>
-<tr><td> ┣ 📜MaxDeliveryFee.js</td></tr>
-<tr><td> ┣ 📜OrderCountDown.js</td></tr>
-<tr><td> ┣ 📜OrderListItem.js</td></tr>
-<tr><td> ┣ 📜PreferenceScreen.js</td></tr>
-<tr><td> ┣ 📜ProgressComponent.js</td></tr>
-<tr><td> ┣ 📜Quantity.js</td></tr>
-<tr><td> ┣ 📜RestaurantDescription.js</td></tr>
-<tr><td> ┣ 📜RestaurantDetailComponent.js</td></tr>
-<tr><td> ┣ 📜RestaurantName.js</td></tr>
-<tr><td> ┣ 📜Reward.js</td></tr>
-<tr><td> ┣ 📜SearchComponent.js</td></tr>
-<tr><td> ┗ 📜menusByGroup.js</td></tr>
+ 
+<tr><td>📦uber-eats-clone</td></tr>
+<tr><td> ┣ 📂assets</td>
+<td><i style={{marginLeft: 20,color:"grey"}}>Any file that the app need at runtime, contain all static image files, icons, animations, fonts </i></td></tr>
+
+<tr><td> ┣ 📂components</td>
+<td><i style={{marginLeft: 20,color:"grey"}}>Contain all components shared between screens, all applications, reusable and UI components </i></td></tr>
+<tr><td> ┣ 📂contexts</td>
+<td><i style={{marginLeft: 20,color:"grey"}}>Context is designed to share data that can be considered global to a component tree </i></td></tr>
+<tr><td> ┣ 📂navigation</td></tr>
+<tr><td> ┣ 📂node_modules</td></tr>
+<tr><td> ┣ 📂redux</td></tr>
+<tr><td> ┣ 📂screens</td></tr>
+<tr><td> ┣ 📜.gitignore</td></tr>
+<tr><td> ┣ 📜App.js</td></tr>
+<tr><td> ┣ 📜README.md</td></tr>
+<tr><td> ┣ 📜babel.config.js</td></tr>
+<tr><td> ┣ 📜data.js</td></tr>
+<tr><td> ┣ 📜firebase.js</td></tr>
+<tr><td> ┣ 📜global.js</td></tr>
+<tr><td> ┣ 📜package.json</td></tr>
+<tr><td> ┣ 📜utils.js</td></tr>
+<tr><td> ┗ 📜yarn.lock</td></tr>
 </tbody>
 </table>
+
+          {/* <table style={{marginLeft: 40}}>
+          <tbody>
+          <tr><td>📦.expo
+            <i style={{marginLeft: 20,color:"grey"}}>All components share between all screens</i></td>
+          </tr>
+          <tr><td>┣📜README.md
+            <i style={{marginLeft: 20,color:"grey"}}>All components share between all screens</i></td>
+          </tr>
+          <tr><td> ┣ 📂home <i style={{marginLeft: 20,color:"grey"}}>Components in Home screen</i></td></tr>
+          <tr><td> ┣ 📂restaurantDetail <i style={{marginLeft: 20,color:"grey"}}>Components in Restaurant details screen</i></td></tr>
+           
+          </tbody>
+          </table> */}
+        </Card>
 
  
 
@@ -84,3 +86,5 @@ const Home = () => {
 };
 
 export default Home;
+
+ 
