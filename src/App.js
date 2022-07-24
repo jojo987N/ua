@@ -89,14 +89,14 @@ function App() {
 
               <Route index element={
 
-                <PrivateRoute />
-                // <Home />
+                // <PrivateRoute />
+                 <Home />
               } />
 
               <Route path="login" element={<Login />} />
               {/* <Route element={<ProtectedRoute currentUser={currentUser} />}> */}
                 <Route path="users">
-                  <Route index element={currentUser ? <List key="users" type="users" /> : <Login />} />
+                  <Route index element={<List key="users" type="users" /> } />
                   {/* <Route path=":userId" element={<Single />} /> */}
                   <Route path=":userId" element={<New inputs={userInputs} type="user" title="Update User" />} />
                   <Route

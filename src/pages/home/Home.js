@@ -41,12 +41,18 @@ const Home = () => {
 <td><i style={{marginLeft: 20,color:"grey"}}>Contain all components shared between screens, all applications, reusable and UI components </i></td></tr>
 <tr><td> ┣ 📂contexts</td>
 <td><i style={{marginLeft: 20,color:"grey"}}>Context is designed to share data that can be considered global to a component tree </i></td></tr>
-<tr><td> ┣ 📂navigation</td></tr>
-<tr><td> ┣ 📂node_modules</td></tr>
-<tr><td> ┣ 📂redux</td></tr>
-<tr><td> ┣ 📂screens</td></tr>
-<tr><td> ┣ 📜.gitignore</td></tr>
-<tr><td> ┣ 📜App.js</td></tr>
+<tr><td> ┣ 📂navigation</td>
+<td><i style={{marginLeft: 20,color:"grey"}}>Contain all stack navigators, to manage the navigation history and presentation of appropriate screen  </i></td></tr>
+<tr><td> ┣ 📂node_modules</td>
+<td><i style={{marginLeft: 20,color:"grey"}}>Directory created by npm and a way of tracking each installed packages. A cache for the external modules  </i></td></tr>
+<tr><td> ┣ 📂redux</td>
+<td><i style={{marginLeft: 20,color:"grey"}}>Contain reducers, actions , state container, a store to store the state of the variables  </i></td></tr>
+<tr><td> ┣ 📂screens</td>
+<td><i style={{marginLeft: 20,color:"grey"}}>contain all screens of app, components can be handled by some navigator  </i></td></tr>
+<tr><td> ┣ 📜.gitignore</td>
+<td><i style={{marginLeft: 20,color:"grey"}}>Specifies untracked files that git should ignore. Files already tracked by git are not affected </i></td></tr>
+<tr><td> ┣ 📜App.js</td>
+<td><i style={{marginLeft: 20,color:"grey"}}>Main component, which acts as a container for all other components . </i></td></tr>
 <tr><td> ┣ 📜README.md</td></tr>
 <tr><td> ┣ 📜babel.config.js</td></tr>
 <tr><td> ┣ 📜data.js</td></tr>
