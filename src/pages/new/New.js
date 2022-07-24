@@ -8,6 +8,7 @@ import { useState } from "react";
 import TimePicker from 'react-time-picker';
 //import TimePicker from 'react-time-picker/dist/entry.nostyle';
 
+import { Button, Modal, Space } from 'antd';
 
 import Select from 'react-select'
 import { useParams } from "react-router-dom";
@@ -79,6 +80,13 @@ const New = ({ inputs, title, type}) => {
     
     e.preventDefault();
   }
+
+  const warning = () => {
+    Modal.warning({
+      title: 'This is a demo version',
+      content: 'Modification is not allowed',
+    });
+  };
 
   // const options = [
   //   { value: 'chocolate', label: 'Chocolate' },
@@ -204,7 +212,8 @@ const New = ({ inputs, title, type}) => {
               </div>
               </>  }
               
-              <button className="button">Send</button>
+              <button className="button" onClick={warning} >Send</button>
+               
             </form>
              
           </div>
