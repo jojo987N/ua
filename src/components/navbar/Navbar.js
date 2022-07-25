@@ -17,7 +17,7 @@ const Navbar = () => {
   //const { dispatch } = useContext(DarkModeContext);
 
   const countDown = () => {
-    let secondsToGo = 5;
+    let secondsToGo = 30;
   
     const modal = Modal.success({
       title: 'This is a notification message',
