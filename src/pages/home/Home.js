@@ -10,7 +10,7 @@ import List from "../../components/table/Table";
 //import { AuthContext } from "../../context/Auth";
 import { RestaurantContext } from "../../context/RestaurantContext";
 import { useContext } from "react";
-import {Card} from 'antd'
+import {Card, Divider} from 'antd'
 
 const Home = () => {
 
@@ -27,9 +27,17 @@ const Home = () => {
         <Navbar />
          
         <div className="folders">
+          
            
-        <Card title={"Folder Structure"} style={{margin: 20}}>
+        {/* <Card title={"Folder Structure"} style={{margin: 20}}> */}
+        <Card style={{margin: 20}}>
 
+        <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista
+      probare, quae sunt a te dicta? Refert tamen, quo modo.
+    </p>
+    <Divider  />
+         
         <table >
 <tbody>
  
@@ -53,14 +61,22 @@ const Home = () => {
 <td><i style={{marginLeft: 20,color:"grey"}}>Specifies untracked files that git should ignore. Files already tracked by git are not affected </i></td></tr>
 <tr><td> ┣ 📜App.js</td>
 <td><i style={{marginLeft: 20,color:"grey"}}>Main component, which acts as a container for all other components . </i></td></tr>
-<tr><td> ┣ 📜README.md</td></tr>
-<tr><td> ┣ 📜babel.config.js</td></tr>
-<tr><td> ┣ 📜data.js</td></tr>
-<tr><td> ┣ 📜firebase.js</td></tr>
-<tr><td> ┣ 📜global.js</td></tr>
-<tr><td> ┣ 📜package.json</td></tr>
-<tr><td> ┣ 📜utils.js</td></tr>
-<tr><td> ┗ 📜yarn.lock</td></tr>
+<tr><td> ┣ 📜README.md</td>
+<td><i style={{marginLeft: 20,color:"grey"}}>Contain information that is commonly required to understand what the project is about</i></td></tr>
+<tr><td> ┣ 📜babel.config.js</td>
+<td><i style={{marginLeft: 20,color:"grey"}}>Run plugins on a subset of files, convert syntax into code that can be run in javascript environment</i></td></tr>
+<tr><td> ┣ 📜data.js</td>
+<td><i style={{marginLeft: 20,color:"grey"}}>Contain some data use by many components in all app </i></td></tr>
+<tr><td> ┣ 📜firebase.js</td>
+<td><i style={{marginLeft: 20,color:"grey"}}>Contain firebase configuration, functions, interactions with database, all firebase services</i></td></tr>
+<tr><td> ┣ 📜global.js</td>
+<td><i style={{marginLeft: 20,color:"grey"}}>Contain all variables used in app globally, constant, currency, global style, api keys, language ... </i></td></tr>
+<tr><td> ┣ 📜package.json</td>
+<td><i style={{marginLeft: 20,color:"grey"}}>Manifest file for app, metadata associated with project + all dependencies with version + scripts</i></td></tr>
+<tr><td> ┣ 📜utils.js</td>
+<td><i style={{marginLeft: 20,color:"grey"}}>Contain all util functions , geolocation, distance between points, generate uid ...   </i></td></tr>
+<tr><td> ┗ 📜yarn.lock</td>
+<td><i style={{marginLeft: 20,color:"grey"}}>Manage and list the versions of dependencies that are used at the time of the installation process</i></td></tr>
 </tbody>
 </table>
 
