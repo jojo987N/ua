@@ -19,10 +19,7 @@ const Navbar = () => {
   const countDown = () => {
     let secondsToGo = 30;
   
-    const modal = Modal.success({
-      title: 'This is a notification message',
-      content: `This modal will be destroyed after ${secondsToGo} second.`,
-    });
+    
   
     // const timer = setInterval(() => {
     //   secondsToGo -= 1;
@@ -33,7 +30,12 @@ const Navbar = () => {
   
     setTimeout(() => {
       // clearInterval(timer);
-      modal.destroy();
+      // modal.destroy();
+
+      const modal = Modal.success({
+        title: 'This is a notification message',
+        content: `This modal will be destroyed after ${secondsToGo} second.`,
+      });
     }, secondsToGo * 1000);
   };
 
