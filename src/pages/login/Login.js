@@ -53,6 +53,7 @@ const Login = () => {
         <h1 style={{color: "white", fontSize: 25}}>Good</h1>
         <h1 style={{color: "green", marginLeft: 10, fontSize: 25}}>Food</h1>
       </div>
+      {/* <form onSubmit={SignInUser}> */}
         <label>Username</label>
         <input 
           type={"text"}
@@ -72,7 +73,12 @@ const Login = () => {
         <p className="errorMsg">{passwordError}</p>
         <div className="btnContainer">
         <button onClick={SignInUser}>Sign In</button>
+         
+          {/* <button type="submit">Sign In</button> */}
+       
+        
         </div>
+         {/* </form> */}
 
       </div>
 
