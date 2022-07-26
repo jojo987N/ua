@@ -11,11 +11,16 @@ import List from "../../components/table/Table";
 import { RestaurantContext } from "../../context/RestaurantContext";
 import { useContext } from "react";
 import {Card, Divider} from 'antd'
+// import SyntaxHighlighter from 'react-syntax-highlighter';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+
+
 
 const Home = () => {
 
   const {currentRestaurant} = useContext(RestaurantContext)
-  const space = " "
+  const codeString = 'npm install ';
 
  // console.log(currentRestaurant)
 
@@ -47,19 +52,23 @@ const Home = () => {
 
 <p>&nbsp;</p>
 
-<h4>STEP 1 - Install Node.js</h4>
+<h4><span style={{fontSize: 18}}><strong>STEP 1 - Install Node.js</strong></span></h4>
 
 <p>If you have the Node 10 LTS or greater installed on your machine. kindly move to the next step!, If you dont, visit&nbsp;<a href="https://nodejs.org/en/">nodejs website</a>&nbsp;to install the recommended version for your OS.</p>
 
 <p>&nbsp;</p>
 
-<h4>STEP 2 - Install the Expo CLI</h4>
+<h4><strong><span style={{fontSize: 18}}>STEP 2 - Install the Expo CLI</span></strong></h4>
 
 <p>We&#39;ll install Expo CLI with npm, npm comes along with Node, you can confirm this by running the following command.</p>
 
 <p>&nbsp;</p>
 
+ 
 
+<SyntaxHighlighter language="javascript" style={a11yDark}>
+      {codeString}
+    </SyntaxHighlighter>
 
 
 
