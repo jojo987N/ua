@@ -7,6 +7,10 @@ import { getCategories, getEarnings, getFoods, getRestaurantsFromFirebase, getUs
 import { decryptData, encryptData } from "../../utils";
 import { RestaurantContext } from "../../context/RestaurantContext";
 import { DotLoader } from "react-spinners";
+import { ExclamationCircleOutlined } from '@ant-design/icons';
+import { Modal, Space } from 'antd';
+
+
 
 const Datatable = ({type}) => {
 
@@ -15,6 +19,7 @@ const Datatable = ({type}) => {
   //const [data, setData] = useState([]);
 
  // let tab;
+ const { confirm } = Modal;
 
  const {currentRestaurant} = useContext(RestaurantContext) 
 
@@ -27,8 +32,29 @@ const Datatable = ({type}) => {
  // console.log(type)
   //const [data, setData] = useState(tab.rows);
 
+
+  const showDeleteConfirm = (id) => {
+    confirm({
+      title: 'Are you sure delete this task?',
+      icon: <ExclamationCircleOutlined />,
+      content: 'Some descriptions',
+      okText: 'Yes',
+      okType: 'danger',
+      cancelText: 'No',
+      onOk() {
+        console.log('OK');
+        handleDelete(id)
+      },
+      onCancel() {
+        console.log('Cancel');
+      },
+    });
+  };
+
   const handleDelete = (id) => {
    // setData(data.filter((item) => item.id !== id));
+
+
 
     setTab({
       rows: tab.rows.filter(item => item.id !== id),
@@ -53,7 +79,8 @@ const Datatable = ({type}) => {
             </Link>:<></>}
             <div
               className="deleteButton"
-              onClick={() => handleDelete(params.row.id)}
+              // onClick={() => handleDelete(params.row.id)}
+              onClick={() => showDeleteConfirm(params.row.id)}
             >
               Delete
             </div>
