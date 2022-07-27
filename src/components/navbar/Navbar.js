@@ -10,16 +10,14 @@ import AccountMenu from "../accountMenu/AccountMenu";
 //import { DarkModeContext } from "../../context/darkModeContext";
 //import { useContext } from "react";
 import { Button, Modal, Space } from 'antd';
-import { useEffect } from "react";
+import { useCallback, useEffect } from "react";
 
 
 const Navbar = () => {
   //const { dispatch } = useContext(DarkModeContext);
 
-  const countDown = () => {
+  const countDown = useCallback(() => {
     let secondsToGo = 30;
-  
-    
   
     // const timer = setInterval(() => {
     //   secondsToGo -= 1;
@@ -37,10 +35,12 @@ const Navbar = () => {
         content: `This modal will be destroyed after ${secondsToGo} second.`,
       });
     }, secondsToGo * 1000);
-  };
+  }, [])
+
+  countDown()
 
   useEffect(()=>{
-    countDown()
+    
   }, [])
 
   return (
