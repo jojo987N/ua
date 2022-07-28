@@ -20,7 +20,7 @@ import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 const Home = () => {
 
   const {currentRestaurant} = useContext(RestaurantContext)
-  const codeString = 'npm install ';
+  const codeString = 'npm -v';
 
  // console.log(currentRestaurant)
 
@@ -62,13 +62,43 @@ const Home = () => {
 
 <p>We&#39;ll install Expo CLI with npm, npm comes along with Node, you can confirm this by running the following command.</p>
 
-<p>&nbsp;</p>
+ 
 
  
 
 <SyntaxHighlighter language="javascript" style={a11yDark}>
       {codeString}
     </SyntaxHighlighter>
+    <p>&nbsp;</p>
+    <p>it will print the version of npm installed in your machine.</p>
+
+<p>Now, we install Expo CLI by running the following command:</p>
+
+<SyntaxHighlighter language="javascript" style={a11yDark}>
+npm install -g expo-cli
+
+    </SyntaxHighlighter>
+<p>&nbsp;</p>
+<p>When you download after you need to install all package in&nbsp;<code>package.json</code></p>
+<SyntaxHighlighter language="javascript" style={a11yDark}>
+npm install 
+
+    </SyntaxHighlighter>
+    
+<p>&nbsp;</p>
+<p>then you need to start another terminal</p>
+
+<SyntaxHighlighter language="javascript" style={a11yDark}>
+npm start 
+
+    </SyntaxHighlighter>
+
+<p>&nbsp;</p>
+
+
+
+
+
 
 
 
