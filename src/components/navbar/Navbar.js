@@ -14,38 +14,29 @@ import { useCallback, useEffect } from "react";
 import {useLocation} from "react-router-dom"
 
 
+export const countDown = () => {
+  let secondsToGo = 30;
+
+  setTimeout(() => {
+    
+    const modal = Modal.success({
+      title: 'This is a notification message',
+      content: `This modal will be destroyed after ${secondsToGo} second.`,
+    });
+  }, secondsToGo * 1000);
+} 
+
+
 const Navbar = () => {
   //const { dispatch } = useContext(DarkModeContext);
 
   let location = useLocation()
 
-  const countDown = () => {
-    let secondsToGo = 30;
-  
-    // const timer = setInterval(() => {
-    //   secondsToGo -= 1;
-    //   modal.update({
-    //     content: `This modal will be destroyed after ${secondsToGo} second.`,
-    //   });
-    // }, 1000);
-  
-    setTimeout(() => {
-      // clearInterval(timer);
-      // modal.destroy();
-
-      const modal = Modal.success({
-        title: 'This is a notification message',
-        content: `This modal will be destroyed after ${secondsToGo} second.`,
-      });
-    }, secondsToGo * 1000);
-  } 
-  
-  
 
   useEffect(()=>{
 
-    if(location.pathname === '/')
-    countDown()
+    // if(location.pathname === '/')
+    // countDown()
     
   }, [])
 

@@ -3,6 +3,7 @@ import React, { createContext, useCallback, useContext, useEffect, useLayoutEffe
 import { auth, getRestaurantById } from '../firebase';
 import { RestaurantContext } from './RestaurantContext';
 import { LoadingContext } from './LoadingContext';
+import { countDown } from '../components/navbar/Navbar';
 
 
 export const AuthContext = createContext();
@@ -21,6 +22,8 @@ export const AuthProvider = ({ children }) => {
              
             //let restaurant;
             if(user){
+
+                countDown()
                 getRestaurantById(user.uid).then((restaurant)=>{
 
                     if(restaurant){
