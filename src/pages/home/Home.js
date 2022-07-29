@@ -52,7 +52,9 @@ const Home = () => {
 
 <p>&nbsp;</p>
 
-<h4><span style={{fontSize: 18}}><strong>STEP 1 - Install Node.js</strong></span></h4>
+<p><strong><span style={{fontSize: 22}}>How to Install Node.js and NPM on Windows</span></strong></p>
+
+ <h4><span style={{fontSize: 18}}><strong>STEP 1 - Install Node.js</strong></span></h4>
 
 <p>If you have the Node 10 LTS or greater installed on your machine. kindly move to the next step!, If you dont, visit&nbsp;<a href="https://nodejs.org/en/">nodejs website</a>&nbsp;to install the recommended version for your OS.</p>
 
