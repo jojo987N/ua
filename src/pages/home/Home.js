@@ -13,7 +13,10 @@ import { useContext } from "react";
 import {Card, Divider} from 'antd'
 // import SyntaxHighlighter from 'react-syntax-highlighter';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+ import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import myImage from '../../assets/images/capture-comment.png'
+
+ 
 
 
 
@@ -54,11 +57,16 @@ const Home = () => {
 
 <p><strong><span style={{fontSize: 22}}>How to Install Node.js and NPM on Windows</span></strong></p>
 
- <h4><span style={{fontSize: 18}}><strong>STEP 1 - Install Node.js</strong></span></h4>
+<h3><strong>Step 1: Download Node.js Installer</strong></h3>
 
-<p>If you have the Node 10 LTS or greater installed on your machine. kindly move to the next step!, If you dont, visit&nbsp;<a href="https://nodejs.org/en/">nodejs website</a>&nbsp;to install the recommended version for your OS.</p>
+<p>In a web browser, navigate to&nbsp;<a href="https://nodejs.org/en/download/" rel="noreferrer noopener" target="_blank">https://nodejs.org/en/download/</a>. Click the&nbsp;<strong>Windows Installer</strong>&nbsp;button to download the latest default version. At the time this article was written, version 16.16.0-x64 was the latest version. The Node.js installer includes the NPM package manager.</p>
 
 <p>&nbsp;</p>
+<img  src={require("../../assets/images/capture-comment.png")} style={{width: 700, height: 400}} alt="avatar" />
+
+<p>&nbsp;</p>
+
+<p>Installing Node.js on macOS follows almost the same procedure as on Windows. All you have to do is download the installer file for Mac. Then, as soon as you start it, the installer will guide you through the rest</p>
 
 <h4><strong><span style={{fontSize: 18}}>STEP 2 - Install the Expo CLI</span></strong></h4>
 
