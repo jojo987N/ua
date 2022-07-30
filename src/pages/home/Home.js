@@ -38,9 +38,9 @@ const Home = () => {
           
            
             
-          {/* <Card title={"Folder Structure"} style={{ margin: 20 }}>
+          <Card title={"Folder Structure"} style={{ margin: 20 }}>
             <FolderStructure />
-          </Card> */}
+          </Card>
 
         <Card >
          
@@ -90,20 +90,24 @@ npm install -g expo-cli
     </SyntaxHighlighter>
 <p>&nbsp;</p>
 <p>When you download after you need to install all package in&nbsp;<code>package.json</code></p>
+<p>Navigate to the downloaded Good Food folder using terminal and run</p>
 <SyntaxHighlighter language="javascript" style={a11yDark}>
 npm install 
 
     </SyntaxHighlighter>
     
 <p>&nbsp;</p>
-<p>then you need to start another terminal</p>
+<p>Now the project is all set to go. Navigate into the newly created folder and type in the npm start.</p>
 
 <SyntaxHighlighter language="javascript" style={a11yDark}>
 npm start 
 
     </SyntaxHighlighter>
 
+    <p> npm start will now start up the Expo development to the Expo Dev Tools and a new tab should open in your browser.</p>
+
 <p>&nbsp;</p>
+
 
 
 
