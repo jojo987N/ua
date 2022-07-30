@@ -93,32 +93,7 @@ const {currentRestaurant} = useContext(RestaurantContext)
             <span>Categories</span>
           </li>
           </Link>
-          {/* <p className="title">USEFUL</p>
-          <li>
-            <InsertChartIcon className="icon" />
-            <span>Stats</span>
-          </li>
-          <li>
-            <NotificationsNoneIcon className="icon" />
-            <span>Notifications</span>
-          </li>
-          <p className="title">STATUS</p>
-          <li>
-            <SettingsSystemDaydreamOutlinedIcon className="icon" />
-            <span>Confirmed</span>
-          </li>
-          <li>
-            <PsychologyOutlinedIcon className="icon" />
-            <span>Cooking</span>
-          </li>
-          <li>
-            <SettingsApplicationsIcon className="icon" />
-            <span>Ready For Pickup</span>
-          </li>
-          <li>
-            <SettingsApplicationsIcon className="icon" />
-            <span>Picked Up</span>
-          </li> */}
+           
           <p className="title">USER</p>
           <Link to="/users/profile" style={{ textDecoration: "none" }}>
           <li>
@@ -135,11 +110,11 @@ const {currentRestaurant} = useContext(RestaurantContext)
       <div className="bottom">
         <div
           className="colorOption"
-        //   onClick={() => dispatch({ type: "LIGHT" })}
+        
         ></div>
         <div
           className="colorOption"
-        //   onClick={() => dispatch({ type: "DARK" })}
+         
         ></div>
       </div>
     </div>
