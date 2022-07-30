@@ -13,7 +13,7 @@ import { useContext } from "react";
 import {Card, Divider} from 'antd'
 // import SyntaxHighlighter from 'react-syntax-highlighter';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
- import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import myImage from '../../assets/images/capture-comment.png'
 
  
