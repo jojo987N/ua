@@ -20,6 +20,8 @@ import { auth } from "../../firebase";
 //import { useContext } from "react";
 import { RestaurantContext } from "../../context/RestaurantContext";
 import { useContext, useState } from "react";
+import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlined";
+
 
 
 import {
@@ -65,20 +67,50 @@ const [collapsed, setCollapsed] = useState(false);
 }
 
 const items = [
-  getItem('Option 1', '1', <PieChartOutlined />),
-  getItem('Option 2', '2', <DesktopOutlined />),
-  getItem('Option 3', '3', <ContainerOutlined />),
-  getItem('Navigation One', 'sub1', <MailOutlined />, [
+  // getItem('Option 1', '1', <PieChartOutlined />),
+  getItem('Dashboard', '1', <DashboardIcon />),
+  // getItem('Users', '2', <PersonOutlineIcon className="icon" />),
+  getItem('Users', 'sub', <PersonOutlineIcon className="icon" />, [
+    getItem('Users List', '2'),
+    getItem('Add User', '3'),
+    
+  ]),
+  getItem('Menus', 'sub0', <StoreIcon className="icon" />, [
+    getItem('Menus List', '2'),
+     
+    
+  ]),
+   
+  getItem('Orders', 'sub1', <CreditCardIcon className="icon" />, [
     getItem('Option 5', '5'),
     getItem('Option 6', '6'),
     getItem('Option 7', '7'),
     getItem('Option 8', '8'),
   ]),
-  getItem('Navigation Two', 'sub2', <AppstoreOutlined />, [
+  getItem('Drivers', 'sub2', <LocalShippingIcon className="icon" />, [
     getItem('Option 9', '9'),
     getItem('Option 10', '10'),
-    getItem('Submenu', 'sub3', null, [getItem('Option 11', '11'), getItem('Option 12', '12')]),
+    // getItem('Submenu', 'sub3', null, [getItem('Option 11', '11'), getItem('Option 12', '12')]),
   ]),
+  getItem('Restaurants', 'sub3', <RestaurantIcon className="icon" />, [
+    getItem('Option 9', '9'),
+    getItem('Option 10', '10'),
+    // getItem('Submenu', 'sub3', null, [getItem('Option 11', '11'), getItem('Option 12', '12')]),
+  ]),
+  getItem('Categories', 'sub4',  <CategoryIcon className="icon" />, [
+    getItem('Option 9', '9'),
+    getItem('Option 10', '10'),
+    // getItem('Submenu', 'sub3', null, [getItem('Option 11', '11'), getItem('Option 12', '12')]),
+  ]),
+  getItem('Profile', 'sub5',  <AccountCircleOutlinedIcon className="icon" />, [
+    getItem('Option 9', '9'),
+    getItem('Option 10', '10'),
+    // getItem('Submenu', 'sub3', null, [getItem('Option 11', '11'), getItem('Option 12', '12')]),
+  ]),
+ 
+  getItem('Earnings', '3',  <MonetizationOnOutlinedIcon />),
+
+  getItem('Logout', '4', <ExitToAppIcon className="icon" />),
 ];
   return (
     <div className="sidebar">
