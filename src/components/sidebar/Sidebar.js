@@ -82,29 +82,29 @@ const items = [
   ]),
    
   getItem('Orders', 'sub1', <CreditCardIcon className="icon" />, [
-    getItem('Option 5', '5'),
-    getItem('Option 6', '6'),
-    getItem('Option 7', '7'),
-    getItem('Option 8', '8'),
+    getItem('Confirmed', '5'),
+    getItem('In progress', '6'),
+    getItem('Completed', '7'),
+    getItem('Pending', '8'),
   ]),
   getItem('Drivers', 'sub2', <LocalShippingIcon className="icon" />, [
-    getItem('Option 9', '9'),
-    getItem('Option 10', '10'),
+    getItem('Drivers List', '9'),
+    getItem('Add Driver', '10'),
     // getItem('Submenu', 'sub3', null, [getItem('Option 11', '11'), getItem('Option 12', '12')]),
   ]),
   getItem('Restaurants', 'sub3', <RestaurantIcon className="icon" />, [
-    getItem('Option 9', '9'),
-    getItem('Option 10', '10'),
+    getItem('Restaurants List', '9'),
+    getItem('Add Restaurant', '10'),
     // getItem('Submenu', 'sub3', null, [getItem('Option 11', '11'), getItem('Option 12', '12')]),
   ]),
   getItem('Categories', 'sub4',  <CategoryIcon className="icon" />, [
-    getItem('Option 9', '9'),
-    getItem('Option 10', '10'),
+    getItem('Categories List', '9'),
+    getItem('Add Category', '10'),
     // getItem('Submenu', 'sub3', null, [getItem('Option 11', '11'), getItem('Option 12', '12')]),
   ]),
   getItem('Profile', 'sub5',  <AccountCircleOutlinedIcon className="icon" />, [
-    getItem('Option 9', '9'),
-    getItem('Option 10', '10'),
+    getItem('Update Profile', '9'),
+    // getItem('Option 10', '10'),
     // getItem('Submenu', 'sub3', null, [getItem('Option 11', '11'), getItem('Option 12', '12')]),
   ]),
  
