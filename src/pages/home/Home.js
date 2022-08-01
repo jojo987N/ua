@@ -108,6 +108,28 @@ npm start
 
 <p>&nbsp;</p>
 
+<h2><strong><span style={{fontSize: 24}}>Create a Firebase Project</span></strong></h2>
+
+<p>Head over to&nbsp;<a href="https://firebase.google.com/" rel="noopener">Firebase.com</a>&nbsp;and create a new account. Once logged in, you&rsquo;ll be able to create a new project in the&nbsp;<a href="https://console.firebase.google.com/u/0/" rel="noopener">Firebase Console</a>.</p>
+
+<ul>
+	<li>Create a new account on&nbsp;<a href="https://firebase.google.com/" rel="noopener">Firebase.com</a></li>
+	<li>Create a new project in&nbsp;<a href="https://console.firebase.google.com/" rel="noopener">Firebase Console</a></li>
+	<li>Enable Email &amp; Password auth method in&nbsp;<em>Firebase Console</em>&nbsp;-&gt;&nbsp;<em>Authentication</em>&nbsp;-&gt;&nbsp;<em>Sign-in method</em></li>
+</ul>
+
+<p>&nbsp;</p>
+
+<img  src={require("../../assets/images/capture-firebase.png")}  alt="avatar" />
+
+<p>&nbsp;</p>
+<h2>Create a Firebase config file</h2>
+
+<h3>Add your firebase configuration into firebase.js:</h3>
+
+
+
+
 
 
 
