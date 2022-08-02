@@ -13,7 +13,7 @@ import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import SettingsSystemDaydreamOutlinedIcon from "@mui/icons-material/SettingsSystemDaydreamOutlined";
 import PsychologyOutlinedIcon from "@mui/icons-material/PsychologyOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { signOut } from "firebase/auth";
 import { auth } from "../../firebase";
 //import { DarkModeContext } from "../../context/darkModeContext";
@@ -50,7 +50,12 @@ const Sidebar = () => {
  // const { dispatch } = useContext(DarkModeContext);
 const {currentRestaurant} = useContext(RestaurantContext)
 const [collapsed, setCollapsed] = useState(false);
- 
+const navigate = useNavigate()
+
+const {key} = useParams()
+
+console.log(key)
+  
  const signOutUser = () => {
   
   signOut(auth)
@@ -68,11 +73,11 @@ const [collapsed, setCollapsed] = useState(false);
 
 const items = [
   // getItem('Option 1', '1', <PieChartOutlined />),
-  getItem('Dashboard', '1', <DashboardIcon />),
+  getItem('Dashboard', '/', <DashboardIcon />),
   // getItem('Users', '2', <PersonOutlineIcon className="icon" />),
   getItem('Users', 'sub', <PersonOutlineIcon className="icon" />, [
-    getItem('Users List', '2'),
-    getItem('Add User', '3'),
+    getItem('Users List', '/users'),
+    getItem('Add User', '/users/new'),
     
   ]),
   getItem('Menus', 'sub0', <StoreIcon className="icon" />, [
@@ -82,10 +87,10 @@ const items = [
   ]),
    
   getItem('Orders', 'sub1', <CreditCardIcon className="icon" />, [
-    getItem('Confirmed', '5'),
-    getItem('In progress', '6'),
-    getItem('Completed', '7'),
-    getItem('Pending', '8'),
+    getItem('Orders List', '5'),
+    // getItem('In progress', '6'),
+    // getItem('Completed', '7'),
+    // getItem('Pending', '8'),
   ]),
   getItem('Drivers', 'sub2', <LocalShippingIcon className="icon" />, [
     getItem('Drivers List', '9'),
@@ -112,6 +117,15 @@ const items = [
 
   getItem('Logout', '4', <ExitToAppIcon className="icon" />),
 ];
+ 
+const onClick = e => {
+  console.log('click ', e);
+  navigate(e.key, {
+    key: e.key
+  })
+   
+};
+
   return (
     <div className="sidebar">
       <div className="top">
@@ -120,6 +134,7 @@ const items = [
          </Link>
        </div>
     <Menu
+        onClick={onClick}
         defaultSelectedKeys={['1']}
         defaultOpenKeys={['sub1']}
         mode="inline"
