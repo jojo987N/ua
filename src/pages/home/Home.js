@@ -126,6 +126,13 @@ npm start
 <h2>Create a Firebase config file</h2>
 
 <h3>Add your firebase configuration into firebase.js:</h3>
+<p></p>
+<p><img  src={require("../../assets/images/firebaseConfig.png")}  alt="avatar" /></p>
+
+<h3>You can get all this information from&nbsp;<a href="https://console.firebase.google.com/" rel="noopener">Firebase Console</a>&nbsp;-&gt; Project Settings</h3>
+
+<p>&nbsp;</p>
+<img  src={require("../../assets/images/findFirebaseConfig.png")}  alt="avatar" />
 
 
 
