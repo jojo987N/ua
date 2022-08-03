@@ -134,8 +134,27 @@ npm start
 <p>&nbsp;</p>
 <img  src={require("../../assets/images/findFirebaseConfig.png")}  alt="avatar" />
 
+<p>&nbsp;</p>
+<h2><strong>Get Google Places API key</strong></h2>
+<p>In order to implement autocomplete functionality, we need to get an API for Google Places API.</p>
+<h3>Go to Google Cloud Platform</h3>
+<p>Visit&nbsp;<a href="https://console.cloud.google.com/google/maps-apis/" rel="noopener ugc nofollow" target="_blank">Google Cloud Platform console</a>&nbsp;to get an API key to use &ldquo;Google Maps Javascript API&rdquo;.</p>
 
+<h3>Create a project and enable the API</h3>
+<p>First, create a new project on the console and navigate to &ldquo;<strong>APIs and Services</strong>&rdquo; on the left drawer navigation. Then, click on &ldquo;<strong>ENABLE APIs AND SERVICES</strong>&rdquo; on the dashboard.</p>
+<img  src={require("../../assets/images/capture-console.png")}  style={{width: 500, height: 250}} alt="avatar" />
 
+<p>&nbsp;</p>
+<p>On the next screen, search for &ldquo;<strong>Places API</strong>&rdquo; and enable it.</p>
+<img  src={require("../../assets/images/capture-console1.png")}  style={{width: 500, height: 250}} alt="avatar" />
+
+<h3>Generate an API key</h3>
+<p>After enabling the API, you need to create a key to actually use the API. navigate to &ldquo;<strong>Credentials</strong>&rdquo; under &ldquo;<strong>APIs &amp; Services</strong>&rdquo;, and click on &ldquo;<strong>CREATE CREDENTIALS</strong>&rdquo; in the upper middle of the screen and choose &ldquo;API key&rdquo;.</p>
+<img  src={require("../../assets/images/capture-console2.png")}  style={{width: 500, height: 250}} alt="avatar" />
+<p></p>
+<p>This will generate an API key, so keep it somewhere safe because you need it later to use the API in the app.</p>
+<h3>Create a billing account and link it to the project</h3>
+<p>In order to get results from the API, your Google Cloud project need to have a billing account linked to your project. You can create a billing account and link it to your project on the&nbsp;<strong>&ldquo;Billing&rdquo;&nbsp;</strong>page.</p>
 
 
 
