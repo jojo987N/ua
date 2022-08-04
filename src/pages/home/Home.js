@@ -157,8 +157,34 @@ npm start
 <p>In order to get results from the API, your Google Cloud project need to have a billing account linked to your project. You can create a billing account and link it to your project on the&nbsp;<strong>&ldquo;Billing&rdquo;&nbsp;</strong>page.</p>
 
 
+<h1><strong>Screens</strong></h1>
 
-
+<table border="1">
+<tbody>
+<tr><td>📦screens</td></tr>
+<tr><td> ┣ 📜AccountScreen</td></tr>
+<tr><td> ┣ 📜AddCard</td></tr>
+<tr><td> ┣ 📜CartScreen</td></tr>
+<tr><td> ┣ 📜Home</td></tr>
+<tr><td> ┣ 📜Loader</td></tr>
+<tr><td> ┣ 📜MenuDetailScreen</td></tr>
+<tr><td> ┣ 📜MyOrdersScreen</td></tr>
+<tr><td> ┣ 📜Offers</td></tr>
+<tr><td> ┣ 📜Onboarding</td></tr>
+<tr><td> ┣ 📜OrderCompleted</td></tr>
+<tr><td> ┣ 📜OrderDetails</td></tr>
+<tr><td> ┣ 📜OrderRequest</td></tr>
+<tr><td> ┣ 📜OrdersScreen</td></tr>
+<tr><td> ┣ 📜RestaurantDetail</td></tr>
+<tr><td> ┣ 📜RestaurantsMapScreen</td></tr>
+<tr><td> ┣ 📜SearchResults</td></tr>
+<tr><td> ┣ 📜SearchScreen</td></tr>
+<tr><td> ┣ 📜SignIn</td></tr>
+<tr><td> ┣ 📜SignUp</td></tr>
+<tr><td> ┣ 📜Splash</td></tr>
+<tr><td> ┗ 📜Wallet</td></tr>
+</tbody>
+</table>
 
 
 
