@@ -52,9 +52,10 @@ const {currentRestaurant} = useContext(RestaurantContext)
 const [collapsed, setCollapsed] = useState(false);
 const navigate = useNavigate()
 
-const {key} = useParams()
+ 
+ 
 
-console.log(key)
+ 
   
  const signOutUser = () => {
   
@@ -108,21 +109,19 @@ const items = [
     // getItem('Submenu', 'sub3', null, [getItem('Option 11', '11'), getItem('Option 12', '12')]),
   ]),
   getItem('Profile', 'sub5',  <AccountCircleOutlinedIcon className="icon" />, [
-    getItem('Update Profile', '9'),
+    getItem('Update Profile', '/users/profile'),
     // getItem('Option 10', '10'),
     // getItem('Submenu', 'sub3', null, [getItem('Option 11', '11'), getItem('Option 12', '12')]),
   ]),
  
-  getItem('Earnings', '3',  <MonetizationOnOutlinedIcon />),
+  getItem('Earnings', '/earnings',  <MonetizationOnOutlinedIcon />),
 
   getItem('Logout', '4', <ExitToAppIcon className="icon" />),
 ];
  
 const onClick = e => {
-  console.log('click ', e);
-  navigate(e.key, {
-    key: e.key
-  })
+  // console.log('click ', e);
+  navigate(e.key)
    
 };
 
@@ -130,7 +129,9 @@ const onClick = e => {
     <div className="sidebar">
       <div className="top">
          <Link to="/" style={{ textDecoration: "none" }}>
-           <span className="logo">Good Food</span>
+           {/* <span className="logo">Good Food</span> */}
+           <img className="cellImg" style={{width: 100, height: 100}} src={require("../../assets/images/logo-goodFood.png")} alt="avatar" />
+
          </Link>
        </div>
     <Menu
