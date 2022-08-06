@@ -156,7 +156,7 @@ npm start
 <h3>Create a billing account and link it to the project</h3>
 <p>In order to get results from the API, your Google Cloud project need to have a billing account linked to your project. You can create a billing account and link it to your project on the&nbsp;<strong>&ldquo;Billing&rdquo;&nbsp;</strong>page.</p>
 
-
+<h1><strong>Translation</strong></h1>
 <h1><strong>Screens</strong></h1>
 
 <table border="1">
