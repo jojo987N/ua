@@ -35,6 +35,7 @@ import {
 } from '@ant-design/icons';
 
 import { Button, Menu } from 'antd';
+import { SelectedKeyContext } from "../../context/SelectedKey";
 
 function getItem(label, key, icon, children, type) {
   return {
@@ -51,6 +52,7 @@ const Sidebar = () => {
 const {currentRestaurant} = useContext(RestaurantContext)
 const [collapsed, setCollapsed] = useState(false);
 const navigate = useNavigate()
+const {selectedKey, setSelectedKey} = useContext(SelectedKeyContext)
 
  
  
@@ -116,12 +118,15 @@ const items = [
  
   getItem('Earnings', '/earnings',  <MonetizationOnOutlinedIcon />),
 
-  getItem('Logout', '4', <ExitToAppIcon className="icon" />),
+  getItem('Logout', '/logout', <ExitToAppIcon className="icon" />),
 ];
  
 const onClick = e => {
   // console.log('click ', e);
+  if(e.key !== "/logout" )
   navigate(e.key)
+  else
+  signOutUser()
    
 };
 
@@ -137,7 +142,8 @@ const onClick = e => {
     <Menu
         onClick={onClick}
         defaultSelectedKeys={['1']}
-        defaultOpenKeys={['sub1']}
+        // defaultOpenKeys={['sub1']}
+        defaultOpenKeys={[selectedKey]}
         mode="inline"
         // theme="dark"
         inlineCollapsed={collapsed}

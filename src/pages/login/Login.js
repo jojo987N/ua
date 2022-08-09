@@ -16,9 +16,9 @@ const Login = () => {
   const {setCurrentRestaurant} = useContext(RestaurantContext)
   const {setLoading} = useContext(LoadingContext)
   
-  const SignInUser = async ()=>{
+  const SignInUser = async (e)=>{
 
-      
+    e.preventDefault()
      
     try{
       const re = await signInWithEmailAndPassword(auth, email, password)
@@ -30,6 +30,7 @@ const Login = () => {
       
     }catch(err){
        
+      
     err.message.includes("password")?setPasswordError(err.message.replace(/Firebase:|auth\//g,''))
      :setEmailError(err.message.replace(/Firebase:|auth\//g,''))
       // setEmailError(err.message.replace("Firebase:",'').replace("auth/:",''))
@@ -53,7 +54,7 @@ const Login = () => {
         <h1 style={{color: "white", fontSize: 25}}>Good</h1>
         <h1 style={{color: "green", marginLeft: 10, fontSize: 25}}>Food</h1>
       </div>
-      {/* <form onSubmit={SignInUser}> */}
+      <form onSubmit={SignInUser}>
         <label>Username</label>
         <input 
           type={"text"}
@@ -72,13 +73,13 @@ const Login = () => {
           />
         <p className="errorMsg">{passwordError}</p>
         <div className="btnContainer">
-        <button onClick={SignInUser}>Sign In</button>
+        <button >Sign In</button>
          
           {/* <button type="submit">Sign In</button> */}
        
         
         </div>
-         {/* </form> */}
+         </form>
 
       </div>
 

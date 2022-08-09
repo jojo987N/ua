@@ -17,6 +17,7 @@ import { RestaurantProvider } from "./context/RestaurantContext";
 import { LoadingProvider } from "./context/LoadingContext";
 import { AuthContext } from "./context/Auth";
 import { onAuthStateChanged } from "firebase/auth";
+import { SelectedKeyProvider } from "./context/SelectedKey";
 
 
 
@@ -95,6 +96,7 @@ function App() {
 
 
     <div className="app">
+      <SelectedKeyProvider>
       <OrdersContext.Provider value={{ ordersData, setOrdersData }}>
         <BrowserRouter>
 
@@ -183,6 +185,7 @@ function App() {
 
         </BrowserRouter>
       </OrdersContext.Provider>
+      </SelectedKeyProvider>
     </div>
 
     // </AuthProvider>
