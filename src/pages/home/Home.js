@@ -157,6 +157,11 @@ npm start
 <p>In order to get results from the API, your Google Cloud project need to have a billing account linked to your project. You can create a billing account and link it to your project on the&nbsp;<strong>&ldquo;Billing&rdquo;&nbsp;</strong>page.</p>
 
 <h1><strong>Translation</strong></h1>
+<p>It's very easy to customizing the experience for specific regions, languages, or cultures. It also provides access to the locale data on the native device.</p>
+<img  src={require("../../assets/images/translation-doc.gif")} style={{width:500, height: 220}} alt="avatar" />
+<p>In en.json file, inside of lang folder, you can translate for your specific language</p>
+<img  src={require("../../assets/images/vscode-translation-annotation-1.png")}  alt="avatar" />
+
 <h1><strong>Screens</strong></h1>
 
 <table border="1">
@@ -185,6 +190,11 @@ npm start
 <tr><td> ┗ 📜Wallet</td></tr>
 </tbody>
 </table>
+<p>&nbsp;</p>
+<h2><strong>Home Screen</strong></h2>
+
+<img  src={require("../../assets/images/home-annotate1.png")}  alt="avatar" />
+
 
 
 
@@ -212,7 +222,7 @@ const FolderStructure = () => {
     <table >
     <tbody>
      
-    <tr><td>📦uber-eats-clone</td></tr>
+    <tr><td>📦<strong>good-food</strong></td></tr>
     <tr><td> ┣ 📂assets</td>
     <td><i style={{marginLeft: 20,color:"grey"}}>Any file that the app need at runtime, contain all static image files, icons, animations, fonts </i></td></tr>
     
@@ -226,6 +236,8 @@ const FolderStructure = () => {
     <td><i style={{marginLeft: 20,color:"grey"}}>Directory created by npm and a way of tracking each installed packages. A cache for the external modules  </i></td></tr>
     <tr><td> ┣ 📂redux</td>
     <td><i style={{marginLeft: 20,color:"grey"}}>Contain reducers, actions , state container, a store to store the state of the variables  </i></td></tr>
+    <tr><td> ┣ 📂lang</td>
+    <td><i style={{marginLeft: 20,color:"grey"}}>Translations for your specific language, regions</i></td></tr>
     <tr><td> ┣ 📂screens</td>
     <td><i style={{marginLeft: 20,color:"grey"}}>contain all screens of app, components can be handled by some navigator  </i></td></tr>
     <tr><td> ┣ 📜.gitignore</td>
