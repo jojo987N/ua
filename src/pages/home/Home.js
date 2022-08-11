@@ -155,37 +155,42 @@ npm start
 <p>This will generate an API key, so keep it somewhere safe because you need it later to use the API in the app.</p>
 <h3>Create a billing account and link it to the project</h3>
 <p>In order to get results from the API, your Google Cloud project need to have a billing account linked to your project. You can create a billing account and link it to your project on the&nbsp;<strong>&ldquo;Billing&rdquo;&nbsp;</strong>page.</p>
+<p>&nbsp;</p>
+<h1><strong>Change app name</strong></h1>
+<p>It's very easy to change app name, open app.json file in root project folder . </p>
+<img  src={require("../../assets/images/changeName.png")}  alt="avatar" />
+<p>&nbsp;</p>
 
 <h1><strong>Translation</strong></h1>
 <p>It's very easy to customizing the experience for specific regions, languages, or cultures. It also provides access to the locale data on the native device.</p>
 <img  src={require("../../assets/images/translation-doc.gif")} style={{width:500, height: 220}} alt="avatar" />
 <p>In en.json file, inside of lang folder, you can translate for your specific language</p>
 <img  src={require("../../assets/images/vscode-translation-annotation-1.png")}  alt="avatar" />
-
+<p>&nbsp;</p>
 <h1><strong>Screens</strong></h1>
 
 <table border="1">
 <tbody>
 <tr><td>📦screens</td></tr>
-<tr><td> ┣ 📜AccountScreen</td></tr>
-<tr><td> ┣ 📜AddCard</td></tr>
-<tr><td> ┣ 📜CartScreen</td></tr>
+<tr><td> ┣ 📜Account Screen</td></tr>
+<tr><td> ┣ 📜Add Card</td></tr>
+<tr><td> ┣ 📜Cart Screen</td></tr>
 <tr><td> ┣ 📜Home</td></tr>
 <tr><td> ┣ 📜Loader</td></tr>
-<tr><td> ┣ 📜MenuDetailScreen</td></tr>
-<tr><td> ┣ 📜MyOrdersScreen</td></tr>
+<tr><td> ┣ 📜Menus Detail Screen</td></tr>
+<tr><td> ┣ 📜Orders Screen</td></tr>
 <tr><td> ┣ 📜Offers</td></tr>
 <tr><td> ┣ 📜Onboarding</td></tr>
-<tr><td> ┣ 📜OrderCompleted</td></tr>
-<tr><td> ┣ 📜OrderDetails</td></tr>
-<tr><td> ┣ 📜OrderRequest</td></tr>
-<tr><td> ┣ 📜OrdersScreen</td></tr>
-<tr><td> ┣ 📜RestaurantDetail</td></tr>
-<tr><td> ┣ 📜RestaurantsMapScreen</td></tr>
-<tr><td> ┣ 📜SearchResults</td></tr>
-<tr><td> ┣ 📜SearchScreen</td></tr>
-<tr><td> ┣ 📜SignIn</td></tr>
-<tr><td> ┣ 📜SignUp</td></tr>
+<tr><td> ┣ 📜Order Completed</td></tr>
+<tr><td> ┣ 📜Order Details</td></tr>
+<tr><td> ┣ 📜Order Request</td></tr>
+<tr><td> ┣ 📜Orders History Screen</td></tr>
+<tr><td> ┣ 📜Restaurant Detail</td></tr>
+<tr><td> ┣ 📜Restaurants Map Screen</td></tr>
+<tr><td> ┣ 📜Search Results</td></tr>
+<tr><td> ┣ 📜Search Screen</td></tr>
+<tr><td> ┣ 📜Sign In</td></tr>
+<tr><td> ┣ 📜Sign Up</td></tr>
 <tr><td> ┣ 📜Splash</td></tr>
 <tr><td> ┗ 📜Wallet</td></tr>
 </tbody>
@@ -194,6 +199,11 @@ npm start
 <h2><strong>Home Screen</strong></h2>
 
 <img  src={require("../../assets/images/home-annotate1.png")}  alt="avatar" />
+
+<h3><strong>Search Component</strong></h3>
+
+<img  src={require("../../assets/images/google-autocomplete.png")}  alt="avatar" />
+
 
 
 
