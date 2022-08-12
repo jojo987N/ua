@@ -325,12 +325,12 @@ export const userColumns = [
           {
             field: "restaurant",
             headerName:  <b>Restaurant</b>,
-            width: 350,
+            width: 300,
           },
           {
             field: "earning",
             headerName:  <b>Earning</b>,
-            width: 350,
+            width: 200,
             renderCell: (params) => {
               return (
                 <div className="cellWithEarning">
@@ -338,6 +338,33 @@ export const userColumns = [
                                       style: "currency",
                                       currency: 'USD'
                                   })}
+                </div>
+              );
+            },
+          },
+          {
+            field: "adminCommission",
+            headerName:  <b>Admin Commission</b>,
+            width: 200,
+            renderCell: (params) => {
+              return (
+                <div className="cellWithEarning">
+                  {(params.row.earning*20/100).toLocaleString('en', {
+                                      style: "currency",
+                                      currency: 'USD'
+                                  })}
+                </div>
+              );
+            },
+          },
+          {
+            field: "percentage",
+            headerName:  <b>Percentage</b>,
+            width: 170,
+            renderCell: (params) => {
+              return (
+                <div className="cellWithEarning">
+                  <span  >20</span>
                 </div>
               );
             },

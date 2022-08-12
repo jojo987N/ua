@@ -107,7 +107,7 @@ const Datatable = ({type}) => {
     
     if(!localStorage.getItem(process.env.REACT_APP_EARNINGS_KEY))
     // Convert restaurantsEarnings object to  array before pass to localstorage
-    await getEarnings().then(restaurantsEarnings => localStorage.setItem(process.env.REACT_APP_EARNINGS_KEY, encryptData(Object.keys(restaurantsEarnings).map((restaurant, index) => ({id: index, restaurant:restaurant, earning:restaurantsEarnings[restaurant]}) ))))
+    await getEarnings().then(restaurantsEarnings => localStorage.setItem(process.env.REACT_APP_EARNINGS_KEY, encryptData(Object.keys(restaurantsEarnings).map((restaurant, index) => ({id: index, restaurant:restaurant, earning:restaurantsEarnings[restaurant], adminCommission: restaurantsEarnings[restaurant], percentage: 25}) ))))
     
     // await getEarnings().then(restaurantsEarnings =>console.log(Object.keys(restaurantsEarnings).map(restaurant => ({restaurant:restaurant, earnings:restaurantsEarnings[restaurant]}) )))
 
