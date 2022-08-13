@@ -15,10 +15,21 @@ const Login = () => {
   const [passwordError, setPasswordError] = useState("")
   const {setCurrentRestaurant} = useContext(RestaurantContext)
   const {setLoading} = useContext(LoadingContext)
+  const [buttonStyle, setButtonStyle] = useState({
+    backgroundColor: "",
+    color: "",
+    text: "Sign In"
+  })
   
   const SignInUser = async (e)=>{
 
     e.preventDefault()
+
+    setButtonStyle({
+      backgroundColor: "green",
+      color: "white",
+      text: "Try to..."
+    })
      
     try{
       const re = await signInWithEmailAndPassword(auth, email, password)
@@ -73,7 +84,7 @@ const Login = () => {
           />
         <p className="errorMsg">{passwordError}</p>
         <div className="btnContainer">
-        <button >Sign In</button>
+        <button style={{backgroundColor: buttonStyle.backgroundColor, color: buttonStyle.color}}>{buttonStyle.text}</button>
          
           {/* <button type="submit">Sign In</button> */}
        

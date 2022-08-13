@@ -47,7 +47,7 @@ function getItem(label, key, icon, children, type) {
   };
 }
 
-const Sidebar = () => {
+const Sidebar = ({type}) => {
  // const { dispatch } = useContext(DarkModeContext);
 const {currentRestaurant} = useContext(RestaurantContext)
 const [collapsed, setCollapsed] = useState(false);
@@ -135,7 +135,7 @@ const onClick = e => {
       <div className="top">
          <Link to="/" style={{ textDecoration: "none" }}>
            {/* <span className="logo">Good Food</span> */}
-           <img className="cellImg" style={{width: 100, height: 100}} src={require("../../assets/images/logo-goodFood.png")} alt="avatar" />
+           <img className="cellImg" style={{width: 100, height: 100}} src={require("../../assets/images/logo-100-removed.png")} alt="avatar" />
 
          </Link>
        </div>
@@ -143,7 +143,7 @@ const onClick = e => {
         onClick={onClick}
         defaultSelectedKeys={['1']}
         // defaultOpenKeys={['sub1']}
-        defaultOpenKeys={[selectedKey]}
+        defaultOpenKeys={[type]}
         mode="inline"
         // theme="dark"
         inlineCollapsed={collapsed}

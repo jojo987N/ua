@@ -9,9 +9,23 @@ import ListOutlinedIcon from "@mui/icons-material/ListOutlined";
 import AccountMenu from "../accountMenu/AccountMenu";
 //import { DarkModeContext } from "../../context/darkModeContext";
 //import { useContext } from "react";
-import { Button, Modal, Space } from 'antd';
+import { Button, Modal, Space, notification } from 'antd';
 import { useCallback, useEffect } from "react";
 import {useLocation} from "react-router-dom"
+
+
+const openNotification = () => {
+  notification.open({
+    message: 'Notification Title',
+    description:
+      'This is the content of the notification. This is the content of the notification. This is the content of the notification.',
+    className: 'custom-class',
+    style: {
+      width: 600,
+    },
+  });
+};
+
 
 
 export const countDown = () => {
@@ -63,7 +77,8 @@ const Navbar = () => {
             <AccountMenu />
           </div>
            <div className="item">
-            <NotificationsNoneOutlinedIcon className="icon" />
+            <NotificationsNoneOutlinedIcon className="icon" onClick={openNotification}/>
+            
             <div className="counter">1</div>
             {/* <Button onClick={countDown}>Open modal to close in 5s</Button> */}
           </div>
