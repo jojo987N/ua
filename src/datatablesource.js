@@ -379,5 +379,15 @@ export const userColumns = [
         ];
 
 
+        const coupons = [
+          {
+            image: '',
+            title: '',
+            fixPrice: '',
+            percentage: '',
+            espireAt: ''
+          }
+        ] 
+
 
 
