@@ -206,6 +206,10 @@ npm start
 
 
 
+<h3><strong>Categories Component</strong></h3>
+
+<img  src={require("../../assets/images/addCategory.gif")} style={{width: 800, height: 450}}  alt="avatar" />
+
 
 
 
