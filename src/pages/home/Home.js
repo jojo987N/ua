@@ -204,11 +204,19 @@ npm start
 
 <img  src={require("../../assets/images/google-autocomplete.png")}  alt="avatar" />
 
-
+<p>&nbsp;</p>
 
 <h3><strong>Categories Component</strong></h3>
-
+<p></p>
+<p>You can easily add category , set image, name, description in restaurant app </p>
 <img  src={require("../../assets/images/addCategory.gif")} style={{width: 800, height: 450}}  alt="avatar" />
+
+<p>&nbsp;</p>
+
+<h3><strong>Restaurants Items Component</strong></h3>
+<p></p>
+<p>You can easily add restaurant, set image, name, description, address in admin dashboard </p>
+<img  src={require("../../assets/images/Capture-addRestaurant.png")} style={{width: 800, height: 393}}  alt="avatar" />
 
 
 
