@@ -21,7 +21,7 @@ import { auth } from "../../firebase";
 import { RestaurantContext } from "../../context/RestaurantContext";
 import { useContext, useState } from "react";
 import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlined";
-
+import SettingsIcon from '@mui/icons-material/Settings';
 
 
 import {
@@ -48,6 +48,9 @@ function getItem(label, key, icon, children, type) {
 }
 
 const Sidebar = ({type}) => {
+
+
+  console.log("type : ", '/'+type)
  // const { dispatch } = useContext(DarkModeContext);
 const {currentRestaurant} = useContext(RestaurantContext)
 const [collapsed, setCollapsed] = useState(false);
@@ -118,6 +121,8 @@ const items = [
  
   getItem('Earnings', '/earnings',  <MonetizationOnOutlinedIcon />),
 
+  getItem('Settings', '/settings',  <SettingsIcon />),
+
   getItem('Logout', '/logout', <ExitToAppIcon className="icon" />),
 ];
  
@@ -142,8 +147,8 @@ const onClick = e => {
     <Menu
         onClick={onClick}
         defaultSelectedKeys={['1']}
-        // defaultOpenKeys={['sub1']}
-        defaultOpenKeys={[type]}
+         defaultOpenKeys={['sub1']}
+        // defaultOpenKeys={['/'+type]}
         mode="inline"
         // theme="dark"
         inlineCollapsed={collapsed}

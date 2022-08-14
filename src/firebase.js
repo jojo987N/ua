@@ -485,7 +485,15 @@ export const updateOrdersFromFirebase = ()=>{
     //   console.log(Object.keys(restaurantsEarnings).map((restaurant, index) => ({id: index, restaurant:restaurant, earnings:restaurantsEarnings[restaurant]}) ))
     // })
 
+    // export const couponsCol = collection(db, 'coupons')
 
+    // export const addCoupons = (coupons)=>{
+
+    //   restaurants.forEach((restaurant)=>{
+    //     addDoc(restaurantsCol, restaurant)
+    //     .then(()=>console.log("ajouté"))
+    //    })
+    // }
 
 
 
