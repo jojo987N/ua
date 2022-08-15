@@ -217,8 +217,19 @@ npm start
 <p></p>
 <p>You can easily add restaurant, set image, name, description, address in admin dashboard </p>
 <img  src={require("../../assets/images/Capture-addRestaurant.png")} style={{width: 800, height: 393}}  alt="avatar" />
+<p>&nbsp;</p>
+<h2><strong>Restaurant Details Screen</strong></h2>
+<p></p>
+<img  src={require("../../assets/images/menuItems.png")} alt="avatar" />
 
+<p>&nbsp;</p>
 
+<h3><strong>Menu Items Component</strong></h3>
+<p></p>
+<p>You can easily add menu , set image, name, description, price in restaurant app </p>
+<img  src={require("../../assets/images/addFood.gif")} style={{width: 800, height: 450}} alt="avatar" />
+
+<p>&nbsp;</p>
 
 
 
