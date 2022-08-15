@@ -117,9 +117,10 @@ const List = ({type}) => {
           </>
           }
 
-          {!type && ordersData.filter((item, index)=> index < 5).map((row) => (
+          {/* {!type && ordersData.filter((item, index)=> index < 5).map((row) => ( */}
+          {!type && ordersData.filter((item, index)=> item.status === "Completed").map((row) => (
             <TableRow key={row.id}>
-               {!type && <TableCell className="tableCell">{row.orderId}</TableCell>}
+               {!type && <TableCell className="tableCell">{row.orderId.toUpperCase()}</TableCell>}
               {/* <TableCell className="tableCell">
                 <div className="cellWrapper">
                   <img src={row.img} alt="" className="image" />

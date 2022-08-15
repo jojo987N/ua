@@ -127,7 +127,7 @@ const items = [
 ];
  
 const onClick = e => {
-  // console.log('click ', e);
+ console.log('click ', e);
   if(e.key !== "/logout" )
   navigate(e.key)
   else
