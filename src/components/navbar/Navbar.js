@@ -77,6 +77,7 @@ const Navbar = () => {
             <AccountMenu />
           </div>
            <div className="item">
+              
             <NotificationsNoneOutlinedIcon className="icon" onClick={openNotification}/>
             
             <div className="counter">1</div>

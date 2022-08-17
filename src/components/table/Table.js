@@ -61,7 +61,7 @@ const List = ({type}) => {
             {!type && <><TableCell className="tableCell">Customer</TableCell>
               <TableCell className="tableCell">Date</TableCell>
               <TableCell className="tableCell">Payment Method</TableCell>
-              <TableCell className="tableCell">Status</TableCell>
+              <TableCell className="tableCell">Driver</TableCell>
             </>}
              <TableCell className="tableCell">Amount</TableCell>
           </TableRow>
@@ -129,13 +129,13 @@ const List = ({type}) => {
               </TableCell> */}
                {!type && <TableCell className="tableCell">{row.User.name}</TableCell>}
                {!type && <TableCell className="tableCell">{renderDate(row)}</TableCell>}
-              <TableCell className="tableCell">{row.User.items.reduce((a,v)=> a + v.price, 0).toLocaleString('en', {
+              <TableCell className="tableCell">{row.paymentMethod}</TableCell>
+              <TableCell className="tableCell">{row.driverName}</TableCell>
+              {!type && <TableCell className="tableCell">
+                <span className={`status ${row.status}`}>{row.User.items.reduce((a,v)=> a + v.price, 0).toLocaleString('en', {
                                 style: "currency",
                                 currency: 'USD'
-                            })}</TableCell>
-              <TableCell className="tableCell">{'card'}</TableCell>
-              {!type && <TableCell className="tableCell">
-                <span className={`status ${row.status}`}>{row.status}</span>
+                            })}</span>
               </TableCell>}
             </TableRow>
           ))}
