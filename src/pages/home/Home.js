@@ -37,7 +37,7 @@ const Home = () => {
         <div className="folders">
           
            
-            
+           <Card title={"Customer App"}>  
           <Card title={"Folder Structure"} style={{ margin: 20 }}>
             <FolderStructure />
           </Card>
@@ -235,6 +235,10 @@ npm start
 
 
         </Card>
+
+        </Card>
+
+        <Card title={"Delivery Boy App"}></Card>
 
  
 
