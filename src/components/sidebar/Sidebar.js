@@ -22,7 +22,7 @@ import { RestaurantContext } from "../../context/RestaurantContext";
 import { useContext, useState } from "react";
 import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlined";
 import SettingsIcon from '@mui/icons-material/Settings';
-
+import PaymentsIcon from '@mui/icons-material/Payments';
 
 import {
   AppstoreOutlined,
@@ -120,6 +120,8 @@ const items = [
   ]),
  
   getItem('Earnings', '/earnings',  <MonetizationOnOutlinedIcon />),
+
+  getItem('Transactions', '/transactions',  <PaymentsIcon />),
 
   getItem('Settings', '/settings',  <SettingsIcon />),
 

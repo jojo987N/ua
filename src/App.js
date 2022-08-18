@@ -18,7 +18,7 @@ import { LoadingProvider } from "./context/LoadingContext";
 import { AuthContext } from "./context/Auth";
 import { onAuthStateChanged } from "firebase/auth";
 import { SelectedKeyProvider } from "./context/SelectedKey";
-import Settings from "./components/settings/Settings";
+import Settings from "./pages/settings/Settings";
 
 
 
@@ -177,7 +177,11 @@ function App() {
                 </Route>
 
                 <Route path="settings">
-                  <Route index element={<Settings key="earnings" type="earnings" />} />
+                  <Route index element={<Settings key="settings" type="settings" />} />
+                </Route>
+
+                <Route path="transactions">
+                  <Route index element={<List key="transactions" type="transactions" />} />
                 </Route>
 
                 <Route path="restaurant">

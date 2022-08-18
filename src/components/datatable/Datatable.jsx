@@ -139,7 +139,14 @@ const Datatable = ({type}) => {
       }
     
       break
-      case "orders":
+      case "transactions":
+        setTitle("Transactions")
+        setTab({
+          rows: decryptData(localStorage.getItem(process.env.REACT_APP_ORDERS_KEY)).filter(order => order.status === "Completed" ),
+          columns: orderColumns
+        })
+        break
+        case "orders":
         setTitle("Orders")
         setTab({
           rows: decryptData(localStorage.getItem(process.env.REACT_APP_ORDERS_KEY)),
