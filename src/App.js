@@ -3,112 +3,38 @@ import Login from "./pages/login/Login";
 import List from "./pages/list/List";
 import Single from "./pages/single/Single";
 import New from "./pages/new/New";
-import { decryptData, encryptData } from "./utils";
-
 import { BrowserRouter, Routes, Route, Navigate, Outlet } from "react-router-dom";
 import { carInputs, categoryInputs, productInputs, restaurantInputs, userInputs } from "./formSource";
-import { auth, getOrdersFromFirebase } from './firebase'
-import { useContext, useEffect, useLayoutEffect, useState } from "react";
+import { getOrdersFromFirebase } from './firebase'
+import { useContext, useEffect, useState } from "react";
 import { OrdersContext } from "./context/OrdersContext"
 import Restaurant from "./pages/restaurant/Restaurant";
-import { AuthProvider } from "./context/Auth";
 import PrivateRoute from "./components/privateRoute/PrivateRoute";
-import { RestaurantProvider } from "./context/RestaurantContext";
-import { LoadingProvider } from "./context/LoadingContext";
 import { AuthContext } from "./context/Auth";
-import { onAuthStateChanged } from "firebase/auth";
-import { SelectedKeyProvider } from "./context/SelectedKey";
 import Settings from "./components/settings/Settings";
 
-
-
-
-// import "./style/dark.scss";
-// import { useContext } from "react";
-// import { DarkModeContext } from "./context/darkModeContext";
-
 const ProtectedRoute = ({ currentUser }) => {
-  
   if (!currentUser)
     return <Navigate to={"/"} replace />
-
   return <Outlet />
-}
-
-const ProtectedRoute1 = () => {
-
-  onAuthStateChanged(auth, (user)=>{
-
-    if (!user)
-    return <Navigate to={"/"} replace />
-  })
-
-  return <Outlet />
-  
 }
 
 function App() {
-
   const { currentUser } = useContext(AuthContext)
-
-
-  // const { darkMode } = useContext(DarkModeContext);
-
-  //console.log(localStorage.getItem('orders'), "aaaaaaaaaaaaaaaaaaaaaaaaaa")
-
   const [ordersData, setOrdersData] = useState([])
-  //const storeData = localStorage.getItem('orders')
-  // getOrdersFromFirebase().then(orders => localStorage.setItem('orders', JSON.stringify(orders)))
-
-
-
 
   useEffect(() => {
-
-    // const encryt = encryptData("c how man")
-    // console.log(encryt)
-
-    // console.log(decryptData(encryt))
-
-    if (!localStorage.getItem(process.env.REACT_APP_ORDERS_KEY)) {
-
-      getOrdersFromFirebase().then(orders => localStorage.setItem(process.env.REACT_APP_ORDERS_KEY, encryptData(orders)))
-        .then(orders => setOrdersData(orders))
-    } else {
-
-      // console.log(decryptData(localStorage.getItem(process.env.REACT_APP_ORDERS_KEY)))
-      setOrdersData(decryptData(localStorage.getItem(process.env.REACT_APP_ORDERS_KEY)))
-
-    }
-
-    // getOrdersFromFirebase().then(orders => setOrdersData(orders))
-
+      getOrdersFromFirebase()
+      .then(orders => setOrdersData(orders))
   }, [])
-
-  // if(!storeData)
-  // return (
-  //   <div>
-  //     <h1>Attend</h1>
-  //   </div>
-  // )
   return (
-    // <RestaurantProvider>
-    // <LoadingProvider> 
-    // <AuthProvider>
-
-
     <div className="app">
-      <SelectedKeyProvider>
       <OrdersContext.Provider value={{ ordersData, setOrdersData }}>
         <BrowserRouter>
-
           <Routes>
             <Route path="/">
-
               <Route index element={
-
                 <PrivateRoute />
-                // <Home />
               } />
 
               <Route path="login" element={<Login />} />
@@ -191,7 +117,6 @@ function App() {
 
         </BrowserRouter>
       </OrdersContext.Provider>
-      </SelectedKeyProvider>
     </div>
 
     // </AuthProvider>
