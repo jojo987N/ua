@@ -160,7 +160,14 @@ npm start
 <p>It's very easy to change app name, open app.json file in root project folder . </p>
 <img  src={require("../../assets/images/changeName.png")}  alt="avatar" />
 <p>&nbsp;</p>
-
+<h1><strong>Change app logo</strong></h1>
+<p>It's very easy to change app logo, open assets folder in root project folder . </p>
+<img  src={require("../../assets/images/add_logo.png")}  alt="avatar" />
+<p>&nbsp;</p>
+<h1><strong>Change app currency</strong></h1>
+<p>It's very easy to change app currency, open assets folder in root project folder . </p>
+<img  src={require("../../assets/images/add_currency.png")}  alt="avatar" />
+<p>&nbsp;</p>
 <h1><strong>Translation</strong></h1>
 <p>It's very easy to customizing the experience for specific regions, languages, or cultures. It also provides access to the locale data on the native device.</p>
 <img  src={require("../../assets/images/translation-doc.gif")} style={{width:500, height: 220}} alt="avatar" />
@@ -201,6 +208,8 @@ npm start
 <img  src={require("../../assets/images/home-annotate1.png")}  alt="avatar" />
 
 <h3><strong>Search Component</strong></h3>
+<p>You can easily change autocomplete language </p>
+
 
 <img  src={require("../../assets/images/google-autocomplete.png")}  alt="avatar" />
 
