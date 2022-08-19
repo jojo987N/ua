@@ -35,6 +35,10 @@ const normFile = (e) => {
   return e?.fileList;
 };
 
+const onChange = (value) => {
+  console.log('changed', value);
+};
+
 const Settings = () => {
   const onFinish = (values) => {
     console.log('Received values of form: ', values);
@@ -78,6 +82,12 @@ const Settings = () => {
               </Select>
             </Form.Item>
 
+             
+               
+             
+
+             
+
             <Form.Item
               name="select-multiple"
               label="Select[multiple]"
@@ -90,11 +100,24 @@ const Settings = () => {
               </Select>
             </Form.Item>
 
-            <Form.Item label="InputNumber">
-              <Form.Item name="input-number" noStyle>
+            <Form.Item label="Commission">
+              <Form.Item name="commission" noStyle>
                 <InputNumber min={1} max={10} />
               </Form.Item>
-              <span className="ant-form-text"> machines</span>
+              <span className="ant-form-text"> %</span>
+            </Form.Item>
+
+            <Form.Item label="Tax">
+              <Form.Item name="tax" noStyle>
+                <InputNumber min={1} max={10} />
+              </Form.Item>
+              <span className="ant-form-text"> %</span>
+            </Form.Item>
+            <Form.Item label="Delivery fee">
+              <Form.Item name="delivery-fee" noStyle>
+                <InputNumber min={1} max={10} />
+              </Form.Item>
+              <span className="ant-form-text"> %</span>
             </Form.Item>
 
             <Form.Item name="switch" label="Switch" valuePropName="checked">
