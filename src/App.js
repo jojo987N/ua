@@ -12,12 +12,9 @@ import Restaurant from "./pages/restaurant/Restaurant";
 import PrivateRoute from "./components/privateRoute/PrivateRoute";
 import { AuthContext } from "./context/Auth";
 import Settings from "./components/settings/Settings";
+import ProtectedRoute from "./ProtectedRoute";
 
-const ProtectedRoute = ({ currentUser }) => {
-  if (!currentUser)
-    return <Navigate to={"/"} replace />
-  return <Outlet />
-}
+ 
 
 function App() {
   const { currentUser } = useContext(AuthContext)
@@ -58,6 +55,8 @@ function App() {
                   {/* <Route path=":productId" element={<Single />} /> */}
                   <Route path=":id" element={<New inputs={productInputs} type="product" title="Update Menu" />} />
                   <Route
+
+
                     path="new"
                     element={<New inputs={productInputs} type="products" title="Add New Menu" />}
                   />
