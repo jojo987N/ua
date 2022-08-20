@@ -10,24 +10,20 @@ import { useState, useContext, useEffect} from "react";
 import { OrdersContext } from "../../context/OrdersContext";
 import {Timestamp} from 'firebase/firestore'
 import { useParams } from "react-router-dom";
+import { getOrdersFromFirebase } from "../../firebase";
   
 
 
 const List = ({type}) => {
 
- // console.log(type)
-
-  //const rows = JSON.parse(localStorage.getItem('orders'))
-
-  //console.log(rows[0], "srgrrdthrytukyiluommipùo")
-
-  //const [rows, setRows] = useState([])
-
-  const {ordersData} = useContext(OrdersContext)
-
   const {orderId} = useParams()
 
-   //console.log(orderId)
+  const [orders, setOrders] = useState()
+
+   useEffect(() => {
+    getOrdersFromFirebase()
+    .then(orders => console.log("eqfrshfyj", orders))
+}, [])
 
   
   return (
@@ -38,11 +34,11 @@ const List = ({type}) => {
           <>
            <TableRow>
            <TableCell className="tableCell2" colSpan={2}>Customer </TableCell>
-           <TableCell className="tableCell1" colSpan={2}>{ordersData.find(order => order.id === orderId).User.name}</TableCell>
+           <TableCell className="tableCell1" colSpan={2}>{orders.find(order => order.id === orderId).User.name}</TableCell>
            </TableRow>
            <TableRow>
            <TableCell className="tableCell2" colSpan={2}>Customer Address </TableCell>
-           <TableCell className="tableCell1" colSpan={2}>{ordersData.find(order => order.id === orderId).User.address}</TableCell>
+           <TableCell className="tableCell1" colSpan={2}>{orders.find(order => order.id === orderId).User.address}</TableCell>
            </TableRow>
           </>
         }
@@ -68,16 +64,16 @@ const List = ({type}) => {
         </TableHead>
         <TableBody>
         
-        {type === "orders" && Object.entries(ordersData.find(order => order.id === orderId).User.items.map(item => item.name).reduce((acc, curr) => (acc[curr] = (acc[curr] || 0) + 1, acc), {}))
+        {type === "orders" && Object.entries(orders.find(order => order.id === orderId).User.items.map(item => item.name).reduce((acc, curr) => (acc[curr] = (acc[curr] || 0) + 1, acc), {}))
          .map(([name, quantity], index) => 
          <TableRow key={index}>
            <TableCell className="tableCell">
-           <img className="tableCellImg" src={ordersData.find(order => order.id === orderId).User.items.find(item => item.name === name).image} alt="avatar" />
+           <img className="tableCellImg" src={orders.find(order => order.id === orderId).User.items.find(item => item.name === name).image} alt="avatar" />
 
              </TableCell>
            <TableCell className="tableCell">{name}</TableCell>
            <TableCell className="tableCell">×{quantity}</TableCell>
-           <TableCell className="tableCell">{ordersData.find(order => order.id === orderId).User.items.reduce((a, v) => v.name === name ? a + v.price : a, 0).toLocaleString('en', {
+           <TableCell className="tableCell">{orders.find(order => order.id === orderId).User.items.reduce((a, v) => v.name === name ? a + v.price : a, 0).toLocaleString('en', {
                                 style: "currency",
                                 currency: 'USD'
                             })}</TableCell>
@@ -90,7 +86,7 @@ const List = ({type}) => {
           <TableRow>
           <TableCell className="tableCell1" rowSpan={3} />
             <TableCell className="tableCell1" colSpan={2}><span  >Subtotal</span></TableCell>
-            <TableCell className="tableCell1" align="right"><span >{ordersData.find(order => order.id === orderId).User.items.reduce((a,v)=> a + v.price, 0).toLocaleString("en", {
+            <TableCell className="tableCell1" align="right"><span >{orders.find(order => order.id === orderId).User.items.reduce((a,v)=> a + v.price, 0).toLocaleString("en", {
                                 style: "currency",
                                 currency: "USD"
                             })}</span></TableCell>
@@ -108,7 +104,7 @@ const List = ({type}) => {
            
             <TableCell className="tableCell1" colSpan={2} ><span className="text">Total</span></TableCell>
              
-            <TableCell className="tableCell1" align="right"><span className="text">{ordersData.find(order => order.id === orderId).User.items.reduce((a,v)=> a + v.price, 0).toLocaleString("en", {
+            <TableCell className="tableCell1" align="right"><span className="text">{orders.find(order => order.id === orderId).User.items.reduce((a,v)=> a + v.price, 0).toLocaleString("en", {
                                 style: "currency",
                                 currency: "USD"
                             })}</span></TableCell>
@@ -117,8 +113,8 @@ const List = ({type}) => {
           </>
           }
 
-          {/* {!type && ordersData.filter((item, index)=> index < 5).map((row) => ( */}
-          {!type && ordersData.filter((item, index)=> item.status === "Completed").map((row) => (
+          {/* {!type && orders.filter((item, index)=> index < 5).map((row) => ( */}
+          {!type && orders.filter((item, index)=> item.status === "Completed").map((row) => (
             <TableRow key={row.id}>
                {!type && <TableCell className="tableCell">{row.orderId.toUpperCase()}</TableCell>}
               {/* <TableCell className="tableCell">

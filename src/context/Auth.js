@@ -23,7 +23,7 @@ export const AuthProvider = ({ children }) => {
             //let restaurant;
             if(user){
 
-                countDown()
+                 
                 getRestaurantById(user.uid).then((restaurant)=>{
 
                     if(restaurant){

@@ -18,15 +18,11 @@ import ProtectedRoute from "./ProtectedRoute";
 
 function App() {
   const { currentUser } = useContext(AuthContext)
-  const [ordersData, setOrdersData] = useState([])
-
-  useEffect(() => {
-      getOrdersFromFirebase()
-      .then(orders => setOrdersData(orders))
-  }, [])
+ 
+  
   return (
     <div className="app">
-      <OrdersContext.Provider value={{ ordersData, setOrdersData }}>
+       
         <BrowserRouter>
           <Routes>
             <Route path="/">
@@ -115,7 +111,7 @@ function App() {
           </Routes>
 
         </BrowserRouter>
-      </OrdersContext.Provider>
+       
     </div>
 
     // </AuthProvider>
