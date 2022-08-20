@@ -37,9 +37,9 @@ const Home = () => {
           <div className="listTitle">Latest Transactions</div>
           {/* <Table1 /> */}
           <List />
-        </div>
+         </div>
       </div>
-    </div>
+     </div>
   );
 };
 
