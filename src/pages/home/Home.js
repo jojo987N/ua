@@ -125,7 +125,7 @@ npm start
 <p>&nbsp;</p>
 <h2>Create a Firebase config file</h2>
 
-<h3>Add your firebase configuration into firebase.js:</h3>
+<h3>Add your firebase configuration into firebase/config file:</h3>
 <p></p>
 <p><img  src={require("../../assets/images/firebaseConfig.png")}  alt="avatar" /></p>
 

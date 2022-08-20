@@ -13,18 +13,55 @@ import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import SettingsSystemDaydreamOutlinedIcon from "@mui/icons-material/SettingsSystemDaydreamOutlined";
 import PsychologyOutlinedIcon from "@mui/icons-material/PsychologyOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { signOut } from "firebase/auth";
 import { auth } from "../../firebase";
 //import { DarkModeContext } from "../../context/darkModeContext";
 //import { useContext } from "react";
 import { RestaurantContext } from "../../context/RestaurantContext";
-import { useContext } from "react";
+import { useContext, useState } from "react";
+import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlined";
+import SettingsIcon from '@mui/icons-material/Settings';
+import PaymentsIcon from '@mui/icons-material/Payments';
 
-const Sidebar = () => {
+import {
+  AppstoreOutlined,
+  ContainerOutlined,
+  DesktopOutlined,
+  MailOutlined,
+  MenuFoldOutlined,
+  MenuUnfoldOutlined,
+  PieChartOutlined,
+} from '@ant-design/icons';
+
+import { Button, Menu } from 'antd';
+// import { SelectedKeyContext } from "../../context/SelectedKey";
+
+function getItem(label, key, icon, children, type) {
+  return {
+    key,
+    icon,
+    children,
+    label,
+    type,
+  };
+}
+
+const Sidebar = ({type}) => {
+
+
+  console.log("type : ", '/'+type)
  // const { dispatch } = useContext(DarkModeContext);
 const {currentRestaurant} = useContext(RestaurantContext)
+const [collapsed, setCollapsed] = useState(false);
+const navigate = useNavigate()
+// const {selectedKey, setSelectedKey} = useContext(SelectedKeyContext)
+
  
+ 
+
+ 
+  
  const signOutUser = () => {
   
   signOut(auth)
@@ -39,97 +76,172 @@ const {currentRestaurant} = useContext(RestaurantContext)
   .catch((err)=>console.log(err.code))
    
 }
+
+const items = [
+  // getItem('Option 1', '1', <PieChartOutlined />),
+  getItem('Dashboard', '/', <DashboardIcon />),
+  // getItem('Users', '2', <PersonOutlineIcon className="icon" />),
+  getItem('Customer App', 'sub', <PersonOutlineIcon className="icon" />, [
+   getItem('Setting up Environment', 'sub1', <StoreIcon className="icon" />),
+   getItem('Install Node.js', 'sub2', <StoreIcon className="icon" />),
+   getItem('Install the Expo CLI', 'sub3', <StoreIcon className="icon" />),
+   getItem('Create a Firebase Project', 'sub4', <StoreIcon className="icon" />),
+   getItem('Create a Firebase config file', 'sub5', <StoreIcon className="icon" />),
+   getItem('Get Google Places API key', 'sub6', <StoreIcon className="icon" />),
+   getItem('Change app name', 'sub7', <StoreIcon className="icon" />),
+   getItem('Change app logo', 'sub7', <StoreIcon className="icon" />),
+   getItem('Change app currency', 'sub7', <StoreIcon className="icon" />),
+   getItem('Translation', 'sub7', <StoreIcon className="icon" />),
+    
+    
+    
+  ]),
+   
+   
+  getItem('Driver App', 'sub1', <CreditCardIcon className="icon" />, [
+    getItem('Orders List', '/orders'),
+    // getItem('In progress', '6'),
+    // getItem('Completed', '7'),
+    // getItem('Pending', '8'),
+  ]),
+  getItem('Restaurant App', 'sub2', <LocalShippingIcon className="icon" />, [
+    getItem('Drivers List', '/drivers'),
+    getItem('Add Driver', '/drivers/new'),
+    // getItem('Submenu', 'sub3', null, [getItem('Option 11', '11'), getItem('Option 12', '12')]),
+  ]),
+  getItem('Admin Panel', 'sub3', <RestaurantIcon className="icon" />, [
+    getItem('Restaurants List', '/restaurants'),
+    getItem('Add Restaurant', '/restaurants/new'),
+    // getItem('Submenu', 'sub3', null, [getItem('Option 11', '11'), getItem('Option 12', '12')]),
+  ]),
+  getItem('Categories', 'sub4',  <CategoryIcon className="icon" />, [
+    getItem('Categories List', '/categories'),
+    getItem('Add Category', '/categories/new'),
+    // getItem('Submenu', 'sub3', null, [getItem('Option 11', '11'), getItem('Option 12', '12')]),
+  ]),
+  getItem('Profile', 'sub5',  <AccountCircleOutlinedIcon className="icon" />, [
+    getItem('Update Profile', '/users/profile'),
+    // getItem('Option 10', '10'),
+    // getItem('Submenu', 'sub3', null, [getItem('Option 11', '11'), getItem('Option 12', '12')]),
+  ]),
+ 
+  getItem('Earnings', '/earnings',  <MonetizationOnOutlinedIcon />),
+
+  getItem('Transactions', '/transactions',  <PaymentsIcon />),
+
+  getItem('Settings', '/settings',  <SettingsIcon />),
+
+  getItem('Logout', '/logout', <ExitToAppIcon className="icon" />),
+];
+ 
+const onClick = e => {
+ console.log('click ', e);
+  if(e.key !== "/logout" )
+  navigate(e.key)
+  else
+  signOutUser()
+   
+};
+
   return (
     <div className="sidebar">
-    <div className="top">
-      <Link to="/" style={{ textDecoration: "none" }}>
-        <span className="logo">Good Food</span>
-        <span className="logo1">{" "}Docs</span>
-      </Link>
+      <div className="top">
+         <Link to="/" style={{ textDecoration: "none" }}>
+           {/* <span className="logo">Good Food</span> */}
+           {/* <img className="cellImg" style={{width: 100, height: 100}} src={require("../../assets/images/logo-100-removed.png")} alt="avatar" /> */}
+
+         </Link>
+       </div>
+    <Menu
+        onClick={onClick}
+        defaultSelectedKeys={['1']}
+         defaultOpenKeys={['sub1']}
+        // defaultOpenKeys={['/'+type]}
+        mode="inline"
+        // theme="dark"
+        inlineCollapsed={collapsed}
+        items={items}
+      />
     </div>
-    <hr />
-    <div className="center">
-      <ul>
-        <p className="title">MAIN</p>
-        <Link to="/" style={{ textDecoration: "none" }}>
-        <li>
+  
+    // <div className="sidebar">
+    //   <div className="top">
+    //     <Link to="/" style={{ textDecoration: "none" }}>
+    //       <span className="logo">Good Food</span>
+    //     </Link>
+    //   </div>
+    //   <hr />
+    //   <div className="center">
+    //     <ul>
+    //       <p className="title">MAIN</p>
+    //       <Link to="/" style={{ textDecoration: "none" }}>
+    //       <li>
+    //         <DashboardIcon className="icon" />
+    //         <span>Dashboard</span>
+    //       </li>
+    //       </Link>
+    //       <p className="title">LISTS</p>
+    //      {!currentRestaurant && <Link to="/users" style={{ textDecoration: "none" }}>
+    //         <li>
+    //           <PersonOutlineIcon className="icon" />
+    //           <span>Users</span>
+    //         </li>
+    //       </Link>}
+    //       <Link to="/products" style={{ textDecoration: "none" }}>
+    //         <li>
+    //           <StoreIcon className="icon" />
+    //           <span>Menus</span>
+    //         </li>
+    //       </Link>
+    //       <Link to="/orders" style={{ textDecoration: "none" }}>
+    //       <li>
+    //         <CreditCardIcon className="icon" />
+    //         <span>Orders</span>
+    //       </li>
+    //       </Link>
+    //       {!currentRestaurant && <Link to="/drivers" style={{ textDecoration: "none" }}>
+    //       <li>
+    //         <LocalShippingIcon className="icon" />
+    //         <span>Drivers</span>
+    //       </li>
+    //       </Link>}
+    //       {!currentRestaurant && <Link to="/restaurants" style={{ textDecoration: "none" }}>
+    //         <li>
+    //         <RestaurantIcon className="icon" />
+    //         <span>Restaurants</span>
+    //       </li>
+    //       </Link>}
+    //       <Link to="/categories" style={{ textDecoration: "none" }}>
+    //         <li>
+    //         <CategoryIcon className="icon" />
+    //         <span>Categories</span>
+    //       </li>
+    //       </Link>
            
-          <span>Dashboard</span>
-        </li>
-        </Link>
-        <p className="title">LISTS</p>
-       {!currentRestaurant && <Link to="/users" style={{ textDecoration: "none" }}>
-          <li>
-             <span>Users</span>
-          </li>
-        </Link>}
-        <Link to="/products" style={{ textDecoration: "none" }}>
-          <li>
-             <span>Menus</span>
-          </li>
-        </Link>
-        <Link to="/orders" style={{ textDecoration: "none" }}>
-        <li>
-           <span>Orders</span>
-        </li>
-        </Link>
-        {!currentRestaurant && <Link to="/drivers" style={{ textDecoration: "none" }}>
-        <li>
-           <span>Drivers</span>
-        </li>
-        </Link>}
-        {!currentRestaurant && <Link to="/restaurants" style={{ textDecoration: "none" }}>
-          <li>
-           <span>Restaurants</span>
-        </li>
-        </Link>}
-        <Link to="/categories" style={{ textDecoration: "none" }}>
-          <li>
-           <span>Categories</span>
-        </li>
-        </Link>
-        <p className="title">USEFUL</p>
-        <li>
-           <span>Stats</span>
-        </li>
-        <li>
-           <span>Notifications</span>
-        </li>
-        <p className="title">STATUS</p>
-        <li>
-           <span>Confirmed</span>
-        </li>
-        <li>
-           <span>Cooking</span>
-        </li>
-        <li>
-           <span>Ready For Pickup</span>
-        </li>
-        <li>
-           <span>Picked Up</span>
-        </li>
-        <p className="title">USER</p>
-        <Link to="/users/profile" style={{ textDecoration: "none" }}>
-        <li>
-           <span>Profile</span>
-        </li>
-        </Link>
-        <li onClick={signOutUser}>
-           <span>Logout</span>
-        </li>
-      </ul>
-    </div>
-    <div className="bottom">
-      <div
-        className="colorOption"
-      //   onClick={() => dispatch({ type: "LIGHT" })}
-      ></div>
-      <div
-        className="colorOption"
-      //   onClick={() => dispatch({ type: "DARK" })}
-      ></div>
-    </div>
-  </div>
+    //       <p className="title">USER</p>
+    //       <Link to="/users/profile" style={{ textDecoration: "none" }}>
+    //       <li>
+    //         <AccountCircleOutlinedIcon className="icon" />
+    //         <span>Profile</span>
+    //       </li>
+    //       </Link>
+    //       <li onClick={signOutUser}>
+    //         <ExitToAppIcon className="icon" />
+    //         <span>Logout</span>
+    //       </li>
+    //     </ul>
+    //   </div>
+    //   <div className="bottom">
+    //     <div
+    //       className="colorOption"
+        
+    //     ></div>
+    //     <div
+    //       className="colorOption"
+         
+    //     ></div>
+    //   </div>
+    // </div>
   );
 };
 
