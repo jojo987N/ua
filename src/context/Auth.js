@@ -1,7 +1,6 @@
 import { onAuthStateChanged } from 'firebase/auth';
 import React, { createContext, useCallback, useContext, useEffect, useLayoutEffect, useState } from 'react'
 import { auth, getRestaurantById } from '../firebase';
-import { RestaurantContext } from './RestaurantContext';
 import { LoadingContext } from './LoadingContext';
 import { countDown } from '../components/navbar/Navbar';
 
@@ -12,7 +11,6 @@ export const AuthProvider = ({ children }) => {
 
     const [currentUser, setCurrentUser] = useState(null)
 
-    const { setCurrentRestaurant } = useContext(RestaurantContext)
     const { setLoading } = useContext(LoadingContext)
 
 
@@ -23,21 +21,9 @@ export const AuthProvider = ({ children }) => {
             //let restaurant;
             if(user){
 
-                 
-                getRestaurantById(user.uid).then((restaurant)=>{
-
-                    if(restaurant){
-                        setCurrentRestaurant(restaurant) 
-                        setCurrentUser(user)
-                    }
-                    else{
-                        setCurrentUser(user)  
-                    }
-                })
-            }else{
-                setCurrentUser(user) 
-                setCurrentRestaurant(null) 
-            }
+                  setCurrentUser(user) 
+               
+            } 
 
             // (async ()=>{
             // if(user){

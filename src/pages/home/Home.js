@@ -8,12 +8,10 @@ import "./home.scss";
 import List from "../../components/table/Table";
 // import { useContext } from "react";
 //import { AuthContext } from "../../context/Auth";
-import { RestaurantContext } from "../../context/RestaurantContext";
 import { useContext } from "react";
 
 const Home = () => {
 
-  const {currentRestaurant} = useContext(RestaurantContext)
 
  // console.log(currentRestaurant)
 
@@ -24,10 +22,10 @@ const Home = () => {
       <div className="homeContainer">
         <Navbar />
         <div className="widgets">
-           {currentRestaurant?<Widget type="confirmed-order" />:<Widget type="user" />}
-           {currentRestaurant?<Widget type="cooking-order" />:<Widget type="order" />}
+           <Widget type="user" />
+           <Widget type="order" />
           <Widget type="earning" />
-          {currentRestaurant?<Widget type="ready-for-pickup-order" />:<Widget type="driver" />}
+          <Widget type="driver" />
         </div>
         <div className="charts">
           <Featured />

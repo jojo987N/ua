@@ -3,8 +3,8 @@ import { useContext, useState } from "react"
 import { auth, getRestaurantById, getRestaurantId } from "../../firebase"
 import "./login.scss"
 import { useNavigate } from "react-router-dom";
-import { RestaurantContext } from "../../context/RestaurantContext";
 import { LoadingContext } from "../../context/LoadingContext";
+import { APP_CONSTANT } from "../../globals";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -13,23 +13,14 @@ const Login = () => {
   const [password, setPassword] = useState("")
   const [emailError, setEmailError] = useState("")
   const [passwordError, setPasswordError] = useState("")
-  const {setCurrentRestaurant} = useContext(RestaurantContext)
   const {setLoading} = useContext(LoadingContext)
-  const [buttonStyle, setButtonStyle] = useState({
-    backgroundColor: "",
-    color: "",
-    text: "Sign In"
-  })
+  
   
   const SignInUser = async (e)=>{
 
     e.preventDefault()
 
-    setButtonStyle({
-      backgroundColor: "green",
-      color: "white",
-      text: "Try to..."
-    })
+    
      
     try{
       const re = await signInWithEmailAndPassword(auth, email, password)
@@ -61,12 +52,9 @@ const Login = () => {
     <section className="login">
        
       <div className="loginContainer" >
-      <div style={{display: "flex", justifyContent: "center"}}>
-        <h1 style={{color: "white", fontSize: 25}}>Good</h1>
-        <h1 style={{color: "green", marginLeft: 10, fontSize: 25}}>Food</h1>
-      </div>
+      
       <form onSubmit={SignInUser}>
-        <label>Username</label>
+        <label>{APP_CONSTANT.TEXT.USERNAME}</label>
         <input 
           type={"text"}
           autoFocus
@@ -75,7 +63,7 @@ const Login = () => {
           onChange={e => setEmail(e.target.value)}
           />
         <p className="errorMsg">{emailError}</p>
-        <label>Password</label>
+        <label>{APP_CONSTANT.TEXT.PASSWORD}</label>
         <input 
           type={"password"}
           required
