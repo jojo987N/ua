@@ -16,6 +16,7 @@ import PrivateRoute from "./components/privateRoute/PrivateRoute";
 import { RestaurantProvider } from "./context/RestaurantContext";
 import { LoadingProvider } from "./context/LoadingContext";
 import { AuthContext } from "./context/Auth";
+import Driver from "./pages/driver/Driver";
 
 
 
@@ -90,7 +91,8 @@ function App() {
               <Route index element={
 
                 // <PrivateRoute />
-                 <Home />
+                //  <Home />
+                <Driver />
               } />
 
               <Route path="login" element={<Login />} />
