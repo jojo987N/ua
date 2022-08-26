@@ -51,11 +51,11 @@ export const userColumns = [
   //temporary data
  
 
-  export const productColumns = [
+  export const foodsColumns = [
   //  { field: "id", headerName: "ID", width: 70 },
     {
       field: "menu",
-      headerName:  <b>Menu</b>,
+      headerName:  Menu,
       width: 230,
       renderCell: (params) => {
         return (

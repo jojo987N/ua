@@ -8,72 +8,49 @@ import { useState } from "react";
 import TimePicker from 'react-time-picker';
 //import TimePicker from 'react-time-picker/dist/entry.nostyle';
 
+import { userInputs } from "./formSource";
+
+
 import { Button, Modal, Space } from 'antd';
 
 import Select from 'react-select'
 import { useParams } from "react-router-dom";
 import { decryptData } from "../../utils";
 import { APP_CONSTANT } from "../../globals";
-import { driverInputs } from "../../formSource";
 
 
-const AddDriver = () => {
+const AddUser = () => {
 
+
+  let data;
 
   const [file, setFile] = useState("");
 
   const [value1, onChange1] = useState('');
   const [value2, onChange2] = useState('');
 
-  const customStyles = {
-     
-    control: (base) => ({
-      // none of react-select's styles are passed to <Control />
-      ...base,
-       border: 0,
-      width: "100%",
-      borderBottom: '1px solid gray',
-       
-        
-    }),
-     
-  }
-  
+
   const handleSubmit = (e)=>{
     
     e.preventDefault();
   }
-
-  const warning = () => {
-    Modal.warning({
-      title: 'This is a demo version',
-      content: 'Modification is not allowed',
-    });
-  };
-
   return (
-    <div className="new">
+    <div className="addUser">
       <Sidebar />
-      <div className="newContainer">
+      <div className="addUserContainer">
         <Navbar />
         <div className="top">
           <h1>{title}</h1>
         </div>
         <div className="bottom">
           <div className="left">
-            <img
-              src={
-                file
-                  ? URL.createObjectURL(file):""
-              }
-              alt=""
-            />
+            <img src={file? URL.createObjectURL(file):""} alt=""/>
           </div>
           <div className="right">
             <form onSubmit={handleSubmit}>
               <div className="formInput">
                 <label htmlFor="file">
-                  {APP_CONSTANT.TEXT.CAR_IMAGE}: <DriveFolderUploadOutlinedIcon className="icon" />
+                  {"Image"}: <DriveFolderUploadOutlinedIcon className="icon" />
                 </label>
                 <input
                   type="file"
@@ -83,16 +60,16 @@ const AddDriver = () => {
                 />
               </div>
 
-              {driverInputs.map((input) => (
+              {userInputs.map((input) => (
                 <div className="formInput" key={input.id}>
                   <label>{input.label}</label>
                   <input type={input.type} 
                   placeholder={input.placeholder}
-                  value={input.placeholder} />
+                  value={input.placeholder} 
+                  />
                 </div>
               ))}
-             
-              <button className="button" >{APP_CONSTANT.TEXT.SEND}</button>
+              <button className="button" onClick={warning} > {APP_CONSTANT.TEXT.SEND}</button>
                
             </form>
              
@@ -103,4 +80,4 @@ const AddDriver = () => {
   );
 };
 
-export default AddDriver;
+export default AddUser;

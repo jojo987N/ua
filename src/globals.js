@@ -17,31 +17,38 @@ export const APP_CONSTANT = {
     CAR_IMAGE: "Car Image",
     LATEST_ORDERS: "Latest Orders",
     USERNAME: "Username",
-    PASSWORD: "Password"
+    PASSWORD: "Password",
+    SIGN_IN: "Sign In"
     },
     ROLE: {
         DRIVER: "driver"
     },
     TYPE: {
-        CATEGORIES: "categories",
-        LOGIN: "login",
-        USERS: "users",
-        NEW: "new",
-        PRODUCTS: "products",
-        ORDERS: "orders",
-        RESTAURANTS: "restaurants",
-        DRIVERS: "drivers",
-        CATEGORIES: "categories",
-        EARNINGS: "earnings",
-        SETTINGS: "settings",
-        COUPONS: "coupons",
-        WALLET: "wallet",
-        PROFILE: "profile"
+        PASSWORD: "password"
     }
+    
 
 }
 
 export const COLORS = {
     LOADING: "#36D7B7"
+}
+
+export const PAGE = {
+    CATEGORIES: "categories",
+    LOGIN: "login",
+    USERS: "users",
+    NEW: "new",
+    PRODUCTS: "products",
+    ORDERS: "orders",
+    RESTAURANTS: "restaurants",
+    DRIVERS: "drivers",
+    CATEGORIES: "categories",
+    EARNINGS: "earnings",
+    SETTINGS: "settings",
+    COUPONS: "coupons",
+    WALLET: "wallet",
+    PROFILE: "profile",
+    ADD_USER: "AddUser"
 }
 

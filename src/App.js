@@ -10,8 +10,9 @@ import { AuthContext } from "./context/Auth";
 import Settings from "./components/settings/Settings";
 import ProtectedRoute from "./ProtectedRoute";
 import { useContext } from "react";
-import { APP_CONSTANT, TYPE } from "./globals";
+import { APP_CONSTANT, PAGE } from "./globals";
 import Users from "./pages/users/Users";
+import AddUser from "./pages/addUser/AddUser";
 function App() {
   const { currentUser } = useContext(AuthContext)
   return (
@@ -22,9 +23,9 @@ function App() {
             <Route index element={
               <PrivateRoute />
             } />
-            <Route path={TYPE.LOGIN} element={<Login />} />
+            <Route path={PAGE.LOGIN} element={<Login />} />
             <Route element={<ProtectedRoute currentUser={currentUser} />}>
-              <Route path={TYPE.USERS}>
+              <Route path={PAGE.USERS}>
                 <Route index element={<Users />} />
                 <Route path=":userId" element={<New inputs={userInputs} type="user" title={APP_CONSTANT.UPDATE_USER} />} />
                 <Route
@@ -32,7 +33,10 @@ function App() {
                   element={<New inputs={userInputs} type="user" title={APP_CONSTANT.ADD_NEW_USER} />}
                 />
               </Route>
-              <Route path={TYPE.PRODUCTS}>
+              <Route path={PAGE.ADD_USER}>
+                <Route index element={<AddUser />} />
+              </Route>
+              <Route path={PAGE.PRODUCTS}>
                 <Route index element={<List key="products" type="products" />} />
                 <Route path=":id" element={<New inputs={productInputs} type="product" title={APP_CONSTANT.UPDATE_MENU} />} />
                 <Route
@@ -40,7 +44,7 @@ function App() {
                   element={<New inputs={productInputs} type="products" title={APP_CONSTANT.ADD_NEW_MENU} />}
                 />
               </Route>
-              <Route path={TYPE.ORDERS}>
+              <Route path={PAGE.ORDERS}>
                 <Route index element={<List key="orders" type="orders" />} />
                 <Route path=":orderId" element={<Single type="orders" />} />
                 <Route
@@ -48,7 +52,7 @@ function App() {
                   element={<New inputs={productInputs} type="orders"  />}
                 />
               </Route>
-              <Route path={TYPE.RESTAURANTS}>
+              <Route path={PAGE.RESTAURANTS}>
                 <Route index element={<List key="restaurants" type="restaurants" />} />
                 <Route path=":restaurantId" element={<New inputs={restaurantInputs} type="restaurant" title={APP_CONSTANT.UPDATE_RESTAURANT}/>} />
                 <Route
@@ -56,7 +60,7 @@ function App() {
                   element={<New inputs={restaurantInputs} type="restaurant" title={APP_CONSTANT.ADD_NEW_RESTAURANT} />}
                 />
               </Route>
-              <Route path={TYPE.DRIVERS}>
+              <Route path={PAGE.DRIVERS}>
                 <Route index element={<List key="drivers" type="drivers" />} />
                 <Route path=":userId" element={<New inputs={[...userInputs, ...carInputs]} type="drivers" title={APP_CONSTANT.UPDATE_DRIVER}/>} />
                 <Route
@@ -64,7 +68,7 @@ function App() {
                   element={<New inputs={[...userInputs, ...carInputs]} type="drivers" title={APP_CONSTANT.ADD_NEW_DRIVER} />}
                 />
               </Route>
-              <Route path={TYPE.CATEGORIES}>
+              <Route path={PAGE.CATEGORIES}>
                 <Route index element={<List key="categories" type="categories" />} />
                 <Route path=":id" element={<New inputs={categoryInputs} type="categorie" title={APP_CONSTANT.UPDATE_CATEGORY} />} />
                 <Route
@@ -72,10 +76,10 @@ function App() {
                   element={<New inputs={categoryInputs} type="categorie" title={APP_CONSTANT.ADD_NEW_CATEGORY} />}
                 />
               </Route>
-              <Route path={TYPE.EARNINGS}>
+              <Route path={PAGE.EARNINGS}>
                 <Route index element={<List key="earnings" type="earnings" />} />
               </Route>
-              <Route path={TYPE.SETTINGS}>
+              <Route path={PAGE.SETTINGS}>
                 <Route index element={<Settings key="earnings" type="earnings" />} />
               </Route>
               

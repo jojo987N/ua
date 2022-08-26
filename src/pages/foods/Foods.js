@@ -4,12 +4,13 @@ import "./foods.scss";
 import {useEffect, useState } from "react";
 import { APP_CONSTANT } from "../../globals";
 import { getFoods } from "../../firebase";
+import Datatable from "../../components/datatable/Datatable";
+import { foodsColumns } from "../../datatablesource";
 
 const Foods = () => {
   const [foods, setFoods] = useState()
     useEffect(()=>{
         getFoods().then(foods => setFoods(foods))
-
     }, [])
 
  return (
@@ -21,18 +22,9 @@ const Foods = () => {
 
 <div className="title">
         {APP_CONSTANT.TEXT.FOODS}
-        
       </div>
        <div className="content">
-      
-      <DataGrid
-        className="datagrid"
-        rows={tab.rows}
-        columns={tab.columns.concat(actionColumn)}
-        pageSize={9}
-        rowsPerPageOptions={[9]}
-        checkboxSelection
-      />
+      <Datatable rows={foods} columns={foodsColumns} />
     </div>
         
      </div>

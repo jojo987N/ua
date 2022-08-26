@@ -94,6 +94,11 @@ export const userInputs = [
       label: "Address",
       type: "text",
     },
+    {
+      id: 5,
+      label: "manager",
+      type: "text",
+    },
   ];
   export const categoryInputs = [
     {
