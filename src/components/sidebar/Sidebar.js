@@ -47,115 +47,95 @@ function getItem(label, key, icon, children, type) {
   };
 }
 
-const Sidebar = ({type}) => {
+const Sidebar = ({ type }) => {
 
 
-  console.log("type : ", '/'+type)
- // const { dispatch } = useContext(DarkModeContext);
-const {currentRestaurant} = useContext(RestaurantContext)
-const [collapsed, setCollapsed] = useState(false);
-const navigate = useNavigate()
-// const {selectedKey, setSelectedKey} = useContext(SelectedKeyContext)
+  console.log("type : ", '/' + type)
+  // const { dispatch } = useContext(DarkModeContext);
+  const { currentRestaurant } = useContext(RestaurantContext)
+  const [collapsed, setCollapsed] = useState(false);
+  const navigate = useNavigate()
+  // const {selectedKey, setSelectedKey} = useContext(SelectedKeyContext)
 
- 
- 
 
- 
-  
- const signOutUser = () => {
-  
-  signOut(auth)
-  .then(()=>{
-       
-      //navigation.replace('SignScreen') // Efface tout
-      //navigation.navigate('SignIn')
-     // window.location.reload();
 
-  })
 
-  .catch((err)=>console.log(err.code))
-   
-}
 
-const items = [
-  // getItem('Option 1', '1', <PieChartOutlined />),
-  getItem('Dashboard', '/', <DashboardIcon />),
-  // getItem('Users', '2', <PersonOutlineIcon className="icon" />),
-  getItem('Customer App', 'sub', <PersonOutlineIcon className="icon" />, [
-   getItem('Setting up Environment', 'sub1', <StoreIcon className="icon" />),
-   getItem('Install Node.js', 'sub2', <StoreIcon className="icon" />),
-   getItem('Install the Expo CLI', 'sub3', <StoreIcon className="icon" />),
-   getItem('Create a Firebase Project', 'sub4', <StoreIcon className="icon" />),
-   getItem('Create a Firebase config file', 'sub5', <StoreIcon className="icon" />),
-   getItem('Get Google Places API key', 'sub6', <StoreIcon className="icon" />),
-   getItem('Change app name', 'sub7', <StoreIcon className="icon" />),
-   getItem('Change app logo', 'sub7', <StoreIcon className="icon" />),
-   getItem('Change app currency', 'sub7', <StoreIcon className="icon" />),
-   getItem('Translation', 'sub7', <StoreIcon className="icon" />),
-    
-    
-    
-  ]),
-   
-   
-  getItem('Driver App', 'sub1', <CreditCardIcon className="icon" />, [
-    getItem('Orders List', '/orders'),
-    // getItem('In progress', '6'),
-    // getItem('Completed', '7'),
-    // getItem('Pending', '8'),
-  ]),
-  getItem('Restaurant App', 'sub2', <LocalShippingIcon className="icon" />, [
-    getItem('Drivers List', '/drivers'),
-    getItem('Add Driver', '/drivers/new'),
-    // getItem('Submenu', 'sub3', null, [getItem('Option 11', '11'), getItem('Option 12', '12')]),
-  ]),
-  getItem('Admin Panel', 'sub3', <RestaurantIcon className="icon" />, [
-    getItem('Restaurants List', '/restaurants'),
-    getItem('Add Restaurant', '/restaurants/new'),
-    // getItem('Submenu', 'sub3', null, [getItem('Option 11', '11'), getItem('Option 12', '12')]),
-  ]),
-  getItem('Categories', 'sub4',  <CategoryIcon className="icon" />, [
-    getItem('Categories List', '/categories'),
-    getItem('Add Category', '/categories/new'),
-    // getItem('Submenu', 'sub3', null, [getItem('Option 11', '11'), getItem('Option 12', '12')]),
-  ]),
-  getItem('Profile', 'sub5',  <AccountCircleOutlinedIcon className="icon" />, [
-    getItem('Update Profile', '/users/profile'),
-    // getItem('Option 10', '10'),
-    // getItem('Submenu', 'sub3', null, [getItem('Option 11', '11'), getItem('Option 12', '12')]),
-  ]),
- 
-  getItem('Earnings', '/earnings',  <MonetizationOnOutlinedIcon />),
 
-  getItem('Transactions', '/transactions',  <PaymentsIcon />),
+  const signOutUser = () => {
 
-  getItem('Settings', '/settings',  <SettingsIcon />),
+    signOut(auth)
+      .then(() => {
 
-  getItem('Logout', '/logout', <ExitToAppIcon className="icon" />),
-];
- 
-const onClick = e => {
- console.log('click ', e);
-  if(e.key !== "/logout" )
-  navigate(e.key)
-  else
-  signOutUser()
-   
-};
+        //navigation.replace('SignScreen') // Efface tout
+        //navigation.navigate('SignIn')
+        // window.location.reload();
+
+      })
+
+      .catch((err) => console.log(err.code))
+
+  }
+
+  const items = [
+    // getItem('Option 1', '1', <PieChartOutlined />),
+    getItem('Dashboard', '/', <DashboardIcon />),
+    // getItem('Users', '2', <PersonOutlineIcon className="icon" />),
+    // getItem('Customer App', 'sub', <PersonOutlineIcon className="icon" />, [
+
+
+    // ]),
+
+    getItem('Setting up Environment', 'sub1', <StoreIcon className="icon" />),
+    getItem('Install Node.js', 'sub2', <StoreIcon className="icon" />),
+    getItem('Install the Expo CLI', 'sub3', <StoreIcon className="icon" />),
+    getItem('Create a Firebase Project', 'sub4', <StoreIcon className="icon" />),
+    getItem('Create a Firebase config file', 'sub5', <StoreIcon className="icon" />),
+    getItem('Get Google Places API key', 'sub6', <StoreIcon className="icon" />),
+    getItem('Change app name', 'sub7', <StoreIcon className="icon" />),
+    getItem('Change app logo', 'sub7', <StoreIcon className="icon" />),
+    getItem('Change app currency', 'sub7', <StoreIcon className="icon" />),
+    getItem('Translation', 'sub7', <StoreIcon className="icon" />),
+    getItem('Screen', 'sub', <PersonOutlineIcon className="icon" />, [
+      getItem('Home Screen', 'sub7', <StoreIcon className="icon" />, [
+        getItem('Search Component', 'sub7', <StoreIcon className="icon" />),
+        getItem('Category Component', 'sub7', <StoreIcon className="icon" />),
+        getItem('Restaurant Items component ', 'sub7', <StoreIcon className="icon" />),
+      ]),
+      getItem('Restaurant Details Screen', 'sub7', <StoreIcon className="icon" />, [
+        getItem('Menu Items Component', 'sub7', <StoreIcon className="icon" />),
+      ]),
+      
+    ]),
+    getItem('Driver App Translation', 'sub7', <StoreIcon className="icon" />),
+
+
+
+
+  ];
+
+  const onClick = e => {
+    console.log('click ', e);
+    if (e.key !== "/logout")
+      navigate(e.key)
+    else
+      signOutUser()
+
+  };
 
   return (
     <div className="sidebar">
       <div className="top">
-         <Link to="/" style={{ textDecoration: "none" }}>
-           {/* <span className="logo">Good Food</span> */}
-           {/* <img className="cellImg" style={{width: 100, height: 100}} src={require("../../assets/images/logo-100-removed.png")} alt="avatar" /> */}
+        <Link to="/" style={{ textDecoration: "none" }}>
+          {/* <span className="logo">Good Food</span> */}
+          {/* <img className="cellImg" style={{width: 100, height: 100}} src={require("../../assets/images/logo-100-removed.png")} alt="avatar" /> */}
 
-         </Link>
-       </div>
-    <Menu
+        </Link>
+      </div>
+      <Menu
         onClick={onClick}
         defaultSelectedKeys={['1']}
-         defaultOpenKeys={['sub1']}
+        defaultOpenKeys={['sub1']}
         // defaultOpenKeys={['/'+type]}
         mode="inline"
         // theme="dark"
@@ -163,7 +143,7 @@ const onClick = e => {
         items={items}
       />
     </div>
-  
+
     // <div className="sidebar">
     //   <div className="top">
     //     <Link to="/" style={{ textDecoration: "none" }}>
@@ -217,7 +197,7 @@ const onClick = e => {
     //         <span>Categories</span>
     //       </li>
     //       </Link>
-           
+
     //       <p className="title">USER</p>
     //       <Link to="/users/profile" style={{ textDecoration: "none" }}>
     //       <li>
@@ -234,11 +214,11 @@ const onClick = e => {
     //   <div className="bottom">
     //     <div
     //       className="colorOption"
-        
+
     //     ></div>
     //     <div
     //       className="colorOption"
-         
+
     //     ></div>
     //   </div>
     // </div>

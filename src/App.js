@@ -91,8 +91,8 @@ function App() {
               <Route index element={
 
                 // <PrivateRoute />
-                //  <Home />
-                <Driver />
+                  <Home />
+                // <Driver />
               } />
 
               <Route path="login" element={<Login />} />

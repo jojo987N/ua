@@ -240,6 +240,26 @@ npm start
 
 <p>&nbsp;</p>
 
+<h1><strong>Driver App Translation</strong></h1>
+<p>It's very easy to customizing the experience for specific regions, languages, or cultures. It also provides access to the locale data on the native device.</p>
+<p>In en.json file, inside of lang folder, you can translate for your specific language</p>
+<img  src={require("../../assets/images/driver-translation.png")}  alt="avatar" />
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h1><strong>Customize Colors</strong></h1>
+<p>It's very easy to change colors , open global.js file in project folder . </p>
+<img  src={require("../../assets/images/customize-colors.png")}  alt="avatar" />
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h1><strong>Add New Driver</strong></h1>
+<p>Add driver in Admin Panel . </p>
+<img  src={require("../../assets/images/add-driver.png")} style={{width: 900, height: 442}} alt="avatar" />
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h1><strong>Customize Icons</strong></h1>
+<p>It's very easy to customize icons , open global.js file in project folder . </p>
+<img  src={require("../../assets/images/customize-icons.png")}  alt="avatar" />
+<p>&nbsp;</p>
 
 
 
@@ -247,7 +267,7 @@ npm start
 
         </Card>
 
-        <Card title={"Delivery Boy App"}></Card>
+         
 
  
 
