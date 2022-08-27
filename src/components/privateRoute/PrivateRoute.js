@@ -3,7 +3,6 @@ import { useContext } from "react";
 import { AuthContext } from "../../context/Auth";
 import Home from '../../pages/home/Home';
 import Login from '../../pages/login/Login';
-import Restaurant from '../../pages/restaurant/Restaurant';
 import ClipLoader from "react-spinners/ClipLoader";
 import { DotLoader } from 'react-spinners';
 import { LoadingContext } from '../../context/LoadingContext';
