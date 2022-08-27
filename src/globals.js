@@ -1,3 +1,5 @@
+export const language = 'en'
+export const currency = "USD"
 export const APP_CONSTANT = {
     TEXT: {
     UPDATE_USER: "Update User",
@@ -18,20 +20,36 @@ export const APP_CONSTANT = {
     LATEST_ORDERS: "Latest Orders",
     USERNAME: "Username",
     PASSWORD: "Password",
-    SIGN_IN: "Sign In"
+    SIGN_IN: "Sign In",
+    USERS: "USERS",
+    SEE_ALL_USERS: "See all users",
+    ORDERS: "ORDERS",
+    VIEW_ALL_ORDERS: "View all orders",
+    EARNINGS: "EARNINGS",
+    VIEW_NET_EARNINGS: "View net earnings",
+    DRIVERS: "DRIVERS",
+    SEE_ALL_DRIVERS: "See all drivers"
     },
     ROLE: {
         DRIVER: "driver"
     },
     TYPE: {
-        PASSWORD: "password"
+        PASSWORD: "password",
+        USERS: "users",
+        ORDERS: "orders",
+        EARNING: "earning",
+        DRIVER: "driver"
+    },
+    STYLE: {
+        CURRENCY: "currency"
     }
     
 
 }
 
 export const COLORS = {
-    LOADING: "#36D7B7"
+    LOADING: "#36D7B7",
+    USERS_ICON: "crimson"
 }
 
 export const PAGE = {

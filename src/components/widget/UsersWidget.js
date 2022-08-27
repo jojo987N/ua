@@ -12,71 +12,20 @@ import { APP_CONSTANT, currency, language } from "../../globals";
 
 const Widget = ({ type, totalUsers, totalOrders, totalDrivers, earnings}) => {
   let data;
+  data = {
+    title: APP_CONSTANT.TEXT.USERS,
+    //isMoney: false,
+    number: totalUsers,
+    link: APP_CONSTANT.TEXT.SEE_ALL_USERS,
+    icon: (
+      <PersonOutlinedIcon
+        className="icon"
+        style={styles.userIcon}
+      />
+    ),
+  };
 
-
-  switch (type) {
-    case APP_CONSTANT.TYPE.USERS:
-      data = {
-        title: APP_CONSTANT.TEXT.USERS,
-        //isMoney: false,
-        number: totalUsers,
-        link: APP_CONSTANT.TEXT.SEE_ALL_USERS,
-        icon: (
-          <PersonOutlinedIcon
-            className="icon"
-            style={styles.userIcon}
-          />
-        ),
-      };
-      break;
-    case APP_CONSTANT.TYPE.ORDERS:
-      data = {
-        title: APP_CONSTANT.TEXT.ORDERS,
-        //isMoney: false,
-        number: totalOrders,
-        link: APP_CONSTANT.TEXT.VIEW_ALL_ORDERS,
-        icon: (
-          <ShoppingCartOutlinedIcon
-            className="icon"
-            style={styles.orderIcon}
-          />
-        ),
-      };
-      break;
-    case APP_CONSTANT.TYPE.EARNING:
-      data = {
-        title:  APP_CONSTANT.TEXT.EARNINGS,
-        //isMoney: true,
-        number: earnings.toLocaleString(language, {
-          style: APP_CONSTANT.STYLE.CURRENCY ,
-          currency: currency
-      }),
-        link: APP_CONSTANT.TEXT.VIEW_NET_EARNINGS,
-        icon: (
-          <MonetizationOnOutlinedIcon
-            className="icon"
-            style={styles.earning}
-          />
-        ),
-      };
-      break;
-    case APP_CONSTANT.TYPE.DRIVER:
-      data = {
-        title: APP_CONSTANT.TEXT.DRIVERS,
-        //isMoney: true,
-        number: totalDrivers,
-        link: APP_CONSTANT.TEXT.SEE_ALL_DRIVERS,
-        icon: (
-          <AccountBalanceWalletOutlinedIcon
-            className="icon"
-            style={styles.driverIcon}
-          />
-        ),
-      };
-      break;
-    default:
-      break;
-  }
+  
 
   return (
     <div className="widget">
