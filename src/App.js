@@ -4,7 +4,6 @@ import Single from "./pages/single/Single";
 import New from "./pages/new/New";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { carInputs, categoryInputs, productInputs, restaurantInputs, userInputs } from "./formSource";
-import Restaurant from "./pages/restaurant/Restaurant";
 import PrivateRoute from "./components/privateRoute/PrivateRoute";
 import { AuthContext } from "./context/Auth";
 import Settings from "./components/settings/Settings";
