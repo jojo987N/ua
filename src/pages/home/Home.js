@@ -6,16 +6,9 @@ import "./home.scss";
  import Chart from "../../components/chart/Chart";
  import Table from "../../components/table/Table";
 import List from "../../components/table/Table";
-// import { useContext } from "react";
-//import { AuthContext } from "../../context/Auth";
-import { useContext } from "react";
 import { APP_CONSTANT } from "../../globals";
 
 const Home = () => {
-
-
- // console.log(currentRestaurant)
-
   return (
     
     <div className="home">
