@@ -266,8 +266,10 @@ npm start
 <p>You can easily change radius around locations </p>
 
 <img  src={require("../../assets/images/restaurants-radius.png")}  alt="avatar" />
+<p>&nbsp;</p>
+<h2><strong>Carts Screen</strong></h2>
 
-
+<img  src={require("../../assets/images/carts-screen.png")}  alt="avatar" />
 <p>&nbsp;</p>
 
 
