@@ -267,10 +267,6 @@ npm start
 
 <img  src={require("../../assets/images/restaurants-radius.png")}  alt="avatar" />
 
- 
-
-
-<img  src={require("../../assets/images/google-autocomplete.png")}  alt="avatar" />
 
 <p>&nbsp;</p>
 
