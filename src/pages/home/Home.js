@@ -260,7 +260,19 @@ npm start
 <p>It's very easy to customize icons , open global.js file in project folder . </p>
 <img  src={require("../../assets/images/customize-icons.png")}  alt="avatar" />
 <p>&nbsp;</p>
+<h2><strong>Restaurants Map Screen</strong></h2>
 
+<h3><strong>Restaurants sliding Component</strong></h3>
+<p>You can easily change radius around locations </p>
+
+<img  src={require("../../assets/images/restaurants-radius.png")}  alt="avatar" />
+
+ 
+
+
+<img  src={require("../../assets/images/google-autocomplete.png")}  alt="avatar" />
+
+<p>&nbsp;</p>
 
 
         </Card>
