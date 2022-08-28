@@ -273,6 +273,15 @@ npm start
 <p>&nbsp;</p>
 
 
+<p>&nbsp;</p>
+
+<h1><strong>Driver Notification Time</strong></h1>
+<p>It's very easy to customizing the driver app, notification when receive order</p>
+<img  src={require("../../assets/images/notification-time.gif")}  alt="avatar" />
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
         </Card>
 
         </Card>
