@@ -35,6 +35,8 @@ import {
 } from '@ant-design/icons';
 
 import { Button, Menu } from 'antd';
+import { HashLink as Link } from 'react-router-hash-link';
+
 // import { SelectedKeyContext } from "../../context/SelectedKey";
 
 function getItem(label, key, icon, children, type) {
