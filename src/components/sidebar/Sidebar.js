@@ -13,7 +13,7 @@ import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import SettingsSystemDaydreamOutlinedIcon from "@mui/icons-material/SettingsSystemDaydreamOutlined";
 import PsychologyOutlinedIcon from "@mui/icons-material/PsychologyOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import {useNavigate, useParams } from "react-router-dom";
 import { signOut } from "firebase/auth";
 import { auth } from "../../firebase";
 //import { DarkModeContext } from "../../context/darkModeContext";
