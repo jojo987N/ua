@@ -31,10 +31,10 @@ const Home = () => {
   return (
     
     <div className="home">
-      {/* <Sidebar /> */}
+      <Sidebar />
       <div className="homeContainer">
-        {/* <Navbar /> */}
-        <Navbar1 />
+        <Navbar />
+        {/* <Navbar1 /> */}
          
         <div className="folders">
           
