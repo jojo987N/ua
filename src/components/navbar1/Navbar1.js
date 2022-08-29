@@ -6,7 +6,7 @@ import { SidebarData } from './SidebarData';
 import './Navbar1.css';
 import { IconContext } from 'react-icons';
 
-function Navbar() {
+function Navbar1() {
   const [sidebar, setSidebar] = useState(false);
 
   const showSidebar = () => setSidebar(!sidebar);
@@ -43,4 +43,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default Navbar1;
