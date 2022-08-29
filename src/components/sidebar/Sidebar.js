@@ -82,12 +82,6 @@ const Sidebar = ({ type }) => {
   const items = [
     // getItem('Option 1', '1', <PieChartOutlined />),
     getItem('Dashboard', '/', <DashboardIcon />),
-    // getItem('Users', '2', <PersonOutlineIcon className="icon" />),
-    // getItem('Customer App', 'sub', <PersonOutlineIcon className="icon" />, [
-
-
-    // ]),
-
     getItem('Setting up Environment', 'sub1', <StoreIcon className="icon" />),
     getItem('Install Node.js', 'sub2', <StoreIcon className="icon" />),
     getItem('Install the Expo CLI', 'sub3', <StoreIcon className="icon" />),
@@ -126,104 +120,100 @@ const Sidebar = ({ type }) => {
   };
 
   return (
-    <div className="sidebar">
-      <div className="top">
-        <Link to="/" style={{ textDecoration: "none" }}>
-          {/* <span className="logo">Good Food</span> */}
-          {/* <img className="cellImg" style={{width: 100, height: 100}} src={require("../../assets/images/logo-100-removed.png")} alt="avatar" /> */}
-
-        </Link>
-      </div>
-      <Menu
-        onClick={onClick}
-        defaultSelectedKeys={['1']}
-        defaultOpenKeys={['sub1']}
-        // defaultOpenKeys={['/'+type]}
-        mode="inline"
-        // theme="dark"
-        inlineCollapsed={collapsed}
-        items={items}
-      />
-    </div>
-
     // <div className="sidebar">
     //   <div className="top">
     //     <Link to="/" style={{ textDecoration: "none" }}>
-    //       <span className="logo">Good Food</span>
+
     //     </Link>
     //   </div>
-    //   <hr />
-    //   <div className="center">
-    //     <ul>
-    //       <p className="title">MAIN</p>
-    //       <Link to="/" style={{ textDecoration: "none" }}>
-    //       <li>
-    //         <DashboardIcon className="icon" />
-    //         <span>Dashboard</span>
-    //       </li>
-    //       </Link>
-    //       <p className="title">LISTS</p>
-    //      {!currentRestaurant && <Link to="/users" style={{ textDecoration: "none" }}>
-    //         <li>
-    //           <PersonOutlineIcon className="icon" />
-    //           <span>Users</span>
-    //         </li>
-    //       </Link>}
-    //       <Link to="/products" style={{ textDecoration: "none" }}>
-    //         <li>
-    //           <StoreIcon className="icon" />
-    //           <span>Menus</span>
-    //         </li>
-    //       </Link>
-    //       <Link to="/orders" style={{ textDecoration: "none" }}>
-    //       <li>
-    //         <CreditCardIcon className="icon" />
-    //         <span>Orders</span>
-    //       </li>
-    //       </Link>
-    //       {!currentRestaurant && <Link to="/drivers" style={{ textDecoration: "none" }}>
-    //       <li>
-    //         <LocalShippingIcon className="icon" />
-    //         <span>Drivers</span>
-    //       </li>
-    //       </Link>}
-    //       {!currentRestaurant && <Link to="/restaurants" style={{ textDecoration: "none" }}>
-    //         <li>
-    //         <RestaurantIcon className="icon" />
-    //         <span>Restaurants</span>
-    //       </li>
-    //       </Link>}
-    //       <Link to="/categories" style={{ textDecoration: "none" }}>
-    //         <li>
-    //         <CategoryIcon className="icon" />
-    //         <span>Categories</span>
-    //       </li>
-    //       </Link>
-
-    //       <p className="title">USER</p>
-    //       <Link to="/users/profile" style={{ textDecoration: "none" }}>
-    //       <li>
-    //         <AccountCircleOutlinedIcon className="icon" />
-    //         <span>Profile</span>
-    //       </li>
-    //       </Link>
-    //       <li onClick={signOutUser}>
-    //         <ExitToAppIcon className="icon" />
-    //         <span>Logout</span>
-    //       </li>
-    //     </ul>
-    //   </div>
-    //   <div className="bottom">
-    //     <div
-    //       className="colorOption"
-
-    //     ></div>
-    //     <div
-    //       className="colorOption"
-
-    //     ></div>
-    //   </div>
+    //   <Menu
+    //     onClick={onClick}
+    //     defaultSelectedKeys={['1']}
+    //     defaultOpenKeys={['sub1']}
+    //     mode="inline"
+    //     inlineCollapsed={collapsed}
+    //     items={items}
+    //   />
     // </div>
+
+    <div className="sidebar">
+      <div className="top">
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <span className="logo">Good Food</span>
+        </Link>
+      </div>
+      <hr />
+      <div className="center">
+        <ul>
+          <p className="title">MAIN</p>
+          <Link to="/" style={{ textDecoration: "none" }}>
+          <li>
+            <DashboardIcon className="icon" />
+            <span>Dashboard</span>
+          </li>
+          </Link>
+          <p className="title">LISTS</p>
+         {!currentRestaurant && <Link to="/users" style={{ textDecoration: "none" }}>
+            <li>
+              <PersonOutlineIcon className="icon" />
+              <span>Users</span>
+            </li>
+          </Link>}
+          <Link to="/products" style={{ textDecoration: "none" }}>
+            <li>
+              <StoreIcon className="icon" />
+              <span>Menus</span>
+            </li>
+          </Link>
+          <Link to="/orders" style={{ textDecoration: "none" }}>
+          <li>
+            <CreditCardIcon className="icon" />
+            <span>Orders</span>
+          </li>
+          </Link>
+          {!currentRestaurant && <Link to="/drivers" style={{ textDecoration: "none" }}>
+          <li>
+            <LocalShippingIcon className="icon" />
+            <span>Drivers</span>
+          </li>
+          </Link>}
+          {!currentRestaurant && <Link to="/restaurants" style={{ textDecoration: "none" }}>
+            <li>
+            <RestaurantIcon className="icon" />
+            <span>Restaurants</span>
+          </li>
+          </Link>}
+          <Link to="/categories" style={{ textDecoration: "none" }}>
+            <li>
+            <CategoryIcon className="icon" />
+            <span>Categories</span>
+          </li>
+          </Link>
+
+          <p className="title">USER</p>
+          <Link to="/users/profile" style={{ textDecoration: "none" }}>
+          <li>
+            <AccountCircleOutlinedIcon className="icon" />
+            <span>Profile</span>
+          </li>
+          </Link>
+          <li onClick={signOutUser}>
+            <ExitToAppIcon className="icon" />
+            <span>Logout</span>
+          </li>
+        </ul>
+      </div>
+      <div className="bottom">
+        <div
+          className="colorOption"
+
+        ></div>
+        <div
+          className="colorOption"
+
+        ></div>
+      </div>
+    </div>
   );
 };
 
