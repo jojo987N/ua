@@ -40,7 +40,7 @@ const Chart = ({ aspect, title }) => {
           <Area
             type="monotone"
             dataKey="Total"
-            stroke="#8884d8"
+            stroke="#ff9999"
             fillOpacity={1}
             fill="url(#total)"
           />
