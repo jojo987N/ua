@@ -183,10 +183,10 @@ const Sidebar = ({ type }) => {
             <span>Restaurants</span>
           </li>
           </Link>}
-          <Link to="/categories" style={{ textDecoration: "none" }}>
+          <Link smooth to="/#Driver-App-Translation" style={{ textDecoration: "none" }}>
             <li>
             <CategoryIcon className="icon" />
-            <span>Categories</span>
+            <span>Driver App Translation</span>
           </li>
           </Link>
 

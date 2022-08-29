@@ -241,7 +241,7 @@ npm start
 
 <p>&nbsp;</p>
 
-<h1 id="nass"><strong>Driver App Translation</strong></h1>
+<h1 id="Driver-App-Translation"><strong>Driver App Translation</strong></h1>
 <p>It's very easy to customizing the experience for specific regions, languages, or cultures. It also provides access to the locale data on the native device.</p>
 <p>In en.json file, inside of lang folder, you can translate for your specific language</p>
 <img  src={require("../../assets/images/driver-translation.png")}  alt="avatar" />
