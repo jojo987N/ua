@@ -20,7 +20,7 @@ const data01 = [
     { name: 'D1', value: 150 },
     { name: 'D2', value: 50 },
   ];
-const PieChart = () => {
+const PieChartt = () => {
     return (
       <div className="pieChart">
           <ResponsiveContainer width="100%" height="100%">
@@ -33,4 +33,4 @@ const PieChart = () => {
     )
 }
 
-export default PieChart;
+export default PieChartt;
