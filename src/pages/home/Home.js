@@ -35,7 +35,7 @@ const Home = () => {
           
           {/* <Featured /> */}
           {/* <PieChartt /> */}
-          <div>xfbgcnh,gj;hhkhk:jl:l:l:l::jlj</div>
+          <div style={{border: "1px solid black", width: 500, height: 500}}>xfbgcnh,gj;hhkhk:jl:l:l:l::jlj</div>
           {/* <Chart title="Last 6 Months (Revenue)" aspect={2 / 1} /> */}
           <Barchart />
         </div>
