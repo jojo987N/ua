@@ -34,7 +34,7 @@ const Home = () => {
         <div className="charts">
           
           {/* <Featured /> */}
-          {/* <PieChartt /> */}
+          <PieChartt />
           {/* <Chart title="Last 6 Months (Revenue)" aspect={2 / 1} /> */}
           <Barchart />
         </div>
