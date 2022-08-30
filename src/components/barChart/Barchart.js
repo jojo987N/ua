@@ -2,15 +2,15 @@ import "./barchart.scss"
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const data = [
-    { name: "January", Total: 1200 },
-    { name: "February", Total: 2100 },
-    { name: "March", Total: 800 },
-    { name: "April", Total: 1600 },
-    { name: "May", Total: 900 },
-    { name: "June", Total: 1700 },
-    { name: "July", Total: 1600 },
-    { name: "August", Total: 900 },
-    { name: "September", Total: 1700 },
+    { name: "January", Total: 1200, Total1: 800 },
+    { name: "February", Total: 2100, Total1: 1700 },
+    { name: "March", Total: 800, Total1: 400 },
+    { name: "April", Total: 1600, Total1: 1000 },
+    { name: "May", Total: 900, Total1: 500 },
+    { name: "June", Total: 1700, Total1: 1000 },
+    { name: "July", Total: 1600, Total1: 800 },
+    { name: "August", Total: 900, Total1: 500 },
+    { name: "September", Total: 1700, Total1: 700 },
   ];
 
 const Barchart = () => {
