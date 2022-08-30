@@ -11,6 +11,7 @@ import List from "../../components/table/Table";
 import { RestaurantContext } from "../../context/RestaurantContext";
 import { useContext } from "react";
 import Barchart from "../../components/barChart/Barchart";
+import PieChart from "../../components/pieChart/PieChart";
 
 const Home = () => {
 
@@ -31,7 +32,8 @@ const Home = () => {
           {currentRestaurant?<Widget type="ready-for-pickup-order" />:<Widget type="driver" />}
         </div>
         <div className="charts">
-          <Featured />
+          <PieChart />
+          {/* <Featured /> */}
           {/* <Chart title="Last 6 Months (Revenue)" aspect={2 / 1} /> */}
           <Barchart />
         </div>
