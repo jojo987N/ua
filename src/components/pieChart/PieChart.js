@@ -40,7 +40,7 @@ const PieChartt = () => {
               cy="50%"
               innerRadius={70}
               outerRadius={90}
-              fill="#6a6d32"
+              fill="#82ca9d"
               label
             />
           </PieChart>
