@@ -16,7 +16,7 @@ const data = [
 const Barchart = () => {
     return (
         <div className="barchart">
-             <ResponsiveContainer width={'99%'} aspect={1}>
+             <ResponsiveContainer width={'99%'} height={400}>
         <BarChart
           width={500}
           height={300}
