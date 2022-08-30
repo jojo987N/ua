@@ -33,8 +33,8 @@ const Barchart = () => {
           <YAxis />
           <Tooltip />
           <Legend />
-          <Bar dataKey="Sell" fill="#8884d8" />
-          <Bar dataKey="Commission" fill="#6a6d32" />
+          <Bar dataKey="Sell" fill="#000033" />
+          <Bar dataKey="Commission" fill="#82ca9d" />
         </BarChart>
       </ResponsiveContainer>
         </div>
