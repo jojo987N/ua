@@ -18,11 +18,11 @@ const Featured = () => {
           {/* <CircularProgressbar value={70} text={"70%"} strokeWidth={5} /> */}
           <PieChartt />
         </div>
-        <p className="title">Total sales made today</p>
+        {/* <p className="title">Total sales made today</p>
         <p className="amount">$420</p>
         <p className="desc">
           Previous transactions processing. Last payments may not be included.
-        </p>
+        </p> */}
         <div className="summary">
           <div className="item">
             <div className="itemTitle">Target</div>
