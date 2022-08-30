@@ -34,7 +34,7 @@ const Barchart = () => {
           <Tooltip />
           <Legend />
           <Bar dataKey="Sell" fill="#8884d8" />
-          <Bar dataKey="Commission" fill="#82ca9d" />
+          <Bar dataKey="Commission" fill="#6a6d32" />
         </BarChart>
       </ResponsiveContainer>
         </div>
