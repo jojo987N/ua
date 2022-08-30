@@ -31,7 +31,7 @@ const PieChartt = () => {
               cx="50%"
               cy="50%"
               outerRadius={60}
-              fill="#8884d8"
+              fill="#004aad"
             />
             <Pie
               data={data02}
