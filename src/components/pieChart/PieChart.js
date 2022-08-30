@@ -23,7 +23,6 @@ const data01 = [
 const PieChartt = () => {
     return (
       <div className="pieChart">
-        <p>bfdhdgfjgkhklhklkklljljjljlm</p>
           <ResponsiveContainer width="100%" height="100%">
         <PieChart width={400} height={400}>
           <Pie data={data01} dataKey="value" cx="50%" cy="50%" outerRadius={60} fill="#8884d8" />
