@@ -2,15 +2,15 @@ import "./barchart.scss"
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const data = [
-    { name: "January", Total: 1200, Total1: 800 },
-    { name: "February", Total: 2100, Total1: 1700 },
-    { name: "March", Total: 800, Total1: 400 },
-    { name: "April", Total: 1600, Total1: 1000 },
-    { name: "May", Total: 900, Total1: 500 },
-    { name: "June", Total: 1700, Total1: 1000 },
-    { name: "July", Total: 1600, Total1: 800 },
-    { name: "August", Total: 900, Total1: 500 },
-    { name: "September", Total: 1700, Total1: 700 },
+    { name: "January", Sell: 1200, Commission: 360 },
+    { name: "February", Sell: 2100, Commission: 525 },
+    { name: "March", Sell: 800, Commission: 240 },
+    { name: "April", Sell: 1600, Commission: 480 },
+    { name: "May", Sell: 900, Commission: 270 },
+    { name: "June", Sell: 1700, Commission: 510 },
+    { name: "July", Sell: 1600, Commission: 480 },
+    { name: "August", Sell: 900, Commission: 270 },
+    { name: "September", Sell: 1700, Commission: 510 },
   ];
 
 const Barchart = () => {
@@ -33,8 +33,8 @@ const Barchart = () => {
           <YAxis />
           <Tooltip />
           <Legend />
-          <Bar dataKey="Total" fill="#8884d8" />
-          <Bar dataKey="Total1" fill="#82ca9d" />
+          <Bar dataKey="Sell" fill="#8884d8" />
+          <Bar dataKey="Commission" fill="#82ca9d" />
         </BarChart>
       </ResponsiveContainer>
         </div>
