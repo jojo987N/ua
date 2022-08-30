@@ -1,60 +1,37 @@
 import "./navbar.scss";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
-import LanguageOutlinedIcon from "@mui/icons-material/LanguageOutlined";
-//import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
-import FullscreenExitOutlinedIcon from "@mui/icons-material/FullscreenExitOutlined";
 import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
-import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutlineOutlined";
-import ListOutlinedIcon from "@mui/icons-material/ListOutlined";
 import AccountMenu from "../accountMenu/AccountMenu";
-//import { DarkModeContext } from "../../context/darkModeContext";
-//import { useContext } from "react";
-import { Button, Modal, Space, notification } from 'antd';
-import { useCallback, useEffect } from "react";
-import {useLocation} from "react-router-dom"
-
+import {Modal, notification } from "antd";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const openNotification = () => {
   notification.open({
-    message: 'Notification Title',
+    message: "Notification Title",
     description:
-      'This is the content of the notification. This is the content of the notification. This is the content of the notification.',
-    className: 'custom-class',
+      "This is the content of the notification. This is the content of the notification. This is the content of the notification.",
+    className: "custom-class",
     style: {
       width: 600,
     },
   });
 };
 
-
-
 export const countDown = () => {
   let secondsToGo = 30;
-
-  setTimeout(() => {
-    
+ setTimeout(() => {
     const modal = Modal.success({
-      title: 'This is a notification message',
+      title: "This is a notification message",
       content: `This modal will be destroyed after ${secondsToGo} second.`,
     });
   }, secondsToGo * 1000);
-} 
-
+};
 
 const Navbar = () => {
-  //const { dispatch } = useContext(DarkModeContext);
-
-  let location = useLocation()
-
-
-  useEffect(()=>{
-
-    // if(location.pathname === '/')
-    // countDown()
-    
-  }, [])
-
-  return (
+  let location = useLocation();
+ useEffect(() => {}, []);
+ return (
     <div className="navbar">
       <div className="wrapper">
         <div className="search">
@@ -62,42 +39,18 @@ const Navbar = () => {
           <SearchOutlinedIcon />
         </div>
         <div className="items">
-          {/* <div className="item">
-            <LanguageOutlinedIcon className="icon" />
-            English
-          </div> */}
+          <div className="item"></div>
           <div className="item">
-            {/* <DarkModeOutlinedIcon
-              className="icon"
-              onClick={() => dispatch({ type: "TOGGLE" })}
-            /> */}
-          </div>
-          <div className="item">
-            {/* <FullscreenExitOutlinedIcon className="icon" /> */}
             <AccountMenu />
           </div>
-           <div className="item">
-              
-            <NotificationsNoneOutlinedIcon className="icon" onClick={openNotification}/>
-            
-            <div className="counter">1</div>
-            {/* <Button onClick={countDown}>Open modal to close in 5s</Button> */}
-          </div>
-        {/*  <div className="item">
-            <ChatBubbleOutlineOutlinedIcon className="icon" />
-            <div className="counter">2</div>
-          </div> */}
-          {/* <div className="item">
-            <ListOutlinedIcon className="icon" />
-          </div> */}
           <div className="item">
-            {/* <img
-              src="https://cdn.pixabay.com/photo/2013/07/13/12/07/avatar-159236__340.png"
-              alt=""
-              className="avatar"
-            /> */}
-             
+            <NotificationsNoneOutlinedIcon
+              className="icon"
+              onClick={openNotification}
+            />
+           <div className="counter">1</div>
           </div>
+          <div className="item"></div>
         </div>
       </div>
     </div>
