@@ -34,13 +34,14 @@ const Home = () => {
         <div className="charts">
           
           {/* <Featured /> */}
-          <PieChartt />
+          {/* <PieChartt /> */}
+          <div>xfbgcnh,gj;hhkhk:jl:l:l:l::jlj</div>
           {/* <Chart title="Last 6 Months (Revenue)" aspect={2 / 1} /> */}
           <Barchart />
         </div>
         <div className="listContainer">
           <div className="listTitle">Latest Orders</div>
-          {/* <Table1 /> */}
+          
           <List />
         </div>
       </div>
