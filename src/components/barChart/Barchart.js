@@ -16,7 +16,7 @@ const data = [
 const Barchart = () => {
     return (
         <div className="barchart">
-             {/* <ResponsiveContainer width="100%" height="100%"> */}
+             <ResponsiveContainer width={'99%'} height={300}>
         <BarChart
           width={500}
           height={300}
@@ -36,7 +36,7 @@ const Barchart = () => {
           <Bar dataKey="Sell" fill="#8884d8" />
           <Bar dataKey="Commission" fill="#82ca9d" />
         </BarChart>
-      {/* </ResponsiveContainer> */}
+      </ResponsiveContainer>
         </div>
     )
 }
