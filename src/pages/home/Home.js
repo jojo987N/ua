@@ -32,8 +32,8 @@ const Home = () => {
           {currentRestaurant?<Widget type="ready-for-pickup-order" />:<Widget type="driver" />}
         </div>
         <div className="charts">
-          <PieChartt />
-          {/* <Featured /> */}
+          {/* <PieChartt /> */}
+          <Featured />
           {/* <Chart title="Last 6 Months (Revenue)" aspect={2 / 1} /> */}
           <Barchart />
         </div>
