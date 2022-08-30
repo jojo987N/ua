@@ -4,7 +4,6 @@ import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpOutlinedIcon from "@mui/icons-material/KeyboardArrowUpOutlined";
-import PieChartt from "../pieChart/PieChart";
 
 const Featured = () => {
   return (
@@ -15,8 +14,7 @@ const Featured = () => {
       </div>
       <div className="bottom">
         <div className="featuredChart">
-          {/* <CircularProgressbar value={70} text={"70%"} strokeWidth={5} /> */}
-          <PieChartt />
+          <CircularProgressbar value={70} text={"70%"} strokeWidth={5} />
         </div>
         <p className="title">Total sales made today</p>
         <p className="amount">$420</p>
