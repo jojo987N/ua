@@ -10,7 +10,7 @@ import List from "../../components/table/Table";
 //import { AuthContext } from "../../context/Auth";
 import { RestaurantContext } from "../../context/RestaurantContext";
 import { useContext } from "react";
-import Example from "../../components/barChart/Barchart";
+import Barchart from "../../components/barChart/Barchart";
 
 const Home = () => {
 
@@ -32,8 +32,8 @@ const Home = () => {
         </div>
         <div className="charts">
           <Featured />
-          <Chart title="Last 6 Months (Revenue)" aspect={2 / 1} />
-          <Example />
+          {/* <Chart title="Last 6 Months (Revenue)" aspect={2 / 1} /> */}
+          <Barchart />
         </div>
         <div className="listContainer">
           <div className="listTitle">Latest Orders</div>
