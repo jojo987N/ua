@@ -174,13 +174,13 @@ const Sidebar = ({ type }) => {
           <Link to="/#firebase-project" style={{ textDecoration: "none" }}>
           <li>
           
-            <span>Create a Firebase Project</span>
+            <span>Firebase Project</span>
           </li>
           </Link>
           <Link to="/#firebase-config" style={{ textDecoration: "none" }}>
             <li>
             
-            <span>Create a Firebase config file</span>
+            <span>Firebase config file</span>
           </li>
           </Link>
           <Link smooth to="/#Driver-App-Translation" style={{ textDecoration: "none" }}>
@@ -192,7 +192,7 @@ const Sidebar = ({ type }) => {
           <Link smooth to="/#places" style={{ textDecoration: "none" }}>
             <li>
             
-            <span>Get Google Places API key</span>
+            <span>Places API key</span>
           </li>
           </Link>
           <Link smooth to="/#apiKey" style={{ textDecoration: "none" }}>
@@ -252,13 +252,13 @@ const Sidebar = ({ type }) => {
           <Link smooth to="/#Restaurants-Items" style={{ textDecoration: "none" }}>
             <li>
             
-            <span>Restaurants Items Component</span>
+            <span>Restaurants Items </span>
           </li>
           </Link>
           <Link smooth to="/#restaurant-details" style={{ textDecoration: "none" }}>
             <li>
             
-            <span>Restaurant Details Screen</span>
+            <span>Restaurant Details </span>
           </li>
           </Link>
           <Link smooth to="/#menu-items" style={{ textDecoration: "none" }}>
