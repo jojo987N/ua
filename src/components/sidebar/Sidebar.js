@@ -228,7 +228,7 @@ const Sidebar = ({ type }) => {
           <Link smooth to="/#screens" style={{ textDecoration: "none" }}>
             <li>
             
-            <span>Screens</span>
+            <span><b>SCREEN</b></span>
           </li>
           </Link>
           <Link smooth to="/#home" style={{ textDecoration: "none" }}>
