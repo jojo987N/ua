@@ -153,39 +153,39 @@ const Sidebar = ({ type }) => {
           </li>
           </Link>
           <p className="title">LISTS</p>
-         {!currentRestaurant && <Link to="/users" style={{ textDecoration: "none" }}>
+         <Link to="/users" style={{ textDecoration: "none" }}>
             <li>
-              <PersonOutlineIcon className="icon" />
+            <DashboardIcon className="icon" />
               <span>Users</span>
             </li>
-          </Link>}
+          </Link>
           <Link to="/products" style={{ textDecoration: "none" }}>
             <li>
-              <StoreIcon className="icon" />
+            <DashboardIcon className="icon" />
               <span>Menus</span>
             </li>
           </Link>
           <Link to="/orders" style={{ textDecoration: "none" }}>
           <li>
-            <CreditCardIcon className="icon" />
+          <DashboardIcon className="icon" />
             <span>Orders</span>
           </li>
           </Link>
-          {!currentRestaurant && <Link to="/drivers" style={{ textDecoration: "none" }}>
+          <Link to="/drivers" style={{ textDecoration: "none" }}>
           <li>
-            <LocalShippingIcon className="icon" />
+          <DashboardIcon className="icon" />
             <span>Drivers</span>
           </li>
-          </Link>}
-          {!currentRestaurant && <Link to="/restaurants" style={{ textDecoration: "none" }}>
+          </Link>
+          <Link to="/restaurants" style={{ textDecoration: "none" }}>
             <li>
-            <RestaurantIcon className="icon" />
+            <DashboardIcon className="icon" />
             <span>Restaurants</span>
           </li>
-          </Link>}
+          </Link>
           <Link smooth to="/#Driver-App-Translation" style={{ textDecoration: "none" }}>
             <li>
-            <CategoryIcon className="icon" />
+            <DashboardIcon className="icon" />
             <span>Driver App Translation</span>
           </li>
           </Link>
@@ -193,12 +193,12 @@ const Sidebar = ({ type }) => {
           <p className="title">USER</p>
           <Link to="/users/profile" style={{ textDecoration: "none" }}>
           <li>
-            <AccountCircleOutlinedIcon className="icon" />
+          <DashboardIcon className="icon" />
             <span>Profile</span>
           </li>
           </Link>
           <li onClick={signOutUser}>
-            <ExitToAppIcon className="icon" />
+          <DashboardIcon className="icon" />
             <span>Logout</span>
           </li>
         </ul>
