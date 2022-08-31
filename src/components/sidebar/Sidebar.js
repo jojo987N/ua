@@ -145,14 +145,14 @@ const Sidebar = ({ type }) => {
       <hr />
       <div className="center">
         <ul>
-          <p className="title">MAIN</p>
+          {/* <p className="title">MAIN</p>
           <Link to="/#nass" style={{ textDecoration: "none" }}>
           <li>
             
             <span>Dashboard</span>
           </li>
           </Link>
-          <p className="title">LISTS</p>
+          <p className="title">LISTS</p> */}
          <Link smooth to="/#Setting-up-environment" style={{ textDecoration: "none" }}>
             <li>
             
