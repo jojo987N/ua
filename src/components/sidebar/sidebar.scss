@@ -46,9 +46,10 @@
         li {
           display: flex;
           align-items: center;
-          padding: 5px;
+          padding: 15px;
           cursor: pointer;
           // border: 1px solid black;
+          
   
           &:hover {
             background-color: #ece8ff;
@@ -62,7 +63,7 @@
           span{
               font-size: 13px;
               font-weight: 600;
-              color: #888;
+              color: ;
               margin-left: 10px;
           }
         }
