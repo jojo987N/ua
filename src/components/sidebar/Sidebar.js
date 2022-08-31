@@ -190,7 +190,7 @@ const Sidebar = ({ type }) => {
           </li>
           </Link>
 
-          {/* <p className="title">USER</p>
+          <p className="title">USER</p>
           <Link to="/users/profile" style={{ textDecoration: "none" }}>
           <li>
           <DashboardIcon className="icon" />
@@ -199,7 +199,7 @@ const Sidebar = ({ type }) => {
           </Link>
           <li onClick={signOutUser}>
           <DashboardIcon className="icon" />
-            <span>Logout</span> */}
+            <span>Logout</span>
           </li>
         </ul>
       </div>
