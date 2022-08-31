@@ -45,7 +45,7 @@ const Home = () => {
 
         <Card >
          
-        <h1>Setting up the development environment</h1>
+        <h1 id="Setting-up-environment">Setting up the development environment</h1>
 
         <hr />
 
@@ -56,7 +56,7 @@ const Home = () => {
 
 <p>&nbsp;</p>
 
-<p><strong><span style={{fontSize: 22}}>How to Install Node.js and NPM on Windows</span></strong></p>
+<p id="node"><strong><span style={{fontSize: 22}}>How to Install Node.js and NPM on Windows</span></strong></p>
 
 <h3><strong>Step 1: Download Node.js Installer</strong></h3>
 
@@ -69,7 +69,7 @@ const Home = () => {
 
 <p>Installing Node.js on macOS follows almost the same procedure as on Windows. All you have to do is download the installer file for Mac. Then, as soon as you start it, the installer will guide you through the rest</p>
 
-<h4><strong><span style={{fontSize: 18}}>STEP 2 - Install the Expo CLI</span></strong></h4>
+<h4 id="expo"><strong><span style={{fontSize: 18}}>STEP 2 - Install the Expo CLI</span></strong></h4>
 
 <p>We&#39;ll install Expo CLI with npm, npm comes along with Node, you can confirm this by running the following command.</p>
 
@@ -109,7 +109,7 @@ npm start
 
 <p>&nbsp;</p>
 
-<h2><strong><span style={{fontSize: 24}}>Create a Firebase Project</span></strong></h2>
+<h2 id="firebase-project"><strong><span style={{fontSize: 24}}>Create a Firebase Project</span></strong></h2>
 
 <p>Head over to&nbsp;<a href="https://firebase.google.com/" rel="noopener">Firebase.com</a>&nbsp;and create a new account. Once logged in, you&rsquo;ll be able to create a new project in the&nbsp;<a href="https://console.firebase.google.com/u/0/" rel="noopener">Firebase Console</a>.</p>
 
@@ -124,7 +124,7 @@ npm start
 <img  src={require("../../assets/images/capture-firebase.png")}  alt="avatar" />
 
 <p>&nbsp;</p>
-<h2>Create a Firebase config file</h2>
+<h2 id="firebase-config">Create a Firebase config file</h2>
 
 <h3>Add your firebase configuration into firebase/config file:</h3>
 <p></p>
@@ -136,7 +136,7 @@ npm start
 <img  src={require("../../assets/images/findFirebaseConfig.png")}  alt="avatar" />
 
 <p>&nbsp;</p>
-<h2><strong>Get Google Places API key</strong></h2>
+<h2 id="places"><strong>Get Google Places API key</strong></h2>
 <p>In order to implement autocomplete functionality, we need to get an API for Google Places API.</p>
 <h3>Go to Google Cloud Platform</h3>
 <p>Visit&nbsp;<a href="https://console.cloud.google.com/google/maps-apis/" rel="noopener ugc nofollow" target="_blank">Google Cloud Platform console</a>&nbsp;to get an API key to use &ldquo;Google Maps Javascript API&rdquo;.</p>
@@ -149,7 +149,7 @@ npm start
 <p>On the next screen, search for &ldquo;<strong>Places API</strong>&rdquo; and enable it.</p>
 <img  src={require("../../assets/images/capture-console1.png")}  style={{width: 500, height: 250}} alt="avatar" />
 
-<h3>Generate an API key</h3>
+<h3 id="apiKey">Generate an API key</h3>
 <p>After enabling the API, you need to create a key to actually use the API. navigate to &ldquo;<strong>Credentials</strong>&rdquo; under &ldquo;<strong>APIs &amp; Services</strong>&rdquo;, and click on &ldquo;<strong>CREATE CREDENTIALS</strong>&rdquo; in the upper middle of the screen and choose &ldquo;API key&rdquo;.</p>
 <img  src={require("../../assets/images/capture-console2.png")}  style={{width: 500, height: 250}} alt="avatar" />
 <p></p>
@@ -157,25 +157,25 @@ npm start
 <h3>Create a billing account and link it to the project</h3>
 <p>In order to get results from the API, your Google Cloud project need to have a billing account linked to your project. You can create a billing account and link it to your project on the&nbsp;<strong>&ldquo;Billing&rdquo;&nbsp;</strong>page.</p>
 <p>&nbsp;</p>
-<h1><strong>Change app name</strong></h1>
+<h1 id="app-name"><strong>Change app name</strong></h1>
 <p>It's very easy to change app name, open app.json file in root project folder . </p>
 <img  src={require("../../assets/images/changeName.png")}  alt="avatar" />
 <p>&nbsp;</p>
-<h1><strong>Change app logo</strong></h1>
+<h1 id="app-logo"><strong>Change app logo</strong></h1>
 <p>It's very easy to change app logo, open assets folder in root project folder . </p>
 <img  src={require("../../assets/images/add_logo.png")}  alt="avatar" />
 <p>&nbsp;</p>
-<h1><strong>Change app currency</strong></h1>
+<h1 id="currency"><strong>Change app currency</strong></h1>
 <p>It's very easy to change app currency, open assets folder in root project folder . </p>
 <img  src={require("../../assets/images/add_currency.png")}  alt="avatar" />
 <p>&nbsp;</p>
-<h1><strong>Translation</strong></h1>
+<h1 id="translation"><strong>Translation</strong></h1>
 <p>It's very easy to customizing the experience for specific regions, languages, or cultures. It also provides access to the locale data on the native device.</p>
 <img  src={require("../../assets/images/translation-doc.gif")} style={{width:500, height: 220}} alt="avatar" />
 <p>In en.json file, inside of lang folder, you can translate for your specific language</p>
 <img  src={require("../../assets/images/vscode-translation-annotation-1.png")}  alt="avatar" />
 <p>&nbsp;</p>
-<h1><strong>Screens</strong></h1>
+<h1 id="screens"><strong>Screens</strong></h1>
 
 <table border="1">
 <tbody>
@@ -204,11 +204,11 @@ npm start
 </tbody>
 </table>
 <p>&nbsp;</p>
-<h2><strong>Home Screen</strong></h2>
+<h2 id="home"><strong>Home Screen</strong></h2>
 
 <img  src={require("../../assets/images/home-annotate1.png")}  alt="avatar" />
 
-<h3><strong>Search Component</strong></h3>
+<h3 id="Search"><strong>Search Component</strong></h3>
 <p>You can easily change autocomplete language </p>
 
 
@@ -216,25 +216,25 @@ npm start
 
 <p>&nbsp;</p>
 
-<h3><strong>Categories Component</strong></h3>
+<h3 id="categories"><strong>Categories Component</strong></h3>
 <p></p>
 <p>You can easily add category , set image, name, description in restaurant app </p>
 <img  src={require("../../assets/images/addCategory.gif")} style={{width: 800, height: 450}}  alt="avatar" />
 
 <p>&nbsp;</p>
 
-<h3><strong>Restaurants Items Component</strong></h3>
+<h3 id="Restaurants-Items"><strong>Restaurants Items Component</strong></h3>
 <p></p>
 <p>You can easily add restaurant, set image, name, description, address in admin dashboard </p>
 <img  src={require("../../assets/images/Capture-addRestaurant.png")} style={{width: 800, height: 393}}  alt="avatar" />
 <p>&nbsp;</p>
-<h2><strong>Restaurant Details Screen</strong></h2>
+<h2 id="restaurants-details"><strong>Restaurant Details Screen</strong></h2>
 <p></p>
 <img  src={require("../../assets/images/menuItems.png")} alt="avatar" />
 
 <p>&nbsp;</p>
 
-<h3><strong>Menu Items Component</strong></h3>
+<h3 id="menu-items"><strong>Menu Items Component</strong></h3>
 <p></p>
 <p>You can easily add menu , set image, name, description, price in restaurant app </p>
 <img  src={require("../../assets/images/addFood.gif")} style={{width: 800, height: 450}} alt="avatar" />
@@ -247,12 +247,12 @@ npm start
 <img  src={require("../../assets/images/driver-translation.png")}  alt="avatar" />
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<h1><strong>Customize Colors</strong></h1>
+<h1 id="customize-colors"><strong>Customize Colors</strong></h1>
 <p>It's very easy to change colors , open global.js file in project folder . </p>
 <img  src={require("../../assets/images/customize-colors.png")}  alt="avatar" />
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<h1><strong>Add New Driver</strong></h1>
+<h1 id="add-driver"><strong>Add New Driver</strong></h1>
 <p>Add driver in Admin Panel . </p>
 <img  src={require("../../assets/images/add-driver.png")} style={{width: 900, height: 442}} alt="avatar" />
 <p>&nbsp;</p>
