@@ -153,34 +153,34 @@ const Sidebar = ({ type }) => {
           </li>
           </Link>
           <p className="title">LISTS</p>
-         <Link to="/users" style={{ textDecoration: "none" }}>
+         <Link smooth to="/#Setting-up-environment" style={{ textDecoration: "none" }}>
             <li>
             <DashboardIcon className="icon" />
-              <span>Users</span>
+              <span>Setting up environment</span>
             </li>
           </Link>
-          <Link to="/products" style={{ textDecoration: "none" }}>
+          <Link to="/#node" style={{ textDecoration: "none" }}>
             <li>
             <DashboardIcon className="icon" />
-              <span>Menus</span>
+              <span>Install Node.js and NPM</span>
             </li>
           </Link>
-          <Link to="/orders" style={{ textDecoration: "none" }}>
+          <Link to="/#expo" style={{ textDecoration: "none" }}>
           <li>
           <DashboardIcon className="icon" />
-            <span>Orders</span>
+            <span>Install Expo CLI</span>
           </li>
           </Link>
-          <Link to="/drivers" style={{ textDecoration: "none" }}>
+          <Link to="/#firebase-project" style={{ textDecoration: "none" }}>
           <li>
           <DashboardIcon className="icon" />
-            <span>Drivers</span>
+            <span>Create a Firebase Project</span>
           </li>
           </Link>
-          <Link to="/restaurants" style={{ textDecoration: "none" }}>
+          <Link to="/#firebase-config" style={{ textDecoration: "none" }}>
             <li>
             <DashboardIcon className="icon" />
-            <span>Restaurants</span>
+            <span>Create a Firebase config file</span>
           </li>
           </Link>
           <Link smooth to="/#Driver-App-Translation" style={{ textDecoration: "none" }}>
@@ -189,6 +189,97 @@ const Sidebar = ({ type }) => {
             <span>Driver App Translation</span>
           </li>
           </Link>
+          <Link smooth to="/#places" style={{ textDecoration: "none" }}>
+            <li>
+            <DashboardIcon className="icon" />
+            <span>Get Google Places API key</span>
+          </li>
+          </Link>
+          <Link smooth to="/#apiKey" style={{ textDecoration: "none" }}>
+            <li>
+            <DashboardIcon className="icon" />
+            <span>Generate an API key</span>
+          </li>
+          </Link>
+          <Link smooth to="/#app-name" style={{ textDecoration: "none" }}>
+            <li>
+            <DashboardIcon className="icon" />
+            <span>Change app name</span>
+          </li>
+          </Link>
+          <Link smooth to="/#app-logo" style={{ textDecoration: "none" }}>
+            <li>
+            <DashboardIcon className="icon" />
+            <span>Change app logo</span>
+          </li>
+          </Link>
+          <Link smooth to="/#currency" style={{ textDecoration: "none" }}>
+            <li>
+            <DashboardIcon className="icon" />
+            <span>Change app currency</span>
+          </li>
+          </Link>
+          <Link smooth to="/#translation" style={{ textDecoration: "none" }}>
+            <li>
+            <DashboardIcon className="icon" />
+            <span>Translation</span>
+          </li>
+          </Link>
+          <Link smooth to="/#screens" style={{ textDecoration: "none" }}>
+            <li>
+            <DashboardIcon className="icon" />
+            <span>Screens</span>
+          </li>
+          </Link>
+          <Link smooth to="/#home" style={{ textDecoration: "none" }}>
+            <li>
+            <DashboardIcon className="icon" />
+            <span>Home Screen</span>
+          </li>
+          </Link>
+          <Link smooth to="/#Search" style={{ textDecoration: "none" }}>
+            <li>
+            <DashboardIcon className="icon" />
+            <span>Search Component</span>
+          </li>
+          </Link>
+          <Link smooth to="/#categories" style={{ textDecoration: "none" }}>
+            <li>
+            <DashboardIcon className="icon" />
+            <span>Categories Component</span>
+          </li>
+          </Link>
+          <Link smooth to="/#Restaurants-Items" style={{ textDecoration: "none" }}>
+            <li>
+            <DashboardIcon className="icon" />
+            <span>Restaurants Items Component</span>
+          </li>
+          </Link>
+          <Link smooth to="/#restaurant-details" style={{ textDecoration: "none" }}>
+            <li>
+            <DashboardIcon className="icon" />
+            <span>Restaurant Details Screen</span>
+          </li>
+          </Link>
+          <Link smooth to="/#menu-items" style={{ textDecoration: "none" }}>
+            <li>
+            <DashboardIcon className="icon" />
+            <span>Menu Items Component</span>
+          </li>
+          </Link>
+          <Link smooth to="/#customize-colors" style={{ textDecoration: "none" }}>
+            <li>
+            <DashboardIcon className="icon" />
+            <span>Customize Colors</span>
+          </li>
+          </Link>
+          <Link smooth to="/#add-driver" style={{ textDecoration: "none" }}>
+            <li>
+            <DashboardIcon className="icon" />
+            <span>Add New Driver</span>
+          </li>
+          </Link>
+
 
           {/* <p className="title">USER</p>
           <Link to="/users/profile" style={{ textDecoration: "none" }}>
