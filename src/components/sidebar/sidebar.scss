@@ -49,6 +49,8 @@
           padding: 15px;
           cursor: pointer;
           // border: 1px solid black;
+
+
           
   
           &:hover {
@@ -67,6 +69,9 @@
               color: white;
               margin-left: 10px;
           }
+        }
+        li:hover {
+          color: black
         }
       }
     }
