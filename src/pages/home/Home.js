@@ -15,6 +15,7 @@ import {Card, Divider} from 'antd'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import myImage from '../../assets/images/capture-comment.png'
+import ScrollToTop from "react-scroll-to-top";
 
  
 
@@ -297,6 +298,7 @@ npm start
         
         
       </div>
+      <ScrollToTop smooth />
     </div>
   );
 };
