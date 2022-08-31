@@ -159,7 +159,7 @@ const Sidebar = ({ type }) => {
               <span>Setting up environment</span>
             </li>
           </Link>
-          <Link to="/#node" style={{ textDecoration: "none" }}>
+          <Link to="/#node" style={{ textDecoration: "none", color: "red"}}>
             <li>
             
               <span>Install Node.js and NPM</span>
