@@ -52,7 +52,8 @@ function getItem(label, key, icon, children, type) {
 const Sidebar = ({ type }) => {
 
 
-  console.log("type : ", '/' + type)
+  console.log("pathname: ", window.location.pathname)
+  // console.log("type : ", '/' + type)
   // const { dispatch } = useContext(DarkModeContext);
   const { currentRestaurant } = useContext(RestaurantContext)
   const [collapsed, setCollapsed] = useState(false);
