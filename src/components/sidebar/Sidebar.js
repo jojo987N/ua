@@ -189,7 +189,7 @@ const Sidebar = ({ type }) => {
           {_items.map(el => {
             return (
               <Link smooth to={`/${el.anchor}`} style={{ textDecoration: "none" }}>
-                <li className={hash === el ? "active" : ""}>
+                <li className={hash === el.anchor ? "active" : ""}>
 
                   <span>{el.title}</span>
                 </li>
