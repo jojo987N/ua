@@ -21,6 +21,8 @@ export const AuthProvider = ({ children }) => {
         onAuthStateChanged(auth, (user) => {
 
             setCurrentUser(user) 
+
+            window.location.reload()
              
             //let restaurant;
             // if(user){
