@@ -10,6 +10,8 @@ import List from "../../components/table/Table";
 //import { AuthContext } from "../../context/Auth";
 import { RestaurantContext } from "../../context/RestaurantContext";
 import { useContext } from "react";
+import Barchart from "../../components/barChart/Barchart";
+import PieChartt from "../../components/pieChart/PieChart";
 
 const Home = () => {
 
@@ -30,8 +32,11 @@ const Home = () => {
           {currentRestaurant?<Widget type="ready-for-pickup-order" />:<Widget type="driver" />}
         </div>
         <div className="charts">
+          
           <Featured />
-          <Chart title="Last 6 Months (Revenue)" aspect={2 / 1} />
+          {/* <PieChartt /> */}
+          {/* <Chart title="Last 6 Months (Revenue)" aspect={2 / 1} /> */}
+          <Barchart />
         </div>
         <div className="listContainer">
           <div className="listTitle">Latest Transactions</div>

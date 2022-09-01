@@ -123,7 +123,7 @@ const items = [
 
   getItem('Transactions', '/transactions',  <PaymentsIcon />),
 
-  getItem('Settings', '/settings',  <SettingsIcon />),
+  // getItem('Settings', '/settings',  <SettingsIcon />),
 
   getItem('Logout', '/logout', <ExitToAppIcon className="icon" />),
 ];

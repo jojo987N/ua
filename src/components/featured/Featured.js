@@ -4,6 +4,7 @@ import { CircularProgressbar, buildStyles} from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpOutlinedIcon from "@mui/icons-material/KeyboardArrowUpOutlined";
+import PieChartt from "../pieChart/PieChart";
 
 const Featured = () => {
   return (
@@ -14,16 +15,14 @@ const Featured = () => {
       </div>
       <div className="bottom">
         <div className="featuredChart">
-          <CircularProgressbar value={70} text={"70%"} strokeWidth={5} 
-          background={true}
-          style={buildStyles({
-            background: 'blue'})}/>
+          {/* <CircularProgressbar value={70} text={"70%"} strokeWidth={5} /> */}
+          <PieChartt />
         </div>
-        <p className="title">Total sales made today</p>
+        {/* <p className="title">Total sales made today</p>
         <p className="amount">$420</p>
         <p className="desc">
           Previous transactions processing. Last payments may not be included.
-        </p>
+        </p> */}
         <div className="summary">
           <div className="item">
             <div className="itemTitle">Target</div>
