@@ -91,11 +91,6 @@ const Sidebar = ({ type }) => {
        anchor:"#Setting-up-environment",
        title: "Setting up environment"
       },
-      {
-        anchor:"#node",
-        title: "Install Node.js and NPM"
-       },
-
      {anchor: "#node", title:"Install Node.js and NPM"},
      {anchor:"/#expo" , title:"Install Expo CLI"},
      {anchor:"#firebase-project", title: "Firebase Project"},
