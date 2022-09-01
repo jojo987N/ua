@@ -156,5 +156,3 @@ const renderDate = (row) => {
   // +'</div>'+ new Timestamp(row.createdAt.seconds, row.createdAt.nanoseconds).toDate().getHours()+'-'+ new Timestamp(row.createdAt.seconds, row.createdAt.nanoseconds).toDate().getMinutes()+'-'+new Timestamp(row.createdAt.seconds, row.createdAt.nanoseconds).toDate().getSeconds()
  
 }
-
-export default List;
