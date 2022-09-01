@@ -167,7 +167,7 @@ const Sidebar = ({ type }) => {
             </li>
           </Link>
           <Link to="/#node" style={{ textDecoration: "none"}}>
-            <li className="active">
+            <li className={hash === "#node"?"active":""}>
             
               <span>Install Node.js and NPM</span>
             </li>
