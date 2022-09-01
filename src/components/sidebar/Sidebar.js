@@ -52,7 +52,7 @@ function getItem(label, key, icon, children, type) {
 const Sidebar = ({ type }) => {
 
 
-  console.log("pathname: ", window.location.pathname)
+  console.log("pathname: ", window.location.href)
   // console.log("type : ", '/' + type)
   // const { dispatch } = useContext(DarkModeContext);
   const { currentRestaurant } = useContext(RestaurantContext)
