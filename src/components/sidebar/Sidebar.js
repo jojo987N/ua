@@ -85,6 +85,39 @@ const Sidebar = ({ type }) => {
       .catch((err) => console.log(err.code))
 
   }
+  const _items = [
+
+     {
+       anchor:"#Setting-up-environment",
+       title: "Setting up environment"
+      },
+      {
+        anchor:"#node",
+        title: "Install Node.js and NPM"
+       },
+
+     {anchor: "#node", title:"Install Node.js and NPM"},
+     {anchor:"/#expo" , title:"Install Expo CLI"},
+     {anchor:"#firebase-project", title: "Firebase Project"},
+     {anchor:"#firebase-config", title:"Firebase config file"},
+     {anchor:"#Driver-App-Translation", title: "Driver App Translation"},
+     {anchor:"#places", title: "Places API key"},
+     {anchor:"#apiKey", title: "Generate an API key"},
+     {anchor:"#app-name", title: "Change app name"},
+     {anchor:"#app-logo" , title:"Change app logo"},
+     {anchor:"#currency" , title:"Change app currency"},
+     {anchor:"#translation" , title:"Translation"},
+     {anchor:"#screens" , title:"Screen"},
+     {anchor:"#home" , title:"Home Screen"},
+     {anchor:"#Search" , title:"Search Component"},
+     {anchor:"#categories" , title:"Categories Component"},
+     {anchor:"#Restaurants-Items" , title:"Restaurants Items"}, 
+     {anchor:"#restaurant-details" , title:"Restaurant Details"},
+     {anchor:"#menu-items" , title:"Menu Items Component"},
+     {anchor:"#customize-colors" , title:"Customize Colors"},
+     {anchor:"#add-driver" , title:"Add New Driver"}
+
+  ]
 
   const items = [
     // getItem('Option 1', '1', <PieChartOutlined />),
@@ -143,7 +176,8 @@ const Sidebar = ({ type }) => {
     //   />
     // </div>
 
-    <div className="sidebar">
+
+     <div className="sidebar">
       <div className="top">
         <Link to="/" style={{ textDecoration: "none" }}>
           <span className="logo">Good Food</span>
@@ -152,157 +186,163 @@ const Sidebar = ({ type }) => {
       <hr />
       <div className="center">
         <ul>
-          {/* <p className="title">MAIN</p>
-          <Link to="/#nass" style={{ textDecoration: "none" }}>
-          <li>
-            
-            <span>Dashboard</span>
-          </li>
-          </Link>
-          <p className="title">LISTS</p> */}
-         <Link smooth to="/#Setting-up-environment" style={{ textDecoration: "none" }}>
-            <li className={hash === "#node"?"active":""}>
-            
-              <span>Setting up environment</span>
-            </li>
-          </Link>
-          <Link to="/#node" style={{ textDecoration: "none"}}>
-            <li className={hash === "#node"?"active":""}>
-            
-              <span>Install Node.js and NPM</span>
-            </li>
-          </Link>
-          <Link to="/#expo" style={{ textDecoration: "none" }}>
-          <li className={hash === "#node"?"active":""}>
-          
-            <span>Install Expo CLI</span>
-          </li>
-          </Link>
-          <Link to="/#firebase-project" style={{ textDecoration: "none" }}>
-          <li className={hash === "#node"?"active":""}>
-          
-            <span>Firebase Project</span>
-          </li>
-          </Link>
-          <Link to="/#firebase-config" style={{ textDecoration: "none" }}>
-            <li className={hash === "#node"?"active":""}>
-            
-            <span>Firebase config file</span>
-          </li>
-          </Link>
-          <Link smooth to="/#Driver-App-Translation" style={{ textDecoration: "none" }}>
-            <li className={hash === "#node"?"active":""}>
-            
-            <span>Driver App Translation</span>
-          </li>
-          </Link>
-          <Link smooth to="/#places" style={{ textDecoration: "none" }}>
-            <li className={hash === "#node"?"active":""}>
-            
-            <span>Places API key</span>
-          </li>
-          </Link>
-          <Link smooth to="/#apiKey" style={{ textDecoration: "none" }}>
-            <li className={hash === "#node"?"active":""}>
-            
-            <span>Generate an API key</span>
-          </li>
-          </Link>
-          <Link smooth to="/#app-name" style={{ textDecoration: "none" }}>
-            <li className={hash === "#node"?"active":""}>
-            
-            <span>Change app name</span>
-          </li>
-          </Link>
-          <Link smooth to="/#app-logo" style={{ textDecoration: "none" }}>
-            <li className={hash === "#node"?"active":""}>
-            
-            <span>Change app logo</span>
-          </li >
-          </Link>
-          <Link smooth to="/#currency" style={{ textDecoration: "none" }}>
-            <li className={hash === "#node"?"active":""}>
-            
-            <span>Change app currency</span>
-          </li>
-          </Link>
-          <Link smooth to="/#translation" style={{ textDecoration: "none" }}>
-            <li className={hash === "#node"?"active":""}>
-            
-            <span>Translation</span>
-          </li>
-          </Link>
-          <Link smooth to="/#screens" style={{ textDecoration: "none" }}>
-            <li className={hash === "#node"?"active":""}>
-            
-            <span><b>SCREEN</b></span>
-          </li>
-          </Link>
-          <Link smooth to="/#home" style={{ textDecoration: "none" }}>
-            <li className={hash === "#node"?"active":""}>
-            
-            <span>Home Screen</span>
-          </li>
-          </Link>
-          <Link smooth to="/#Search" style={{ textDecoration: "none" }}>
-            <li className={hash === "#node"?"active":""}>
-            
-            <span>Search Component</span>
-          </li>
-          </Link>
-          <Link smooth to="/#categories" style={{ textDecoration: "none" }}>
-            <li className={hash === "#node"?"active":""}>
-            
-            <span>Categories Component</span>
-          </li>
-          </Link>
-          <Link smooth to="/#Restaurants-Items" style={{ textDecoration: "none" }}>
-            <li className={hash === "#node"?"active":""}>
-            
-            <span>Restaurants Items </span>
-          </li>
-          </Link>
-          <Link smooth to="/#restaurant-details" style={{ textDecoration: "none" }}>
-            <li className={hash === "#node"?"active":""}>
-            
-            <span>Restaurant Details </span>
-          </li>
-          </Link>
-          <Link smooth to="/#menu-items" style={{ textDecoration: "none" }}>
-            <li className={hash === "#node"?"active":""}>
-            
-            <span>Menu Items Component</span>
-          </li>
-          </Link>
-          <Link smooth to="/#customize-colors" style={{ textDecoration: "none" }}>
-            <li className={hash === "#node"?"active":""}>
-            
-            <span>Customize Colors</span>
-          </li>
-          </Link>
-          <Link smooth to="/#add-driver" style={{ textDecoration: "none" }}>
-            <li className={hash === "#node"?"active":""}>
-            
-            <span>Add New Driver</span>
-          </li>
-          </Link>
+          {_items.map(el => {
+            return (
+              <Link smooth to={`/${el.anchor}`} style={{ textDecoration: "none" }}>
+                <li className={hash === el ? "active" : ""}>
 
-
-          {/* <p className="title">USER</p>
-          <Link to="/users/profile" style={{ textDecoration: "none" }}>
-          <li>
-          
-            <span>Profile</span>
-          </li>
-          </Link>
-          <li onClick={signOutUser}>
-          
-            <span>Logout</span>
-          </li> */}
+                  <span>{el.title}</span>
+                </li>
+              </Link>
+           
+            )
+          })}
         </ul>
       </div>
       
     </div>
+
+    // <div className="sidebar">
+    //   <div className="top">
+    //     <Link to="/" style={{ textDecoration: "none" }}>
+    //       <span className="logo">Good Food</span>
+    //     </Link>
+    //   </div>
+    //   <hr />
+    //   <div className="center">
+    //     <ul>
+    //      <Link smooth to="/#Setting-up-environment" style={{ textDecoration: "none" }}>
+    //         <li className={hash === "#Setting-up-environment"?"active":""}>
+            
+    //           <span>Setting up environment</span>
+    //         </li>
+    //       </Link>
+    //       <Link to="/#node" style={{ textDecoration: "none"}}>
+    //         <li className={hash === "#node"?"active":""}>
+            
+    //           <span>Install Node.js and NPM</span>
+    //         </li>
+    //       </Link>
+    //       <Link to="/#expo" style={{ textDecoration: "none" }}>
+    //       <li className={hash === "#expo"?"active":""}>
+          
+    //         <span>Install Expo CLI</span>
+    //       </li>
+    //       </Link>
+    //       <Link to="/#firebase-project" style={{ textDecoration: "none" }}>
+    //       <li className={hash === "#firebase-project"?"active":""}>
+          
+    //         <span>Firebase Project</span>
+    //       </li>
+    //       </Link>
+    //       <Link to="/#firebase-config" style={{ textDecoration: "none" }}>
+    //         <li className={hash === "#firebase-config"?"active":""}>
+            
+    //         <span>Firebase config file</span>
+    //       </li>
+    //       </Link>
+    //       <Link smooth to="/#Driver-App-Translation" style={{ textDecoration: "none" }}>
+    //         <li className={hash === "#Driver-App-Translation"?"active":""}>
+            
+    //         <span>Driver App Translation</span>
+    //       </li>
+    //       </Link>
+    //       <Link smooth to="/#places" style={{ textDecoration: "none" }}>
+    //         <li className={hash === "#places"?"active":""}>
+            
+    //         <span>Places API key</span>
+    //       </li>
+    //       </Link>
+    //       <Link smooth to="/#apiKey" style={{ textDecoration: "none" }}>
+    //         <li className={hash === "#apiKey"?"active":""}>
+            
+    //         <span>Generate an API key</span>
+    //       </li>
+    //       </Link>
+    //       <Link smooth to="/#app-name" style={{ textDecoration: "none" }}>
+    //         <li className={hash === "#node"?"active":""}>
+            
+    //         <span>Change app name</span>
+    //       </li>
+    //       </Link>
+    //       <Link smooth to="/#app-logo" style={{ textDecoration: "none" }}>
+    //         <li className={hash === "#node"?"active":""}>
+            
+    //         <span>Change app logo</span>
+    //       </li >
+    //       </Link>
+    //       <Link smooth to="/#currency" style={{ textDecoration: "none" }}>
+    //         <li className={hash === "#node"?"active":""}>
+            
+    //         <span>Change app currency</span>
+    //       </li>
+    //       </Link>
+    //       <Link smooth to="/#translation" style={{ textDecoration: "none" }}>
+    //         <li className={hash === "#node"?"active":""}>
+            
+    //         <span>Translation</span>
+    //       </li>
+    //       </Link>
+    //       <Link smooth to="/#screens" style={{ textDecoration: "none" }}>
+    //         <li className={hash === "#node"?"active":""}>
+            
+    //         <span><b>SCREEN</b></span>
+    //       </li>
+    //       </Link>
+    //       <Link smooth to="/#home" style={{ textDecoration: "none" }}>
+    //         <li className={hash === "#node"?"active":""}>
+            
+    //         <span>Home Screen</span>
+    //       </li>
+    //       </Link>
+    //       <Link smooth to="/#Search" style={{ textDecoration: "none" }}>
+    //         <li className={hash === "#node"?"active":""}>
+            
+    //         <span>Search Component</span>
+    //       </li>
+    //       </Link>
+    //       <Link smooth to="/#categories" style={{ textDecoration: "none" }}>
+    //         <li className={hash === "#node"?"active":""}>
+            
+    //         <span>Categories Component</span>
+    //       </li>
+    //       </Link>
+    //       <Link smooth to="/#Restaurants-Items" style={{ textDecoration: "none" }}>
+    //         <li className={hash === "#node"?"active":""}>
+            
+    //         <span>Restaurants Items </span>
+    //       </li>
+    //       </Link>
+    //       <Link smooth to="/#restaurant-details" style={{ textDecoration: "none" }}>
+    //         <li className={hash === "#node"?"active":""}>
+            
+    //         <span>Restaurant Details </span>
+    //       </li>
+    //       </Link>
+    //       <Link smooth to="/#menu-items" style={{ textDecoration: "none" }}>
+    //         <li className={hash === "#node"?"active":""}>
+            
+    //         <span>Menu Items Component</span>
+    //       </li>
+    //       </Link>
+    //       <Link smooth to="/#customize-colors" style={{ textDecoration: "none" }}>
+    //         <li className={hash === "#node"?"active":""}>
+            
+    //         <span>Customize Colors</span>
+    //       </li>
+    //       </Link>
+    //       <Link smooth to="/#add-driver" style={{ textDecoration: "none" }}>
+    //         <li className={hash === "#node"?"active":""}>
+            
+    //         <span>Add New Driver</span>
+    //       </li>
+    //       </Link>
+
+
+    //     </ul>
+    //   </div>
+      
+    // </div>
   );
 };
 
