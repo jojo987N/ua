@@ -8,8 +8,6 @@ import Restaurant from '../../pages/restaurant/Restaurant';
 import ClipLoader from "react-spinners/ClipLoader";
 import { DotLoader } from 'react-spinners';
 import { LoadingContext } from '../../context/LoadingContext';
-import { Navigate} from "react-router-dom";
-
 
 export default function PrivateRoute() {
 
@@ -40,9 +38,6 @@ export default function PrivateRoute() {
       
       <DotLoader color={"#36D7B7"} loading={true}  size={150} />
     </div>
-
-  if (currentUser)
-  return <Navigate to={"/"} replace />
 
 
   return (
