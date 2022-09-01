@@ -22,7 +22,7 @@ export const AuthProvider = ({ children }) => {
 
             setCurrentUser(user) 
 
-            window.location.reload()
+            // window.location.reload()
              
             //let restaurant;
             // if(user){
