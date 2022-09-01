@@ -184,11 +184,11 @@ function App() {
                   <Route index element={<List key="transactions" type="transactions" />} />
                 </Route>
 
-                <Route path="restaurant">
+                {/* <Route path="restaurant">
                   <Route index element={<Restaurant path={"/"} />} />
                   <Route path="orders/:id" element={<Restaurant path={"orders/:id"} />} />
                   <Route path="menu" element={<Restaurant path={"menu"} />} />
-                </Route>
+                </Route> */}
               </Route>
             </Route>
           </Routes>
