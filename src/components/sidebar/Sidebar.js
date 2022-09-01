@@ -161,7 +161,7 @@ const Sidebar = ({ type }) => {
           </Link>
           <p className="title">LISTS</p> */}
          <Link smooth to="/#Setting-up-environment" style={{ textDecoration: "none" }}>
-            <li>
+            <li className={hash === "#node"?"active":""}>
             
               <span>Setting up environment</span>
             </li>
@@ -173,115 +173,115 @@ const Sidebar = ({ type }) => {
             </li>
           </Link>
           <Link to="/#expo" style={{ textDecoration: "none" }}>
-          <li>
+          <li className={hash === "#node"?"active":""}>
           
             <span>Install Expo CLI</span>
           </li>
           </Link>
           <Link to="/#firebase-project" style={{ textDecoration: "none" }}>
-          <li>
+          <li className={hash === "#node"?"active":""}>
           
             <span>Firebase Project</span>
           </li>
           </Link>
           <Link to="/#firebase-config" style={{ textDecoration: "none" }}>
-            <li>
+            <li className={hash === "#node"?"active":""}>
             
             <span>Firebase config file</span>
           </li>
           </Link>
           <Link smooth to="/#Driver-App-Translation" style={{ textDecoration: "none" }}>
-            <li>
+            <li className={hash === "#node"?"active":""}>
             
             <span>Driver App Translation</span>
           </li>
           </Link>
           <Link smooth to="/#places" style={{ textDecoration: "none" }}>
-            <li>
+            <li className={hash === "#node"?"active":""}>
             
             <span>Places API key</span>
           </li>
           </Link>
           <Link smooth to="/#apiKey" style={{ textDecoration: "none" }}>
-            <li>
+            <li className={hash === "#node"?"active":""}>
             
             <span>Generate an API key</span>
           </li>
           </Link>
           <Link smooth to="/#app-name" style={{ textDecoration: "none" }}>
-            <li>
+            <li className={hash === "#node"?"active":""}>
             
             <span>Change app name</span>
           </li>
           </Link>
           <Link smooth to="/#app-logo" style={{ textDecoration: "none" }}>
-            <li>
+            <li className={hash === "#node"?"active":""}>
             
             <span>Change app logo</span>
-          </li>
+          </li >
           </Link>
           <Link smooth to="/#currency" style={{ textDecoration: "none" }}>
-            <li>
+            <li className={hash === "#node"?"active":""}>
             
             <span>Change app currency</span>
           </li>
           </Link>
           <Link smooth to="/#translation" style={{ textDecoration: "none" }}>
-            <li>
+            <li className={hash === "#node"?"active":""}>
             
             <span>Translation</span>
           </li>
           </Link>
           <Link smooth to="/#screens" style={{ textDecoration: "none" }}>
-            <li>
+            <li className={hash === "#node"?"active":""}>
             
             <span><b>SCREEN</b></span>
           </li>
           </Link>
           <Link smooth to="/#home" style={{ textDecoration: "none" }}>
-            <li>
+            <li className={hash === "#node"?"active":""}>
             
             <span>Home Screen</span>
           </li>
           </Link>
           <Link smooth to="/#Search" style={{ textDecoration: "none" }}>
-            <li>
+            <li className={hash === "#node"?"active":""}>
             
             <span>Search Component</span>
           </li>
           </Link>
           <Link smooth to="/#categories" style={{ textDecoration: "none" }}>
-            <li>
+            <li className={hash === "#node"?"active":""}>
             
             <span>Categories Component</span>
           </li>
           </Link>
           <Link smooth to="/#Restaurants-Items" style={{ textDecoration: "none" }}>
-            <li>
+            <li className={hash === "#node"?"active":""}>
             
             <span>Restaurants Items </span>
           </li>
           </Link>
           <Link smooth to="/#restaurant-details" style={{ textDecoration: "none" }}>
-            <li>
+            <li className={hash === "#node"?"active":""}>
             
             <span>Restaurant Details </span>
           </li>
           </Link>
           <Link smooth to="/#menu-items" style={{ textDecoration: "none" }}>
-            <li>
+            <li className={hash === "#node"?"active":""}>
             
             <span>Menu Items Component</span>
           </li>
           </Link>
           <Link smooth to="/#customize-colors" style={{ textDecoration: "none" }}>
-            <li>
+            <li className={hash === "#node"?"active":""}>
             
             <span>Customize Colors</span>
           </li>
           </Link>
           <Link smooth to="/#add-driver" style={{ textDecoration: "none" }}>
-            <li>
+            <li className={hash === "#node"?"active":""}>
             
             <span>Add New Driver</span>
           </li>
