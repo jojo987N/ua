@@ -35,7 +35,7 @@ const Login = () => {
       const re = await signInWithEmailAndPassword(auth, email, password)
       //navigate("/")   
       setLoading(true)
-
+        window.location.reload()
       // getRestaurantById(re.user.uid).then(restaurant => setCurrentRestaurant(restaurant))
       // .then(()=> setLoading(false))
       
