@@ -298,7 +298,7 @@ npm start
         
         
       </div>
-      <ScrollToTop smooth />
+      <ScrollToTop smooth color="red"/>
     </div>
   );
 };
