@@ -258,18 +258,18 @@ npm start
 <img  src={require("../../assets/images/add-driver.png")} style={{width: 900, height: 442}} alt="avatar" />
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<h1><strong>Customize Icons</strong></h1>
+<h1 id="Customize-Icons"><strong>Customize Icons</strong></h1>
 <p>It's very easy to customize icons , open global.js file in project folder . </p>
 <img  src={require("../../assets/images/customize-icons.png")}  alt="avatar" />
 <p>&nbsp;</p>
-<h2><strong>Restaurants Map Screen</strong></h2>
+<h2 id="Restaurants-Map-Screen"><strong>Restaurants Map Screen</strong></h2>
 
 <h3><strong>Restaurants sliding Component</strong></h3>
 <p>You can easily change radius around locations </p>
 
 <img  src={require("../../assets/images/restaurants-radius.png")}  alt="avatar" />
 <p>&nbsp;</p>
-<h2><strong>Carts Screen</strong></h2>
+<h2 id="Carts-Screen"><strong>Carts Screen</strong></h2>
 
 <img  src={require("../../assets/images/carts-screen.png")}  alt="avatar" />
 <p>&nbsp;</p>
@@ -277,7 +277,7 @@ npm start
 
 <p>&nbsp;</p>
 
-<h1><strong>Driver Notification Time</strong></h1>
+<h1 id="Driver-Notification-Time"><strong>Driver Notification Time</strong></h1>
 <p>It's very easy to customizing the driver app, notification when receive order</p>
 <img  src={require("../../assets/images/notification-time.gif")}  alt="avatar" />
 <p>&nbsp;</p>

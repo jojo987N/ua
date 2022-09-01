@@ -110,7 +110,18 @@ const Sidebar = ({ type }) => {
      {anchor:"#restaurant-details" , title:"Restaurant Details"},
      {anchor:"#menu-items" , title:"Menu Items Component"},
      {anchor:"#customize-colors" , title:"Customize Colors"},
-     {anchor:"#add-driver" , title:"Add New Driver"}
+     {anchor:"#add-driver" , title:"Add New Driver"},
+     {anchor:"#Customize-Icons" , title:"Customize Icons"},
+     {anchor:"#Restaurants-Map-Screen" , title:"Restaurants Map Screen"},
+     {anchor:"#Carts-Screen" , title:"Carts Screen"},
+     {anchor:"#Driver-Notification-Time" , title:"Driver Notification Time"},
+      
+      
+
+      
+
+      
+
 
   ]
 
