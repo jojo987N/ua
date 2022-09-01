@@ -20,56 +20,17 @@ export const AuthProvider = ({ children }) => {
 
         onAuthStateChanged(auth, (user) => {
              
-            //let restaurant;
+            
             if(user){
 
-                // countDown()
-                getRestaurantById(user.uid).then((restaurant)=>{
+                setCurrentUser(user)
 
-                    if(restaurant){
-                        setCurrentRestaurant(restaurant) 
-                        setCurrentUser(user)
-                    }
-                    else{
-                        setCurrentUser(user)  
-                    }
-                })
-            }else{
-                setCurrentUser(user) 
-                setCurrentRestaurant(null) 
+              
             }
 
-            // (async ()=>{
-            // if(user){
-            // restaurant = await getRestaurantById(user.uid)
-            // if(restaurant){
-            //     setCurrentRestaurant(restaurant)  
-            // }
-            // else {
-
-                
-                
-            //     setCurrentUser(user)
-            // }
             
-            // }else{
-            //     console.log("dehors")
-            //    setCurrentUser(user)
-            // }
-
-            // })()
-
-
-
-            // if(user)
-            // getRestaurantById(user.uid).then(restaurant => {
-                 
-            //     setCurrentRestaurant(restaurant)})
-            //     .then(() => setCurrentUser(user))
-            //     .then(() => setLoading(false))
-            // else
-            // setCurrentUser(user)
-
+            
+            
 
         })
 
