@@ -23,7 +23,7 @@ const Login = () => {
   
   const SignInUser = async (e)=>{
 
-    e.preventDefault()
+    // e.preventDefault()
 
     setButtonStyle({
       backgroundColor: "green",
@@ -35,7 +35,7 @@ const Login = () => {
       const re = await signInWithEmailAndPassword(auth, email, password)
       //navigate("/")   
       setLoading(true)
-        window.location.reload()
+      // window.location.reload()
       // getRestaurantById(re.user.uid).then(restaurant => setCurrentRestaurant(restaurant))
       // .then(()=> setLoading(false))
       
