@@ -37,6 +37,9 @@ import {
 import { Button, Menu } from 'antd';
 import { HashLink as Link } from 'react-router-hash-link';
 
+import useLocation from "react-router-dom";
+
+
 // import { SelectedKeyContext } from "../../context/SelectedKey";
 
 function getItem(label, key, icon, children, type) {
@@ -51,8 +54,11 @@ function getItem(label, key, icon, children, type) {
 
 const Sidebar = ({ type }) => {
 
+  const { hash } = useLocation();
 
-  console.log("pathname: ", window.location.href)
+  console.log("hash", hash)
+
+  // console.log("pathname: ", window.location.href)
   // console.log("type : ", '/' + type)
   // const { dispatch } = useContext(DarkModeContext);
   const { currentRestaurant } = useContext(RestaurantContext)
