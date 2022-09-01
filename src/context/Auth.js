@@ -19,25 +19,16 @@ export const AuthProvider = ({ children }) => {
     useEffect(() => {
 
         onAuthStateChanged(auth, (user) => {
+
+            setCurrentUser(user) 
              
             //let restaurant;
-            if(user){
-
-                // countDown()
-                getRestaurantById(user.uid).then((restaurant)=>{
-
-                    if(restaurant){
-                        setCurrentRestaurant(restaurant) 
-                        setCurrentUser(user)
-                    }
-                    else{
-                        setCurrentUser(user)  
-                    }
-                })
-            }else{
-                setCurrentUser(user) 
-                setCurrentRestaurant(null) 
-            }
+            // if(user){
+                
+            //     setCurrentUser(user) 
+            // }else{
+            //     setCurrentUser(user) 
+            // }
 
             // (async ()=>{
             // if(user){
