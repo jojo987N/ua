@@ -7,7 +7,7 @@ import React, {
   useLayoutEffect,
   useState,
 } from "react";
-import { auth, getRestaurantById } from "../firebase";
+import { auth, getRestaurantById } from "../config";
 import { LoadingContext } from "./LoadingContext";
 
 export const AuthContext = createContext();

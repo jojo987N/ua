@@ -10,7 +10,7 @@ import { useState, useContext, useEffect } from "react";
 import { OrdersContext } from "../../context/OrdersContext";
 import { Timestamp } from "firebase/firestore";
 import { useParams } from "react-router-dom";
-import { getOrdersFromFirebase } from "../../firebase";
+import { getOrdersFromFirebase } from "../../config";
 
 const List = ({ type }) => {
   const { orderId } = useParams();

@@ -8,9 +8,9 @@ import { useLocation } from "react-router-dom";
 
 const openNotification = () => {
   notification.open({
-    message: "Notification Title",
+    message: "Notification",
     description:
-      "This is the content of the notification. This is the content of the notification. This is the content of the notification.",
+      "This is the content of notification.",
     className: "custom-class",
     style: {
       width: 600,

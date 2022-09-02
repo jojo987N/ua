@@ -1,6 +1,6 @@
 import { signInWithEmailAndPassword } from "firebase/auth"
 import { useContext, useState } from "react"
-import { auth } from "../../firebase"
+import { auth } from "../../config"
 import "./login.scss"
 import { LoadingContext } from "../../context/LoadingContext";
 import { APP_CONSTANT } from "../../globals";
