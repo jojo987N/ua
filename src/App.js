@@ -2,6 +2,7 @@ import Home from "./pages/home/Home";
 
 import { BrowserRouter, Routes, Route, Navigate, Outlet } from "react-router-dom";
 import { carInputs, categoryInputs, productInputs, restaurantInputs, userInputs } from "./formSource";
+import PrivateRoute from "./components/privateRoute/PrivateRoute";
 import { RestaurantProvider } from "./context/RestaurantContext";
 import { LoadingProvider } from "./context/LoadingContext";
 import { AuthContext } from "./context/Auth";
