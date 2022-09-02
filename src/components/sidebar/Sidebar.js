@@ -93,6 +93,7 @@ const Sidebar = ({ type }) => {
       },
      {anchor: "#node", title:"Install Node.js and NPM"},
      {anchor:"/#expo" , title:"Install Expo CLI"},
+     {anchor:"/#Install-Project" , title:"Install Project"},
      {anchor:"#firebase-project", title: "Firebase Project"},
      {anchor:"#firebase-config", title:"Firebase config file"},
      {anchor:"#Driver-App-Translation", title: "Driver App Translation"},
