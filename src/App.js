@@ -1,11 +1,7 @@
 import Home from "./pages/home/Home";
-import List from "./pages/list/List";
 
 import { BrowserRouter, Routes, Route, Navigate, Outlet } from "react-router-dom";
 import { carInputs, categoryInputs, productInputs, restaurantInputs, userInputs } from "./formSource";
-import { getOrdersFromFirebase } from './firebase'
-import { useContext, useEffect, useLayoutEffect, useState } from "react";
-import { OrdersContext } from "./context/OrdersContext"
 import Restaurant from "./pages/restaurant/Restaurant";
 import { AuthProvider } from "./context/Auth";
 import PrivateRoute from "./components/privateRoute/PrivateRoute";
@@ -49,9 +45,7 @@ function App() {
 
               
               </Route>
-              <Route path="documentation">
-                  <Route index element={<List key="documentation" type="documentation" />} />
-              </Route>
+              
            
           </Routes>
 
