@@ -1,6 +1,6 @@
 import Home from "./pages/home/Home";
 
-import { BrowserRouter, Routes, Route, Navigate, Outlet } from "react-router-dom";
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 import PrivateRoute from "./components/privateRoute/PrivateRoute";
  
 
