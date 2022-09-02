@@ -92,7 +92,7 @@ npm install -g expo-cli
     </SyntaxHighlighter>
  
 <p>&nbsp;</p>
-<h2 id="Install-Project"><strong><span > Install Project</span></strong></h2>
+<h2 id="Install-Project"> Install Project</h2>
 <p></p>
 <p>When you download after you need to install all package in&nbsp;<code>package.json</code></p>
 <p>Navigate to the downloaded Good Food folder using terminal and run</p>
