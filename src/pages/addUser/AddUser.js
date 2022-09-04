@@ -24,7 +24,7 @@ const AddUser = () => {
       <div className="addUserContainer">
         <Navbar />
         <div className="top">
-          <h1>{title}</h1>
+          <h1>{APP_CONSTANT.TEXT.ADD_NEW_USER}</h1>
         </div>
         <div className="bottom">
           <div className="left">

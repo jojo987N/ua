@@ -28,7 +28,7 @@ export const APP_CONSTANT = {
     EARNINGS: "EARNINGS",
     VIEW_NET_EARNINGS: "View net earnings",
     DRIVERS: "DRIVERS",
-    SEE_ALL_DRIVERS: "See all drivers"
+    SEE_ALL_DRIVERS: "See all drivers",
     },
     ROLE: {
         DRIVER: "driver"
