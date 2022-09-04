@@ -10,6 +10,7 @@ export const restaurantsCol = collection(db, 'restaurants')
 export const categoriesCol = collection(db, 'categories')
 export const ordersCol = collection(db, 'orders')
 export const usersCol = collection(db, 'users')
+
 export const getRestaurantsFromFirebase = () => {
     const restos = []
     return getDocs(restaurantsCol)

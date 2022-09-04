@@ -1,5 +1,3 @@
-import { decryptData } from "./utils";
-
 
 export const userColumns = [
   { field: "id", headerName: "ID", width: 70 },
@@ -70,7 +68,7 @@ export const foodsColumns = [
 
       return (
         <div className="cellWithRestaurant">
-          {decryptData(localStorage.getItem(process.env.REACT_APP_RESTAURANTS_KEY)).find(restaurant => restaurant.restaurantId === params.row.restaurantID).name}
+          {/* {decryptData(localStorage.getItem(process.env.REACT_APP_RESTAURANTS_KEY)).find(restaurant => restaurant.restaurantId === params.row.restaurantID).name} */}
         </div>
       );
     },
@@ -98,7 +96,7 @@ export const foodsColumns = [
 
       return (
         <div className="cellWithRestaurant">
-          {decryptData(localStorage.getItem(process.env.REACT_APP_CATEGORIES_KEY)).find(category => category.id === params.row.categorieId).name}
+          {/* {decryptData(localStorage.getItem(process.env.REACT_APP_CATEGORIES_KEY)).find(category => category.id === params.row.categorieId).name} */}
         </div>
       );
     },
@@ -162,7 +160,7 @@ export const categoryColumns = [
 
       return (
         <div className="cellWithRestaurant">
-          {decryptData(localStorage.getItem(process.env.REACT_APP_RESTAURANTS_KEY)).find((restaurant => restaurant.categories.some(category => category.title === params.row.name))).name}
+          {/* {decryptData(localStorage.getItem(process.env.REACT_APP_RESTAURANTS_KEY)).find((restaurant => restaurant.categories.some(category => category.title === params.row.name))).name} */}
         </div>
       );
     },
