@@ -49,7 +49,7 @@ export const userColumns = [
 export const foodsColumns = [
   {
     field: "menu",
-    headerName: Menu,
+    headerName: "Menu",
     width: 230,
     renderCell: (params) => {
       return (
