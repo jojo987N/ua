@@ -169,12 +169,7 @@ function App() {
                   element={<List key="earnings" type="earnings" />}
                 />
               </Route>
-              <Route path={PAGE.SETTINGS}>
-                <Route
-                  index
-                  element={<Settings key="earnings" type="earnings" />}
-                />
-              </Route>
+             
             </Route>
           </Route>
         </Routes>
