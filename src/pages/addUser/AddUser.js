@@ -3,7 +3,7 @@ import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
 import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUploadOutlined";
 import { useState } from "react";
-import { userInputs } from "./formSource";
+import { userInputs } from "../../formSource";
 import { APP_CONSTANT } from "../../globals";
 
 
