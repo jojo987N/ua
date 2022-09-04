@@ -45,7 +45,7 @@ const AddUser = () => {
                   <input type={input.type} placeholder={input.placeholder} value={input.placeholder}/>
                 </div>
               ))}
-              <button className="button" onClick={warning} > {APP_CONSTANT.TEXT.SEND}</button>
+              <button className="button"  > {APP_CONSTANT.TEXT.SEND}</button>
                
             </form>
              
