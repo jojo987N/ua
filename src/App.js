@@ -12,7 +12,6 @@ import {
 } from "./formSource";
 import PrivateRoute from "./components/privateRoute/PrivateRoute";
 import { AuthContext } from "./context/Auth";
-import Settings from "./components/settings/Settings";
 import ProtectedRoute from "./ProtectedRoute";
 import { useContext } from "react";
 import { APP_CONSTANT, PAGE } from "./globals";
