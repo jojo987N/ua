@@ -3,6 +3,8 @@ import Navbar from "../../components/navbar/Navbar";
 import "./orders.scss";
 import { useEffect, useState } from "react";
 import { APP_CONSTANT } from "../../globals";
+import { getOrdersFromFirebase } from "../../utils";
+
 
 const Orders = () => {
   const [orders, setOrders] = useState()
