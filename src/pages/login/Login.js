@@ -30,7 +30,7 @@ const Login = () => {
             value={email}
             onChange={e => setEmail(e.target.value)}
           />
-          <p className="errorMsg">{emailError}</p>
+          {/* <p className="errorMsg">{emailError}</p> */}
           <label>{APP_CONSTANT.TEXT.PASSWORD}</label>
           <input
             type={APP_CONSTANT.TYPE.PASSWORD}
