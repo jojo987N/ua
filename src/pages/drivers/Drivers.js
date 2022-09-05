@@ -3,7 +3,7 @@ import Navbar from "../../components/navbar/Navbar";
 import "./drivers.scss";
 import { useEffect, useState } from "react";
 import { APP_CONSTANT } from "../../globals";
-import { getUsersFromFirebase } from "../../firebase";
+import { getUsersFromFirebase } from "../../utils";
 
 const Drivers = () => {
   const [drivers, setDrivers] = useState()

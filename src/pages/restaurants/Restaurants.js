@@ -3,7 +3,7 @@ import Navbar from "../../components/navbar/Navbar";
 import "./restaurants.scss";
 import {useEffect, useState } from "react";
 import { APP_CONSTANT } from "../../globals";
-import { getRestaurantsFromFirebase } from "../../firebase";
+import { getRestaurantsFromFirebase } from "../../utils";
 
 const Restaurants = () => {
   const [restaurants, setRestaurants] = useState()
