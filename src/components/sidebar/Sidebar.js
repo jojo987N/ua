@@ -60,8 +60,10 @@ const Sidebar = () => {
           <p className="title">LISTS</p>
          <Link to="/users" style={{ textDecoration: "none" }}>
             <li>
-              <PersonOutlineIcon className="icon" />
-              <span>Users</span>
+              <div className="icon-label">
+                <PersonOutlineIcon className="icon" />
+                <span>Users</span>
+              </div>
               <ArrowDropDownIcon />
               
             </li>
