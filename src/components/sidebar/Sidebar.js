@@ -18,7 +18,6 @@ import { signOut } from "firebase/auth";
 import { auth } from "../../utils";
 //import { DarkModeContext } from "../../context/darkModeContext";
 //import { useContext } from "react";
-import { RestaurantContext } from "../../context/RestaurantContext";
 import { useContext, useState } from "react";
 import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlined";
 import SettingsIcon from '@mui/icons-material/Settings';
@@ -51,7 +50,6 @@ const Sidebar = ({type}) => {
 
   console.log("type : ", '/'+type)
  // const { dispatch } = useContext(DarkModeContext);
-const {currentRestaurant} = useContext(RestaurantContext)
 const [collapsed, setCollapsed] = useState(false);
 const navigate = useNavigate()
 
