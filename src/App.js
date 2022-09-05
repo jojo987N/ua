@@ -14,7 +14,7 @@ import PrivateRoute from "./components/privateRoute/PrivateRoute";
 import { AuthContext } from "./context/Auth";
 import ProtectedRoute from "./ProtectedRoute";
 import { useContext } from "react";
-import { APP_CONSTANT, PAGE } from "./globals";
+import {PAGE } from "./globals";
 import Users from "./pages/users/Users";
 import AddUser from "./pages/addUser/AddUser";
 import Orders from "./pages/orders/Orders";
