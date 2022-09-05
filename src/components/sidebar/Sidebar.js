@@ -50,14 +50,16 @@ const Sidebar = () => {
       <hr />
       <div className="center"> 
         <ul>
-          <p className="title">MAIN</p>
+          
           <Link to="/" style={{ textDecoration: "none" }}>
           <li>
+          <div className="icon-label">
             <DashboardIcon className="icon" />
             <span>Dashboard</span>
+            </div>
           </li>
           </Link>
-          <p className="title">LISTS</p>
+          
          <Link to="/users" style={{ textDecoration: "none" }}>
             <li>
               <div className="icon-label">
@@ -74,6 +76,7 @@ const Sidebar = () => {
               <StoreIcon className="icon" />
               <span>Menus</span>
               </div>
+              <ArrowDropDownIcon />
             </li>
           </Link>
           <Link to="/orders" style={{ textDecoration: "none" }}>
@@ -82,6 +85,7 @@ const Sidebar = () => {
             <CreditCardIcon className="icon" />
             <span>Orders</span>
             </div>
+            <ArrowDropDownIcon />
           </li>
           </Link>
          <Link to="/drivers" style={{ textDecoration: "none" }}>
@@ -90,6 +94,7 @@ const Sidebar = () => {
             <LocalShippingIcon className="icon" />
             <span>Drivers</span>
             </div>
+            <ArrowDropDownIcon />
           </li>
           </Link>
           <Link to="/restaurants" style={{ textDecoration: "none" }}>
@@ -98,6 +103,7 @@ const Sidebar = () => {
             <RestaurantIcon className="icon" />
             <span>Restaurants</span>
             </div>
+            <ArrowDropDownIcon />
           </li>
           </Link>
           <Link to="/categories" style={{ textDecoration: "none" }}>
@@ -106,6 +112,7 @@ const Sidebar = () => {
             <CategoryIcon className="icon" />
             <span>Categories</span>
             </div>
+            <ArrowDropDownIcon />
           </li>
           </Link>
          
