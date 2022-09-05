@@ -75,9 +75,9 @@ const arrow = () => setClicked(v => !v)
             <li >
               <div className="icon-label">
                 <PersonOutlineIcon className="icon" />
-                <span>Add Users</span>
+                <span>Add User</span>
               </div>
-              <ArrowDropDownIcon />
+              
               
             </li>
             
