@@ -70,32 +70,42 @@ const Sidebar = () => {
           </Link>
           <Link to="/products" style={{ textDecoration: "none" }}>
             <li>
+            <div className="icon-label">
               <StoreIcon className="icon" />
               <span>Menus</span>
+              </div>
             </li>
           </Link>
           <Link to="/orders" style={{ textDecoration: "none" }}>
           <li>
+          <div className="icon-label">
             <CreditCardIcon className="icon" />
             <span>Orders</span>
+            </div>
           </li>
           </Link>
          <Link to="/drivers" style={{ textDecoration: "none" }}>
           <li>
+          <div className="icon-label">
             <LocalShippingIcon className="icon" />
             <span>Drivers</span>
+            </div>
           </li>
           </Link>
           <Link to="/restaurants" style={{ textDecoration: "none" }}>
             <li>
+            <div className="icon-label">
             <RestaurantIcon className="icon" />
             <span>Restaurants</span>
+            </div>
           </li>
           </Link>
           <Link to="/categories" style={{ textDecoration: "none" }}>
             <li>
+            <div className="icon-label">
             <CategoryIcon className="icon" />
             <span>Categories</span>
+            </div>
           </li>
           </Link>
          
@@ -104,13 +114,17 @@ const Sidebar = () => {
          
           <Link to="/users/profile" style={{ textDecoration: "none" }}>
           <li>
+          <div className="icon-label">
             <AccountCircleOutlinedIcon className="icon" />
             <span>Profile</span>
+            </div>
           </li>
           </Link>
           <li onClick={signOutUser}>
+          <div className="icon-label">
             <ExitToAppIcon className="icon" />
             <span>Logout</span>
+            </div>
           </li>
         </ul>
       </div>
