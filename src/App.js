@@ -1,15 +1,15 @@
 import Login from "./pages/login/Login";
-import List from "./pages/list/List";
-import Single from "./pages/single/Single";
-import New from "./pages/new/New";
+// import List from "./pages/list/List";
+// import Single from "./pages/single/Single";
+// import New from "./pages/new/New";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import {
-  carInputs,
-  categoryInputs,
-  productInputs,
-  restaurantInputs,
-  userInputs,
-} from "./formSource";
+// import {
+//   carInputs,
+//   categoryInputs,
+//   productInputs,
+//   restaurantInputs,
+//   userInputs,
+// } from "./formSource";
 import PrivateRoute from "./components/privateRoute/PrivateRoute";
 import { AuthContext } from "./context/Auth";
 import ProtectedRoute from "./ProtectedRoute";
@@ -17,6 +17,10 @@ import { useContext } from "react";
 import { APP_CONSTANT, PAGE } from "./globals";
 import Users from "./pages/users/Users";
 import AddUser from "./pages/addUser/AddUser";
+import Orders from "./pages/orders/Orders";
+import Restaurants from "./pages/restaurants/Restaurants"
+import Drivers from "./pages/drivers/Drivers"
+import Categories from "./pages/categories/Categories"
 function App() {
   const { currentUser } = useContext(AuthContext);
   return (
@@ -29,7 +33,7 @@ function App() {
             <Route element={<ProtectedRoute currentUser={currentUser} />}>
               <Route path={PAGE.USERS}>
                 <Route index element={<Users />} />
-                <Route
+                {/* <Route
                   path=":userId"
                   element={
                     <New
@@ -38,8 +42,8 @@ function App() {
                       title={APP_CONSTANT.UPDATE_USER}
                     />
                   }
-                />
-                <Route
+                /> */}
+                {/* <Route
                   path="new"
                   element={
                     <New
@@ -48,7 +52,7 @@ function App() {
                       title={APP_CONSTANT.ADD_NEW_USER}
                     />
                   }
-                />
+                /> */}
               </Route>
               <Route path={PAGE.ADD_USER}>
                 <Route index element={<AddUser />} />
@@ -56,9 +60,9 @@ function App() {
               <Route path={PAGE.PRODUCTS}>
                 <Route
                   index
-                  element={<List key="products" type="products" />}
+                  element={<Foods/>}
                 />
-                <Route
+                {/* <Route
                   path=":id"
                   element={
                     <New
@@ -77,32 +81,23 @@ function App() {
                       title={APP_CONSTANT.ADD_NEW_MENU}
                     />
                   }
-                />
+                /> */}
               </Route>
               <Route path={PAGE.ORDERS}>
-                <Route index element={<List key="orders" type="orders" />} />
-                <Route path=":orderId" element={<Single type="orders" />} />
-                <Route
-                  path="new"
-                  element={<New inputs={productInputs} type="orders" />}
-                />
+                <Route index element={<Orders />} />
+                {/* <Route path=":orderId" element={<Single type="orders" />} /> */}
+               
               </Route>
               <Route path={PAGE.RESTAURANTS}>
                 <Route
                   index
-                  element={<List key="restaurants" type="restaurants" />}
+                  element={<Restaurants />}
                 />
-                <Route
+                {/* <Route
                   path=":restaurantId"
-                  element={
-                    <New
-                      inputs={restaurantInputs}
-                      type="restaurant"
-                      title={APP_CONSTANT.UPDATE_RESTAURANT}
-                    />
-                  }
-                />
-                <Route
+                  element={}
+                /> */}
+                {/* <Route
                   path="new"
                   element={
                     <New
@@ -111,11 +106,11 @@ function App() {
                       title={APP_CONSTANT.ADD_NEW_RESTAURANT}
                     />
                   }
-                />
+                /> */}
               </Route>
               <Route path={PAGE.DRIVERS}>
-                <Route index element={<List key="drivers" type="drivers" />} />
-                <Route
+                <Route index element={<Drivers/>} />
+                {/* <Route
                   path=":userId"
                   element={
                     <New
@@ -134,14 +129,14 @@ function App() {
                       title={APP_CONSTANT.ADD_NEW_DRIVER}
                     />
                   }
-                />
+                /> */}
               </Route>
               <Route path={PAGE.CATEGORIES}>
                 <Route
                   index
-                  element={<List key="categories" type="categories" />}
+                  element={<Categories />}
                 />
-                <Route
+                {/* <Route
                   path=":id"
                   element={
                     <New
@@ -150,8 +145,8 @@ function App() {
                       title={APP_CONSTANT.UPDATE_CATEGORY}
                     />
                   }
-                />
-                <Route
+                /> */}
+                {/* <Route
                   path="new"
                   element={
                     <New
@@ -160,14 +155,14 @@ function App() {
                       title={APP_CONSTANT.ADD_NEW_CATEGORY}
                     />
                   }
-                />
+                /> */}
               </Route>
-              <Route path={PAGE.EARNINGS}>
+              {/* <Route path={PAGE.EARNINGS}>
                 <Route
                   index
                   element={<List key="earnings" type="earnings" />}
                 />
-              </Route>
+              </Route> */}
              
             </Route>
           </Route>
