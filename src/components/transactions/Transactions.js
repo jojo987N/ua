@@ -11,6 +11,7 @@ import { OrdersContext } from "../../context/OrdersContext";
 import { Timestamp } from "firebase/firestore";
 import { useParams } from "react-router-dom";
 import { getOrdersFromFirebase } from "../../utils";
+import Loading from "../loading/Loading";
 
 const Transactions = () => {
   const { orderId } = useParams();
@@ -20,6 +21,9 @@ const Transactions = () => {
   useEffect(() => {
     getOrdersFromFirebase().then((orders) => setOrders(orders));
   }, []);
+
+  if(!orders)
+  return <Loading />
 
   return (
     <TableContainer component={Paper} className="transactions">
