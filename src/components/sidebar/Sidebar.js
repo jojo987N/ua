@@ -60,7 +60,7 @@ const Sidebar = () => {
           </li>
           </Link>
           
-         <Link to="/users" style={{ textDecoration: "none" }}>
+         {/* <Link to="/users" style={{ textDecoration: "none" }}> */}
             <li>
               <div className="icon-label">
                 <PersonOutlineIcon className="icon" />
@@ -69,7 +69,7 @@ const Sidebar = () => {
               <ArrowDropDownIcon />
               
             </li>
-          </Link>
+          {/* </Link> */}
           <Link to="/products" style={{ textDecoration: "none" }}>
             <li>
             <div className="icon-label">
