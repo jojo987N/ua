@@ -71,9 +71,9 @@ const arrow = () => setClicked(v => !v)
               <ArrowDropDownIcon className={clicked?"arrow180":"arrow0"}/>
               
             </li>
-            <ul>
+            
               <li>Users List</li>
-            </ul>
+             
           {/* </Link> */}
           <Link to="/products" style={{ textDecoration: "none" }}>
             <li>
