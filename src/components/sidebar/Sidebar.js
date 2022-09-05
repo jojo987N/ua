@@ -66,7 +66,7 @@ const Sidebar = () => {
                 <PersonOutlineIcon className="icon" />
                 <span>Users</span>
               </div>
-              <ArrowDropDownIcon />
+              <ArrowDropDownIcon className="arrowIcon"/>
               
             </li>
           {/* </Link> */}
