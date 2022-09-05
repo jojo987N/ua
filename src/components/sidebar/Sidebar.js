@@ -72,7 +72,7 @@ const arrow = () => setClicked(v => !v)
               
             </li>
             
-              <li>Users List</li>
+              <span>Users List</span>
              
           {/* </Link> */}
           <Link to="/products" style={{ textDecoration: "none" }}>
