@@ -49,15 +49,16 @@
             background-color: #ece8ff;
           }
            
-           
-
+          .icon-label {
+            display: flex;
+            align-items: center;
             .icon {
               font-size: 22px;
               color: #00b300;
               border: 1px solid black
             }
 
-           
+          }
           
   
           span{
