@@ -18,12 +18,12 @@ import { signOut } from "firebase/auth";
 import { auth } from "../../utils";
 //import { DarkModeContext } from "../../context/darkModeContext";
 //import { useContext } from "react";
-import { RestaurantContext } from "../../context/RestaurantContext";
+// import { RestaurantContext } from "../../context/RestaurantContext";
 import { useContext } from "react";
 
 const Sidebar = () => {
  // const { dispatch } = useContext(DarkModeContext);
-const {currentRestaurant} = useContext(RestaurantContext)
+// const {currentRestaurant} = useContext(RestaurantContext)
  
  const signOutUser = () => {
   
@@ -57,12 +57,12 @@ const {currentRestaurant} = useContext(RestaurantContext)
           </li>
           </Link>
           <p className="title">LISTS</p>
-         {!currentRestaurant && <Link to="/users" style={{ textDecoration: "none" }}>
+         <Link to="/users" style={{ textDecoration: "none" }}>
             <li>
               <PersonOutlineIcon className="icon" />
               <span>Users</span>
             </li>
-          </Link>}
+          </Link>
           <Link to="/products" style={{ textDecoration: "none" }}>
             <li>
               <StoreIcon className="icon" />
@@ -75,51 +75,28 @@ const {currentRestaurant} = useContext(RestaurantContext)
             <span>Orders</span>
           </li>
           </Link>
-          {!currentRestaurant && <Link to="/drivers" style={{ textDecoration: "none" }}>
+         <Link to="/drivers" style={{ textDecoration: "none" }}>
           <li>
             <LocalShippingIcon className="icon" />
             <span>Drivers</span>
           </li>
-          </Link>}
-          {!currentRestaurant && <Link to="/restaurants" style={{ textDecoration: "none" }}>
+          </Link>
+          <Link to="/restaurants" style={{ textDecoration: "none" }}>
             <li>
             <RestaurantIcon className="icon" />
             <span>Restaurants</span>
           </li>
-          </Link>}
+          </Link>
           <Link to="/categories" style={{ textDecoration: "none" }}>
             <li>
             <CategoryIcon className="icon" />
             <span>Categories</span>
           </li>
           </Link>
-          <p className="title">USEFUL</p>
-          <li>
-            <InsertChartIcon className="icon" />
-            <span>Stats</span>
-          </li>
-          <li>
-            <NotificationsNoneIcon className="icon" />
-            <span>Notifications</span>
-          </li>
-          <p className="title">STATUS</p>
-          <li>
-            <SettingsSystemDaydreamOutlinedIcon className="icon" />
-            <span>Confirmed</span>
-          </li>
-          <li>
-            <PsychologyOutlinedIcon className="icon" />
-            <span>Cooking</span>
-          </li>
-          <li>
-            <SettingsApplicationsIcon className="icon" />
-            <span>Ready For Pickup</span>
-          </li>
-          <li>
-            <SettingsApplicationsIcon className="icon" />
-            <span>Picked Up</span>
-          </li>
-          <p className="title">USER</p>
+         
+          
+         
+         
           <Link to="/users/profile" style={{ textDecoration: "none" }}>
           <li>
             <AccountCircleOutlinedIcon className="icon" />
