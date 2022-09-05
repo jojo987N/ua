@@ -10,7 +10,7 @@ import { categoryColumns } from "../../datatablesource";
 const Categories = () => {
   const [categories, setCategories] = useState()
   useEffect(() => {
-    await getCategories().then(categories => setCategories(categories))
+    getCategories().then(categories => setCategories(categories))
   }, [])
   return (
     <div className="categories">
