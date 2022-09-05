@@ -63,7 +63,7 @@ const Sidebar = () => {
          {/* <Link to="/users" style={{ textDecoration: "none" }}> */}
             <li>
               <div className="icon-label">
-                <PersonOutlineIcon className="icon" />
+                <PersonOutlineIcon className="icon" style={{transform: 'rotate(180deg)'}}/>
                 <span>Users</span>
               </div>
               <ArrowDropDownIcon />
