@@ -14,8 +14,8 @@ const Home = () => {
   return (
     
     <div className="home">
-      {/* <Sidebar /> */}
-      <Sidenav />
+      <Sidebar />
+      
       <div className="homeContainer">
         <Navbar />
         {/* <div className="widgets">
