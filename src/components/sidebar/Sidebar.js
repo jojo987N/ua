@@ -21,6 +21,7 @@ import { auth } from "../../utils";
 //import { useContext } from "react";
 // import { RestaurantContext } from "../../context/RestaurantContext";
 import { useState } from "react";
+import {PAGE} from "../../globals"
 
 const Sidebar = () => {
  // const { dispatch } = useContext(DarkModeContext);
@@ -71,7 +72,7 @@ const arrow = () => setClicked(v => !v)
               <ArrowDropDownIcon className={clicked?"arrow180":"arrow0"}/>
               
             </li>
-
+            <Link to={PAGE.ADD_USER} style={{ textDecoration: "none" }}>
             <li >
               <div className="icon-label">
                 <PersonOutlineIcon className="icon" />
@@ -80,6 +81,7 @@ const arrow = () => setClicked(v => !v)
               
               
             </li>
+            </Link>
             
               
              
