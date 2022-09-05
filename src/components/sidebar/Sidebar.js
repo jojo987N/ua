@@ -13,145 +13,97 @@ import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import SettingsSystemDaydreamOutlinedIcon from "@mui/icons-material/SettingsSystemDaydreamOutlined";
 import PsychologyOutlinedIcon from "@mui/icons-material/PsychologyOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { signOut } from "firebase/auth";
-import { auth } from "../../utils";
-//import { DarkModeContext } from "../../context/darkModeContext";
-//import { useContext } from "react";
-// import { RestaurantContext } from "../../context/RestaurantContext";
-import { useState } from "react";
-
-const Sidebar = () => {
- // const { dispatch } = useContext(DarkModeContext);
-// const {currentRestaurant} = useContext(RestaurantContext)
-const [clicked, setClicked] = useState(false)
- 
- const signOutUser = () => {
-  
-  signOut(auth)
-  .then(()=>{
-       
-      //navigation.replace('SignScreen') // Efface tout
-      //navigation.navigate('SignIn')
-     // window.location.reload();
-
-  })
-
-  .catch((err)=>console.log(err.code))
-   
+import { auth } from "../../config";
+import { useContext, useState } from "react";
+import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlined";
+import SettingsIcon from '@mui/icons-material/Settings';
+import {
+  AppstoreOutlined,
+  ContainerOutlined,
+  DesktopOutlined,
+  MailOutlined,
+  MenuFoldOutlined,
+  MenuUnfoldOutlined,
+  PieChartOutlined,
+} from '@ant-design/icons';
+import { Button, Menu } from 'antd';
+import { SelectedKeyContext } from "../../context/SelectedKey";
+function getItem(label, key, icon, children, type) {
+  return {
+    key,
+    icon,
+    children,
+    label,
+    type,
+  };
 }
-const arrow = () => setClicked(v => !v)
+const Sidebar = ({ type }) => {
+  console.log("type : ", '/' + type)
+  const [collapsed, setCollapsed] = useState(false);
+  const navigate = useNavigate()
+  const { selectedKey, setSelectedKey } = useContext(SelectedKeyContext)
+  const signOutUser = () => {
+    signOut(auth)
+      .then(() => {
+      })
+      .catch((err) => console.log(err.code))
+  }
+  const items = [
+    getItem('Dashboard', '/', <DashboardIcon />),
+    getItem('Users', 'sub', <PersonOutlineIcon className="icon" />, [
+      getItem('Users List', '/users'),
+      getItem('Add User', '/users/new'),
+    ]),
+    getItem('Menus', 'sub0', <StoreIcon className="icon" />, [
+      getItem('Menus List', '/products'),
+    ]),
+    getItem('Orders', 'sub1', <CreditCardIcon className="icon" />, [
+      getItem('Orders List', '/orders'),
+    ]),
+    getItem('Drivers', 'sub2', <LocalShippingIcon className="icon" />, [
+      getItem('Drivers List', '/drivers'),
+      getItem('Add Driver', '/drivers/new'),
+    ]),
+    getItem('Restaurants', 'sub3', <RestaurantIcon className="icon" />, [
+      getItem('Restaurants List', '/restaurants'),
+      getItem('Add Restaurant', '/restaurants/new'),
+    ]),
+    getItem('Categories', 'sub4', <CategoryIcon className="icon" />, [
+      getItem('Categories List', '/categories'),
+      getItem('Add Category', '/categories/new'),
+    ]),
+    getItem('Profile', 'sub5', <AccountCircleOutlinedIcon className="icon" />, [
+      getItem('Update Profile', '/users/profile'),
+    ]),
+    getItem('Earnings', '/earnings', <MonetizationOnOutlinedIcon />),
+    getItem('Settings', '/settings', <SettingsIcon />),
+    getItem('Logout', '/logout', <ExitToAppIcon className="icon" />),
+  ];
+  const onClick = e => {
+    console.log('click ', e);
+    if (e.key !== "/logout")
+      navigate(e.key)
+    else
+      signOutUser()
+  };
   return (
     <div className="sidebar">
       <div className="top">
         <Link to="/" style={{ textDecoration: "none" }}>
-          <span className="logo">Good Food</span>
+          <img className="cellImg" style={{ width: 100, height: 100 }} src={require("../../assets/images/logo-100-removed.png")} alt="avatar" />
         </Link>
       </div>
-      <hr />
-      <div className="center"> 
-        <ul>
-          
-          <Link to="/" style={{ textDecoration: "none" }}>
-          <li>
-          <div className="icon-label">
-            <DashboardIcon className="icon" />
-            <span>Dashboard</span>
-            </div>
-          </li>
-          </Link>
-          
-         {/* <Link to="/users" style={{ textDecoration: "none" }}> */}
-            <li onClick={arrow}>
-              <div className="icon-label">
-                <PersonOutlineIcon className="icon" />
-                <span>Users</span>
-              </div>
-              <ArrowDropDownIcon className={clicked?"arrow180":"arrow0"}/>
-              
-            </li>
-            
-              <span>Users List</span>
-             
-          {/* </Link> */}
-          <Link to="/products" style={{ textDecoration: "none" }}>
-            <li>
-            <div className="icon-label">
-              <StoreIcon className="icon" />
-              <span>Menus</span>
-              </div>
-              <ArrowDropDownIcon />
-            </li>
-          </Link>
-          <Link to="/orders" style={{ textDecoration: "none" }}>
-          <li>
-          <div className="icon-label">
-            <CreditCardIcon className="icon" />
-            <span>Orders</span>
-            </div>
-            <ArrowDropDownIcon />
-          </li>
-          </Link>
-         <Link to="/drivers" style={{ textDecoration: "none" }}>
-          <li>
-          <div className="icon-label">
-            <LocalShippingIcon className="icon" />
-            <span>Drivers</span>
-            </div>
-            <ArrowDropDownIcon />
-          </li>
-          </Link>
-          <Link to="/restaurants" style={{ textDecoration: "none" }}>
-            <li>
-            <div className="icon-label">
-            <RestaurantIcon className="icon" />
-            <span>Restaurants</span>
-            </div>
-            <ArrowDropDownIcon />
-          </li>
-          </Link>
-          <Link to="/categories" style={{ textDecoration: "none" }}>
-            <li>
-            <div className="icon-label">
-            <CategoryIcon className="icon" />
-            <span>Categories</span>
-            </div>
-            <ArrowDropDownIcon />
-          </li>
-          </Link>
-         
-          
-         
-         
-          <Link to="/users/profile" style={{ textDecoration: "none" }}>
-          <li>
-          <div className="icon-label">
-            <AccountCircleOutlinedIcon className="icon" />
-            <span>Profile</span>
-            </div>
-          </li>
-          </Link>
-          <li onClick={signOutUser}>
-          <div className="icon-label">
-            <ExitToAppIcon className="icon" />
-            <span>Logout</span>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div className="bottom">
-        <div
-          className="colorOption"
-        //   onClick={() => dispatch({ type: "LIGHT" })}
-        ></div>
-        <div
-          className="colorOption"
-        //   onClick={() => dispatch({ type: "DARK" })}
-        ></div>
-      </div>
+      <Menu
+        onClick={onClick}
+        defaultSelectedKeys={['1']}
+        defaultOpenKeys={['sub1']}
+        mode="inline"
+        inlineCollapsed={collapsed}
+        items={items}
+      />
     </div>
   );
 };
-
 export default Sidebar;
