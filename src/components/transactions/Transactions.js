@@ -28,47 +28,45 @@ const Transactions = () => {
         <TableHead>
          
           <TableRow>
-            {!type && <TableCell className="tableCell">Orders ID</TableCell>}
+             <TableCell className="tableCell">Orders ID</TableCell>
 
             
 
-            {!type && (
-              <>
+             
                 <TableCell className="tableCell">Customer</TableCell>
                 <TableCell className="tableCell">Date</TableCell>
                 <TableCell className="tableCell">Payment Method</TableCell>
                 <TableCell className="tableCell">Driver</TableCell>
-              </>
-            )}
+              
             <TableCell className="tableCell">Amount</TableCell>
           </TableRow>
         </TableHead>
 
         <TableBody>
           
-          {!type &&
+          { 
             orders
               .filter((item, index) => item.status === "Completed")
               .map((row) => (
                 <TableRow key={row.id}>
-                  {!type && (
+                  
                     <TableCell className="tableCell">
                       {row.orderId.toUpperCase()}
                     </TableCell>
-                  )}
-                  {!type && (
+                  
+                   
                     <TableCell className="tableCell">{row.User.name}</TableCell>
-                  )}
-                  {!type && (
+                  
+                  
                     <TableCell className="tableCell">
                       {renderDate(row)}
                     </TableCell>
-                  )}
+                   
                   <TableCell className="tableCell">
                     {row.paymentMethod}
                   </TableCell>
                   <TableCell className="tableCell">{row.driverName}</TableCell>
-                  {!type && (
+                  
                     <TableCell className="tableCell">
                       <span className={`status ${row.status}`}>
                         {row.User.items
@@ -79,7 +77,7 @@ const Transactions = () => {
                           })}
                       </span>
                     </TableCell>
-                  )}
+                  
                 </TableRow>
               ))}
         </TableBody>
