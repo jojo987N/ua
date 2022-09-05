@@ -2,10 +2,12 @@ import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
 import "./categories.scss";
 import { useEffect, useState } from "react";
-import { APP_CONSTANT } from "../../globals";
+import { APP_CONSTANT, PAGE } from "../../globals";
 import { getCategories } from "../../utils";
 import Datatable from "../../components/datatable/Datatable";
 import { categoryColumns } from "../../datatablesource";
+import { Link } from "react-router-dom";
+
 
 const Categories = () => {
   const [categories, setCategories] = useState()
