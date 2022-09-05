@@ -47,7 +47,7 @@ const Sidebar = () => {
         </Link>
       </div>
       <hr />
-      <div className="center">
+      <div className="center"> 
         <ul>
           <p className="title">MAIN</p>
           <Link to="/" style={{ textDecoration: "none" }}>
