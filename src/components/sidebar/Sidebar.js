@@ -15,7 +15,7 @@ import PsychologyOutlinedIcon from "@mui/icons-material/PsychologyOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { signOut } from "firebase/auth";
-import { auth } from "../../firebase";
+import { auth } from "../../utils";
 //import { DarkModeContext } from "../../context/darkModeContext";
 //import { useContext } from "react";
 import { RestaurantContext } from "../../context/RestaurantContext";
