@@ -8,12 +8,14 @@ import "./home.scss";
 // import List from "../../components/table/Table";
 import { APP_CONSTANT } from "../../globals";
 import Transactions from "../../components/transactions/Transactions";
+import Sidenav from "../../components/sidenav/Sidenav";
 
 const Home = () => {
   return (
     
     <div className="home">
-      <Sidebar />
+      {/* <Sidebar /> */}
+      <Sidenav />
       <div className="homeContainer">
         <Navbar />
         {/* <div className="widgets">
