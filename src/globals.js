@@ -18,6 +18,7 @@ export const APP_CONSTANT = {
     IMAGE: "Image",
     CAR_IMAGE: "Car Image",
     LATEST_ORDERS: "Latest Orders",
+    TRANSACTIONS: "Transactions",
     USERNAME: "Username",
     PASSWORD: "Password",
     SIGN_IN: "Sign In",

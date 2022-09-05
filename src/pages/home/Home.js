@@ -7,6 +7,7 @@ import "./home.scss";
 //  import Table from "../../components/table/Table";
 // import List from "../../components/table/Table";
 import { APP_CONSTANT } from "../../globals";
+import Transactions from "../../components/transactions/Transactions";
 
 const Home = () => {
   return (
@@ -26,9 +27,10 @@ const Home = () => {
           <Chart title="Last 6 Months (Revenue)" aspect={2 / 1} />
         </div> */}
         <div className="listContainer">
-          <div className="listTitle">{APP_CONSTANT.TEXT.LATEST_ORDERS}</div>
+          <div className="listTitle">{APP_CONSTANT.TEXT.TRANSACTIONS}</div>
           {/* <Table1 /> */}
           {/* <List /> */}
+          <Transactions />
         </div>
       </div>
     </div>
