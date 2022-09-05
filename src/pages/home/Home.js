@@ -15,16 +15,16 @@ const Home = () => {
       {/* <Sidebar /> */}
       <div className="homeContainer">
         <Navbar />
-        <div className="widgets">
+        {/* <div className="widgets">
            <Widget type={APP_CONSTANT.TYPE.USERS} />
            <Widget type={APP_CONSTANT.TYPE.ORDERS} />
           <Widget type={APP_CONSTANT.TYPE.EARNINGS} />
           <Widget type={APP_CONSTANT.TYPE.DRIVERS} />
-        </div>
-        <div className="charts">
+        </div> */}
+        {/* <div className="charts">
           <Featured />
           <Chart title="Last 6 Months (Revenue)" aspect={2 / 1} />
-        </div>
+        </div> */}
         <div className="listContainer">
           <div className="listTitle">{APP_CONSTANT.TEXT.LATEST_ORDERS}</div>
           {/* <Table1 /> */}
