@@ -28,7 +28,7 @@ const Home = () => {
         <div className="listContainer">
           <div className="listTitle">{APP_CONSTANT.TEXT.LATEST_ORDERS}</div>
           {/* <Table1 /> */}
-          <List />
+          {/* <List /> */}
         </div>
       </div>
     </div>
