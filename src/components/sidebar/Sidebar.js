@@ -41,7 +41,10 @@ const [clicked, setClicked] = useState(false)
   .catch((err)=>console.log(err.code))
    
 }
-const arrow = () => setClicked(v => console.log(v))
+const arrow = () => {
+  console.log(clicked)
+  setClicked(v => !v)
+}
   return (
     <div className="sidebar">
       <div className="top">
