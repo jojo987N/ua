@@ -5,6 +5,7 @@ import Home from "../../pages/home/Home";
 import Login from "../../pages/login/Login";
 import { DotLoader } from "react-spinners";
 import { LoadingContext } from "../../context/LoadingContext";
+import Loading from "../loading/Loading";
 
 export default function PrivateRoute() {
   const { currentUser } = useContext(AuthContext);
@@ -22,19 +23,7 @@ export default function PrivateRoute() {
   }, 5000);
 
   if (loading)
-    return (
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "100vh",
-        }}
-      >
-        <DotLoader color={"#36D7B7"} loading={true} size={150} />
-      </div>
-    );
-
+    return <Loading />
   return (
     <>
       {currentUser ? <Home /> : <Login />}
