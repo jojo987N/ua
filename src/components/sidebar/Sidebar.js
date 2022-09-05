@@ -20,11 +20,12 @@ import { auth } from "../../utils";
 //import { DarkModeContext } from "../../context/darkModeContext";
 //import { useContext } from "react";
 // import { RestaurantContext } from "../../context/RestaurantContext";
-import { useContext } from "react";
+import { useState } from "react";
 
 const Sidebar = () => {
  // const { dispatch } = useContext(DarkModeContext);
 // const {currentRestaurant} = useContext(RestaurantContext)
+const [clicked, setClicked] = useState(false)
  
  const signOutUser = () => {
   
@@ -40,6 +41,7 @@ const Sidebar = () => {
   .catch((err)=>console.log(err.code))
    
 }
+const arrow = () => setClicked(v => console.log(v))
   return (
     <div className="sidebar">
       <div className="top">
@@ -61,12 +63,12 @@ const Sidebar = () => {
           </Link>
           
          {/* <Link to="/users" style={{ textDecoration: "none" }}> */}
-            <li>
+            <li onClick={arrow}>
               <div className="icon-label">
                 <PersonOutlineIcon className="icon" />
                 <span>Users</span>
               </div>
-              <ArrowDropDownIcon className="arrowIcon"/>
+              <ArrowDropDownIcon className={clicked?"arrow180":"arrow0"}/>
               
             </li>
           {/* </Link> */}
