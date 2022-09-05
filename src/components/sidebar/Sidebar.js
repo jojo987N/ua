@@ -13,6 +13,7 @@ import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import SettingsSystemDaydreamOutlinedIcon from "@mui/icons-material/SettingsSystemDaydreamOutlined";
 import PsychologyOutlinedIcon from "@mui/icons-material/PsychologyOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { Link } from "react-router-dom";
 import { signOut } from "firebase/auth";
 import { auth } from "../../utils";
@@ -61,6 +62,8 @@ const Sidebar = () => {
             <li>
               <PersonOutlineIcon className="icon" />
               <span>Users</span>
+              <ArrowDropDownIcon />
+              
             </li>
           </Link>
           <Link to="/products" style={{ textDecoration: "none" }}>
