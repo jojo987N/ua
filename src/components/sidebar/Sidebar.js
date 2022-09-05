@@ -15,7 +15,7 @@ import PsychologyOutlinedIcon from "@mui/icons-material/PsychologyOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { signOut } from "firebase/auth";
-import { auth } from "../../config";
+import { auth } from "../../utils";
 import { useContext, useState } from "react";
 import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlined";
 import SettingsIcon from '@mui/icons-material/Settings';
