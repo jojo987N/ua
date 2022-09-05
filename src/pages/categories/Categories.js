@@ -3,7 +3,7 @@ import Navbar from "../../components/navbar/Navbar";
 import "./categories.scss";
 import { useEffect, useState } from "react";
 import { APP_CONSTANT } from "../../globals";
-import { getCategories } from "../../firebase";
+import { getCategories } from "../../utils";
 import Datatable from "../../components/datatable/Datatable";
 import { categoryColumns } from "../../datatablesource";
 
