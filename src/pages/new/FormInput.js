@@ -54,11 +54,11 @@ class FormInput extends React.Component {
     handleSubmit = (e)=>{
     
       e.preventDefault();
+
+      console.log(this.state)
       
     }
-    onChange1 = (e) => {
-
-    }
+    
     render() {
     //   return <div ref={this.myRef} />;
     
