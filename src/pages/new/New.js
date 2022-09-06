@@ -46,38 +46,7 @@ const New = ({ inputs, title, type}) => {
   const [role, setRole] = useState('');
   const [formData, setFormData] = useState({});
 
-  const roles = [
-    {
-      value: "customer",
-      label: "Customer"
-    
-    },
-    {
-      value: "driver",
-      label: "Driver"
-    
-    },
-    {
-      value: "manager",
-      label: "Manager"
-    
-    }
-  ]
-
-
-  const customStyles = {
-     
-    control: (base) => ({
-      // none of react-select's styles are passed to <Control />
-      ...base,
-       border: 0,
-      width: "100%",
-      borderBottom: '1px solid gray',
-       
-        
-    }),
-     
-  }
+   
   
   const handleSubmit = (e)=>{
     
