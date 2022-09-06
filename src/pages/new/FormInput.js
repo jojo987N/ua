@@ -55,7 +55,7 @@ class FormInput extends React.Component {
     
       e.preventDefault();
 
-      console.log(this.state.email)
+      console.log(this.state)
       
     }
     
