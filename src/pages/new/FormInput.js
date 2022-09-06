@@ -130,7 +130,7 @@ class FormInput extends React.Component {
     {(this.props.type === "restaurant" || this.props.type === "drivers") && <div className="formInput" >
     <label>{this.props.type === "drivers"?"Driver":"Manager"}</label>
       <Select 
-      onChange={(e) => setRole(e.target.value)}
+      onChange={(e) => this.props.setRole(e.target.value)}
        styles={customStyles}
       options={decryptData(localStorage.getItem(process.env.REACT_APP_USERS_KEY)).map(option =>
         ({
