@@ -50,7 +50,7 @@ class FormInput extends React.Component {
         role: "",
         formData: {},
         // email: ""
-        value: this.props.data[input.alias]
+        value: ""
       }
     }
     handleSubmit = (e)=>{
@@ -91,7 +91,7 @@ class FormInput extends React.Component {
     
 
      {this.props.inputs.map((input) => {
-       
+       this.setState({value: this.props.data[input.alias]})
       return (
       <div className="formInput" key={input.id}>
         <label>{input.label}</label>
