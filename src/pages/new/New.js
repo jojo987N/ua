@@ -96,7 +96,7 @@ const New = ({ inputs, title, type}) => {
           </div>
           <div className="right">
             
-            <FormInput inputs={inputs} type={type} data={data}/>
+            <FormInput inputs={inputs} type={type} data={data} itemId={itemId}/>
              
           </div>
         </div>

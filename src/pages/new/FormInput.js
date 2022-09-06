@@ -116,7 +116,7 @@ class FormInput extends React.Component {
           // (itemId && itemId !== "profile" && (data[input.alias]))} 
         //  itemId !== "profile"?data[input.alias]:input.placeholder} 
 
-        itemId !== "profile"?data?data[input.alias]:"":input.placeholder
+        this.props.itemId !== "profile"?data?data[input.alias]:"":input.placeholder
           
       } 
         />
