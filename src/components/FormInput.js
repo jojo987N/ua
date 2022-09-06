@@ -7,7 +7,7 @@ class FormInput extends React.Component {
     }
     render() {
     //   return <div ref={this.myRef} />;
-    <div>Bonjour</div>
+    return <div>Bonjour</div>
     }
   }
   export default FormInput;
