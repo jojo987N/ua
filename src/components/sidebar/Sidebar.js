@@ -70,7 +70,7 @@ const {selectedKey, setSelectedKey} = useContext(SelectedKeyContext)
       //navigation.replace('SignScreen') // Efface tout
       //navigation.navigate('SignIn')
      // window.location.reload();
-
+     localStorage.clear();
   })
 
   .catch((err)=>console.log(err.code))
