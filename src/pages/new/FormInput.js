@@ -82,6 +82,7 @@ class FormInput extends React.Component {
      {this.props.inputs.map((input) => {
 
       this.state = {
+        ...this.state,
         [input.alias]: ""
       }   
        
