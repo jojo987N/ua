@@ -18,14 +18,14 @@ class FormInput extends React.Component {
                   //   ...val,
                   //   [input.alias] : e.target.value
                   // }))}
-                  value={
-                   // (userId && user[input.alias]) || 
-                    // (itemId && itemId !== "profile" && (data[input.alias]))} 
-                  //  itemId !== "profile"?data[input.alias]:input.placeholder} 
+                //   value={
+                //    // (userId && user[input.alias]) || 
+                //     // (itemId && itemId !== "profile" && (data[input.alias]))} 
+                //   //  itemId !== "profile"?data[input.alias]:input.placeholder} 
 
-                  // itemId !== "profile"?data?data[input.alias]:"":formData[input.alias]
-                  formData[input.alias]
-                } 
+                //   // itemId !== "profile"?data?data[input.alias]:"":formData[input.alias]
+                //   formData[input.alias]
+                // } 
                   />
                 </div>
               ))
