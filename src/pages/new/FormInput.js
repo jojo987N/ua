@@ -55,8 +55,17 @@ class FormInput extends React.Component {
     
       e.preventDefault();
 
-      console.log(this.state)
+      console.log(this.state[email])
       
+    }
+
+    handleInputChange =  (event) => {
+      const target = event.target;
+      const name = target.name;
+
+      this.setState({
+        [name]: value
+      });
     }
     
     render() {
@@ -91,18 +100,21 @@ class FormInput extends React.Component {
         <label>{input.label}</label>
         <input type={input.type} 
         placeholder={input.placeholder}
-        ref={"input"+input.id}
+        name={input.alias}
+        // ref={"input"+input.id}
         // onChange={e => this.setState({
         //   [input.alias] : e.target.value
         // })}
-        onChange={e => this.setState(val => {
 
-          console.log(val)
-          return {
-          ...val,
-          [input.alias] : e.target.value
-        }
-      } )}
+        onChange={this.handleInputChange}
+      //   onChange={e => this.setState(val => {
+
+      //     console.log(val)
+      //     return {
+      //     ...val,
+      //     [input.alias] : e.target.value
+      //   }
+      // } )}
       //   value={
       //    // (userId && user[input.alias]) || 
       //     // (itemId && itemId !== "profile" && (data[input.alias]))} 
