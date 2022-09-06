@@ -13,6 +13,7 @@ import { Button, Modal, Space } from 'antd';
 import Select from 'react-select'
 import { useParams } from "react-router-dom";
 import { decryptData } from "../../utils";
+import FormInput from "../../components/FormInput"
 
 
 const New = ({ inputs, title, type}) => {
@@ -136,7 +137,9 @@ const New = ({ inputs, title, type}) => {
                   onChange={(e) => setFile(e.target.files[0])}
                   style={{ display: "none" }}
                 />
-              </div>
+              </div> 
+
+              <FormInput />
 
               {/* {inputs.map((input) => (
                 <div className="formInput" key={input.id}>
