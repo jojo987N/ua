@@ -139,7 +139,7 @@ const New = ({ inputs, title, type}) => {
                 />
               </div> 
 
-              <FormInput />
+              <FormInput inputs={inputs}/>
 
               {/* {inputs.map((input) => (
                 <div className="formInput" key={input.id}>
