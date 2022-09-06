@@ -212,7 +212,7 @@ const New = ({ inputs, title, type}) => {
               </div>
               </>  }
               
-              <button className="button" onClick={warning} >Send</button>
+              <button className="button" >Send</button>
                
             </form>
              
