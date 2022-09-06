@@ -13,7 +13,7 @@ import { Button, Modal, Space } from 'antd';
 import Select from 'react-select'
 import { useParams } from "react-router-dom";
 import { decryptData } from "../../utils";
-import FormInput from "../../components/FormInput"
+import FormInput from "./FormInput"
 
 
 const New = ({ inputs, title, type}) => {
