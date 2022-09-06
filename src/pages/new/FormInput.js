@@ -79,22 +79,12 @@ class FormInput extends React.Component {
 
     
 
-     {this.props.inputs.map((input) => {
-
-      this.state = {
-        ...this.state,
-        [input.alias]: ""
-      }   
-       
-      return (
+     {this.props.inputs.map((input) => (
       <div className="formInput" key={input.id}>
         <label>{input.label}</label>
         <input type={input.type} 
         placeholder={input.placeholder}
         ref={"input"+input.id}
-        // onChange={e => this.setState({
-        //   [input.alias] : e.target.value
-        // })}
         onChange={e => this.setState(val => ({
           ...val,
           [input.alias] : e.target.value
@@ -109,7 +99,7 @@ class FormInput extends React.Component {
       // } 
         />
       </div>
-    )} )} 
+    ))} 
     {(this.props.type === "products" || this.props.type === "categorie") && <div className="formInput" >
     <label>Restaurant</label>
       <Select 
