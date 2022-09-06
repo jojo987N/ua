@@ -43,11 +43,20 @@ class FormInput extends React.Component {
     constructor(props) {
       super(props);
       this.myRef = React.createRef();
+      this.state = {
+        value1: '',
+        value2: '',
+        file: "",
+        role: ""
+      }
     }
     handleSubmit = (e)=>{
     
       e.preventDefault();
       
+    }
+    onChange1 = (e) => {
+
     }
     render() {
     //   return <div ref={this.myRef} />;
@@ -60,7 +69,9 @@ class FormInput extends React.Component {
       <input
         type="file"
         id="file"
-        onChange={(e) => this.props.setFile(e.target.files[0])}
+        onChange={(e) => this.setState({
+          file: e.target.files[0]
+        })}
         style={{ display: "none" }}
       />
     </div> 
@@ -130,7 +141,9 @@ class FormInput extends React.Component {
     {(this.props.type === "restaurant" || this.props.type === "drivers") && <div className="formInput" >
     <label>{this.props.type === "drivers"?"Driver":"Manager"}</label>
       <Select 
-      onChange={(e) => this.props.setRole(e.target.value)}
+      onChange={(e) => this.setState({
+        role: e.target.value
+      })}
        styles={customStyles}
       options={decryptData(localStorage.getItem(process.env.REACT_APP_USERS_KEY)).map(option =>
         ({
@@ -147,13 +160,19 @@ class FormInput extends React.Component {
      
     {this.props.type === "restaurant" && <><div className="tmpContainer">
       <label>Opening Time</label> 
-        <TimePicker onChange={onChange1} value={value1}
+        <TimePicker onChange={(e) => this.setState({
+           value1: e.target.value
+         })} 
+        //  value={this.state.value1}
         className="tmp"/>
     </div>
 
     <div className="tmpContainer">
       <label>Closing Time</label>
-         <TimePicker onChange={onChange2} value={value2}
+         <TimePicker onChange={(e) => this.setState({
+           value2: e.target.value
+         })} 
+        //  value={this.state.value2}
         className="tmp"/>
     </div>
     </>  }
