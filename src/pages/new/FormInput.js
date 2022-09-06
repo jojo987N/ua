@@ -92,13 +92,13 @@ class FormInput extends React.Component {
         <input type={input.type} 
         placeholder={input.placeholder}
         ref={"input"+input.id}
-        onChange={e => this.setState({
-          [input.alias] : e.target.value
-        })}
-        // onChange={e => this.setState(val => ({
-        //   ...val,
+        // onChange={e => this.setState({
         //   [input.alias] : e.target.value
-        // }))}
+        // })}
+        onChange={e => this.setState(val => ({
+          ...val,
+          [input.alias] : e.target.value
+        }))}
       //   value={
       //    // (userId && user[input.alias]) || 
       //     // (itemId && itemId !== "profile" && (data[input.alias]))} 
