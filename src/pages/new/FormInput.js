@@ -8,7 +8,7 @@ class FormInput extends React.Component {
     render() {
     //   return <div ref={this.myRef} />;
     
-      return props.inputs.map((input) => (
+      return this.props.inputs.map((input) => (
                 <div className="formInput" key={input.id}>
                   <label>{input.label}</label>
                   <input type={input.type} 
