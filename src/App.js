@@ -18,6 +18,7 @@ import { AuthContext } from "./context/Auth";
 import { onAuthStateChanged } from "firebase/auth";
 import { SelectedKeyProvider } from "./context/SelectedKey";
 import Settings from "./pages/settings/Settings";
+import "antd/dist/antd.min.css"
 
 
 
