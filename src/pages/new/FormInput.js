@@ -49,7 +49,7 @@ class FormInput extends React.Component {
         file: "",
         role: "",
         formData: {},
-        email: ""
+        // email: ""
       }
     }
     handleSubmit = (e)=>{
