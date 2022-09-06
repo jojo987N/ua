@@ -159,7 +159,7 @@ const New = ({ inputs, title, type}) => {
               <label>Restaurant</label>
                 <Select 
                  styles={customStyles}
-                 onChange={handleChange}
+                //  onChange={handleChange}
                 options={decryptData(localStorage.getItem(process.env.REACT_APP_RESTAURANTS_KEY)).map(option =>
                   ({
                     value: option.name,
