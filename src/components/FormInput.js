@@ -8,3 +8,4 @@ class FormInput extends React.Component {
     <div>Bonjour</div>
     }
   }
+  export default FormInput;
