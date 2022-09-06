@@ -138,11 +138,12 @@ const New = ({ inputs, title, type}) => {
                 />
               </div>
 
-              {inputs.map((input) => (
+              {/* {inputs.map((input) => (
                 <div className="formInput" key={input.id}>
                   <label>{input.label}</label>
                   <input type={input.type} 
                   placeholder={input.placeholder}
+                  ref={"input"+input.id}
                   // onChange={e => setFormData(val => ({
                   //   ...val,
                   //   [input.alias] : e.target.value
@@ -157,7 +158,7 @@ const New = ({ inputs, title, type}) => {
                 } 
                   />
                 </div>
-              ))}
+              ))} */}
               {(type === "products" || type === "categorie") && <div className="formInput" >
               <label>Restaurant</label>
                 <Select 
