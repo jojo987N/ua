@@ -55,18 +55,10 @@ class FormInput extends React.Component {
     
       e.preventDefault();
 
-      console.log(this.state)
+      console.log(this.refs)
       
     }
 
-    handleInputChange =  (event) => {
-      const target = event.target;
-      const name = target.name;
-       
-      this.setState({
-        [name]:  "dgfdhhfj"
-      }, ()=> console.log(this.state));
-    }
     
     render() {
     //   return <div ref={this.myRef} />;
@@ -89,11 +81,6 @@ class FormInput extends React.Component {
     
 
      {this.props.inputs.map((input) => {
-
-      this.state = {
-        ...this.state,
-        [input.alias]: ""
-      }   
        
       return (
       <div className="formInput" key={input.id}>
@@ -101,7 +88,7 @@ class FormInput extends React.Component {
         <input type={input.type} 
         placeholder={input.placeholder}
         name={input.alias}
-        // ref={"input"+input.id}
+        ref={"input"+input.id}
         // onChange={e => this.setState({
         //   [input.alias] : e.target.value
         // })}

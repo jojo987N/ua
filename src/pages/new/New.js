@@ -13,6 +13,7 @@ import { Button, Modal, Space } from 'antd';
 import Select from 'react-select'
 import { useParams } from "react-router-dom";
 import { decryptData } from "../../utils";
+import FormInput from "./FormInput"
 
 
 const New = ({ inputs, title, type}) => {
@@ -45,38 +46,7 @@ const New = ({ inputs, title, type}) => {
   const [role, setRole] = useState('');
   const [formData, setFormData] = useState({});
 
-  const roles = [
-    {
-      value: "customer",
-      label: "Customer"
-    
-    },
-    {
-      value: "driver",
-      label: "Driver"
-    
-    },
-    {
-      value: "manager",
-      label: "Manager"
-    
-    }
-  ]
-
-
-  const customStyles = {
-     
-    control: (base) => ({
-      // none of react-select's styles are passed to <Control />
-      ...base,
-       border: 0,
-      width: "100%",
-      borderBottom: '1px solid gray',
-       
-        
-    }),
-     
-  }
+   
   
   const handleSubmit = (e)=>{
     
@@ -86,8 +56,6 @@ const New = ({ inputs, title, type}) => {
       file: URL.createObjectURL(file)
     })
   }
-
-
 
   const warning = () => {
     Modal.warning({
@@ -127,7 +95,8 @@ const New = ({ inputs, title, type}) => {
             />
           </div>
           <div className="right">
-           
+            
+            <FormInput inputs={inputs} type={type}/>
              
           </div>
         </div>
