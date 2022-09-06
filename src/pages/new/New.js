@@ -143,10 +143,10 @@ const New = ({ inputs, title, type}) => {
                   <label>{input.label}</label>
                   <input type={input.type} 
                   placeholder={input.placeholder}
-                  onChange={e => setFormData(val => ({
-                    ...val,
-                    [input.alias] : e.target.value
-                  }))}
+                  // onChange={e => setFormData(val => ({
+                  //   ...val,
+                  //   [input.alias] : e.target.value
+                  // }))}
                   value={
                    // (userId && user[input.alias]) || 
                     // (itemId && itemId !== "profile" && (data[input.alias]))} 
