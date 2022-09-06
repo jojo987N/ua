@@ -55,7 +55,7 @@ class FormInput extends React.Component {
     
       e.preventDefault();
 
-      console.log(this.refs.input2.value)
+      console.log(this.state.email)
       
     }
     
@@ -70,21 +70,31 @@ class FormInput extends React.Component {
       <input
         type="file"
         id="file"
-        onChange={(e) => this.setState({
-          file: e.target.files[0]
-        })}
+        // onChange={(e) => this.setState({
+        //   file: e.target.files[0]
+        // })}
         style={{ display: "none" }}
       />
     </div> 
 
     
 
-     {this.props.inputs.map((input) => (
+     {this.props.inputs.map((input) => {
+
+      this.state = {
+        ...this.state,
+        [input.alias]: ""
+      }   
+       
+      return (
       <div className="formInput" key={input.id}>
         <label>{input.label}</label>
         <input type={input.type} 
         placeholder={input.placeholder}
         ref={"input"+input.id}
+        // onChange={e => this.setState({
+        //   [input.alias] : e.target.value
+        // })}
         onChange={e => this.setState(val => ({
           ...val,
           [input.alias] : e.target.value
@@ -99,7 +109,7 @@ class FormInput extends React.Component {
       // } 
         />
       </div>
-    ))} 
+    )} )} 
     {(this.props.type === "products" || this.props.type === "categorie") && <div className="formInput" >
     <label>Restaurant</label>
       <Select 
@@ -142,9 +152,9 @@ class FormInput extends React.Component {
     {(this.props.type === "restaurant" || this.props.type === "drivers") && <div className="formInput" >
     <label>{this.props.type === "drivers"?"Driver":"Manager"}</label>
       <Select 
-      onChange={(e) => this.setState({
-        role: e.target.value
-      })}
+      // onChange={(e) => this.setState({
+      //   role: e.target.value
+      // })}
        styles={customStyles}
       options={decryptData(localStorage.getItem(process.env.REACT_APP_USERS_KEY)).map(option =>
         ({
@@ -161,18 +171,20 @@ class FormInput extends React.Component {
      
     {this.props.type === "restaurant" && <><div className="tmpContainer">
       <label>Opening Time</label> 
-        <TimePicker onChange={(e) => this.setState({
-           value1: e.target.value
-         })} 
+        <TimePicker 
+        // onChange={(e) => this.setState({
+        //    value1: e.target.value
+        //  })} 
         //  value={this.state.value1}
         className="tmp"/>
     </div>
 
     <div className="tmpContainer">
       <label>Closing Time</label>
-         <TimePicker onChange={(e) => this.setState({
-           value2: e.target.value
-         })} 
+         <TimePicker 
+        //  onChange={(e) => this.setState({
+        //    value2: e.target.value
+        //  })} 
         //  value={this.state.value2}
         className="tmp"/>
     </div>
