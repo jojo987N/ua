@@ -62,7 +62,7 @@ class FormInput extends React.Component {
     handleInputChange =  (event) => {
       const target = event.target;
       const name = target.name;
-      console.log(name)
+      console.log(this.state)
       this.setState({
         [name]:  "dgfdhhfj"
       });
