@@ -159,7 +159,7 @@ class FormInput extends React.Component {
       // "Select Role"
       // }
       onChange={(e) => this.setState({
-        role: e.target.value
+        role: e.value
       })}
       />
     </div>}
