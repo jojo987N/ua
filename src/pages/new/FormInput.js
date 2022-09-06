@@ -55,7 +55,7 @@ class FormInput extends React.Component {
     
       e.preventDefault();
 
-      console.log(this.refs.input2)
+      console.log(this.refs.input2.value)
       
     }
     
