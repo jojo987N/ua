@@ -108,7 +108,7 @@ import { getAuth } from 'firebase/auth';
        // console.log(doc.data().createdAt)
         orders.push({...doc.data(), id: doc.id})
       })
-      return orders
+      return orders?orders:[]
   })
  }
 
