@@ -64,7 +64,7 @@ class FormInput extends React.Component {
       const name = target.name;
 
       this.setState({
-        [name]: value
+        [name]: target.value
       });
     }
     
