@@ -42,6 +42,8 @@ const New = ({ inputs, title, type}) => {
 
   const [value1, onChange1] = useState('');
   const [value2, onChange2] = useState('');
+  const [role, setRole] = useState('');
+  const [formData, setFormData] = useState({});
 
   const roles = [
     {
@@ -79,6 +81,10 @@ const New = ({ inputs, title, type}) => {
   const handleSubmit = (e)=>{
     
     e.preventDefault();
+    console.log({
+      ...formData,
+      file: URL.createObjectURL(file)
+    })
   }
 
   const warning = () => {
@@ -137,6 +143,10 @@ const New = ({ inputs, title, type}) => {
                   <label>{input.label}</label>
                   <input type={input.type} 
                   placeholder={input.placeholder}
+                  onChange={e => setFormData(val => ({
+                    ...val,
+                    [input.alias] : e.target.value
+                  }))}
                   value={
                    // (userId && user[input.alias]) || 
                     // (itemId && itemId !== "profile" && (data[input.alias]))} 
@@ -149,6 +159,7 @@ const New = ({ inputs, title, type}) => {
               <label>Restaurant</label>
                 <Select 
                  styles={customStyles}
+                 onChange={handleChange}
                 options={decryptData(localStorage.getItem(process.env.REACT_APP_RESTAURANTS_KEY)).map(option =>
                   ({
                     value: option.name,
@@ -185,6 +196,7 @@ const New = ({ inputs, title, type}) => {
               {(type === "restaurant" || type === "drivers") && <div className="formInput" >
               <label>{type === "drivers"?"Driver":"Manager"}</label>
                 <Select 
+                onChange={(e) => setRole(e.target.value)}
                  styles={customStyles}
                 options={decryptData(localStorage.getItem(process.env.REACT_APP_USERS_KEY)).map(option =>
                   ({
