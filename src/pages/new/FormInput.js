@@ -59,7 +59,7 @@ class FormInput extends React.Component {
       console.log(this.state.email)
       
     }
-    handleInputChange(event) {
+    handleInputChange = (event) =>{
       const target = event.target;
       const name = target.name;
       
