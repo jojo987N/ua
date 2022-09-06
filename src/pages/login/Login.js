@@ -71,7 +71,7 @@ const Login = () => {
           type={"text"}
           autoFocus
           required
-          value={email}
+          // value={email}
           onChange={e => setEmail(e.target.value)}
           />
         <p className="errorMsg">{emailError}</p>
