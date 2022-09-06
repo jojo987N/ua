@@ -96,6 +96,7 @@ const New = ({ inputs, title, type}) => {
           </div>
           <div className="right">
             
+            <FormInput />
              
           </div>
         </div>
