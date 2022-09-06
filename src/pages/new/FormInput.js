@@ -48,15 +48,24 @@ class FormInput extends React.Component {
         value2: '',
         file: "",
         role: "",
-        formData: {}
+        formData: {},
+        email: ""
       }
     }
     handleSubmit = (e)=>{
     
       e.preventDefault();
 
-      console.log(this.refs)
+      console.log(this.state.email)
       
+    }
+    handleInputChange(event) {
+      const target = event.target;
+      const name = target.name;
+      
+      this.setState({
+        [name]: target.value
+      });
     }
 
     
