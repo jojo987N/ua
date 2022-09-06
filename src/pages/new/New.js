@@ -151,7 +151,7 @@ const New = ({ inputs, title, type}) => {
                    // (userId && user[input.alias]) || 
                     // (itemId && itemId !== "profile" && (data[input.alias]))} 
                   //  itemId !== "profile"?data[input.alias]:input.placeholder} 
-                  itemId !== "profile"?data?data[input.alias]:"":input.placeholder} 
+                  itemId !== "profile"?data?data[input.alias]:"":formData[input.alias]} 
                   />
                 </div>
               ))}
