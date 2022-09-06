@@ -50,6 +50,7 @@ class FormInput extends React.Component {
         role: "",
         formData: {},
         // email: ""
+        value: this.props.data[input.alias]
       }
     }
     handleSubmit = (e)=>{
@@ -116,7 +117,7 @@ class FormInput extends React.Component {
           // (itemId && itemId !== "profile" && (data[input.alias]))} 
         //  itemId !== "profile"?data[input.alias]:input.placeholder} 
 
-        this.props.itemId !== "profile"?this.props.data?this.props.data[input.alias]:"":input.placeholder
+        this.props.itemId !== "profile"?this.props.data?this.state.value:"":input.placeholder
           
       } 
         />
