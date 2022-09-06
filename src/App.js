@@ -10,7 +10,6 @@ import { carInputs, categoryInputs, productInputs, restaurantInputs, userInputs 
 import { auth, getOrdersFromFirebase } from './firebase'
 import { useContext, useEffect, useLayoutEffect, useState } from "react";
 import { OrdersContext } from "./context/OrdersContext"
-import Restaurant from "./pages/restaurant/Restaurant";
 import { AuthProvider } from "./context/Auth";
 import PrivateRoute from "./components/privateRoute/PrivateRoute";
 import { RestaurantProvider } from "./context/RestaurantContext";
