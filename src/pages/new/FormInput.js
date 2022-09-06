@@ -52,7 +52,7 @@ class FormInput extends React.Component {
     render() {
     //   return <div ref={this.myRef} />;
     
-    return <form onSubmit={handleSubmit}>
+    return <form onSubmit={this.handleSubmit}>
     <div className="formInput">
       <label htmlFor="file">
         {type === "drivers"?"Car Image":"Image"}: <DriveFolderUploadOutlinedIcon className="icon" />
