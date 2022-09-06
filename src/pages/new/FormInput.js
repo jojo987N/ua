@@ -47,7 +47,8 @@ class FormInput extends React.Component {
         value1: '',
         value2: '',
         file: "",
-        role: ""
+        role: "",
+        formData: {}
       }
     }
     handleSubmit = (e)=>{
@@ -78,13 +79,22 @@ class FormInput extends React.Component {
 
     
 
-     {this.props.inputs.map((input) => (
+     {this.props.inputs.map((input) => {
+
+      this.state = {
+        [input.alias]: ""
+      }   
+       
+      return (
       <div className="formInput" key={input.id}>
         <label>{input.label}</label>
         <input type={input.type} 
         placeholder={input.placeholder}
         ref={"input"+input.id}
-        // onChange={e => setFormData(val => ({
+        onChange={e => this.setState({
+          [input.alias] : e.target.value
+        })}
+        // onChange={e => this.setState(val => ({
         //   ...val,
         //   [input.alias] : e.target.value
         // }))}
@@ -98,7 +108,7 @@ class FormInput extends React.Component {
       // } 
         />
       </div>
-    ))} 
+    )} )} 
     {(this.props.type === "products" || this.props.type === "categorie") && <div className="formInput" >
     <label>Restaurant</label>
       <Select 
