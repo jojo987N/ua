@@ -158,6 +158,9 @@ class FormInput extends React.Component {
       // (itemId && itemId !== "profile" && data.Role) || 
       // "Select Role"
       // }
+      onChange={(e) => this.setState({
+        role: e.target.value
+      })}
       />
     </div>}
 
