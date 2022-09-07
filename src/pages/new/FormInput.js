@@ -62,7 +62,6 @@ class FormInput extends React.Component {
     }
     handleInputChange = (event) =>{
 
-      console.log(target.value)
       const target = event.target;
       const name = target.name;
       
@@ -114,7 +113,7 @@ class FormInput extends React.Component {
       //     [input.alias] : e.target.value
       //   }
       // } )}
-        value={
+        defaultValue={
          // (userId && user[input.alias]) || 
           // (itemId && itemId !== "profile" && (data[input.alias]))} 
         //  itemId !== "profile"?data[input.alias]:input.placeholder} 
