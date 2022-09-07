@@ -62,6 +62,8 @@ class FormInput extends React.Component {
 
      e.preventDefault();
 
+     console.log(this.state.inputs.file)
+
     //  console.log(restaurantModel(this.state.inputs.latitude, this.state.inputs.longitude, this.state.inputs.phone, this.state.inputs.image_url, this.state.inputs.address, this.state.inputs.city, this.state.inputs.country, this.state.inputs.name))
       
 
