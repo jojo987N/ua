@@ -14,6 +14,7 @@ import Select from 'react-select'
 import { useParams } from "react-router-dom";
 import { decryptData } from "../../utils";
 import FormInput from "./FormInput"
+import { useNavigate } from "react-router-dom";
 
 
 const New = ({ inputs, title, type, history}) => {
@@ -22,6 +23,8 @@ const New = ({ inputs, title, type, history}) => {
 
   //const {userId} = useParams()
   //const {productId} = useParams()
+  const navigate = useNavigate();
+
   const paramName = Object.keys(useParams())[0]
   const itemId = useParams()[paramName]
   let data;
@@ -95,7 +98,7 @@ const New = ({ inputs, title, type, history}) => {
           </div>
           <div className="right">
             
-            <FormInput inputs={inputs} type={type} data={data} itemId={itemId} history={history}/>
+            <FormInput inputs={inputs} type={type} data={data} itemId={itemId} navigate={navigate}/>
              
           </div>
         </div>
