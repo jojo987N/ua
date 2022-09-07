@@ -118,14 +118,22 @@ class FormInput extends React.Component {
         type="file"
         id="file"
         onChange={(e) => {
-         
-          this.setState({
+  
+          console.log(URL.createObjectURL(e.target.files[0]))
+
+
+           this.setState({
             inputs: {
               ...this.state.inputs,
               file: e.target.files[0]
             }
            
         })
+
+
+
+
+
       }
       
     }
