@@ -113,23 +113,23 @@ export const userInputs = [
     },
     {
       id: 4,
-      label: "Address",
-      type: "text",
-      //placeholder: "100",
-     // alias: "location"
-     alias: "address"
-    },
-    {
-      id: 5,
       label: "Latitude",
       type: "text",
      alias: "latitude"
     },
     {
-      id: 6,
+      id: 5,
       label: "Longitude",
       type: "text",
      alias: "longitude"
+    },
+    {
+      id: 6,
+      label: "Address",
+      type: "text",
+      //placeholder: "100",
+     // alias: "location"
+     alias: "address"
     },
     // {
     //   id: 5,
