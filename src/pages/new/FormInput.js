@@ -3,7 +3,7 @@ import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUpload
 import Select from 'react-select'
 import { decryptData } from "../../utils";
 import TimePicker from 'react-time-picker';
-import { updateUser } from "../../firebase";
+import { addRestaurant, updateUser } from "../../firebase";
 
 
 
@@ -58,20 +58,24 @@ class FormInput extends React.Component {
          
       }
     }
-    handleSubmit = (e)=>{
-    
-      e.preventDefault();
-       
-       if(Object.keys(this.state.inputs).length && this.props.data)
+  handleSubmit = (e) => {
+
+    e.preventDefault();
+
+
+    if (this.props.data)
       updateUser(this.state.inputs, this.props.itemId)
-      .then(()=> this.setState({
+    else
+      addRestaurant(this.state.inputs)
+    if (Object.keys(this.state.inputs).length)
+      this.setState({
         button: {
           text: "Sent",
           color: "green"
         }
-      }))
-      
-    }
+      })
+
+  }
     handleInputChange = (event) =>{
 
       const target = event.target;

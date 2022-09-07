@@ -194,6 +194,12 @@ export const addProduct = (name, description, price) => {
   }) 
 }
 
+export const addRestaurant = (inputs) => {
+  addDoc(restaurantsCol, {
+    ...inputs
+  })
+}
+
 
 export const getRestaurantById = (uid)=>{
 
