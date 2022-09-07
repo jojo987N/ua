@@ -59,7 +59,8 @@ import { getAuth } from 'firebase/auth';
         
          if(doc)
          restos.push({
-           restaurantId: doc.id,
+          //  restaurantId: doc.id,
+          id: doc.id,
            ...doc.data()
          })
 
