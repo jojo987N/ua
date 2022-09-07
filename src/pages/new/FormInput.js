@@ -61,8 +61,8 @@ class FormInput extends React.Component {
     handleSubmit = (e)=>{
     
       e.preventDefault();
-
-       console.log(this.state.inputs)
+       
+       if(Object.keys(this.state.inputs).length)
       updateUser(this.state.inputs, this.props.itemId)
       .then(()=> this.setState({
         button: {
