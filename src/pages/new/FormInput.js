@@ -61,6 +61,8 @@ class FormInput extends React.Component {
       
     }
     handleInputChange = (event) =>{
+
+      console.log(target.value)
       const target = event.target;
       const name = target.name;
       
