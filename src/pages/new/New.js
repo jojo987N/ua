@@ -26,9 +26,6 @@ const New = ({ inputs, title, type}) => {
   const itemId = useParams()[paramName]
   let data;
 
-  console.log("fsdgfh: "+itemId)
-
-   
    console.log(type === 'user'?process.env.REACT_APP_USERS_KEY:type)
    //console.log(`${type}s`)
   //console.log(paramName)

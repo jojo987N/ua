@@ -3,6 +3,7 @@ import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUpload
 import Select from 'react-select'
 import { decryptData } from "../../utils";
 import TimePicker from 'react-time-picker';
+import { updateUser } from "../../firebase";
 
 
 
@@ -62,7 +63,8 @@ class FormInput extends React.Component {
     
       e.preventDefault();
 
-      console.log(this.state)
+      // console.log(this.state)
+      updateUser(this.state, this.props.itemId)
       
     }
     handleInputChange = (event) =>{

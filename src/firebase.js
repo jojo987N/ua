@@ -408,6 +408,12 @@ export const updateUsersFromFirebase = () => {
     })
     //.then(()=> setRestaurantData(restaurants))
 }
+
+export const updateUser = (state, itemId) => {
+  updateDoc(doc(db, 'users', itemId), {
+    ...state
+  })
+}
 //updateUsersFromFirebase()
 
 export const updateDriversFromFirebase = () => {
@@ -451,6 +457,8 @@ export const updateOrdersFromFirebase = ()=>{
        
   })
  }
+
+
 
  //updateOrdersFromFirebase()
 
@@ -517,6 +525,7 @@ export const updateOrdersFromFirebase = ()=>{
   // }
   
   // console.log(makeid(15));
+
 
 
 
