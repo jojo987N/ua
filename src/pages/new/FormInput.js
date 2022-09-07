@@ -62,7 +62,7 @@ class FormInput extends React.Component {
 
     e.preventDefault();
 
-
+    console.log(this.props.data)
     if (this.props.data)
       updateUser(this.state.inputs, this.props.itemId)
     else
