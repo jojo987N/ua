@@ -71,7 +71,7 @@ class FormInput extends React.Component {
     else     
      addRestaurant(restaurantModel(this.state.inputs.latitude, this.state.inputs.longitude, this.state.inputs.phone, this.state.inputs.image_url, this.state.inputs.address, this.state.inputs.city, this.state.inputs.country, this.state.inputs.name))
       // addRestaurant(this.state.inputs)
-      
+
     if (Object.keys(this.state.inputs).length)
     this.props.navigate('/'+this.props.type+'s');
       // this.setState({
@@ -119,6 +119,7 @@ class FormInput extends React.Component {
         //   file: e.target.files[0]
         // })}
         style={{ display: "none" }}
+        required="required"
       />
     </div> 
 
