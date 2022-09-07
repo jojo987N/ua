@@ -119,7 +119,7 @@ class FormInput extends React.Component {
         //   file: e.target.files[0]
         // })}
         style={{ display: "none" }}
-        required="required"
+        required
       />
     </div> 
 
