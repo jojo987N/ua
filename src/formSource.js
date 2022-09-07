@@ -117,6 +117,7 @@ export const userInputs = [
       type: "text",
       //placeholder: "100",
      // alias: "location"
+     alias: "address"
     },
     // {
     //   id: 5,
