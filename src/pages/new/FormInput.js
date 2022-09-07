@@ -43,15 +43,15 @@ class FormInput extends React.Component {
     constructor(props) {
       super(props);
       this.myRef = React.createRef();
-      this.state = {
-        value1: '',
-        value2: '',
-        file: "",
-        role: "",
-        formData: {},
-        // email: ""
+      // this.state = {
+      //   value1: '',
+      //   value2: '',
+      //   file: "",
+      //   role: "",
+      //   formData: {},
+      //   // email: ""
          
-      }
+      // }
     }
     handleSubmit = (e)=>{
     
