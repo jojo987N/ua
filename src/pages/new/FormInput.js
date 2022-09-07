@@ -21,6 +21,11 @@ const roles = [
     value: "manager",
     label: "Manager"
   
+  },
+  {
+    value: "admin",
+    label: "Admin"
+  
   }
 ]
 
