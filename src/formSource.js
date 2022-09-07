@@ -119,6 +119,18 @@ export const userInputs = [
      // alias: "location"
      alias: "address"
     },
+    {
+      id: 5,
+      label: "Latitude",
+      type: "text",
+     alias: "latitude"
+    },
+    {
+      id: 6,
+      label: "Longitude",
+      type: "text",
+     alias: "longitude"
+    },
     // {
     //   id: 5,
     //   label: "Stock",
