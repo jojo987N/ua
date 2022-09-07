@@ -62,7 +62,12 @@ class FormInput extends React.Component {
 
      e.preventDefault();
 
-    console.log(this.state.inputs)
+     console.log(restaurantModel(this.state.inputs.latitude, 
+      this.state.inputs.longitude, this.state.inputs.phone, 
+      this.state.inputs.image_url, this.state.inputs.address, this.state.inputs.city, 
+      this.state.inputs.country, this.state.inputs.name))
+
+    // console.log(this.state.inputs)
     if (this.props.data)
       updateUser(this.state.inputs, this.props.itemId)
     else
@@ -269,3 +274,40 @@ class FormInput extends React.Component {
     }
   }
   export default FormInput;
+
+
+  const restaurantModel = () => (latitude, longitude, phone, image_url, address, city, 
+    country, restaurantName) => {
+    return      {
+      "coordinates":  {
+        "latitude": latitude,
+        "longitude": longitude,
+        
+      },
+      "image_url": image_url,
+      "is_closed": false,
+      "location":  {
+        "address1": address,
+        "address2": "",
+        "address3": null,
+        "city": city,
+        "country": country,
+        "display_address":  [
+          address,
+          "",
+          "",
+        ],
+        "state": "",
+        "zip_code": "",
+      },
+      "name": name,
+      "phone": phone,
+      "price": "$$",
+      "transactions":  [
+        "pickup",
+        "delivery",
+      ],
+      deliveryTime:15,
+      collectTime:5,
+    }
+  }
