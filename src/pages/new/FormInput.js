@@ -50,6 +50,7 @@ class FormInput extends React.Component {
       super(props);
       this.myRef = React.createRef();
       this.state = {
+        inputs: {},
         button: {
           text: "Send",
           color: "teal"
@@ -64,7 +65,6 @@ class FormInput extends React.Component {
        console.log(this.state)
       // updateUser(this.state, this.props.itemId)
       // .then(()=> this.setState({
-      //   inputs: {},
       //   button: {
       //     text: "Sent",
       //     color: "green"
