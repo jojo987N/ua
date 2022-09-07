@@ -60,7 +60,7 @@ class FormInput extends React.Component {
     }
   handleSubmit = (e) => {
 
-    // e.preventDefault();
+     e.preventDefault();
 
     console.log(this.state.inputs)
     if (this.props.data)
