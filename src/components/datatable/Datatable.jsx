@@ -98,7 +98,6 @@ const Datatable = ({type}) => {
 
     // if(!localStorage.getItem(process.env.REACT_APP_RESTAURANTS_KEY))
     // await getRestaurantsFromFirebase().then(restaurants => localStorage.setItem(process.env.REACT_APP_RESTAURANTS_KEY, encryptData(restaurants)))
-    getRestaurantsFromFirebase().then(restaurants => localStorage.setItem(process.env.REACT_APP_RESTAURANTS_KEY, encryptData(restaurants)))
 
     if(!localStorage.getItem(process.env.REACT_APP_CATEGORIES_KEY))
     await getCategories().then(categories => localStorage.setItem(process.env.REACT_APP_CATEGORIES_KEY, encryptData(categories)))
@@ -163,11 +162,14 @@ const Datatable = ({type}) => {
         break
       case "restaurants":
         setTitle("Restaurant")
-        setTab({
-          //rows: JSON.parse(localStorage.getItem('restaurants')),
-          rows: decryptData(localStorage.getItem(process.env.REACT_APP_RESTAURANTS_KEY)),
-          columns: restaurantColumns
+        getRestaurantsFromFirebase().then(restaurants => {
+          setTab({
+            rows: restaurants,
+            columns: restaurantColumns
+          })
         })
+
+         
       break
       case "categories":
         setTitle("Category")
