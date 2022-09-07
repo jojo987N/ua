@@ -62,7 +62,7 @@ class FormInput extends React.Component {
 
     e.preventDefault();
 
-    console.log(this.props.data)
+    console.log(this.state.inputs)
     if (this.props.data)
       updateUser(this.state.inputs, this.props.itemId)
     else
@@ -78,12 +78,8 @@ class FormInput extends React.Component {
   }
     handleInputChange = (event) =>{
 
-      
-
       const target = event.target;
       const name = target.name;
-
-      console.log(target.value)
 
       this.setState({
         inputs: {
