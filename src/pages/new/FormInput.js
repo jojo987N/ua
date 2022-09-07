@@ -85,6 +85,10 @@ class FormInput extends React.Component {
         inputs: {
           ...this.state.inputs,
           [name]: target.value
+        },
+        button: {
+          text: "Send",
+          color: "teal"
         }
       })
       
