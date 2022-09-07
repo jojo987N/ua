@@ -52,7 +52,7 @@ class FormInput extends React.Component {
       this.state = {
         button: {
           text: "send",
-          color: ""
+          color: "teal"
         }
          
       }
@@ -212,7 +212,7 @@ class FormInput extends React.Component {
     </div>
     </>  }
     
-    <button className="button" >{this.state.button.text}</button>
+    <button className="button" style={{backgroundColor: this.state.color}}>{this.state.button.text}</button>
      
   </form>
 
