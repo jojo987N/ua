@@ -62,7 +62,7 @@ class FormInput extends React.Component {
     
       e.preventDefault();
 
-       console.log(this.state)
+       console.log(this.state.button)
       // updateUser(this.state, this.props.itemId)
       // .then(()=> this.setState({
       //   button: {
