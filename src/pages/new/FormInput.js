@@ -79,7 +79,7 @@ class FormInput extends React.Component {
 
       this.setState({
         inputs: {
-          ...inputs,
+          ...this.inputs,
           [name]: target.value
         }
       })
