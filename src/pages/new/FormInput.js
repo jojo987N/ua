@@ -62,16 +62,16 @@ class FormInput extends React.Component {
 
      e.preventDefault();
 
-     console.log(restaurantModel(this.state.inputs.latitude, 
-      this.state.inputs.longitude, this.state.inputs.phone, 
-      this.state.inputs.image_url, this.state.inputs.address, this.state.inputs.city, 
-      this.state.inputs.country, this.state.inputs.name))
+    //  console.log(restaurantModel(this.state.inputs.latitude, this.state.inputs.longitude, this.state.inputs.phone, this.state.inputs.image_url, this.state.inputs.address, this.state.inputs.city, this.state.inputs.country, this.state.inputs.name))
+      
 
     // console.log(this.state.inputs)
     if (this.props.data)
       updateUser(this.state.inputs, this.props.itemId)
-    else
-      addRestaurant(this.state.inputs)
+    else     
+     addRestaurant(restaurantModel(this.state.inputs.latitude, this.state.inputs.longitude, this.state.inputs.phone, this.state.inputs.image_url, this.state.inputs.address, this.state.inputs.city, this.state.inputs.country, this.state.inputs.name))
+      // addRestaurant(this.state.inputs)
+      
     if (Object.keys(this.state.inputs).length)
     this.props.navigate('/'+this.props.type+'s');
       // this.setState({
