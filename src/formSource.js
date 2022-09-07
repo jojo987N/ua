@@ -36,7 +36,7 @@ export const userInputs = [
       label: "Address",
       type: "text",
       placeholder: "Elton St. 216 NewYork",
-      alias: "Address"
+      alias: "address"
     },
     {
       id: 7,
