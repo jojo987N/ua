@@ -277,7 +277,7 @@ class FormInput extends React.Component {
 
 
   const restaurantModel = () => (latitude, longitude, phone, image_url, address, city, 
-    country, restaurantName) => {
+    country, name) => {
     return      {
       "coordinates":  {
         "latitude": latitude,
