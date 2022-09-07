@@ -117,9 +117,14 @@ class FormInput extends React.Component {
       <input
         type="file"
         id="file"
-        onChange={(e) => this.setState({
+        onChange={(e) => {
+          console.log("test")
+          this.setState({
           file: e.target.files[0]
-        })}
+        })
+      }
+      
+    }
         style={{ display: "none" }}
         required
       />
