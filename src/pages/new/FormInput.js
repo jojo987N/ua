@@ -68,12 +68,13 @@ class FormInput extends React.Component {
     else
       addRestaurant(this.state.inputs)
     if (Object.keys(this.state.inputs).length)
-      this.setState({
-        button: {
-          text: "Sent",
-          color: "green"
-        }
-      })
+    this.props.history.push('/'+this.props.type);
+      // this.setState({
+      //   button: {
+      //     text: "Sent",
+      //     color: "green"
+      //   }
+      // })
 
   }
     handleInputChange = (event) =>{

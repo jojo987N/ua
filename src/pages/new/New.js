@@ -16,7 +16,7 @@ import { decryptData } from "../../utils";
 import FormInput from "./FormInput"
 
 
-const New = ({ inputs, title, type}) => {
+const New = ({ inputs, title, type, history}) => {
 
  // console.log(useParams())
 
@@ -95,7 +95,7 @@ const New = ({ inputs, title, type}) => {
           </div>
           <div className="right">
             
-            <FormInput inputs={inputs} type={type} data={data} itemId={itemId}/>
+            <FormInput inputs={inputs} type={type} data={data} itemId={itemId} history={history}/>
              
           </div>
         </div>
