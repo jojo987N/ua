@@ -61,24 +61,32 @@ class FormInput extends React.Component {
     
       e.preventDefault();
 
-      // console.log(this.state)
-      updateUser(this.state, this.props.itemId)
-      .then(()=> this.setState({
-        button: {
-          text: "Sent",
-          color: "green"
-        }
-      }))
+       console.log(this.state)
+      // updateUser(this.state, this.props.itemId)
+      // .then(()=> this.setState({
+      //   inputs: {},
+      //   button: {
+      //     text: "Sent",
+      //     color: "green"
+      //   }
+      // }))
       
     }
     handleInputChange = (event) =>{
 
       const target = event.target;
       const name = target.name;
-      
+
       this.setState({
-        [name]: target.value
-      });
+        inputs: {
+          ...inputs,
+          [name]: target.value
+        }
+      })
+      
+      // this.setState({
+      //   [name]: target.value
+      // });
     }
 
     
