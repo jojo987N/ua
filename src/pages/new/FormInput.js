@@ -69,7 +69,7 @@ class FormInput extends React.Component {
     if (this.props.data)
       updateUser(this.state.inputs, this.props.itemId)
     else     
-     addRestaurant(restaurantModel(this.state.inputs.latitude, this.state.inputs.longitude, this.state.inputs.phone, this.state.inputs.image_url, this.state.inputs.address, this.state.inputs.city, this.state.inputs.country, this.state.inputs.name))
+     addRestaurant(restaurantModel(this.state.inputs.latitude, this.state.inputs.longitude, this.state.inputs.phone, URL.createObjectURL(this.state.inputs.file), this.state.inputs.address, this.state.inputs.city, this.state.inputs.country, this.state.inputs.name))
       // addRestaurant(this.state.inputs)
 
     if (Object.keys(this.state.inputs).length)
@@ -115,9 +115,9 @@ class FormInput extends React.Component {
       <input
         type="file"
         id="file"
-        // onChange={(e) => this.setState({
-        //   file: e.target.files[0]
-        // })}
+        onChange={(e) => this.setState({
+          file: e.target.files[0]
+        })}
         style={{ display: "none" }}
         required
       />
