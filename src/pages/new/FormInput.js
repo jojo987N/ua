@@ -68,7 +68,7 @@ class FormInput extends React.Component {
     else
       addRestaurant(this.state.inputs)
     if (Object.keys(this.state.inputs).length)
-    this.props.navigate('/'+this.props.type);
+    this.props.navigate('/'+this.props.type+'s');
       // this.setState({
       //   button: {
       //     text: "Sent",
