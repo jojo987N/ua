@@ -131,6 +131,22 @@ export const userInputs = [
      // alias: "location"
      alias: "address"
     },
+    {
+      id: 7,
+      label: "City",
+      type: "text",
+      //placeholder: "100",
+     // alias: "location"
+     alias: "city"
+    },
+    {
+      id: 8,
+      label: "Country",
+      type: "text",
+      //placeholder: "100",
+     // alias: "location"
+     alias: "country"
+    },
     // {
     //   id: 5,
     //   label: "Stock",
