@@ -409,7 +409,7 @@ export const updateUsersFromFirebase = () => {
     //.then(()=> setRestaurantData(restaurants))
 }
 
-export const updateUser = (state, itemId) => {
+export const updateUser = async (state, itemId) => {
   updateDoc(doc(db, 'users', itemId), {
     ...state
   })
