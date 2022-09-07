@@ -62,7 +62,7 @@ class FormInput extends React.Component {
 
      e.preventDefault();
 
-     console.log(this.state.inputs.file)
+    //  console.log(this.state.inputs.file)
 
     //  console.log(restaurantModel(this.state.inputs.latitude, this.state.inputs.longitude, this.state.inputs.phone, this.state.inputs.image_url, this.state.inputs.address, this.state.inputs.city, this.state.inputs.country, this.state.inputs.name))
       
@@ -118,9 +118,13 @@ class FormInput extends React.Component {
         type="file"
         id="file"
         onChange={(e) => {
-          console.log("test", e.target.files[0])
+         
           this.setState({
-          file: e.target.files[0]
+            inputs: {
+              ...this.state.inputs,
+              file: e.target.files[0]
+            }
+           
         })
       }
       
