@@ -147,10 +147,10 @@ function App() {
                 <Route path="restaurants">
                   <Route index element={<List key="restaurants" type="restaurants" />} />
                   {/* <Route path=":restaurantId" element={<Single />} /> */}
-                  <Route path=":restaurantId" element={<New inputs={restaurantInputs} type="restaurant" title="Update Restaurant" />} />
+                  <Route path=":restaurantId" element={<New inputs={restaurantInputs} type="restaurants" title="Update Restaurant" />} />
                   <Route
                     path="new"
-                    element={<New inputs={restaurantInputs} type="restaurant" title="Add New Restaurant" />}
+                    element={<New inputs={restaurantInputs} type="restaurants" title="Add New Restaurant" />}
                   />
                 </Route>
                 <Route path="drivers">
