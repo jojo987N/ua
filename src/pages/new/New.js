@@ -98,7 +98,7 @@ const New = ({ inputs, title, type, history}) => {
           </div>
           <div className="right">
             
-            <FormInput inputs={inputs} type={type} data={data} itemId={itemId} navigate={navigate}/>
+            <FormInput inputs={inputs} type={type} data={data} itemId={itemId} navigate={navigate} file={file}/>
              
           </div>
         </div>
