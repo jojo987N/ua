@@ -83,6 +83,7 @@ const New = ({ inputs, title, type}) => {
 
   useEffect(() => {
     // if (itemId)
+    console.log("DAAAAAAAATAAAAAAA ")
       getData(type).then(d => {
         console.log("DAAAAAAAATAAAAAAA : ",d)
         setData(d)
