@@ -151,12 +151,12 @@ export const userInputs = [
      // alias: "location"
      alias: "country"
     },
-    {
-      id: 9,
-      label: "Coordinates",
-      type: "object",
-      alias: "coordinates"
-    },
+    // {
+    //   id: 9,
+    //   label: "Coordinates",
+    //   type: "object",
+    //   alias: "coordinates"
+    // },
     // {
     //   id: 5,
     //   label: "Stock",
