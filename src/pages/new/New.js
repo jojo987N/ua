@@ -30,8 +30,6 @@ const New = ({ inputs, title, type}) => {
   // let data;
   const [data, setData] = useState()
 
-  console.log("IIIIIIII", itemId, type)
-
   //  console.log(type === 'user'?process.env.REACT_APP_USERS_KEY:type)
    //console.log(`${type}s`)
   //console.log(paramName)
@@ -82,11 +80,9 @@ const New = ({ inputs, title, type}) => {
   //console.log(options)
 
   useEffect(() => {
-    // if (itemId)
-    console.log("DAAAAAAAATAAAAAAA ")
-      getData(type).then(d => {
-        console.log("DAAAAAAAATAAAAAAA : ",d)
-        setData(d)
+     if(itemId)
+      getData(type).then(values => {
+        setData(values.find(value => value.id === itemId))
       })
   }, [])
 
