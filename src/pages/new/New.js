@@ -100,7 +100,8 @@ const New = ({ inputs, title, type}) => {
         </div>
         <div className="bottom">
           <div className="left">
-            <img
+            <img src="https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg" />
+            {/* <img
               src={
                 file
                   ? URL.createObjectURL(file)
@@ -109,7 +110,7 @@ const New = ({ inputs, title, type}) => {
                   "https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg"
               }
               alt=""
-            />
+            /> */}
           </div>
           <div className="right">
             
