@@ -2,7 +2,7 @@ import "./new.scss";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
 import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUploadOutlined";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 // import Select, { SelectChangeEvent } from '@mui/material/Select';
 // import MenuItem from '@mui/material/MenuItem';
 import TimePicker from 'react-time-picker';
@@ -12,7 +12,7 @@ import { Button, Modal, Space } from 'antd';
 
 import Select from 'react-select'
 import { useParams } from "react-router-dom";
-import { decryptData } from "../../utils";
+import { decryptData, getData } from "../../utils";
 import FormInput from "./FormInput"
 import { useNavigate } from "react-router-dom";
 
@@ -27,7 +27,8 @@ const New = ({ inputs, title, type, history}) => {
 
   const paramName = Object.keys(useParams())[0]
   const itemId = useParams()[paramName]
-  let data;
+  // let data;
+  const [data, setData] = useState()
 
    console.log(type === 'user'?process.env.REACT_APP_USERS_KEY:type)
    //console.log(`${type}s`)
@@ -35,9 +36,10 @@ const New = ({ inputs, title, type, history}) => {
   //console.log(`${(type === 'drivers' && "user") || type}s`, paramName)
   if(itemId && itemId !== "profile")
   // data = decryptData(localStorage.getItem(`${((type === 'drivers' || type === 'users') && process.env.REACT_APP_USERS_KEY) || type}s`)).find(item => item[paramName] === itemId)  
-  data = decryptData(localStorage.getItem((type === 'user' || type === 'drivers')?process.env.REACT_APP_USERS_KEY:type === 'product'?process.env.REACT_APP_PRODUCTS_KEY:type === 'restaurant'?process.env.REACT_APP_RESTAURANTS_KEY:type === 'categorie'?process.env.REACT_APP_CATEGORIES_KEY:type)).find(item => item[paramName] === itemId)  
-
-  console.log("DATA: ",data)
+  // data = decryptData(localStorage.getItem((type === 'user' || type === 'drivers')?process.env.REACT_APP_USERS_KEY:type === 'product'?process.env.REACT_APP_PRODUCTS_KEY:type === 'restaurant'?process.env.REACT_APP_RESTAURANTS_KEY:type === 'categorie'?process.env.REACT_APP_CATEGORIES_KEY:type)).find(item => item[paramName] === itemId)  
+  // data = decryptData(localStorage.getItem((type === 'user' || type === 'drivers')?process.env.REACT_APP_USERS_KEY:type === 'product'?process.env.REACT_APP_PRODUCTS_KEY:type === 'restaurant'?process.env.REACT_APP_RESTAURANTS_KEY:type === 'categorie'?process.env.REACT_APP_CATEGORIES_KEY:type)).find(item => item[paramName] === itemId)  
+ 
+   
    
  //console.log(data)
  // const user = JSON.parse(localStorage.getItem('users')).find(user => user.userId === userId)
@@ -75,6 +77,13 @@ const New = ({ inputs, title, type, history}) => {
 
    
   //console.log(options)
+
+  useEffect(()=>{
+   getData().then(d =>{
+     console.log(d)
+     setData(d)
+   })
+  }, [])
 
   return (
     <div className="new">
