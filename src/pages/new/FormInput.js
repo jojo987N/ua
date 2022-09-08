@@ -3,9 +3,9 @@ import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUpload
 import Select from 'react-select'
 import { decryptData } from "../../utils";
 import TimePicker from 'react-time-picker';
-import { addRestaurant, updateUser } from "../../firebase";
+import { addRestaurant, updateUser, uploadBytes} from "../../firebase";
 import { restaurantModel } from "../../model";
-import {getDownloadURL, getStorage, ref} from 'firebase/storage'
+import {getDownloadURL, getStorage, ref, uploadBytes} from 'firebase/storage'
 
 
 
@@ -125,6 +125,8 @@ class FormInput extends React.Component {
             const file = e.target.files[0];
             const storage = getStorage();
             const storageRef = ref(storage, file.name);
+            await uploadBytes(storageRef, file)
+            
             const url = await getDownloadURL(storageRef)
 
             console.log("url", url)
