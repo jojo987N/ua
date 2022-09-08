@@ -130,7 +130,7 @@ class FormInput extends React.Component {
             
             const url = await getDownloadURL(storageRef)
 
-            console.log("url", url)
+            // console.log("url", url)
                
 
 
