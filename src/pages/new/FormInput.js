@@ -3,7 +3,7 @@ import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUpload
 import Select from 'react-select'
 import { decryptData } from "../../utils";
 import TimePicker from 'react-time-picker';
-import { addRestaurant, updateUser, uploadBytes} from "../../firebase";
+import { addRestaurant, updateUser} from "../../firebase";
 import { restaurantModel } from "../../model";
 import {getDownloadURL, getStorage, ref, uploadBytes} from 'firebase/storage'
 
