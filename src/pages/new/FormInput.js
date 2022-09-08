@@ -245,11 +245,11 @@ class FormInput extends React.Component {
 
 
       {this.props.type === "restaurant" && <>
-      <div className="formInput" key={input.id}>
+      <div className="formInput" >
       <label>Reward</label>
       <input type="text"/>
       </div>
-      <div className="formInput" key={input.id}>
+      <div className="formInput" >
       <label>Collect Time</label>
       <input type="text"/>
       </div>
