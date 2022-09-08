@@ -17,7 +17,7 @@ import FormInput from "./FormInput"
 import { useNavigate } from "react-router-dom";
 
 
-const New = ({ inputs, title, type, history}) => {
+const New = ({ inputs, title, type}) => {
 
  // console.log(useParams())
 
@@ -30,7 +30,7 @@ const New = ({ inputs, title, type, history}) => {
   // let data;
   const [data, setData] = useState()
 
-  console.log("IIIIIIII", itemId)
+  console.log("IIIIIIII", itemId, type)
 
   //  console.log(type === 'user'?process.env.REACT_APP_USERS_KEY:type)
    //console.log(`${type}s`)
