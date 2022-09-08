@@ -5,6 +5,8 @@ import { decryptData } from "../../utils";
 import TimePicker from 'react-time-picker';
 import { addRestaurant, updateUser } from "../../firebase";
 import { restaurantModel } from "../../model";
+import {getDownloadURL, getStorage, ref} from 'firebase/storage'
+
 
 
 
@@ -118,7 +120,16 @@ class FormInput extends React.Component {
         <input
           type="file"
           id="file"
-          onChange={(e) => {
+          onChange={async (e) => {
+
+            const file = e.target.files[0];
+            const storage = getStorage();
+            const storageRef = ref(storage, file.name);
+            const url = await getDownloadURL(storageRef)
+
+            console.log("url", url)
+               
+
 
             this.setState({
               inputs: {
@@ -245,23 +256,23 @@ class FormInput extends React.Component {
 
 
       {this.props.type === "restaurant" && <>
-      <div className="formInput" >
-      <label>Reward</label>
-      <input type="text"/>
-      </div>
-      <div className="formInput" >
-      <label>Collect Time</label>
-      <input type="text"/>
-      </div>
-      <div className="tmpContainer">
-        <label>Opening Time</label>
-        <TimePicker
-          // onChange={(e) => this.setState({
-          //    value1: e.target.value
-          //  })} 
-          //  value={this.state.value1}
-          className="tmp" />
-      </div>
+        <div className="formInput" >
+          <label>Reward</label>
+          <input type="text" />
+        </div>
+        <div className="formInput" >
+          <label>Collect Time</label>
+          <input type="text" />
+        </div>
+        <div className="tmpContainer">
+          <label>Opening Time</label>
+          <TimePicker
+            // onChange={(e) => this.setState({
+            //    value1: e.target.value
+            //  })} 
+            //  value={this.state.value1}
+            className="tmp" />
+        </div>
 
         <div className="tmpContainer">
           <label>Closing Time</label>
