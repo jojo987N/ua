@@ -123,17 +123,13 @@ export const userInputs = [
       type: "text",
      alias: "longitude"
     },
-    // {
-    //   id: 6,
-    //   label: "Address",
-    //   type: "text",
-    //  alias: "address"
-    // },
     {
       id: 6,
       label: "Address",
-      type: "object",
-     alias: "location"
+      type: "text",
+      //placeholder: "100",
+     // alias: "location"
+     alias: "address"
     },
     {
       id: 7,
@@ -151,12 +147,6 @@ export const userInputs = [
      // alias: "location"
      alias: "country"
     },
-    // {
-    //   id: 9,
-    //   label: "Coordinates",
-    //   type: "object",
-    //   alias: "coordinates"
-    // },
     // {
     //   id: 5,
     //   label: "Stock",
