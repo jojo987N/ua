@@ -34,7 +34,8 @@ const New = ({ inputs, title, type, history}) => {
    //console.log(`${type}s`)
   //console.log(paramName)
   //console.log(`${(type === 'drivers' && "user") || type}s`, paramName)
-  if(itemId && itemId !== "profile")
+
+  // if(itemId && itemId !== "profile") iciii
   // data = decryptData(localStorage.getItem(`${((type === 'drivers' || type === 'users') && process.env.REACT_APP_USERS_KEY) || type}s`)).find(item => item[paramName] === itemId)  
   // data = decryptData(localStorage.getItem((type === 'user' || type === 'drivers')?process.env.REACT_APP_USERS_KEY:type === 'product'?process.env.REACT_APP_PRODUCTS_KEY:type === 'restaurant'?process.env.REACT_APP_RESTAURANTS_KEY:type === 'categorie'?process.env.REACT_APP_CATEGORIES_KEY:type)).find(item => item[paramName] === itemId)  
   // data = decryptData(localStorage.getItem((type === 'user' || type === 'drivers')?process.env.REACT_APP_USERS_KEY:type === 'product'?process.env.REACT_APP_PRODUCTS_KEY:type === 'restaurant'?process.env.REACT_APP_RESTAURANTS_KEY:type === 'categorie'?process.env.REACT_APP_CATEGORIES_KEY:type)).find(item => item[paramName] === itemId)  
@@ -78,11 +79,12 @@ const New = ({ inputs, title, type, history}) => {
    
   //console.log(options)
 
-  useEffect(()=>{
-   getData().then(d =>{
-     console.log(d)
-     setData(d)
-   })
+  useEffect(() => {
+    if (itemId)
+      getData().then(d => {
+        console.log(d)
+        setData(d)
+      })
   }, [])
 
   return (
