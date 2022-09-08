@@ -1,4 +1,5 @@
 import CryptoJS from 'crypto-js';
+import { getCategories, getEarnings, getFoods, getOrdersFromFirebase, getRestaurantsFromFirebase, getUsersFromFirebase } from './firebase';
 
 export const encryptData = (data) =>
     CryptoJS.AES.encrypt(JSON.stringify(data), '6d09g496-kcdf-11ea-a3c1-0282ac192345').toString();
