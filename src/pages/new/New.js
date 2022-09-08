@@ -37,7 +37,7 @@ const New = ({ inputs, title, type, history}) => {
   // data = decryptData(localStorage.getItem(`${((type === 'drivers' || type === 'users') && process.env.REACT_APP_USERS_KEY) || type}s`)).find(item => item[paramName] === itemId)  
   data = decryptData(localStorage.getItem((type === 'user' || type === 'drivers')?process.env.REACT_APP_USERS_KEY:type === 'product'?process.env.REACT_APP_PRODUCTS_KEY:type === 'restaurant'?process.env.REACT_APP_RESTAURANTS_KEY:type === 'categorie'?process.env.REACT_APP_CATEGORIES_KEY:type)).find(item => item[paramName] === itemId)  
 
-  console.log(data)
+  console.log("DATA: ",data)
    
  //console.log(data)
  // const user = JSON.parse(localStorage.getItem('users')).find(user => user.userId === userId)
