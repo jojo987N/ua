@@ -82,7 +82,7 @@ const New = ({ inputs, title, type, history}) => {
   useEffect(() => {
     if (itemId)
       getData().then(d => {
-        console.log(d)
+        console.log("DAAAAAAAATAAAAAAA : ",d)
         setData(d)
       })
   }, [])
