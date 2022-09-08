@@ -30,7 +30,9 @@ const New = ({ inputs, title, type, history}) => {
   // let data;
   const [data, setData] = useState()
 
-   console.log(type === 'user'?process.env.REACT_APP_USERS_KEY:type)
+  console.log("IIIIIIII", itemId)
+
+  //  console.log(type === 'user'?process.env.REACT_APP_USERS_KEY:type)
    //console.log(`${type}s`)
   //console.log(paramName)
   //console.log(`${(type === 'drivers' && "user") || type}s`, paramName)
