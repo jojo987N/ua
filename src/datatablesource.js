@@ -146,7 +146,8 @@ export const userColumns = [
         renderCell: (params) => {
           return (
             <div className="cellWithAddress">
-              {params.row.location.display_address.reduce((a, v) => a + v , "")}
+              {/* {params.row.location.display_address.reduce((a, v) => a + v , "")} */}
+              {params.row.address}
             </div>
           );
         },
