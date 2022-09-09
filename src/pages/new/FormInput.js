@@ -80,7 +80,7 @@ class FormInput extends React.Component {
 
 
     if (Object.keys(this.state.inputs).length)
-      this.props.navigate('/' + this.props.type + 's');
+      this.props.navigate('/' + this.props.type);
     // this.setState({
     //   button: {
     //     text: "Sent",
