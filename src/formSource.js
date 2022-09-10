@@ -184,6 +184,7 @@ export const userInputs = [
       label: "Description",
       type: "text",
      // placeholder: "Description",
+     alias: "description"
     },
     
   ];
