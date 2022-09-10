@@ -99,8 +99,8 @@ const Datatable = ({type}) => {
     // if(!localStorage.getItem(process.env.REACT_APP_RESTAURANTS_KEY))
     // await getRestaurantsFromFirebase().then(restaurants => localStorage.setItem(process.env.REACT_APP_RESTAURANTS_KEY, encryptData(restaurants)))
 
-    if(!localStorage.getItem(process.env.REACT_APP_CATEGORIES_KEY))
-    await getCategories().then(categories => localStorage.setItem(process.env.REACT_APP_CATEGORIES_KEY, encryptData(categories)))
+    // if(!localStorage.getItem(process.env.REACT_APP_CATEGORIES_KEY))
+    // await getCategories().then(categories => localStorage.setItem(process.env.REACT_APP_CATEGORIES_KEY, encryptData(categories)))
      
     if(!localStorage.getItem(process.env.REACT_APP_USERS_KEY))
     await getUsersFromFirebase().then(users => localStorage.setItem(process.env.REACT_APP_USERS_KEY, encryptData(users)))
@@ -173,9 +173,11 @@ const Datatable = ({type}) => {
       break
       case "categories":
         setTitle("Category")
-        setTab({
-          rows: decryptData(localStorage.getItem(process.env.REACT_APP_CATEGORIES_KEY)),
-          columns: categoryColumns
+        getCategories().then(categories => {
+          setTab({
+            rows: categories,
+            columns: categoryColumns
+          })
         })
       break
       case "earnings":
