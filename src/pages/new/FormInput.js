@@ -138,7 +138,7 @@ class FormInput extends React.Component {
             this.setState({
               inputs: {
                 ...this.state.inputs,
-                file: url
+                image: url
                 // file: e.target.files[0]
               }
 
