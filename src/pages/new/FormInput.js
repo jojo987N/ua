@@ -80,7 +80,7 @@ class FormInput extends React.Component {
       addCategory(this.state.inputs)
 
 
-    if (Object.keys(this.state.inputs).length)
+    if (Object.keys(this.state.inputs).length && this.state.inputs.image)
       this.props.navigate('/' + this.props.type);
     // this.setState({
     //   button: {
