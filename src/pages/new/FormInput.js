@@ -296,7 +296,7 @@ class FormInput extends React.Component {
         </div>
       </>}
 
-      <button  className="button" style={{ backgroundColor: this.state.button.color }}>{this.state.button.text}</button>
+      <button disabled={this.state.disabled} className="button" style={{ backgroundColor: this.state.button.color }}>{this.state.button.text}</button>
 
     </form>
 
