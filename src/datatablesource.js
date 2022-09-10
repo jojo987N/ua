@@ -181,7 +181,7 @@ export const userColumns = [
                  {/* {params.row.id} */}
                 {/* {params.row.restaurantID} */}
                 {/* {JSON.stringify(JSON.parse(localStorage.getItem('restaurants')).find(restaurant => restaurant.restaurantId === params.row.restaurantID ))} */}
-                {decryptData(localStorage.getItem(process.env.REACT_APP_RESTAURANTS_KEY)).find((restaurant => restaurant.categories.some( category => category.title === params.row.name))).name}
+                {/* {decryptData(localStorage.getItem(process.env.REACT_APP_RESTAURANTS_KEY)).find((restaurant => restaurant.categories.some( category => category.title === params.row.name))).name} */}
               </div>
             );
           },
