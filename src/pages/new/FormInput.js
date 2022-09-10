@@ -53,6 +53,7 @@ class FormInput extends React.Component {
     super(props);
     this.myRef = React.createRef();
     this.state = {
+      disabled: false,
       inputs: {},
       button: {
         text: "Send",
@@ -77,9 +78,11 @@ class FormInput extends React.Component {
       // addRestaurant(restaurantModel(this.state.inputs.latitude, this.state.inputs.longitude, this.state.inputs.phone, URL.createObjectURL(this.state.inputs.file), this.state.inputs.address, this.state.inputs.city, this.state.inputs.country, this.state.inputs.name))
      // addRestaurant(restaurantModel(this.state.inputs.latitude, this.state.inputs.longitude, this.state.inputs.phone, this.state.inputs.file, this.state.inputs.address, this.state.inputs.city, this.state.inputs.country, this.state.inputs.name))
       // addRestaurant(this.state.inputs)
-      if(this.state.inputs.image)
+      if(this.state.inputs.image){
+      this.setState({disabled: true})
       addCategory(this.state.inputs)
       .then(()=> this.props.navigate('/' + this.props.type))
+      }
 
 
     // if (Object.keys(this.state.inputs).length && this.state.inputs.image)
@@ -293,7 +296,7 @@ class FormInput extends React.Component {
         </div>
       </>}
 
-      <button className="button" style={{ backgroundColor: this.state.button.color }}>{this.state.button.text}</button>
+      <button disabled className="button" style={{ backgroundColor: this.state.button.color }}>{this.state.button.text}</button>
 
     </form>
 
