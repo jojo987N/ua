@@ -201,6 +201,14 @@ export const addRestaurant = (inputs) => {
   })
 }
 
+export const addCategory = (data) => {
+
+  return addDoc(categoriesCol, {
+    ...data,
+    createdAt: serverTimestamp()      
+  }) 
+}
+
 
 export const getRestaurantById = (uid)=>{
 

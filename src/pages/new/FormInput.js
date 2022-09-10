@@ -3,7 +3,7 @@ import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUpload
 import Select from 'react-select'
 import { decryptData } from "../../utils";
 import TimePicker from 'react-time-picker';
-import { addRestaurant, updateUser} from "../../firebase";
+import { addCategory, addRestaurant, updateUser} from "../../firebase";
 import { restaurantModel } from "../../model";
 import {getDownloadURL, getStorage, ref, uploadBytes} from 'firebase/storage'
 
@@ -76,7 +76,8 @@ class FormInput extends React.Component {
     else
       // addRestaurant(restaurantModel(this.state.inputs.latitude, this.state.inputs.longitude, this.state.inputs.phone, URL.createObjectURL(this.state.inputs.file), this.state.inputs.address, this.state.inputs.city, this.state.inputs.country, this.state.inputs.name))
      // addRestaurant(restaurantModel(this.state.inputs.latitude, this.state.inputs.longitude, this.state.inputs.phone, this.state.inputs.file, this.state.inputs.address, this.state.inputs.city, this.state.inputs.country, this.state.inputs.name))
-      addRestaurant(this.state.inputs)
+      // addRestaurant(this.state.inputs)
+      addCategory(this.state.inputs)
 
 
     if (Object.keys(this.state.inputs).length)

@@ -45,3 +45,5 @@ export const getData = (type) => {
             return getUsersFromFirebase()
     }
 }
+
+ 
