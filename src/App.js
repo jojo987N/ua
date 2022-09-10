@@ -168,7 +168,7 @@ function App() {
                   <Route path=":id" element={<New inputs={categoryInputs} type="categorie" title="Update Category" />} />
                   <Route
                     path="new"
-                    element={<New inputs={categoryInputs} type="categorie" title="Add New Category" />}
+                    element={<New inputs={categoryInputs} type="categories" title="Add New Category" />}
                   />
                 </Route>
 
