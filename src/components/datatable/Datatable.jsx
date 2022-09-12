@@ -3,6 +3,7 @@ import { DataGrid } from "@mui/x-data-grid";
 import { Link } from "react-router-dom";
 
 const Datatable = ({ rows, columns }) => {
+  const [tab, setTab] = useState({})
   const handleDelete = (id) => {
     setTab({
       rows: tab.rows.filter((item) => item.id !== id),
