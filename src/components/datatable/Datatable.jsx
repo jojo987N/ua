@@ -4,12 +4,11 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const Datatable = ({ rows, columns }) => {
-  const [tab, setTab] = useState({})
   const handleDelete = (id) => {
-    setTab({
-      rows: tab.rows.filter((item) => item.id !== id),
-      columns: tab.columns,
-    });
+    // setTab({
+    //   rows: tab.rows.filter((item) => item.id !== id),
+    //   columns: tab.columns,
+    // });
   };
 
   const actionColumn = [
@@ -20,7 +19,7 @@ const Datatable = ({ rows, columns }) => {
       renderCell: (params) => {
         return (
           <div className="cellAction">
-            {type !== "earnings" ? (
+            {/* {type !== "earnings" ? (
               <Link
                 to={`/${type}/${
                   ((type === "users" || type === "drivers") &&
@@ -34,7 +33,7 @@ const Datatable = ({ rows, columns }) => {
               </Link>
             ) : (
               <></>
-            )}
+            )} */}
             <div
               className="deleteButton"
               onClick={() => handleDelete(params.row.id)}
