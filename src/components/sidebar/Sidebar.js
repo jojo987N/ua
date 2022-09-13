@@ -15,7 +15,7 @@ import PsychologyOutlinedIcon from "@mui/icons-material/PsychologyOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { signOut } from "firebase/auth";
-import { auth } from "../../utils";
+import { auth } from "../../config";
 import { useContext, useState } from "react";
 import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlined";
 import SettingsIcon from '@mui/icons-material/Settings';
@@ -92,7 +92,7 @@ const Sidebar = ({ type }) => {
     <div className="sidebar">
       <div className="top">
         <Link to="/" style={{ textDecoration: "none" }}>
-          <img className="cellImg" style={{ width: 100, height: 100 }} src={require("../../assets/images/logo.png")} alt="avatar" />
+          <img className="cellImg" style={{ width: 100, height: 100 }} src={require("../../assets/images/logo-100-removed.png")} alt="avatar" />
         </Link>
       </div>
       <Menu
