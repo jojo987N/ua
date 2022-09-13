@@ -44,10 +44,8 @@ const Sidebar = ({ type }) => {
   const navigate = useNavigate()
   const { selectedKey, setSelectedKey } = useContext(SelectedKeyContext)
   const signOutUser = () => {
-    signOut(auth)
-      .then(() => {
-      })
-      .catch((err) => console.log(err.code))
+    // signOut(auth)
+     
   }
   const items = [
     getItem('Dashboard', '/', <DashboardIcon />),
