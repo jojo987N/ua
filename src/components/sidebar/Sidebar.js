@@ -91,7 +91,7 @@ const Sidebar = ({ type }) => {
     <div className="sidebar">
       <div className="top">
         <Link to="/" style={{ textDecoration: "none" }}>
-          <img className="cellImg" style={{ width: 100, height: 100 }} src={require("../../assets/images/logo-100-removed.png")} alt="avatar" />
+          <img className="cellImg" style={{ width: 100, height: 100 }} src={require("../../assets/images/logo.png")} alt="avatar" />
         </Link>
       </div>
       <Menu
