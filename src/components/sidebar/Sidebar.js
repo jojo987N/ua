@@ -28,7 +28,6 @@ import {
   PieChartOutlined,
 } from '@ant-design/icons';
 import { Button, Menu } from 'antd';
-import { SelectedKeyContext } from "../../context/SelectedKey";
 function getItem(label, key, icon, children, type) {
   return {
     key,
@@ -42,7 +41,6 @@ const Sidebar = ({ type }) => {
   console.log("type : ", '/' + type)
   const [collapsed, setCollapsed] = useState(false);
   const navigate = useNavigate()
-  const { selectedKey, setSelectedKey } = useContext(SelectedKeyContext)
   const signOutUser = () => {
     // signOut(auth)
      
