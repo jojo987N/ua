@@ -20,7 +20,7 @@ const AddDriver = () => {
       <div className="addDriverContainer">
         <Navbar />
         <div className="top">
-          <h1>{title}</h1>
+          <h1>{APP_CONSTANT.ADD_NEW_DRIVER}</h1>
         </div>
         <div className="bottom">
           <div className="left">
