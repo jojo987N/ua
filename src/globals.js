@@ -62,7 +62,7 @@ export const PAGE = {
     ORDERS: "orders",
     RESTAURANTS: "restaurants",
     DRIVERS: "drivers",
-    ADD_DRIVERS: "addDrivers",
+    ADD_DRIVER: "addDriver",
     CATEGORIES: "categories",
     EARNINGS: "earnings",
     SETTINGS: "settings",
