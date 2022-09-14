@@ -22,6 +22,8 @@ import Restaurants from "./pages/restaurants/Restaurants"
 import Drivers from "./pages/drivers/Drivers"
 import Categories from "./pages/categories/Categories"
 import Foods from "./pages/foods/Foods";
+import "antd/dist/antd.min.css"
+
 function App() {
   const { currentUser } = useContext(AuthContext);
   return (
