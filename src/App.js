@@ -136,7 +136,7 @@ function App() {
                 /> */}
               </Route>
 
-              <Route path={PAGE.ADD_DRIVERS}>
+              <Route path={PAGE.ADD_DRIVER}>
                 <Route index element={<AddDriver />} />
                 
               </Route>
