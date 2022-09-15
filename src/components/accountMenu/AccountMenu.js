@@ -24,8 +24,6 @@ export default function AccountMenu() {
   return (
     <React.Fragment>
       <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
-        {/* <Typography sx={{ minWidth: 100 }}>Contact</Typography>
-        <Typography sx={{ minWidth: 100 }}>Profile</Typography> */}
         <Tooltip title="Account settings">
           <IconButton
             onClick={handleClick}
@@ -35,7 +33,6 @@ export default function AccountMenu() {
             aria-haspopup="true"
             aria-expanded={open ? 'true' : undefined}
           >
-            {/* <Avatar sx={{ width: 32, height: 32 }}>M</Avatar> */}
             <img
               src="https://cdn.pixabay.com/photo/2013/07/13/12/07/avatar-159236__340.png"
               alt=""
@@ -82,16 +79,6 @@ export default function AccountMenu() {
         <MenuItem>
           <Avatar /> Profile
         </MenuItem>
-        {/* <MenuItem>
-          <Avatar /> My account
-        </MenuItem> */}
-        <Divider />
-        {/* <MenuItem>
-          <ListItemIcon>
-            <PersonAdd fontSize="small" />
-          </ListItemIcon>
-          Add another account
-        </MenuItem> */}
         <MenuItem>
           <ListItemIcon>
             <Settings fontSize="small" />

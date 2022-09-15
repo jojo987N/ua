@@ -10,29 +10,11 @@ import { DotLoader } from "react-spinners";
 import { ExclamationCircleOutlined } from '@ant-design/icons';
 import { Modal, Space } from 'antd';
 
-
-
 const Datatable = ({type}) => {
-
-  //getFoods().then(foods => console.log(foods))
-
-  //const [data, setData] = useState([]);
-
- // let tab;
  const { confirm } = Modal;
-
  const {currentRestaurant} = useContext(RestaurantContext) 
-
-// console.log(currentRestaurant)
-
  const [tab, setTab] = useState({})
  const [title, setTitle] = useState()
-
-   
- // console.log(type)
-  //const [data, setData] = useState(tab.rows);
-
-
   const showDeleteConfirm = (id) => {
     confirm({
       title: 'Are you sure delete this task?',
@@ -50,28 +32,18 @@ const Datatable = ({type}) => {
       },
     });
   };
-
   const handleDelete = (id) => {
-   // setData(data.filter((item) => item.id !== id));
-
-
-
     setTab({
       rows: tab.rows.filter(item => item.id !== id),
       columns: tab.columns
     })
-
-
   };
-
   const actionColumn = [
     {
       field: "action",
       headerName:  <b>Action</b>,
       width: 200,
       renderCell: (params) => {
-
-        
         return (
           <div className="cellAction">
            {type !== "earnings"?<Link to={`/${type}/${(((type==="users" || type === "drivers") && params.row.userId ) || (type === "restaurants" && params.row.restaurantId) ) || params.row.id}`} style={{ textDecoration: "none" }}>
@@ -79,7 +51,6 @@ const Datatable = ({type}) => {
             </Link>:<></>}
             <div
               className="deleteButton"
-              // onClick={() => handleDelete(params.row.id)}
               onClick={() => showDeleteConfirm(params.row.id)}
             >
               Delete
@@ -89,39 +60,12 @@ const Datatable = ({type}) => {
       },
     },
   ];
-
   useEffect(()=>{
-
-    //console.log(process.env.REACT_APP_RESTAURANTS_KEY);
-
     (async ()=>{
-
-    // if(!localStorage.getItem(process.env.REACT_APP_RESTAURANTS_KEY))
-    // await getRestaurantsFromFirebase().then(restaurants => localStorage.setItem(process.env.REACT_APP_RESTAURANTS_KEY, encryptData(restaurants)))
-
-    // if(!localStorage.getItem(process.env.REACT_APP_CATEGORIES_KEY))
-    // await getCategories().then(categories => localStorage.setItem(process.env.REACT_APP_CATEGORIES_KEY, encryptData(categories)))
-     
     if(!localStorage.getItem(process.env.REACT_APP_USERS_KEY))
     await getUsersFromFirebase().then(users => localStorage.setItem(process.env.REACT_APP_USERS_KEY, encryptData(users)))
-    
     if(!localStorage.getItem(process.env.REACT_APP_EARNINGS_KEY))
-    // Convert restaurantsEarnings object to  array before pass to localstorage
     await getEarnings().then(restaurantsEarnings => localStorage.setItem(process.env.REACT_APP_EARNINGS_KEY, encryptData(Object.keys(restaurantsEarnings).map((restaurant, index) => ({id: index, restaurant:restaurant, earning:restaurantsEarnings[restaurant], adminCommission: restaurantsEarnings[restaurant], percentage: 25}) ))))
-    
-    // await getEarnings().then(restaurantsEarnings =>console.log(Object.keys(restaurantsEarnings).map(restaurant => ({restaurant:restaurant, earnings:restaurantsEarnings[restaurant]}) )))
-
-      
-    // if(!localStorage.getItem('restaurants'))
-    // await getRestaurantsFromFirebase().then(restaurants => localStorage.setItem('restaurants', JSON.stringify(restaurants)))
-
-    // if(!localStorage.getItem('categories'))
-    // await getCategories().then(categories => localStorage.setItem('categories', JSON.stringify(categories)))
-     
-    // if(!localStorage.getItem('users'))
-    // await getUsersFromFirebase().then(users => localStorage.setItem('users', JSON.stringify(users)))
- 
-     
     switch (type) {
       case "products":
         setTitle("Menu")
@@ -137,7 +81,6 @@ const Datatable = ({type}) => {
           columns: productColumns
         })
       }
-    
       break
       case "transactions":
         setTitle("Transactions")
@@ -168,8 +111,6 @@ const Datatable = ({type}) => {
             columns: restaurantColumns
           })
         })
-
-         
       break
       case "categories":
         setTitle("Category")
@@ -191,23 +132,16 @@ const Datatable = ({type}) => {
       default:
         setTitle("User")
         setTab({
-         // rows: userRows,
           rows: decryptData(localStorage.getItem(process.env.REACT_APP_USERS_KEY)),
           columns: userColumns
         })
     } 
   })();
-
-  
   }, [])
-
    if (!tab.columns)
    return <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-      
       <DotLoader color={"#36D7B7"} loading={true}  size={150} />
     </div>
-
-
   return (
     <div className="datatable">
       <div className="datatableTitle">
@@ -227,6 +161,4 @@ const Datatable = ({type}) => {
     </div>
   );
 };
-
- 
 export default Datatable;

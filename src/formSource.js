@@ -1,10 +1,4 @@
 export const userInputs = [
-    // {
-    //   id: 1,
-    //   label: "Username",
-    //   type: "text",
-    //   placeholder: "john_doe",
-    // },
     {
       id: 2,
       label: "Name",
@@ -46,27 +40,23 @@ export const userInputs = [
       alias: "Country"
     },
   ];
-  
   export const productInputs = [
     {
       id: 1,
       label: "Name",
       type: "text",
-      //placeholder: "",
       alias: "name"
     },
     {
       id: 2,
       label: "Description",
       type: "text",
-     // placeholder: "Description",
      alias: "description"
     },
     {
       id: 3,
       label: "Ingredients",
       type: "text",
-      //placeholder: "Computers",
     },
     {
       id: 4,
@@ -75,40 +65,29 @@ export const userInputs = [
       placeholder: "100",
       alias: "price"
     },
-    // {
-    //   id: 5,
-    //   label: "Stock",
-    //   type: "text",
-    //   placeholder: "in stock",
-    // },
     {
       id: 5,
       label: "Offer",
       type: "text",
-      //placeholder: "in stock",
     },
   ];
-  
   export const restaurantInputs = [
     {
       id: 1,
       label: "Name",
       type: "text",
-      //placeholder: "",
       alias: "name"
     },
     {
       id: 2,
       label: "Description",
       type: "text",
-     // placeholder: "Description",
      alias: "description"
     },
     {
       id: 3,
       label: "Phone",
       type: "text",
-      //placeholder: "Computers",
       alias: "phone"
     },
     {
@@ -129,81 +108,43 @@ export const userInputs = [
       type: "text",
      alias: "address"
     },
-    // {
-    //   id: 6,
-    //   label: "Address",
-    //   type: "object",
-    //  alias: "location"
-    // },
     {
       id: 7,
       label: "City",
       type: "text",
-      //placeholder: "100",
-     // alias: "location"
      alias: "city"
     },
     {
       id: 8,
       label: "Country",
       type: "text",
-      //placeholder: "100",
-     // alias: "location"
      alias: "country"
     },
-    // {
-    //   id: 9,
-    //   label: "Coordinates",
-    //   type: "object",
-    //   alias: "coordinates"
-    // },
-    // {
-    //   id: 5,
-    //   label: "Stock",
-    //   type: "text",
-    //   placeholder: "in stock",
-    // },
-    // {
-    //   id: 5,
-    //   label: "Offer",
-    //   type: "text",
-       
-    // },
   ];
-  
   export const categoryInputs = [
     {
       id: 1,
       label: "Name",
       type: "text",
-      //placeholder: "",
       alias: "name"
     },
     {
       id: 2,
       label: "Description",
       type: "text",
-     // placeholder: "Description",
      alias: "description"
     },
-    
   ];
-
   export const carInputs = [
     {
       id: 1,
       label: "Car Name",
       type: "text",
-      //placeholder: "",
     },
     {
       id: 2,
       label: "Car Number",
       type: "text",
-     // placeholder: "Description",
     },
-    
   ];
-
-  
   

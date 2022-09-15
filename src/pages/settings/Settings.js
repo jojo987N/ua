@@ -19,14 +19,11 @@ import {
 import React from 'react';
 import Navbar from '../../components/navbar/Navbar';
 import Sidebar from '../../components/sidebar/Sidebar';
-
 const { Option } = Select;
-
 const formItemLayout = {
   labelCol: { span: 6 },
   wrapperCol: { span: 14 },
 };
-
 const normFile = (e) => {
   console.log('Upload event:', e);
   if (Array.isArray(e)) {
@@ -34,16 +31,13 @@ const normFile = (e) => {
   }
   return e?.fileList;
 };
-
 const onChange = (value) => {
   console.log('changed', value);
 };
-
 const Settings = () => {
   const onFinish = (values) => {
     console.log('Received values of form: ', values);
   };
-
   return (
     <div className="settings">
       <Sidebar />
@@ -60,16 +54,12 @@ const Settings = () => {
               rate: 3.5,
             }}
           >
-
             <Form.Item label="Plain Text">
               <span className="ant-form-text">China</span>
             </Form.Item>
-
             <Form.Item label="Api">
               <Input placeholder="Google console api" />
             </Form.Item>
-
-
             <Form.Item
               name="select"
               label="Select"
@@ -81,13 +71,6 @@ const Settings = () => {
                 <Option value="usa">U.S.A</Option>
               </Select>
             </Form.Item>
-
-             
-               
-             
-
-             
-
             <Form.Item
               name="select-multiple"
               label="Select[multiple]"
@@ -99,14 +82,12 @@ const Settings = () => {
                 <Option value="blue">Blue</Option>
               </Select>
             </Form.Item>
-
             <Form.Item label="Commission">
               <Form.Item name="commission" noStyle>
                 <InputNumber min={1} max={10} />
               </Form.Item>
               <span className="ant-form-text"> %</span>
             </Form.Item>
-
             <Form.Item label="Tax">
               <Form.Item name="tax" noStyle>
                 <InputNumber min={1} max={10} />
@@ -119,11 +100,9 @@ const Settings = () => {
               </Form.Item>
               <span className="ant-form-text"> %</span>
             </Form.Item>
-
             <Form.Item name="switch" label="Switch" valuePropName="checked">
               <Switch />
             </Form.Item>
-
             <Form.Item name="slider" label="Slider">
               <Slider
                 marks={{
@@ -136,7 +115,6 @@ const Settings = () => {
                 }}
               />
             </Form.Item>
-
             <Form.Item name="radio-group" label="Radio.Group">
               <Radio.Group>
                 <Radio value="a">item 1</Radio>
@@ -144,7 +122,6 @@ const Settings = () => {
                 <Radio value="c">item 3</Radio>
               </Radio.Group>
             </Form.Item>
-
             <Form.Item
               name="radio-button"
               label="Radio.Button"
@@ -156,7 +133,6 @@ const Settings = () => {
                 <Radio.Button value="c">item 3</Radio.Button>
               </Radio.Group>
             </Form.Item>
-
             <Form.Item name="checkbox-group" label="Checkbox.Group">
               <Checkbox.Group>
                 <Row>
@@ -193,23 +169,20 @@ const Settings = () => {
                 </Row>
               </Checkbox.Group>
             </Form.Item>
-
             <Form.Item name="rate" label="Rate">
               <Rate />
             </Form.Item>
-
             <Form.Item
               name="upload"
               label="Upload"
               valuePropName="fileList"
               getValueFromEvent={normFile}
-              extra="longgggggggggggggggggggggggggggggggggg"
+              extra="long"
             >
               <Upload name="logo" action="/upload.do" listType="picture">
                 <Button icon={<UploadOutlined />}>Click to upload</Button>
               </Upload>
             </Form.Item>
-
             <Form.Item label="Dragger">
               <Form.Item name="dragger" valuePropName="fileList" getValueFromEvent={normFile} noStyle>
                 <Upload.Dragger name="files" action="/upload.do">
@@ -221,7 +194,6 @@ const Settings = () => {
                 </Upload.Dragger>
               </Form.Item>
             </Form.Item>
-
             <Form.Item wrapperCol={{ span: 12, offset: 6 }}>
               <Button type="primary" htmlType="submit">
                 Submit
@@ -231,28 +203,6 @@ const Settings = () => {
         </Card>
       </div>
     </div>
-
   );
 };
-
 export default Settings;
-
-// // import "./list.scss"
-// import Sidebar from "../../components/sidebar/Sidebar"
-// import Navbar from "../../components/navbar/Navbar"
-// import Datatable from "../../components/datatable/Datatable"
-
-// const Settings = ({type}) => {
-
-//   return (
-//     <div className="list">
-//       <Sidebar type={type}/>
-//       <div className="listContainer">
-//         <Navbar/>
-//         {/* <Datatable type={type}/> */}
-//       </div>
-//     </div>
-//   )
-// }
-
-// export default Settings

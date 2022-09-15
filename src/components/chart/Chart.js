@@ -16,7 +16,6 @@ const data = [
   { name: "May", Total: 900 },
   { name: "June", Total: 1700 },
 ];
-
 const Chart = ({ aspect, title }) => {
   return (
     <div className="chart">
@@ -27,7 +26,6 @@ const Chart = ({ aspect, title }) => {
           height={250}
           data={data}
           margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
-           
         >
           <defs>
             <linearGradient id="total" x1="0" y1="0" x2="0" y2="1">
@@ -43,7 +41,6 @@ const Chart = ({ aspect, title }) => {
             dataKey="Total"
             stroke="#8884d8"
             fillOpacity={1}
-            // fill="url(#total)"
             fill="#8884d8"
           />
         </AreaChart>
@@ -51,5 +48,4 @@ const Chart = ({ aspect, title }) => {
     </div>
   );
 };
-
 export default Chart;

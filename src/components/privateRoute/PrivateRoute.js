@@ -15,9 +15,6 @@ export default function PrivateRoute() {
   const { currentRestaurant } = useContext(RestaurantContext)
 
   const {loading, setLoading} = useContext(LoadingContext)
-  //  console.log(currentUser)
-
-   
 
   useLayoutEffect(() => {
      
@@ -41,8 +38,6 @@ export default function PrivateRoute() {
 
   return (
     <>
-      {/* {currentUser?<Home />:currentRestaurant?<Restaurant  path={"/"}/>:<Login />} */}
-      {/* {currentUser && currentRestaurant?<Restaurant  path={"/"}/>:currentUser?<Home />:<Login />} */}
       {currentUser?<Home />:<Login />}
     </>
 

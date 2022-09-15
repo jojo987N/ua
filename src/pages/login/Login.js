@@ -20,46 +20,24 @@ const Login = () => {
     color: "",
     text: "Sign In"
   })
-  
   const SignInUser = async (e)=>{
-
      e.preventDefault()
-
     setButtonStyle({
       backgroundColor: "green",
       color: "white",
       text: "Try to..."
     })
-     
     try{
       const re = await signInWithEmailAndPassword(auth, email, password)
-      //navigate("/")   
       setLoading(true)
        window.location.reload()
-      // getRestaurantById(re.user.uid).then(restaurant => setCurrentRestaurant(restaurant))
-      // .then(()=> setLoading(false))
-      
     }catch(err){
-       
-      
     err.message.includes("password")?setPasswordError(err.message.replace(/Firebase:|auth\//g,''))
      :setEmailError(err.message.replace(/Firebase:|auth\//g,''))
-      // setEmailError(err.message.replace("Firebase:",'').replace("auth/:",''))
-      // switch(err.code){
-      //   case "auth/invalid-email":
-      //   case "auth/user-not-found":
-      //    setEmailError(err.message)
-      //    break
-      //   case "auth/wrong-password":
-      //     setPasswordError(err.message)
-        
-      // }
-
     }
   }
   return (
     <section className="login">
-       
       <div className="loginContainer" >
       <div style={{display: "flex", justifyContent: "center"}}>
         <h1 style={{color: "white", fontSize: 25}}>Good</h1>
@@ -71,7 +49,6 @@ const Login = () => {
           type={"text"}
           autoFocus
           required
-          // value={email}
           onChange={e => setEmail(e.target.value)}
           />
         <p className="errorMsg">{emailError}</p>
@@ -85,17 +62,10 @@ const Login = () => {
         <p className="errorMsg">{passwordError}</p>
         <div className="btnContainer">
         <button style={{backgroundColor: buttonStyle.backgroundColor, color: buttonStyle.color}}>{buttonStyle.text}</button>
-         
-          {/* <button type="submit">Sign In</button> */}
-       
-        
         </div>
          </form>
-
       </div>
-
     </section>
   )
 }
-
 export default Login

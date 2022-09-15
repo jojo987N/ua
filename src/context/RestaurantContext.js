@@ -4,8 +4,6 @@ export const RestaurantContext = createContext();
 
 export const RestaurantProvider = ({children})=> {
 
-   
-
     const [currentRestaurant, setCurrentRestaurant] = useState(null)
 
     return (

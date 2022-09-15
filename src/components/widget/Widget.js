@@ -7,14 +7,14 @@ import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlin
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { RestaurantContext } from "../../context/RestaurantContext";
-import { decryptData} from "../../utils";
+import { decryptData } from "../../utils";
 
 
 const Widget = ({ type }) => {
   let data;
-  const {currentRestaurant} = useContext(RestaurantContext)
+  const { currentRestaurant } = useContext(RestaurantContext)
 
-  //temporary
+
   const amount = 100;
   const diff = 20;
 
@@ -22,7 +22,7 @@ const Widget = ({ type }) => {
     case "user":
       data = {
         title: "USERS",
-        //isMoney: false,
+
         number: 300,
         link: "See all users",
         icon: (
@@ -39,7 +39,7 @@ const Widget = ({ type }) => {
     case "order":
       data = {
         title: "ORDERS",
-        //isMoney: false,
+
         number: 350,
         link: "View all orders",
         icon: (
@@ -56,19 +56,19 @@ const Widget = ({ type }) => {
     case "earning":
       data = {
         title: "EARNINGS",
-        //isMoney: true,
-        number: currentRestaurant?
-        
-        decryptData(localStorage.getItem(process.env.REACT_APP_EARNINGS_KEY))
-        .find(item => item.restaurant === currentRestaurant.name).earning.toLocaleString('en', {
-          style: "currency",
-          currency: 'USD'
-      }) 
-        
-        :(81450).toLocaleString('en', {
-          style: "currency",
-          currency: 'USD'
-      }),
+
+        number: currentRestaurant ?
+
+          decryptData(localStorage.getItem(process.env.REACT_APP_EARNINGS_KEY))
+            .find(item => item.restaurant === currentRestaurant.name).earning.toLocaleString('en', {
+              style: "currency",
+              currency: 'USD'
+            })
+
+          : (81450).toLocaleString('en', {
+            style: "currency",
+            currency: 'USD'
+          }),
         link: "View net earnings",
         icon: (
           <MonetizationOnOutlinedIcon
@@ -81,7 +81,7 @@ const Widget = ({ type }) => {
     case "driver":
       data = {
         title: "DRIVERS",
-        //isMoney: true,
+
         number: 100,
         link: "See all drivers",
         icon: (
@@ -95,57 +95,57 @@ const Widget = ({ type }) => {
         ),
       };
       break;
-      case "confirmed-order":
-        data = {
-          title: "CONFIRMED",
-          //isMoney: false,
-          number: 20,
-          link: "See all confirmed orders",
-          icon: (
-            <PersonOutlinedIcon
-              className="icon"
-              style={{
-                color: "crimson",
-                backgroundColor: "rgba(255, 0, 0, 0.2)",
-              }}
-            />
-          ),
-        };
-        break;
-        case "cooking-order":
-          data = {
-            title: "COOKING",
-            //isMoney: false,
-            number: 20,
-            link: "See all ready for pickup orders",
-            icon: (
-              <PersonOutlinedIcon
-                className="icon"
-                style={{
-                  color: "crimson",
-                  backgroundColor: "rgba(255, 0, 0, 0.2)",
-                }}
-              />
-            ),
-          };
-          break;
-        case "ready-for-pickup-order":
-          data = {
-            title: "READY FOR PICKUP",
-            //isMoney: false,
-            number: 20,
-            link: "See all ready for pickup orders",
-            icon: (
-              <PersonOutlinedIcon
-                className="icon"
-                style={{
-                  color: "crimson",
-                  backgroundColor: "rgba(255, 0, 0, 0.2)",
-                }}
-              />
-            ),
-          };
-          break;
+    case "confirmed-order":
+      data = {
+        title: "CONFIRMED",
+
+        number: 20,
+        link: "See all confirmed orders",
+        icon: (
+          <PersonOutlinedIcon
+            className="icon"
+            style={{
+              color: "crimson",
+              backgroundColor: "rgba(255, 0, 0, 0.2)",
+            }}
+          />
+        ),
+      };
+      break;
+    case "cooking-order":
+      data = {
+        title: "COOKING",
+
+        number: 20,
+        link: "See all ready for pickup orders",
+        icon: (
+          <PersonOutlinedIcon
+            className="icon"
+            style={{
+              color: "crimson",
+              backgroundColor: "rgba(255, 0, 0, 0.2)",
+            }}
+          />
+        ),
+      };
+      break;
+    case "ready-for-pickup-order":
+      data = {
+        title: "READY FOR PICKUP",
+
+        number: 20,
+        link: "See all ready for pickup orders",
+        icon: (
+          <PersonOutlinedIcon
+            className="icon"
+            style={{
+              color: "crimson",
+              backgroundColor: "rgba(255, 0, 0, 0.2)",
+            }}
+          />
+        ),
+      };
+      break;
     default:
       break;
   }
@@ -155,17 +155,15 @@ const Widget = ({ type }) => {
       <div className="left">
         <span className="title">{data.title}</span>
         <span className="counter">
-          {/* {data.isMoney && "$"} {amount} */}
           {data.number}
-          
+
         </span>
-        {/* <Link to="/users" style={{ textDecoration: "none" }}> */}
 
         <Link to={`/${type}s`} style={{ textDecoration: "none" }}>
-          
+
           <span className="link">{data.link}</span>
         </Link>
-        
+
       </div>
       <div className="right">
         <div className="percentage positive">
