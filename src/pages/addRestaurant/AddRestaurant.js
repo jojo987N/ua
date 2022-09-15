@@ -4,6 +4,8 @@ import Navbar from "../../components/navbar/Navbar";
 import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUploadOutlined";
 import { useState } from "react";
 import { APP_CONSTANT } from "../../globals";
+import { restaurantInputs } from "../../formSource";
+
 
 const AddRestaurant = () => {
   const [file, setFile] = useState("");
@@ -30,7 +32,7 @@ const AddRestaurant = () => {
                 </label>
                 <input type="file" id="file" onChange={(e) => setFile(e.target.files[0])} style={{ display: "none" }}/>
               </div>
-              {inputs.map((input) => (
+              {restaurantInputs.map((input) => (
                 <div className="formInput" key={input.id}>
                   <label>{input.label}</label>
                   <input type={input.type} placeholder={input.placeholder} value={input.placeholder}/>
