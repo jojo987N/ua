@@ -63,7 +63,7 @@ const Sidebar = ({ type }) => {
     ]),
     getItem('Restaurants', 'sub3', <RestaurantIcon className="icon" />, [
       getItem('Restaurants List', '/restaurants'),
-      getItem('Add Restaurant', '/restaurants/new'),
+      getItem('Add Restaurant', '/addRestaurant'),
     ]),
     getItem('Categories', 'sub4', <CategoryIcon className="icon" />, [
       getItem('Categories List', '/categories'),
