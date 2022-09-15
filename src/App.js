@@ -23,6 +23,7 @@ import Drivers from "./pages/drivers/Drivers"
 import Categories from "./pages/categories/Categories"
 import Foods from "./pages/foods/Foods";
 import AddDriver from "./pages/addDriver/AddDriver"
+import AddRestaurant from "./pages/addRestaurant/AddRestaurant"
 import "antd/dist/antd.min.css"
 
 function App() {
@@ -112,8 +113,14 @@ function App() {
                   }
                 /> */}
               </Route>
-              <Route path={PAGE.DRIVERS}>
-                <Route index element={<Drivers/>} />
+
+              <Route path={PAGE.ADD_DRIVER}>
+                <Route index element={<AddDriver />} />
+                
+              </Route>
+
+              <Route path={PAGE.ADD_RESTAURANT}>
+                <Route index element={<AddRestaurant/>} />
                 {/* <Route
                   path=":userId"
                   element={

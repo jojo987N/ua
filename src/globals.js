@@ -63,6 +63,7 @@ export const PAGE = {
     RESTAURANTS: "restaurants",
     DRIVERS: "drivers",
     ADD_DRIVER: "addDriver",
+    ADD_RESTAURANT: "addRestaurant",
     CATEGORIES: "categories",
     EARNINGS: "earnings",
     SETTINGS: "settings",
