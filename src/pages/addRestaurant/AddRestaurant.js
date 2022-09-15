@@ -14,11 +14,11 @@ const AddRestaurant = () => {
   const handleSubmit = (e)=>{
     e.preventDefault();
   }
-  handleInputChange = (event) => { 
-
+  const handleInputChange = (event) => { 
+      setFile(e.target.files[0])
   }
   // const handleImage = async (e) => {
-  //   setFile(e.target.files[0])
+  //  
   //   const storage = getStorage();
   //   const storageRef = ref(storage, e.target.files[0].name);
   //   await uploadBytes(storageRef, e.target.files[0])
