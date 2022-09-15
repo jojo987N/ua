@@ -114,11 +114,6 @@ function App() {
                 /> */}
               </Route>
 
-              <Route path={PAGE.ADD_DRIVER}>
-                <Route index element={<AddDriver />} />
-                
-              </Route>
-
               <Route path={PAGE.ADD_RESTAURANT}>
                 <Route index element={<AddRestaurant/>} />
                 {/* <Route
