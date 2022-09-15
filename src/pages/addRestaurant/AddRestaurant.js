@@ -9,9 +9,23 @@ import { restaurantInputs } from "../../formSource";
 
 const AddRestaurant = () => {
   const [file, setFile] = useState("");
+  const [inputs, setInputs] = useState()
+
   const handleSubmit = (e)=>{
     e.preventDefault();
   }
+  handleInputChange = (event) => { 
+
+  }
+  // const handleImage = async (e) => {
+  //   setFile(e.target.files[0])
+  //   const storage = getStorage();
+  //   const storageRef = ref(storage, e.target.files[0].name);
+  //   await uploadBytes(storageRef, e.target.files[0])
+
+  //   const url = await getDownloadURL(storageRef)
+     
+  // }
   return (
     <div className="addRestaurant">
       <Sidebar />
@@ -30,7 +44,7 @@ const AddRestaurant = () => {
                 <label htmlFor="file">
                   "Image": <DriveFolderUploadOutlinedIcon className="icon" />
                 </label>
-                <input type="file" id="file" onChange={(e) => setFile(e.target.files[0])} style={{ display: "none" }}/>
+                <input type="file" id="file" onChange={handleImage} style={{ display: "none" }}/>
               </div>
               {restaurantInputs.map((input) => (
                 <div className="formInput" key={input.id}>
