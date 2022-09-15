@@ -15,17 +15,17 @@ const AddRestaurant = () => {
     e.preventDefault();
   }
   const handleInputChange = (event) => { 
-      setFile(e.target.files[0])
+      
   }
-  // const handleImage = async (e) => {
-  //  
-  //   const storage = getStorage();
-  //   const storageRef = ref(storage, e.target.files[0].name);
-  //   await uploadBytes(storageRef, e.target.files[0])
+  const handleImage = async (e) => {
+        setFile(e.target.files[0])
+    // const storage = getStorage();
+    // const storageRef = ref(storage, e.target.files[0].name);
+    // await uploadBytes(storageRef, e.target.files[0])
 
-  //   const url = await getDownloadURL(storageRef)
+    // const url = await getDownloadURL(storageRef)
      
-  // }
+  }
   return (
     <div className="addRestaurant">
       <Sidebar />
