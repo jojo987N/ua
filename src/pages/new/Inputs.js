@@ -1,5 +1,7 @@
 import { categoryType } from "../../formSource"
 import { roles } from "../../formSource";
+import Select from 'react-select'
+
 
 const Inputs = ({ type, setState, state }) => {
 
