@@ -3,9 +3,9 @@ import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUpload
 import Select from 'react-select'
 import { decryptData } from "../../utils";
 import TimePicker from 'react-time-picker';
-import { addCategory, addRestaurant, updateUser} from "../../firebase";
+import { addCategory, addRestaurant, updateUser } from "../../firebase";
 import { restaurantModel } from "../../model";
-import {getDownloadURL, getStorage, ref, uploadBytes} from 'firebase/storage'
+import { getDownloadURL, getStorage, ref, uploadBytes } from 'firebase/storage'
 import { roles } from "../../formSource";
 import Inputs from "./Inputs";
 
@@ -33,14 +33,14 @@ class FormInput extends React.Component {
   }
   handleSubmit = (e) => {
     e.preventDefault();
-      console.log(this.state.inputs.image)
+    console.log(this.state.inputs.image)
     if (this.props.data)
       updateUser(this.state.inputs, this.props.itemId)
     else
-      if(this.state.inputs.image){
-      this.setState({disabled: true})
-      addCategory(this.state.inputs)
-      .then(()=> this.props.navigate('/' + this.props.type))
+      if (this.state.inputs.image) {
+        this.setState({ disabled: true })
+        addCategory(this.state.inputs)
+          .then(() => this.props.navigate('/' + this.props.type))
       }
   }
   handleInputChange = (event) => {
@@ -101,6 +101,16 @@ class FormInput extends React.Component {
           </div>
         )
       })}
+
+      {(this.props.type === "categories") &&
+        <div className="formInput" >
+          <label>Category</label>
+          <Select
+            styles={customStyles}
+            options={categoryType}
+            placeholder={"Select Type"} />
+        </div>
+      }
       {/* {(this.props.type === "products" || this.props.type === "categorie") && <div className="formInput" >
         <label>Restaurant</label>
         <Select
