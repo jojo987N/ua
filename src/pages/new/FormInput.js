@@ -108,7 +108,17 @@ class FormInput extends React.Component {
           <Select
             styles={customStyles}
             options={categoryType}
-            placeholder={"Select Type"} />
+            placeholder={"Select Type"} 
+            
+            onChange={(e) => this.setState({
+              inputs: {
+                ...this.state.inputs,
+                cayegory: {
+                  type: e.value
+                }
+              }
+            })}
+            />
         </div>
       }
       {/* {(this.props.type === "products" || this.props.type === "categorie") && <div className="formInput" >
