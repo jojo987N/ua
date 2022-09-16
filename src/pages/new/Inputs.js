@@ -10,18 +10,12 @@ const Inputs = ({ type, setState, state }) => {
             )
             break
         case "transactions":
-            return getOrdersFromFirebase()
-                .then(orders => orders.filter(order => order.status === "Completed"))
             break
         case "orders":
-            return getOrdersFromFirebase()
             break
         case "drivers":
-            return getUsersFromFirebase()
-                .then(users => users.filter(user => user.Role === "driver"))
             break
         case "restaurants":
-            return getRestaurantsFromFirebase()
             break
         case "categories":
             return (
@@ -35,7 +29,6 @@ const Inputs = ({ type, setState, state }) => {
             )
             break
         case "earnings":
-            return getEarnings()
             break
         default:
             return (
