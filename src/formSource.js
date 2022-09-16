@@ -135,6 +135,20 @@ export const userInputs = [
      alias: "description"
     },
   ];
+  export const categoryFoodInputs = [
+    {
+      id: 1,
+      label: "Name",
+      type: "text",
+      alias: "name"
+    },
+    {
+      id: 2,
+      label: "Description",
+      type: "text",
+     alias: "description"
+    },
+  ];
   export const carInputs = [
     {
       id: 1,

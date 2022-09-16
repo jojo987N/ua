@@ -5,7 +5,7 @@ import Single from "./pages/single/Single";
 import New from "./pages/new/New";
 import { decryptData, encryptData } from "./utils";
 import { BrowserRouter, Routes, Route, Navigate, Outlet } from "react-router-dom";
-import { carInputs, categoryInputs, productInputs, restaurantInputs, userInputs } from "./formSource";
+import { carInputs, categoryFoodInputs, categoryInputs, productInputs, restaurantInputs, userInputs } from "./formSource";
 import { auth, getOrdersFromFirebase } from './firebase'
 import { useContext, useEffect, useLayoutEffect, useState } from "react";
 import { OrdersContext } from "./context/OrdersContext"
@@ -97,6 +97,10 @@ function App() {
                   <Route path="categories">
                     <Route index element={<List key="categories" type="categories" />} />
                     <Route path=":id" element={<New inputs={categoryInputs} type="categorie" title="Update Category" />} />
+                    <Route
+                      path="food"
+                      element={<New inputs={categoryFoodInputs} type="categoryFood" title="Add New Food Category " />}
+                    />
                     <Route
                       path="new"
                       element={<New inputs={categoryInputs} type="categories" title="Add New Category" />}

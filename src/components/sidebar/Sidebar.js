@@ -76,7 +76,8 @@ const Sidebar = ({ type }) => {
       getItem('Add Restaurant', '/restaurants/new'),
     ]),
     getItem('Categories', 'sub4', <CategoryIcon className="icon" />, [
-      getItem('Categories List', '/categories'),
+      getItem('Restaurants', '/categories'),
+      getItem('Foods', '/categories/foods'),
       getItem('Add Category', '/categories/new'),
     ]),
     getItem('Profile', 'sub5', <AccountCircleOutlinedIcon className="icon" />, [
