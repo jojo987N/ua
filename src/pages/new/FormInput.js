@@ -6,7 +6,7 @@ import TimePicker from 'react-time-picker';
 import { addCategory, addRestaurant, updateUser } from "../../firebase";
 import { restaurantModel } from "../../model";
 import { getDownloadURL, getStorage, ref, uploadBytes } from 'firebase/storage'
-import { roles } from "../../formSource";
+import { roles, categoryType} from "../../formSource";
 import Inputs from "./Inputs";
 
 
