@@ -160,7 +160,7 @@ export const categoryColumns = [
 
       return (
         <div className="cellWithRestaurant">
-          {params.row.category.type}
+          {params.row.category?params.row.category.type:""}
         </div>
       );
     },
