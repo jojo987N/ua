@@ -157,7 +157,7 @@ export const categoryColumns = [
     headerName: <b>Type</b>,
     width: 300,
     renderCell: (params) => {
-   console.log("tttrtr", params.row)
+   console.log("tttrtr", params.row.category)
       return (
         <div className="cellWithRestaurant">
           {params.row.category?params.row.category.type:""}
