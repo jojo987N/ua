@@ -98,10 +98,6 @@ function App() {
                     <Route index element={<List key="categories" type="categories" />} />
                     <Route path=":id" element={<New inputs={categoryInputs} type="categorie" title="Update Category" />} />
                     <Route
-                      path="food"
-                      element={<New inputs={categoryFoodInputs} type="categoryFood" title="Add New Food Category " />}
-                    />
-                    <Route
                       path="new"
                       element={<New inputs={categoryInputs} type="categories" title="Add New Category" />}
                     />

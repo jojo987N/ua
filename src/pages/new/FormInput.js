@@ -6,25 +6,10 @@ import TimePicker from 'react-time-picker';
 import { addCategory, addRestaurant, updateUser} from "../../firebase";
 import { restaurantModel } from "../../model";
 import {getDownloadURL, getStorage, ref, uploadBytes} from 'firebase/storage'
+import { roles } from "../../formSource";
+import Inputs from "./Inputs";
 
-const roles = [
-  {
-    value: "customer",
-    label: "Customer"
-  },
-  {
-    value: "driver",
-    label: "Driver"
-  },
-  {
-    value: "manager",
-    label: "Manager"
-  },
-  {
-    value: "admin",
-    label: "Admin"
-  }
-]
+
 const customStyles = {
   control: (base) => ({
     ...base,
@@ -109,13 +94,14 @@ class FormInput extends React.Component {
               required="required"
               onChange={this.handleInputChange}
               defaultValue={
-                this.props.itemId !== "profile" ? this.props.data ? this.props.data[input.alias] : "" : input.placeholder
+                // this.props.itemId !== "profile" ? this.props.data ? this.props.data[input.alias] : "" : input.placeholder
+                this.props.data ? this.props.data[input.alias] : input.placeholder
               }
             />
           </div>
         )
       })}
-      {(this.props.type === "products" || this.props.type === "categorie") && <div className="formInput" >
+      {/* {(this.props.type === "products" || this.props.type === "categorie") && <div className="formInput" >
         <label>Restaurant</label>
         <Select
           styles={customStyles}
@@ -125,8 +111,8 @@ class FormInput extends React.Component {
             label: option.name
           }))}
           placeholder={"Select Restaurant"} />
-      </div>}
-      {(this.props.type === "products") && <div className="formInput" >
+      </div>} */}
+      {/* {(this.props.type === "products") && <div className="formInput" >
         <label>Category</label>
         <Select
           styles={customStyles}
@@ -136,7 +122,10 @@ class FormInput extends React.Component {
             label: option.name
           }))}
           placeholder="Select Category" />
-      </div>}
+      </div>} */}
+
+      {/* <Inputs type="user" setState={this.setState} state={this.state}/> */}
+
       {(this.props.type === "user") && <div className="formInput" >
         <label>Role</label>
         <Select
@@ -150,7 +139,7 @@ class FormInput extends React.Component {
           })}
         />
       </div>}
-      {(this.props.type === "restaurant" || this.props.type === "drivers") && <div className="formInput" >
+      {/* {(this.props.type === "restaurant" || this.props.type === "drivers") && <div className="formInput" >
         <label>{this.props.type === "drivers" ? "Driver" : "Manager"}</label>
         <Select
           styles={customStyles}
@@ -160,7 +149,7 @@ class FormInput extends React.Component {
             label: option.name
           }))}
           placeholder={this.props.type === "drivers" ? "Select driver" : "Select manager"} />
-      </div>}
+      </div>} */}
       {this.props.type === "restaurant" && <>
         <div className="formInput" >
           <label>Reward</label>

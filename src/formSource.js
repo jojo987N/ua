@@ -161,4 +161,34 @@ export const userInputs = [
       type: "text",
     },
   ];
+
+  export const roles = [
+    {
+      value: "customer",
+      label: "Customer"
+    },
+    {
+      value: "driver",
+      label: "Driver"
+    },
+    {
+      value: "manager",
+      label: "Manager"
+    },
+    {
+      value: "admin",
+      label: "Admin"
+    }
+  ]
+
+  export const categoryType = [
+    {
+      value: "food",
+      label: "Food"
+    },
+    {
+      value: "restaurant",
+      label: "Restaurant"
+    },
+  ]
   
