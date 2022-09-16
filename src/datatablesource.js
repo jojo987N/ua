@@ -153,8 +153,8 @@ export const categoryColumns = [
     },
   },
   {
-    field: "restaurant",
-    headerName: <b>Restaurant</b>,
+    field: "type",
+    headerName: <b>Type</b>,
     width: 300,
     renderCell: (params) => {
 
