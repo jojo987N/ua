@@ -113,7 +113,7 @@ class FormInput extends React.Component {
             onChange={(e) => this.setState({
               inputs: {
                 ...this.state.inputs,
-                cayegory: {
+                category: {
                   type: e.value
                 }
               }
