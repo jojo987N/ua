@@ -116,7 +116,7 @@ const Datatable = ({type}) => {
         setTitle("Category")
         getCategories().then(categories => {
           setTab({
-            rows: categories.sort((a,b) => a.createdAt.seconds - b.createdAt.seconds),
+            rows: categories.sort((a,b) => b.createdAt.seconds - a.createdAt.seconds),
             columns: categoryColumns
           })
         })
