@@ -45,7 +45,7 @@ const New = ({ inputs, title, type}) => {
  //console.log(data)
  // const user = JSON.parse(localStorage.getItem('users')).find(user => user.userId === userId)
 
-  const [file, setFile] = useState("");
+  const [file, setFile] = useState();
 
   const [value1, onChange1] = useState('');
   const [value2, onChange2] = useState('');
@@ -96,7 +96,7 @@ const New = ({ inputs, title, type}) => {
         </div>
         <div className="bottom">
           <div className="left">
-            <img src="https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg" />
+            <img src={file?file:"https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg"} />
             {/* <img
               src={
                 file
@@ -110,7 +110,7 @@ const New = ({ inputs, title, type}) => {
           </div>
           <div className="right">
             
-            <FormInput inputs={inputs} type={type} data={data} itemId={itemId} navigate={navigate} />
+            <FormInput inputs={inputs} type={type} data={data} itemId={itemId} navigate={navigate} setFile={setFile}/>
              
           </div>
         </div>

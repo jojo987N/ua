@@ -56,6 +56,7 @@ class FormInput extends React.Component {
         color: "teal"
       }
     })
+    
   }
   render() {
     return <form onSubmit={this.handleSubmit}>
@@ -78,6 +79,7 @@ class FormInput extends React.Component {
                 image: url
               }
             })
+            this.props.setFile(url)
           }
           }
           style={{ display: "none" }}
