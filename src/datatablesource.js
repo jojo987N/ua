@@ -147,7 +147,7 @@ export const categoryColumns = [
       return (
         <div className="cellWithImg">
           <img className="cellImg" src={params.row.image} alt="avatar" />
-          {params.row.name}
+          <span className="name">{params.row.name}</span>
         </div>
       );
     },
