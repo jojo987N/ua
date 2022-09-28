@@ -142,7 +142,7 @@ export const categoryColumns = [
   {
     field: "category",
     headerName: <b>Category</b>,
-    width: 350,
+    width: 250,
     renderCell: (params) => {
       return (
         <div className="cellWithImg">
