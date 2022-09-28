@@ -159,7 +159,7 @@ export const categoryColumns = [
     renderCell: (params) => {
       return (
         <div className="cellWithRestaurant">
-          {params.row.type?params.row.type:""}
+          {params.row.type?params.row.type:"restaurant"}
         </div>
       );
     },
